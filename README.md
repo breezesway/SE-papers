@@ -2,6 +2,11 @@
 
 软件工程顶会论文整理仓库：收录自2025年起 **ICSE / FSE / ASE / ISSTA** Research Track 全部论文，以及 **ICML / NeurIPS / ICLR / ACL** 中与软件工程（SE）/ Coding 紧密相关的论文。论文按主题分类整理，并附中文总结。
 
+## 亮点
+
+1. **软工顶会按主题分类**：ICSE / FSE / ASE / ISSTA Research Track 全部录用论文按主题归类列出，可按兴趣快速筛选阅读。
+2. **AI 会议中的软工相关工作**：从 ICML / NeurIPS / ICLR / ACL 等主会录用论文中筛选与 SE / Coding 紧密相关的工作。
+
 ## 仓库内容
 
 | 类型 | 会议 | 说明 |
@@ -83,3 +88,5 @@ AI 会议则为单份 digest：`{VENUE}{YEAR}_SE_Coding_Papers.md`。
 - **ISSTA'26**：每篇论文的 PDF 链接；awarded papers 信息
 - **ASE'26**：全部论文的 PDF 链接；awarded papers 信息；部分论文尚缺 abstract，对应中文总结亦待补全（目前约 146/181 篇无摘要）
 - **NeurIPS'26**：软工 / Coding 相关论文 digest 尚未整理
+
+> 暂无 PDF 链接的论文，绝大多数可在 [Google Scholar](https://scholar.google.com/) 上通过标题检索到。
