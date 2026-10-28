@@ -4,37 +4,43 @@ Source: https://conf.researchr.org/track/issta-2026/issta-2026-research-papers
 
 Count: 37
 
-## 1. AgentInspect: Diagnosing Behavioral Failures in Artificial Intelligence Agents
+## 1. A Temporal Reasoning Benchmarking Framework for LRMs via Difficulty-controlled and Dynamic Test Generation
+
+**Authors:** shide zhou (Huazhong University of Science and Technology), Kailong Wang (Huazhong University of Science and Technology), Ling Shi (Nanyang Technological University), Haoyu Wang (Huazhong University of Science and Technology)
+
+**Categories:** Software Engineering for AI
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832143
+
+**中文总结:** 提出 TRACE 测试框架，以 Allen 区间代数建模时序推理并支持难度可控的动态测试生成与 trace 验证。在 TRACEBench 上模型性能与难度强负相关（r≈−0.97），并发现中型模型约 28% 的答案属于虚假猜测。
+
+**Abstract:** Defining the reasoning boundaries and ensuring the reliability of Large Reasoning Models (LRMs) remains a critical challenge. Current benchmarks primarily rely on static datasets susceptible to data contamination or synthetic tasks lacking fine-grained difficulty control. Furthermore, standard outcome-based evaluations often conceal reasoning flaws by neglecting the reasoning process. To address these limitations, we introduce TRACE, a testing framework that models temporal reasoning as constraint satisfaction problems via Allen’s Interval Algebra. This approach enables precise regulation of logical complexity and incorporates a Trace-Based Verification Oracle to validate reasoning faithfulness. Using this framework, we construct TRACEBench, an extensive benchmark comprising 1,200 synthesized test instances across graded difficulty levels. We employ TRACE to evaluate six widely used LRMs on TRACEBench. The results confirm a strong negative correlation between model performance and our difficulty metric (Pearson’s 𝑟 ≈ −0.97), validating the effectiveness of our difficulty control mechanism. Moreover, our trace-based analysis exposes significant discrepancies between reasoning validity and final answers, revealing a high spurious guessing rate of approximately 28% in mid-sized models. In addition, we diagnose scale-dependent failure modes, ranging from Degenerative Loops in small models to Reasoning Explosion in advanced architectures. TRACE thus provides a robust, automated platform for benchmarking the true temporal reasoning capabilities of LRMs.
+
+
+## 2. AgentInspect: Diagnosing Behavioral Failures in Artificial Intelligence Agents
 
 **Authors:** Ruchira Manke (Tulane University), Mohammad Wardat (Oakland University, USA), Foutse Khomh (Polytechnique Montréal), Hridesh Rajan (Tulane University)
 
 **Categories:** Software Engineering for AI
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832174
 
 **中文总结:** 提出 AgentInspect 框架，结合覆盖率引导输入生成、工具行为模拟与确定性轨迹分析，自动检测 LangChain Agent 的六类行为失效。在 35 个 GitHub Agent 上高精确率、高召回率识别关键鲁棒性缺陷，模拟环境可暴露真实工具响应下未出现的失效模式。
 
 **Abstract:** Effectively testing Artificial Intelligence (AI) agents remains a fundamental challenge due to their stochastic reasoning, vast and diverse input space, reliance on external tools, and operation in dynamic execution environments; factors that demand new testing methodologies explicitly tailored to the complex and interactive nature of agent-based systems. This work presents a novel methodology for testing AI agents, with a particular focus on assessing their behavioral robustness under varied operational conditions. Our approach relies on following key technical innovations: (1) a coverage-guided test input generation strategy based on agent-specific coverage criteria, (2) a capture-and-simulate mechanism that systematically emulates abnormal tool behaviors to mimic real-world execution failures, and (3) a deterministic behavioral failure detection approach that enables consistent identification of failures across different test inputs. We developed AgentInspect, a framework that automatically detects six categories of behavioral failures in LangChain-based AI agents by analyzing their execution trajectories across two evaluation settings: a baseline setting using real tool responses and a simulated setting incorporating synthetic tool responses. To evaluate our approach, we curated a benchmark of 35 AI agents obtained from GitHub. Our results show that AgentInspect consistently identifies different behavioral failures with high precision and recall across both baseline and simulated execution settings. In particular, the simulated setting exposes failure modes that do not emerge during baseline execution with real tool responses, thereby enabling a more comprehensive assessment of agent robustness. Our findings highlight AgentInspect’s effectiveness in revealing critical failures and its practical utility for systematic robustness evaluation of AI agents.
 
 
-## 2. ARQ: A Mixed-Precision Quantization Framework for Accurate and Certifiably Robust DNNs
+## 3. ARQ: A Mixed-Precision Quantization Framework for Accurate and Certifiably Robust DNNs
 
 **Authors:** Yuchen Yang (University of Illinois Urbana-Champaign), Yifan Zhao (University of Illinois Urbana-Champaign), Shubham Ugare (University of Illinois Urbana-Champaign / Meta), Gagandeep Singh (University of Illinois Urbana-Champaign), Sasa Misailovic (University of Illinois Urbana-Champaign)
 
 **Categories:** Software Engineering for AI
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832266
+
 **中文总结:** 提出混合精度量化框架 ARQ，利用强化学习结合 randomized smoothing 在压缩 DNN 的同时保持可证明鲁棒性。量化后模型在约 1.5% 指令开销下达到与原浮点模型相当的精度与认证半径。
 
 **Abstract:** Mixed precision quantization has become an important technique for optimizing the execution of deep neural networks (DNNs). Certified robustness, which provides provable guarantees about a model’s ability to withstand different adversarial perturbations, has rarely been addressed in quantization due to the unacceptably high cost of certifying robustness. This paper introduces ARQ, an innovative mixed-precision quantization method that not only preserves the clean accuracy of the smoothed classifiers, but also maintains their certified robustness. ARQ uses reinforcement learning to find accurate and robust DNN quantization, while efficiently leveraging randomized smoothing, a popular class of statistical DNN verification algorithms. ARQ consistently performs better than multiple state-of-the-art quantization techniques across all the benchmarks and the input perturbation levels. The performance of ARQ quantized networks reaches that of the original DNN with floating-point weights, while with only$~1.5%$ instructions and the highest certified radius. ARQ code is available at https://anonymous.4open.science/r/ARQ-35CB .
-
-
-## 3. A Temporal Reasoning Benchmarking Framework for LRMs via Difficulty-controlled and Dynamic Test Generation
-
-**Authors:** shide zhou (Huazhong University of Science and Technology), Kailong Wang (Huazhong University of Science and Technology), Ling Shi (Nanyang Technological University), Haoyu Wang (Huazhong University of Science and Technology)
-
-**Categories:** Software Engineering for AI
-
-**中文总结:** 提出 TRACE 测试框架，以 Allen 区间代数建模时序推理并支持难度可控的动态测试生成与 trace 验证。在 TRACEBench 上模型性能与难度强负相关（r≈−0.97），并发现中型模型约 28% 的答案属于虚假猜测。
-
-**Abstract:** Defining the reasoning boundaries and ensuring the reliability of Large Reasoning Models (LRMs) remains a critical challenge. Current benchmarks primarily rely on static datasets susceptible to data contamination or synthetic tasks lacking fine-grained difficulty control. Furthermore, standard outcome-based evaluations often conceal reasoning flaws by neglecting the reasoning process. To address these limitations, we introduce TRACE, a testing framework that models temporal reasoning as constraint satisfaction problems via Allen’s Interval Algebra. This approach enables precise regulation of logical complexity and incorporates a Trace-Based Verification Oracle to validate reasoning faithfulness. Using this framework, we construct TRACEBench, an extensive benchmark comprising 1,200 synthesized test instances across graded difficulty levels. We employ TRACE to evaluate six widely used LRMs on TRACEBench. The results confirm a strong negative correlation between model performance and our difficulty metric (Pearson’s 𝑟 ≈ −0.97), validating the effectiveness of our difficulty control mechanism. Moreover, our trace-based analysis exposes significant discrepancies between reasoning validity and final answers, revealing a high spurious guessing rate of approximately 28% in mid-sized models. In addition, we diagnose scale-dependent failure modes, ranging from Degenerative Loops in small models to Reasoning Explosion in advanced architectures. TRACE thus provides a robust, automated platform for benchmarking the true temporal reasoning capabilities of LRMs.
 
 
 ## 4. CAST: A Compiler-Based Framework for Systematically Testing LLM Compositional Safety
@@ -42,6 +48,10 @@ Count: 37
 **Authors:** Lu Yan (Purdue University), Zhuo Zhang (Columbia University), Xiangzhe Xu (Purdue University), Shengwei An (Virginia Tech), Guangyu Shen (Purdue University), Zhou Xuan, Xuan Chen (Purdue University), Xiangyu Zhang (Purdue University)
 
 **Categories:** Software Engineering for AI
+
+**Artifact badges:** Published Artifact, Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832237
 
 **中文总结:** CAST 提出组合式安全测试框架，通过编译器式中间表示 CAIR 将恶意代码生成意图分解为可重组的子任务，系统评估 LLM 在长程多步工作流中的安全性。在四个前沿 LLM 上成功测试用例数较基线最高增加 365%。
 
@@ -54,16 +64,22 @@ Count: 37
 
 **Categories:** Software Engineering for AI
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832251
+
 **中文总结:** CID 无需预先可信干净种子集，利用语义充分性与触发器必要性两类反事实探针从混合数据中提取高纯度干净样本，再基于 Mahalanobis 聚类检测神经代码模型后门。在四种 SE 任务与三种架构上表现优于现有防御基线。
 
 **Abstract:** Neural code models, which automate foundational software engineering tasks such as code classification and generation, are critically vulnerable to backdoor attacks. Yet, existing defenses face a dual failure: they struggle with sophisticated threats spanning injection-based and semantically-equivalent transformation (\textit{SET-based}) backdoor attacks, and they rely on a restrictive assumption—a trusted, pre-verified \emph{in-distribution} clean seed set—that can be costly and difficult to obtain and audit in practice. This paper introduces Counterfactual Invariance-based Defense (CID), a clean-seed-free backdoor defense—requiring no \emph{a priori} trusted \emph{in-distribution} clean data—grounded in \emph{operational} counterfactual invariance tests. CID’s core insight is that clean and poisoned samples exhibit \emph{asymmetric counterfactual behavior}: clean predictions degrade under semantic context corruption (semantic sufficiency), whereas backdoor predictions change when a localized trigger is neutralized (trigger necessity). Accordingly, CID applies two orthogonal probes—a contextual intervention to test semantic sufficiency and a structural neutralization test guided by a gradient-based probe to test trigger necessity—to extract a high-purity clean seed set directly from a mixed dataset. This seed set then enables Mahalanobis-based clustering in representation space to partition the full dataset. Evaluated across four software engineering tasks and three model architectures, and further validated on multilingual code summarization, CID achieves strong poison detection performance among evaluated baselines while keeping false positives low in most settings. By eliminating reliance on \emph{a priori} trusted \emph{in-distribution} clean seed data, CID provides a practical pathway toward more secure deployment of neural code models.
 
 
-## 6. Code-MUE: Measuring Code LLM' Uncertainty through Execution-based Semantic Interaction Graphs
+## 6. Code-MUE: Measuring Code LLMs’ Uncertainty through Execution-Based Semantic Interaction Graphs
 
 **Authors:** xiaoning ren, Yinxing Xue (Institute of AI for Industries, Chinese Academy of Sciences), Lei Ma (The University of Tokyo & University of Alberta), Yuheng Huang (The University of Tokyo)
 
 **Categories:** Software Engineering for AI
+
+**Awards:** ACM SIGSOFT Distinguished Paper Award
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832276
 
 **中文总结:** Code-MUE 基于执行结果构建语义交互图，用 Von Neumann 熵量化 Code LLM 输出的语义不确定性，无需访问模型内部。在八个 LLM 上与功能正确性的 Spearman 相关最高达 -0.98，显著优于文本与嵌入基线。
 
@@ -76,6 +92,10 @@ Count: 37
 
 **Categories:** Software Engineering for AI
 
+**Artifact badges:** Published Artifact, Artifacts Available, Artifacts Functional
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832286
+
 **中文总结:** CONCUR 构建面向并发代码生成的评测基准，含 43 道教材级并发题及 72 个变异体共 115 题，覆盖死锁、竞态等并发特有缺陷。对多种 LLM 的评估揭示当前模型在并发代码生成上的显著不足。
 
 **Abstract:** Leveraging Large Language Models (LLMs) for code generation has increasingly emerged as a common practice in the domain of software engineering. Relevant benchmarks have been established to evaluate the code generation capabilities of LLMs. However, existing benchmarks focus primarily on sequential code, lacking the ability to effectively evaluate LLMs on concurrent code generation. Compared to sequential code, concurrent code exhibits greater complexity and possesses unique types of bugs, such as deadlocks and race conditions, that do not occur in sequential code. Therefore, a benchmark for evaluating sequential code generation cannot be useful for evaluating concurrent code generation with LLMs. To address this gap, we designed a benchmark CONCUR specifically aimed at evaluating the capability of LLMs to generate concurrent code. CONCUR consists of a base set of 43 concurrency problems derived from a standard concurrency textbook, together with 72 validated mutant variants, resulting in 115 total problems. The base problems serve as the semantic core of the benchmark, while the mutants expand linguistic and structural diversity. We conducted an evaluation of a range of LLMs on CONCUR, highlighting limitations of current models. Overall, our work provides a novel direction for evaluating the capability of LLMs to generate code with focus on concurrency.
@@ -86,6 +106,8 @@ Count: 37
 **Authors:** Zhen Yang (Shandong University), Hongyi Lin (Shandong University), Yifan He (Shandong University), Junqi Wang (Shandong University), Zeyu Sun (National Key Laboratory of Space Integrated Information System, Institute of Software, Chinese Academy of Sciences), Shuo Liu, Jie Xu (Shandong University), Pengpeng Wang (Columbia University), Zhongxing Yu (Shandong University), Qingyuan Liang (Peking University)
 
 **Categories:** Software Engineering for AI
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832279
 
 **中文总结:** 本文细粒度划分 input-only、output-only、unpaired、paired 四类数据污染场景，系统评估 RoBERTa、GPT-2、LLaMA、StarCoder 在代码翻译、生成与摘要任务上的影响。发现污染并非必然导致性能高估，LLM 在 paired 污染下受影响最显著。
 
@@ -100,6 +122,8 @@ Experimental results show that, under the pre-training, fine-tuning, and inferen
 
 **Categories:** Software Engineering for AI
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832269
+
 **中文总结:** EESQLBench 为 Text-to-SQL 引入专家优化 SQL 作为效率基准，用 Cost Reachability 等指标同时评估正确性与查询开销。六种 LLM 虽语义正确率高，但在查询效率上存在显著差距，常出现缺失访问剪枝等问题。
 
 **Abstract:** Text-to-SQL models translate natural language questions into SQL, enabling non-technical users to access databases. However, most existing research focuses on correctness, neglecting query efficiency. In this paper, we address the challenge of evaluating the execution efficiency of generated SQL in Text-to-SQL by introducing EESQLBench, a novel benchmark designed to assess both correctness and efficiency. EESQLBench pairs each natural language question with an expert-optimized SQL query, providing a reliable efficiency baseline. We evaluate six representative large language models (LLMs), including four open-source models (SQLCoder, CodeLlama, DeepSeek-Coder, and DeepSeek-R1) and two closed-source models (GPT-5.2 and Gemini-2.5-Pro), using cost-based metrics including Cost Reachability (CR) and Acceptable Reachability at $k$ (AR@$k$). Our results reveal that current LLMs, despite achieving high correctness, struggle to produce efficient queries. We observe substantial efficiency gaps between models and emphasize that semantic correctness alone does not guarantee query efficiency. Furthermore, we provide insights into common inefficiency patterns in LLM-generated SQL queries, such as missing access pruning and inefficient subquery logic.
@@ -110,6 +134,10 @@ Experimental results show that, under the pre-training, fine-tuning, and inferen
 **Authors:** Yuchen Shao (East China Normal University, Shanghai Innovation Institute), Ziqun Bao (East China Normal University), Yuheng Huang (The University of Tokyo), Yuling Shi (Shanghai Jiao Tong University), Mingyu Weng (East China Normal University), Yiwen Sun (East China Normal University), Long Yang (East China Normal University, Shanghai Innovation Institute), Lei Ma (The University of Tokyo & University of Alberta), Ting Su (East China Normal University), Chengcheng Wan (East China Normal University)
 
 **Categories:** Software Engineering for AI
+
+**Artifact badges:** Published Artifact, Artifacts Available, Artifacts Reusable
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832101
 
 **中文总结:** Datura 通过五阶段工作流对 LLM Agent 的工具调用链进行渐进式红队测试，每步输入看似合法但串联达成有害目标。在五种 LLM 与五种防御机制下攻击成功率达 94.86%–99.59%，显著优于现有基线。
 
@@ -124,49 +152,48 @@ In this paper, we first conduct an empirical study to investigate how external t
 
 **Categories:** Software Engineering for AI
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832109
+
 **中文总结:** DDOR 用 delta debugging 在黑盒设置下定位触发过度拒绝的最小片段 mRTF，并据此生成规模化过度拒绝测试集与定向 prompt 修复方案。可在保持有害输入安全性的同时显著降低 LLM 对良性查询的误拒率。
 
 **Abstract:** While safety alignment and guardrails help large language models (LLMs) avoid harmful outputs, they can also induce overrefusal, i.e., unwarranted rejection of benign queries that merely appear risky. We present DDOR (Delta Debugging for OverRefusal), a fully automated and causally grounded framework for overrefusal testing and repair in a black-box setting, where only model inputs and outputs are accessible and internal safety mechanisms remain opaque. DDOR applies delta debugging to localize minimal refusal-triggering fragments (mRTFs) that provide phrase-level, explainable evidence for why a refusal occurs. Conditioned on these mRTFs, DDOR generates diverse, context-rich prompts and performs multi-oracle validation to filter intrinsically unsafe or ambiguous cases, producing scalable and model-specific overrefusal test suites (approximately 1K cases per model). Beyond evaluation, we further leverage localized mRTFs to perform targeted prompt repair, substantially reducing overrefusal while preserving the original intent and maintaining safety on genuinely harmful inputs. Overall, DDOR offers a practical end-to-end solution to both evaluate and mitigate overrefusal, improving LLM usability without sacrificing safety.
 
 
-## 12. Do Large Language Models Understand Code like Humans?
-
-**Authors:** Xiaokai Rong (University of Texas at Dallas), Aashish Yadavally (University of Central Florida), Hridya Dhulipala (University of Texas at Dallas), Anh H. N. Nguyen, Tien N. Nguyen
-
-**Categories:** Software Engineering for AI
-
-**中文总结:** 本文引入语义自一致性等代理指标量化模型代码可理解性，并与多组人类评分对比。LLM 与专业开发者理解性对齐最强，但与不同经验学生群体对齐较弱，角色条件 prompt 无法改善后者。
-
-**Abstract:** Code understandability is a critical aspect of software quality. Prior research has largely focused on this attribute from a human-centric perspective, while it should be viewed as a relational property arising from the interaction between a reader and the code. With the increasing adoption of large language models (LLMs) in software engineering, we posit that the notion of “reader” should be generalized to encompass both humans and models. Building on this relational perspective, we extend the concept of code understandability to distinguish between human and model code understandability, aiming to investigate the alignment between the two. To this end, we use a dataset from a prior study containing human-rated judgments of understandability across diverse participant groups, and evaluate multiple open and closed-source LLMs. To operationalize model code understandability, we introduce four proxies: P0, based on program comprehension-focused question answering; and P1–P3, based on program intent summarization (derived from our proposed semantic self-consistency). Our findings show that LLMs exhibit stronger alignment with general human code understandability than previously used shallow machine learning baselines. Stratified analyses further reveal that model code understandability aligns most closely with professional developers, but significantly less with other student groups. Role-conditioned prompting does not improve the alignment for the latter, suggesting that current LLMs cannot accurately mimic the perspectives of human readers with varying expertise. Finally, we demonstrate that semantic self-consistency is a reliable and extensible measure for quantifying model code understandability, with broad implications in both software engineering research and practice.
-
-
-## 13. Don’t Use a Cannon to Kill a Fly: Lightweight Model Editing for LLMs to Correct Deprecated API Recommendations
+## 12. Don’t Use a Cannon to Kill a Fly: Lightweight Model Editing for LLMs to Correct Deprecated API Recommendations
 
 **Authors:** Guancheng Lin (City University of Hong Kong), Xiao Yu (Zhejiang University), Jacky Keung (City University of Hong Kong, Hong Kong SAR China), Xing Hu (Zhejiang University), Xin Xia (Zhejiang University), Alex X. Liu
 
 **Categories:** Software Engineering for AI
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832130
 
 **中文总结:** 本文在 EDAPIBench 上系统评估 10 种模型编辑方法更新 LLM 中过时 API 知识的效果，并提出 AdaLoRA-L 仅编辑 API 特定层以保护通用知识。AdaLoRA-L 在生成最新 API 的同时显著改善编辑特异性。
 
 **Abstract:** Pre-trained or fine-tuned on large code corpora, Large Language Models (LLMs) have demonstrated strong performance in code completion tasks. However, their embedded knowledge is constrained by the timeliness of training data, which often includes code using deprecated APIs. Consequently, LLMs frequently generate deprecated APIs that will no longer be supported in future versions of third-party libraries. While retraining LLMs on updated codebases could refresh their API knowledge, this approach is computationally expensive. Recently, lightweight model editing methods have emerged to efficiently correct specific knowledge in LLMs. However, it remains unclear whether these methods can effectively update deprecated API knowledge and enable edited models to generate up-to-date APIs. To address this gap, we conduct the first systematic study applying 10 state-of-the-art model editing techniques to update deprecated API knowledge in three LLMs: Qwen2.5-Coder, CodeGemma, and DeepSeek-Coder. We introduce EDAPIBench, a dedicated benchmark featuring over 70 deprecated APIs from 8 popular Python libraries, with more than 3,000 editing instances. Our results show that the parameter-efficient fine-tuning method AdaLoRA achieves the best performance in enabling edited models to generate correct, up-to-date APIs, but falls short in Specificity (i.e., the editing influences untargeted knowledge). To resolve this, we propose AdaLoRA-L, which defines Common API Layers'' (layers within the LLMs with high importance across all APIs, storing general knowledge and excluded from editing) and restricts edits exclusively to Specific API Layers'' (layers with high importance only for the target API, storing the API-specific knowledge). Experimental results demonstrate that AdaLoRA-L significantly improves Specificity while maintaining comparable performance across other evaluation metrics.
 
 
-## 14. Efficient Grammar-Constrained Decoding via Parser Stack Classification
+## 13. Efficient Grammar-Constrained Decoding via Parser Stack Classification
 
 **Authors:** Yongmin Li (Peking University), Yihong Dong (Peking University), Jia Li (Tsinghua University), Ge Li (Peking University)
 
 **Categories:** Software Engineering for AI
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832172
 
 **中文总结:** PSC 将词汇表全部 token 的语法接受条件预合并为 parser stack 单次分类，使每步 mask 计算复杂度与词表大小无关。复杂编程语言语法下 mask 计算最高快 700 倍，端到端 LLM 吞吐接近无约束解码。
 
 **Abstract:** LLMs are widely used to generate structured output like source code or JSON. Grammar-constrained decoding (GCD) can guarantee the syntactic validity of the generated output, by masking out tokens that violate rules specified by a context-free grammar. However, the online computational overhead of existing GCD methods, with latency typically scaling linearly with vocabulary size, limits the throughput of LLMs, especially for models with large vocabularies. To address this issue, we propose PSC, a novel grammar-constrained decoding method. By combining acceptance conditions of all vocabulary tokens into a single classifier of the parser stack during preprocessing, PSC can compute the complete vocabulary mask by checking the parser stack exactly once per decoding step, with time complexity independent of the vocabulary size. Experiments show that PSC computes masks up to 700× faster than baselines on complex programming language grammars, and up to 30× faster for schema-conformant JSON; end-to-end LLM throughput with PSC approaches that of unconstrained decoding.
 
 
-## 15. Fairness Invariants: A Relational Approach to Explaining and Mitigating Fairness Bugs
+## 14. Fairness Invariants: A Relational Approach to Explaining and Mitigating Fairness Bugs
 
 **Authors:** Ranit Debnath Akash, Ashish Kumar (Pennsylvania State University), Gang (Gary) Tan, Saeid Tizpaz-Niari (University of Illinois Chicago)
 
 **Categories:** Software Engineering for AI
+
+**Artifact badges:** Published Artifact, Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832110
 
 **中文总结:** 提出 REMI，将 counterfactual fairness 视为 relational invariant 发现，用双向关系解释定位个体公平性 bug 并以规则缓解；在符号与神经网络程序上 83%+ 定位准确率，歧视决策最多降 70%。
 
@@ -175,11 +202,13 @@ In this paper, we first conduct an empirical study to investigate how external t
 We present REMI, a framework for the automated localization, explanation, and mitigation of individual fairness bugs. Inspired by loop-invariant synthesis in formal methods, we treat counterfactual fairness as a relational invariant discovery problem. We introduce a bidirectional relational explanation framework that learns over paired examples (𝑥, 𝑥′) to identify regions of the input space where fairness is violated. Unlike traditional one-way implication pairs used in invariant inference, our approach enforces bidirectional constraints: requiring identical outcomes for both original and counterfactual samples. REMI utilizes three data-alignment techniques to infer interpretable rule-based models that act as “fairness invariants.” These rules serve as guardrails to selectively block or relabel unfair predictions without requiring model retraining. Our evaluation on symbolic and neural network programs demonstrates that REMI localizes ground-truth fairness bugs in over 83% of cases, significantly outperforming state-of-the-art baselines and reducing discriminatory decisions in black-box models by up to 70%
 
 
-## 16. Function Calling as a Flexible LLM Defense Add-On: Capability and Application Exploration
+## 15. Function Calling as a Flexible LLM Defense Add-On: Capability and Application Exploration
 
 **Authors:** Zhenlan Ji (Nara Institute of Science and Technology), Daoyuan Wu (Lingnan University, Hong Kong SAR China), Wenxuan Wang (Hong Kong University of Science and Technology), Pingchuan Ma (Zhejiang University of Technology), Shuai Wang (Hong Kong University of Science and Technology), Lei Ma (The University of Tokyo & University of Alberta), Juergen Rahmel (HSBC)
 
 **Categories:** Software Engineering for AI
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832209
 
 **中文总结:** 探索将 function calling 作为 LLM 可插拔轻量防御，通过定义恶意动作函数拦截有害输出；在 DSPEC 真实应用数据集上显著优于现有防御且对 helpfulness 影响极小。
 
@@ -188,33 +217,43 @@ We present REMI, a framework for the automated localization, explanation, and mi
 In this paper, we explore function calling (FC)—a built-in mechanism in modern LLMs for invoking custom tools—as a lightweight and adaptable defense add-on. We show that by defining functions representing malicious actions, LLMs equipped with FC can intercept harmful prompts by triggering these function calls instead of generating unsafe content. Extensive experiments across mainstream LLMs demonstrate that FC substantially improves defense effectiveness with minimal impact on model helpfulness. To further assess FC’s practical utility, we also introduce DSPEC, a new dataset reflecting real-world LLM applications with specific defense requirements. Our evaluations on DSPEC show that FC substantially outperforms existing defenses in this realistic setting. Besides, we also explore the practical applications of FC in various scenarios, including universal defense frameworks and multi-agent systems, further demonstrating its versatility and effectiveness in enhancing LLM security.
 
 
-## 17. Fuzzing the Boundary Between Models and Code in Hybrid AI-enabled Systems
+## 16. Fuzzing the Boundary Between Models and Code in Hybrid AI-enabled Systems
 
 **Authors:** Xinyu Gao (Nanjing University), Yang Feng (Nanjing University), Yuchen Lu (Nanjing University), Zhenqian Liu (Nanjing University), Zhenyu Chen (Nanjing University), Baowen Xu (Nanjing University)
 
 **Categories:** Software Engineering for AI
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832205
 
 **中文总结:** 提出 Neude，面向 hybrid AI-enabled 系统联合程序执行与神经网络 coverage 做 coverage-guided fuzzing，并配合 metamorphic relations 自动检 bug；在 Pylot 自动驾驶系统上揭示模型-代码交互脆弱性。
 
 **Abstract:** Deep learning (DL) techniques are increasingly integrated into traditional software systems, giving rise to hybrid AI-enabled systems that combine neural models with program logic. While these systems exhibit remarkable capabilities, their complex and heterogeneous architectures pose significant challenges for reliability and testing, particularly in safety-critical domains such as autonomous driving. Existing testing approaches either target traditional code or isolate neural networks, overlooking failures arising from their interactions. In this paper, we present Neude, a lightweight and extensible coverage-guided fuzzing framework specifically designed for hybrid AI-enabled systems. Unlike existing tools, Neude combines observations of program execution and neural model coverage to guide input mutations toward unexplored state spaces, enabling systematic evaluation of the entire hybrid pipeline. Moreover, Neude employs domain-aware mutation operators coupled with metamorphic relations, allowing automated bug detection without manual assertions. We evaluate Neude on Pylot, a complex autonomous driving system with tightly coupled neural and program components. Experimental results show that Neude uncovers diverse faults, and further analysis reveals how model uncertainty propagates through deterministic program logic to trigger downstream module failures. Our findings highlight the fragility of current hybrid architectures, calling for a paradigm shift from model-centric testing to system-centric quality assurance that accounts for the intricate interplay between neural and procedural components.
 
 
-## 18. Insecure Coding Preferences in Long-Term Memory: Security Risks for LLM-based Code Generation
+## 17. Insecure Coding Preferences in Long-Term Memory: Security Risks for LLM-based Code Generation
 
 **Authors:** Yuchen Chen (Nanjing University), Wei Cheng (Nanjing University of Aeronautics and Astronautics), Yuan Xiao (Nanjing University), Zhou Yang (University of Alberta; CIFAR AI Chair; Alberta Machine Intelligence Institute), Weifeng Sun (Singapore Management University, Singapore), Chunrong Fang (Nanjing University), Xiang Chen (Nantong University), Baowen Xu (Nanjing University), David Lo (Singapore Management University), Zhenyu Chen (Nanjing University)
 
 **Categories:** Software Engineering for AI
+
+**Artifact badges:** Published Artifact, Artifacts Available, Artifacts Functional
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832170
 
 **中文总结:** 首次系统实证 LLM 长期记忆中不安全编码偏好会持久提升漏洞代码生成风险 11–14% 并降低安全警告；显式安全需求可缓解 20–34% 漏洞率。
 
 **Abstract:** LLM-based systems are increasingly incorporating long-term memory to improve cross-session continuity and output consistency. However, the persistence of long-term memory may introduce additional risks in security-sensitive code generation: once insecure coding preferences are stored, they may silently and persistently influence security-critical choices in subsequent generations. In this study, we conduct the first systematic empirical study to evaluate the impact of insecure coding preferences stored in long-term memory on the security of LLM-based code generation. We study two widely used commercial LLMs (i.e., ChatGPT and Gemini) and examine the impact of long-term memory from multiple perspectives. Our results show that insecure coding preferences stored in long-term memory significantly increase the risk of generating vulnerable code by 11.3%–13.8%. Moreover, they reduce the likelihood that models proactively issue security warnings when producing vulnerable code, leading to a 5.4–14.5 percentage-point decrease. Further analysis reveals that these insecure memory entries are difficult to overwrite through normal interactions and can broadly influence model outputs even when prompts are phrased differently. Finally, we evaluate a mitigation strategy based on explicit security requirements, which reduces vulnerability rates by 19.7%–33.6% but may incur a functional performance drop of up to 15.9%. Based on these findings, we provide actionable suggestions to improve the security of long-term memory in LLM-based code generation.
 
 
-## 19. Is "Knowing It's Malicious'' Enough? Evaluating LLMs for Fine-Grained Malware Behavior Auditing
+## 18. Is “Knowing It’s Malicious” Enough? Evaluating LLMs for Fine-Grained Malware Behavior Auditing
 
 **Authors:** Xinran Zheng (University College London), Xingzhi Qian (University College London), Yiling He (University College London), Shuo Yang (The University of Hong Kong), Lorenzo Cavallaro (University College London)
 
 **Categories:** Software Engineering for AI
+
+**Artifact badges:** Published Artifact, Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832187
 
 **中文总结:** 提出 MalEval 评估框架，用 expert audit report 与 context-driven IR 分解 malware auditing 为四阶段可验证任务；揭示 LLM 依赖表面线索、难组合证据链等能力边界。
 
@@ -223,22 +262,30 @@ In this paper, we explore function calling (FC)—a built-in mechanism in modern
 Together, these obstacles make benchmarking LLM-based auditing non-trivial, leaving their true capabilities and failure modes opaque. To bridge this gap, we introduce MalEval, an evaluation framework for systematically measuring the reasoning fidelity of LLMs in malware auditing. We pair real-world application codebases with expert-written audit reports to obtain fine-grained, behavior-level ground truth. Large codebases are compressed into unified behavior-relevant program contexts via a context-driven intermediate representation that preserves essential call relations. Both expert reports and model outputs are then mapped, through constrained reasoning, into structured evidence chains linking code-level facts to high-level behaviors in a common, comparable space. Built on this foundation, MalEval decomposes auditing into 4 stage-wise auditing tasks, allowing each intermediate judgment to be independently verified under limited context windows. We leverage MalEval to evaluate seven widely used LLMs and uncover clear capability boundaries: models rely on surface cues over verifiable evidence, struggle to compose dispersed facts into coherent attack chains, and are highly sensitive to context formulation. These findings shift the focus from optimizing isolated outputs to designing LLM and agentic workflows that can reliably support malware auditing.
 
 
-## 20. Learning from the Test: Self-Referential Differential Testing for Deep RL Agents
+## 19. Learning from the Test: Self-Referential Differential Testing for Deep RL Agents
 
 **Authors:** Junda He (Singapore Management University), Jieke Shi (Singapore Management University), Zhou Yang (University of Alberta; CIFAR AI Chair; Alberta Machine Intelligence Institute), Mingfei Cheng (Singapore Management University), David Lo (Singapore Management University)
 
 **Categories:** Software Engineering for AI
+
+**Artifact badges:** Published Artifact, Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832102
 
 **中文总结:** Delta 对 DRL 智能体分两阶段测试：先收集安全测试数据，再用离线 RL 训练 challenger 并与 AUT 做差分测试以发现最优性缺陷。在五个环境中平均发现 2517 个最优性问题，较基线提升 50.2%。
 
 **Abstract:** Deep Reinforcement Learning (DRL) has achieved significant success in complex decision-making problems. As DRL systems are increasingly deployed in real-world applications, ensuring their quality and reliability is paramount. Current works primarily focus on detecting safety-critical failures, often neglecting policy optimality, which can lead to reduced efficiency, user distrust, and economic losses. This oversight, compounded by the inherent “testing oracle problem” for optimality, leaves a significant gap in comprehensively evaluating DRL systems. To address this gap, we propose Delta (Differential Testing for DRL Agents), a novel and comprehensive framework that automatically identifies both safety-critical and optimality bugs in DRL agents. Delta employs a two-phase approach: (1) Safety Testing, where the Agent Under Test (AUT) is evaluated for catastrophic failures while collecting data from its decision-making policy, and (2) Optimality Testing, where this collected data from the prior phase is used to train a challenger agent via Offline Reinforcement Learning. Differential testing is then performed by comparing the challenger agent against the AUT; instances, where the challenger achieves higher cumulative rewards indicate optimality issues in the AUT. We demonstrate Delta’s effectiveness across five environments. We investigate the effectiveness of three offline RL algorithms (BC, BCQ, and CQL) in generating challenger agents. Experimental results demonstrate that safety testing datasets are valuable for training competent DRL agents. Challenger agents trained with BCQ proved most effective for identifying optimality issues within the framework of Delta. Across the five environments, Delta uncovered an average of 2,517 optimality issues, outperforming the baseline methods by 50.2%.
 
 
-## 21. LogicHunter: Testing LLM Agent Frameworks with an Agentic Oracle
+## 20. LogicHunter: Testing LLM Agent Frameworks with an Agentic Oracle
 
 **Authors:** Minghui Long (Huazhong University of Science and Technology), Yanjie Zhao (Huazhong University of Science and Technology), Haoyu Wang (Huazhong University of Science and Technology)
 
 **Categories:** Software Engineering for AI
+
+**Artifact badges:** Published Artifact, Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832142
 
 **中文总结:** LogicHunter 对 LangChain、LlamaIndex、CrewAI 等 LLM agent 框架做规约驱动模糊测试，并用 ReAct 式 Agentic Oracle 主动查文档与源码判定缺陷。发现 40 个未知 bug（30 已确认），Oracle 精度 90.9%，远超被动基线 27.9%。
 
@@ -247,11 +294,13 @@ Together, these obstacles make benchmarking LLM-based auditing non-trivial, leav
 We present LogicHunter, a fuzzing framework that addresses both the generation and oracle challenges through active specification-aware testing. LogicHunter employs specification-driven generation that systematically fuses formal type constraints with authentic usage patterns from real-world repositories, synthesizing inputs that are valid by construction yet semantically extreme, equipped with behavioral probes to expose silent failures. To resolve oracle ambiguity, we introduce the Agentic Oracle, which transcends passive classification by actively retrieving documentation, navigating source code, and inspecting runtime states through a ReAct-based architecture with Dual-Layer State Management and Dual-Stream Memory. Evaluated on three widely deployed frameworks, LogicHunter discovered 40 previously unknown bugs with 30 confirmed and 26 fixed by developers, while state-of-the-art baselines found none. The Agentic Oracle achieves 90.9% precision, surpassing the best passive approach at 27.9% by 63 percentage points.
 
 
-## 22. Lookahead-then-Verify: Reliable Constrained Decoding for Diffusion LLMs under Context-Free Grammars
+## 21. Lookahead-then-Verify: Reliable Constrained Decoding for Diffusion LLMs under Context-Free Grammars
 
 **Authors:** Yitong Zhang (Beihang University), Yongmin Li (Peking University), Yuetong Liu (Beihang University), Jia Li (Tsinghua University), Xiaoran Jia (Beijing Institute of Technology), Zherui Li (Beijing University of Posts and Telecommunications), Ge Li (Peking University)
 
 **Categories:** Software Engineering for AI
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832146
 
 **中文总结:** LAVE 针对扩散 LLM 在 CFG 约束解码时利用并行 token 分布做 lookahead 验证，确保中间输出可扩展为合法句子。在四个 dLLM 与三个基准上显著提升语法正确率，运行时开销可忽略。
 
@@ -260,11 +309,26 @@ We present LogicHunter, a fuzzing framework that addresses both the generation a
 To address these challenges, we present LAVE, a constrained decoding approach specifically designed for dLLMs. Our approach leverages a key property of dLLMs, namely their ability to predict token distributions for all positions in parallel during each forward pass. Whenever a new token is proposed by model, LAVE performs lookahead using these distributions to efficiently and reliably verify the validity of the proposed token. This design ensures reliable constraints by reliably preserving the potential for intermediate outputs to be extended into valid sentences. Extensive experiments across four widely used dLLMs and three representative benchmarks demonstrate that LAVE consistently outperforms existing baselines and achieves substantial improvements in syntactic correctness, while incurring negligible runtime overhead.
 
 
+## 22. On Behavioral Alignment of Model-Code and Human-Code Understandability via Behavioral Proxies
+
+**Authors:** Xiaokai Rong (University of Texas at Dallas), Aashish Yadavally (University of Central Florida), Hridya Dhulipala (University of Texas at Dallas), Anh H. N. Nguyen, Tien N. Nguyen
+
+**Categories:** Software Engineering for AI
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832202
+
+**中文总结:** 本文引入语义自一致性等代理指标量化模型代码可理解性，并与多组人类评分对比。LLM 与专业开发者理解性对齐最强，但与不同经验学生群体对齐较弱，角色条件 prompt 无法改善后者。
+
+**Abstract:** Code understandability is a critical aspect of software quality. Prior research has largely focused on this attribute from a human-centric perspective, while it should be viewed as a relational property arising from the interaction between a reader and the code. With the increasing adoption of large language models (LLMs) in software engineering, we posit that the notion of “reader” should be generalized to encompass both humans and models. Building on this relational perspective, we extend the concept of code understandability to distinguish between human and model code understandability, aiming to investigate the alignment between the two. To this end, we use a dataset from a prior study containing human-rated judgments of understandability across diverse participant groups, and evaluate multiple open and closed-source LLMs. To operationalize model code understandability, we introduce four proxies: P0, based on program comprehension-focused question answering; and P1–P3, based on program intent summarization (derived from our proposed semantic self-consistency). Our findings show that LLMs exhibit stronger alignment with general human code understandability than previously used shallow machine learning baselines. Stratified analyses further reveal that model code understandability aligns most closely with professional developers, but significantly less with other student groups. Role-conditioned prompting does not improve the alignment for the latter, suggesting that current LLMs cannot accurately mimic the perspectives of human readers with varying expertise. Finally, we demonstrate that semantic self-consistency is a reliable and extensible measure for quantifying model code understandability, with broad implications in both software engineering research and practice.
+
+
 ## 23. PackMonitor: Towards Zero Package Hallucinations via Decoding-Time Monitoring
 
 **Authors:** Xiting Liu (Tsinghua University), Yuetong Liu (Beihang University), Yitong Zhang (Beihang University), Jia Li (Tsinghua University), Shi-Min Hu (Tsinghua University)
 
 **Categories:** Software Engineering for AI
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832118
 
 **中文总结:** PackMonitor 在解码时监控 LLM 输出，于安装命令生成阶段用 Context-Aware Parser 触发 Package-Name Intervenor，将解码空间限制在权威包列表并配合 DFA-Caching。五种 LLM 上包幻觉率降至零且推理延迟开销可忽略。
 
@@ -279,6 +343,8 @@ In this work, we argue that package hallucinations are theoretically preventable
 
 **Categories:** Software Engineering for AI
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832252
+
 **中文总结:** 提出 Mure，通过 memoization 复用 DNN 原模型与 mutant 的公共前缀计算，实现可证明无损的 DNN mutation testing 加速。在 15 个模型上平均降低 44.54% 计算开销，且 mutation score 与穷举测试等价。
 
 **Abstract:** Mutation analysis has recently reemerged in the context of deep neural networks (DNNs) as a promising, but notoriously costly, approach for assessing test dataset adequacy. Existing techniques speed up DNN mutation testing through lossy approximations that trade efficiency for mutation score accuracy. This paper introduces Mure, the first provably lossless framework for accelerating DNN mutation testing via memoization. Mure is based on the idea that DNN mutants and the original model share substantial redundant computation, so during mutation testing, it executes only the mutated suffixes of each mutant and reuses the common prefix from the original model, which is computed only once. We give a formal account of memoized mutation testing, and prove that Mure is sound, i.e., it produces results equivalent to exhaustive vanilla mutation testing, and identify basic conditions under which speed-up is guaranteed. We have implemented Mure and evaluated it on 15 DNN models of various architectures, complexities, and sizes ranging from a few thousands to millions of parameters. This provides empirical evidence that Mure reduces the computational cost of mutation testing by 44.54%, on average. We also observed that while state-of-the-art techniques tend to yield higher acceleration (up to 88.97%, on average), they come at the cost of some error in mutation score. We further analyze the effect of mutation generation selection ratio on the effectiveness of Mure and observed predictable reductions in memoization opportunities with increasing the percentage of mutated neurons. We observed that Mure offers more than 20% speed-up even when as high as 5% of the neurons are mutated.
@@ -289,6 +355,8 @@ In this work, we argue that package hallucinations are theoretically preventable
 **Authors:** Yuan Si (University of Waterloo), Simeng Han (Stanford University), Daming Li (Independent Researcher), Hanyuan Shi (Independent Researcher), Jialu Zhang (University of Waterloo)
 
 **Categories:** Software Engineering for AI
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832131
 
 **中文总结:** 发布 ScratchNet 可执行基准，含 100 个高复杂度 Scratch 项目及测试套件、块级最小编辑约束与多媒体资产，三层协议评估 LLM 修复。为块语言程序理解、调试与修复提供可复现评测与后训练闭环。
 
@@ -305,6 +373,8 @@ To enable rigorous and reproducible evaluation, we propose a three-layer, execut
 
 **Categories:** Software Engineering for AI
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832167
+
 **中文总结:** 首次系统评估 MLLM 以渲染图像理解代码的可行性：最高 8× token 压缩仍有效，语法高亮在 4× 压缩下提升补全，克隆检测对视觉压缩高度鲁棒。揭示图像模态代码表示的效率潜力与局限。
 
 **Abstract:** Large Language Models (LLMs) have achieved remarkable success in source code understanding, yet as software systems grow in scale, computational efficiency has become a critical bottleneck. Currently, these models rely on a text-based paradigm that treats source code as a linear sequence of tokens, which leads to a linear increase in context length and associated computational costs. The rapid advancement of Multimodal LLMs (MLLMs) introduces an opportunity to optimize efficiency by representing source code as rendered images. Unlike text, which is difficult to compress without losing semantic meaning, the image modality is inherently suitable for compression. By adjusting resolution, images can be scaled to a fraction of their original token cost while remaining recognizable to vision-capable models. To explore the feasibility of this approach, we conduct the first systematic study on the effectiveness of MLLMs for code understanding. Our experiments reveal that: (1) MLLMs can effectively understand code with substantial token reduction, achieving up to 8x compression; (2) MLLMs can effectively leverage visual cues such as syntax highlighting, improving code completion performance under 4x compression; and (3) Code-understanding tasks like clone detection exhibit exceptional resilience to visual compression, with some compression ratios even slightly outperforming raw text inputs. Our findings highlight both the potential and current limitations of MLLMs in code understanding, which points out a shift toward image-modality code representation as a pathway to more efficient inference.
@@ -315,6 +385,8 @@ To enable rigorous and reproducible evaluation, we propose a three-layer, execut
 **Authors:** Kerui Huang, Shuhan Liu (Zhejiang University), Xing Hu (Zhejiang University), Tongtong Xu (Nanjing University), Lingfeng Bao (Zhejiang University), Xin Xia (Zhejiang University)
 
 **Categories:** Software Engineering for AI
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832120
 
 **中文总结:** 提出 SEER 自适应 CoT 压缩框架：Best-of-N 去循环、数据驱动过滤后微调，在代码生成等 SE 任务上平均缩短推理链 41.6% 并提升性能。发现过长 CoT 常致截断与 n-gram 退化循环。
 
@@ -331,6 +403,8 @@ Motivated by these findings, we propose SEER (Self-Enhancing Efficient Reasoning
 
 **Categories:** Software Engineering for AI
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832194
+
 **中文总结:** 提出 SpectraDL，从算子文档抽取测试规约、将历史 issue 转为 bug pattern，并以语义+结构双检索做跨框架迁移测试。在四个主流 DL 框架中发现 125 个未知 bug，107 个获开发者确认。
 
 **Abstract:** Deep learning (DL) frameworks provide diverse fundamental algorithmic units as operators, which are critical infrastructure for constructing various intelligent software. Due to the fact that open source development paradigm is widely adopted by mainstream frameworks, bugs may repeatedly occur across operators and even frameworks. Although some efforts have been reported that large language models (LLMs) are leveraged to exploit historical issues to generate test cases for cross-framework testing, existing approaches suffer from the following limitations: 1) the generated test cases have low fault detection capability since they mainly rely on inputs or contexts from historical issues without considering the underlying root causes; 2) an effective mechanism is missing to determine the appropriate scope in a targeted framework for applying generated test cases. To overcome these limitations, we propose SpectraDL, a historical issue-driven, test specification-assisted transfer testing approach for DL frameworks. SpectraDL first extracts rigorous test specifications for each operator from official documentation, and then extracts and transforms historical issues and associated pull requests into structured fault representations (i.e., bug patterns). A dual retrieval mechanism based on semantic intent and structural input-space features is designed to transfer these bug patterns for testing related operators across frameworks. We evaluated SpectraDL with four mainstream DL frameworks, and experimental results have shown that SpectraDL successfully detected 125 previously unknown bugs, with 107 confirmed by developers. The results confirm that SpectraDL delivers a promising transfer testing approach for DL frameworks.
@@ -341,6 +415,8 @@ Motivated by these findings, we propose SEER (Self-Enhancing Efficient Reasoning
 **Authors:** Xinyu Gao (Nanjing University), Shuoxiao Zhang (Nanjing University), Minghui Wei (Nanjing University), Xiao Zhang (Nanjing University), An Guo (The Hong Kong Polytechnic Universituy, Hong Kong SAR China), Enyi Tang (Nanjing University)
 
 **Categories:** Software Engineering for AI
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832178
 
 **中文总结:** 提出 StateTree，构建 Abstract State Tree 抽象 RNN 决策行为并引导测试探索未见路径。能准确抽象 RNN 决策、检出数百故障，以其测试用例重训练可超越现有 RNN 覆盖率方法的鲁棒性提升。
 
@@ -355,6 +431,8 @@ To address these challenges, we propose StateTree, a tree-based abstract modelin
 
 **Categories:** Software Engineering for AI
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832119
+
 **中文总结:** TensorLock 通过连通性聚类与类型感知指纹识别，自动恢复模型托管平台上的依赖关系图。聚类 ARI 达 0.96、依赖识别 DF1 达 0.82，在 289 个孤立模型中恢复 189 条缺失依赖（42 条获作者确认）。
 
 **Abstract:** The public models on the model hosting platforms have undergone exponential growth, allowing developers to build upon existing models rather than training from scratch. These models are continuously reused, modified, and re-distributed similar to traditional software components, breeding a dense and rapidly evolving model supply chain. However, while enjoying the benefits of model reuse, developers also inherit supply risks ranging from legal liabilities to security threats. To mitigate these risks, a well-established model dependency graph can significantly benefit supply chain risk governance. Unfortunately, although model hosting platforms offer mechanisms for dependency disclosure, such declarations are optional and frequently missing.
@@ -368,6 +446,10 @@ To address this challenge, we propose a novel model dependency recovering framew
 
 **Categories:** Software Engineering for AI
 
+**Artifact badges:** Published Artifact, Artifacts Available, Artifacts Functional
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832183
+
 **中文总结:** NCIP 基于 Neural Collapse 思想，通过晚训 checkpoint 的预测一致性而非单点置信度对 DNN 测试用例排序。在多数据集/架构上 RAUC 提升 2.34%–13.57%，RAUC-500 提升 4.61%–31.77%，显著优于现有基线。
 
 **Abstract:** With the widespread deployment of deep neural networks (DNNs) in safety-critical domains, reducing the cost of model validation under limited testing budgets has become increasingly important. Existing test case prioritization techniques often rely on single-checkpoint confidence signals derived from output probabilities. However, DNNs can be confidently wrong, and the confidence margin between the predicted and competing classes is frequently small, which weakens early fault discovery. To address this limitation, we propose a \textbf{N}eural-\textbf{C}ollapse-\textbf{I}nspired \textbf{P}rioritization (\textbf{NCIP}) framework that replaces absolute confidence with cross-checkpoint consistency in the terminal training regime, where model geometry becomes highly structured. NCIP introduces two key components. First, it selects a coherent set of late training checkpoints by measuring the equiangularity of classifier weights, quantified as the standard deviation of pairwise cosine similarities among class weight vectors. Second, it prioritizes test inputs by their prediction variability across the selected checkpoints, surfacing boundary-adjacent and failure-prone samples that are unstable under checkpoint-induced decision boundary shifts. Extensive experiments across multiple datasets and architectures show that NCIP consistently improves early fault discovery over strong baselines, achieving \textbf{2.34%–13.57%} RAUC gains and \textbf{4.61%–31.77%} RAUC-$500$ gains under the same testing budget. NCIP further attains the best average performance across all dataset model pairs.
@@ -378,6 +460,10 @@ To address this challenge, we propose a novel model dependency recovering framew
 **Authors:** Ali Asgari (TU Delft), Mitchell Olsthoorn (Delft University of Technology), Annibale Panichella (Delft University of Technology)
 
 **Categories:** Software Engineering for AI
+
+**Artifact badges:** Published Artifact, Artifacts Available, Artifacts Reusable
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832236
 
 **中文总结:** 大规模复现研究将 13 种 DNN 测试用例选择（TCS）策略应用于 17 个代码 LLM 的克隆检测、漏洞检测与技术债预测任务。发现仅部分视觉 DNN 结论可泛化，特征驱动不确定性方法 consistently 优于熵基线，效果因任务与模型而异。
 
@@ -394,6 +480,8 @@ The results indicate that only a subset of findings reported for vision-based DN
 
 **Categories:** Software Engineering for AI
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832208
+
 **中文总结:** Chunk Coverage（CC）提出无需 oracle 的 RAG 检索组件测试充分性准则，度量测试套件对语料 chunk 的覆盖比例并指导测试选择。CC 引导测试达 50% 覆盖率速度比随机快 1.9×、比冗余策略快 6.9×，APFD 提升 10%–25%。
 
 **Abstract:** Retrieval-Augmented Generation (RAG)-based systems are increasingly deployed in high-stakes settings where correct behaviour depends not only on the language model but also on the retrieval component that selects external documents at inference time. While existing RAG evaluation metrics assess retrieval and generation quality on a per-query basis, typically relying on query-level test oracles such as reference answers or relevance annotations, they provide limited insight into whether a test suite adequately exercises the retrieval behaviour of the system as a whole. In this paper, we introduce Chunk Coverage (CC), an oracle-independent test adequacy criterion for testing the retrieval component of RAG systems. CC measures the fraction of corpus chunks that are retrieved at least once across a test suite, providing a structural view of which parts of the retrieval space have been exercised. We further show how CC can be used to guide test selection and generation by prioritising queries that expand coverage of previously unexercised retrieval regions. We evaluate CC on clinical and financial RAG system scenarios. CC-guided testing reaches 50% of attainable coverage up to 1.9 times faster than random selection and up to 6.9 times faster than redundancy-biased strategies. Moreover, CC improves fault detection effectiveness (APFD) by 10% to 25% over random, indicating earlier discovery of distinct retrieval faults. These results show that CC captures retrieval diversity relevant to effective testing without requiring test oracles.
@@ -404,6 +492,8 @@ The results indicate that only a subset of findings reported for vision-based DN
 **Authors:** Jiexin Wang (South China University of Technology), Liuwen Cao (South China University of Technology), Xitong Luo (South China University of Technology), Yang Cao (South China University of Technology), Zhenghao Li (South China University of Technology), Yunyi Xiao (South China University of Technology), Mengchen Zhao (South China University of Technology), Adam Jatowt (University of Innsbruck), Yi Cai (School of Software Engineering, South China University of Technology, Guangzhou, China)
 
 **Categories:** Software Engineering for AI
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832159
 
 **中文总结:** CodeSecEval 提供 255 个可执行 Python 安全编码任务（77 类 CWE），SecAwareCoder 通过任务自适应威胁建模与执行反馈引导安全代码生成。多 LLM 骨干上 Pass@1 与安全鲁棒性 consistently 优于 prompt 与分析器基线。
 
@@ -416,6 +506,8 @@ The results indicate that only a subset of findings reported for vision-based DN
 
 **Categories:** Software Engineering for AI
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832254
+
 **中文总结:** 首次系统评估模型编辑作为 LLM 安全代码生成硬化机制，对比 CoSec 等推理时方法。编辑在已知漏洞上安全比提升 15%–25%，SafeEdit 后处理将 Pass@1 比 UltraEdit 提升 44.40%–156.07% 且基本保持安全性。
 
 **Abstract:** Large language models (LLMs) are widely used for code generation, yet they can reproduce vulnerable code implementations learned from insecure patterns in training data. Prior work has primarily explored \emph{inference-time hardening} to reduce insecure generations without updating the target model. While effective, this paradigm couples security behavior to the auxiliary component and incurs additional runtime overhead. This paper presents the first systematic empirical study of applying \emph{model editing} as the \emph{model-level} hardening mechanism for secure code generation. Unlike inference-time interventions, model editing updates a small subset of parameters to inject security-relevant knowledge directly into the target LLM. We evaluate 3 state-of-the-art editing methods across diverse LLM families and compare them with CoSec, a representative inference-time hardening approach, focusing on: (i) security effectiveness and robustness, (ii) generalization to unseen vulnerabilities, and (iii) functional correctness on general programming tasks. Our results show that model editing yields substantially larger security gains than CoSec on seen vulnerability types, improving security ratios by 15%–25% over vanilla models, and these gains remain stable under prompt perturbations. However, security improvements do not always transfer reliably to unseen vulnerabilities and induce functional regressions on general programming tasks, even for UltraEdit, the best-performing editing method in our evaluation. To mitigate this side effect, we propose SafeEdit, an effective post-edit refinement method that combines functional tuning with edit-aware regularization, which improves Pass@1 by 44.40%–156.07% over UltraEdit and largely preserves (and even improves) security. Moreover, SafeEdit and CoSec are complementary: combining them can further improve security under stochastic decoding while maintaining strong functional correctness. Finally, we analyze efficiency and key design factors, showing that model editing is more efficient than CoSec and sensitive to editing depth, parameter location, and injected context. Overall, our work provides evidence-backed guidance for applying model editing to secure code generation.
@@ -426,6 +518,10 @@ The results indicate that only a subset of findings reported for vision-based DN
 **Authors:** Dongze Li (The Hong Kong University of Science and Technology and Guangzhou HKUST Fok Ying Tung Research Institute), Songqiang Chen (The Hong Kong University of Science and Technology), Jialun Cao (The Hong Kong University of Science and Technology and Guangzhou HKUST Fok Ying Tung Research Institute), Shing-Chi Cheung (Hong Kong University of Science and Technology)
 
 **Categories:** Software Engineering for AI
+
+**Artifact badges:** Published Artifact, Artifacts Available, Artifacts Reusable
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832275
 
 **中文总结:** 通过受控实验系统分析 ICL 代码示例各属性对 LLM 代码生成的影响。发现 LLM 难以从相似题解提取泛化洞察，但 I/O 演示等上下文信息显著有效，语义化标识符命名比格式更关键（去除描述性命名可降 30 个百分点）。
 
@@ -438,9 +534,10 @@ The results indicate that only a subset of findings reported for vision-based DN
 
 **Categories:** Software Engineering for AI
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832235
+
 **中文总结:** Hopta 通过选择性启用/禁用 Plaintext-Domain Optimization Passes 的流水线变异检测 CMLC 优化缺陷，并用 profile 引导代码化简隔离根因。在 SecretFlow-SPU 上发现 11 个优化缺陷，编译电路成本最高增加 310.2%。
 
 **Abstract:** Growing concerns about data security and privacy have fueled the widespread adoption of Privacy-Preserving Machine Learning (PPML). Cryptography-based PPML, which allows computation directly on encrypted data, significantly mitigates data leakage risks. To facilitate its adoption, Ciphertext Machine Learning Compilers (CMLCs) automate the translation of high-level ML procedures into low-level circuits for encrypted data. Recently, CMLCs have increasingly adopted infrastructure from Plaintext Machine Learning Compilers (PMLCs). While integrating Plaintext-Domain Optimization Passes (PDOPs) into CMLCs offers potential performance, usability, and extensibility benefits, our study shows it can also lead to severe performance regressions — a risk that has been largely overlooked.
 
 To address this, we introduce Hopta, a hybrid domain optimization defects tester and analyzer, aiming to find optimization bugs that can degrade the performance of compiled circuits from CMLCs. We carefully design two core components: (1) an optimization pipeline mutation mechanism to detect optimization defects by selectively enabling/disabling PDOPs, and (2) a profile-guided code reduction tool that efficiently simplifies defect-triggering programs to isolate optimization defects and facilitate debugging. Applying Hopta to SecretFlow-SPU, a production-grade CMLC, we identified 11 optimization defects (spanning matrix indexing, arithmetic/boolean conversion, and cost model deviation) that led to substantial performance regressions, with compiled circuits incurring up to 310.2% increased cost. Our comprehensive analysis provides empirical insights into fundamental differences between plaintext and ciphertext domain optimization strategies, offering crucial guidance for future CMLC development. We conclude with a brief discussion of extensions to other hybrid ML compilers, underscoring the methodology’s compiler-agnostic nature. This work establishes a new research direction for enhancing CMLC performance and the practical deployment of privacy-preserving ML systems.
-

@@ -10,6 +10,8 @@ Count: 5
 
 **Categories:** Mining Software Repositories
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832180
+
 **中文总结:** 本文识别 825 个已弃用但下载量持续增长的 NPM 包（GDNP），结合维护者与用户调查分析其社区参与度下降与依赖树复杂性导致的持续使用原因。GDNP 每月带来超 1.26 亿次高危漏洞暴露，社区讨论却极少关注安全问题。
 
 **Abstract:** Package deprecation in ecosystems like NPM signals the termination of maintenance, and continued use of such packages poses potential sustainability and security risks to dependent projects. We observe a counter-intuitive phenomenon from widely-used deprecated packages whose user demand continues to grow after deprecation; we define these as Growing-user-demand Deprecated NPM Packages (GDNPs). Despite this clear contradiction between deprecation and growing user demand, the community engagement, reasons, and challenges of GDNPs have not been systematically examined. To bridge this gap, we conduct a mixed‑method empirical study that identifies and analyzes 825 GDNPs from 4,011 widely‑used deprecated packages, alongside surveys of 76 maintainers and 67 users. We find that GDNPs grow on average by 82,811 download counts per month after deprecation, yet repository‑level community engagement declines significantly, revealing an expanding maintenance gap. Quantitatively, GDNPs contribute to over 126 million monthly exposures to high-severity vulnerabilities. Surveys indicate that continued reliance stems primarily from the complexity of the dependency tree and user inertia, leading to reactive maintenance and the accumulation of technical debt. Furthermore, topic modeling of post-deprecation discussions of GDNP repositories shows that community discussions heavily prioritize functional errors while seldom discussing security vulnerabilities, highlighting a misalignment between perceived and actual risk.  Based on the results, we provide actionable implications that can facilitate future research and assist stakeholders in improving the maintenance of GDNP.
@@ -20,6 +22,10 @@ Count: 5
 **Authors:** Bo Wang (Beijing Jiaotong University), Yueyang Chen (Beijing Jiaotong University), Jieke Shi (Singapore Management University), Minghui Li (Beijing Jiaotong University), Yunbo Lyu (Singapore Management University), Yinan Wu (North Carolina State University), Youfang Lin (Beijing Jiaotong University), Zhou Yang (University of Alberta; CIFAR AI Chair; Alberta Machine Intelligence Institute)
 
 **Categories:** Mining Software Repositories
+
+**Artifact badges:** Published Artifact, Artifacts Available, Artifacts Reusable
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832175
 
 **中文总结:** 构建 GitHub+Hugging Face 上 12000+ LLMware 供应链数据集并分析许可证实践；提出 LiAgent 做生态级 license 兼容性分析，F1 达 87%，已提交 60 个 incompatibility issue。
 
@@ -33,6 +39,8 @@ Leveraging GitHub and Hugging Face, two premier hubs for code and models, we cur
 **Authors:** Jiaying Zhu (Nanyang Technological University), Lyuye Zhang (Nanyang Technological University), Wu Jiahui (Nanyang Technological University, Singapore), CHENGYUE LIU, Yang Liu (Nanyang Technological University)
 
 **Categories:** Mining Software Repositories
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832133
 
 **中文总结:** 大规模实证研究 3820 个活跃 fork 的同步行为，揭示仅 6.92% fork 本地提交进入 PR 的同步悖论，并构建三阶段 syncability 评估流水线。在 50 万 fork 本地提交中筛出 12284 个可同步对，人工确认 83 个潜在 1-day 漏洞。
 
@@ -49,6 +57,8 @@ Based on these insights, we develop a three-stage syncability assessment pipelin
 
 **Categories:** Mining Software Repositories
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832264
+
 **中文总结:** 对 19 个 Java 仓库 128417 次提交做细粒度纵向研究，分析生产代码 smell 与测试 smell 的配对共演化、生存期与移除动机。发现 30 条显著关联规则且配对 smell 寿命通常更短，常触发风险驱动重构。
 
 **Abstract:** As software systems grow in complexity, ensuring maintainability is essential, but often hindered by various quality issues. Among them, code smells and test smells are widely recognized indicators of technical debt that degrade system quality. While production code and test suites are intrinsically coupled and evolve together, existing research predominantly studies code smells and test smells in isolation, ignoring their underlying connection over time.
@@ -62,7 +72,10 @@ To bridge this gap, this paper presents a fine-grained longitudinal study on the
 
 **Categories:** Mining Software Repositories
 
+**Awards:** ACM SIGSOFT Distinguished Paper Award
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832226
+
 **中文总结:** 对 Verilator HDL 编译器 488 个已确认 bug 进行首个系统实证研究，分析症状、根因与触发用例特征并评估现有测试技术有效性。为 HDL 编译器可靠性改进与针对性自动化测试方法设计提供可操作建议。
 
 **Abstract:** Verilator is the premier open-source Hardware Description Language (HDL) compiler. It transforms Verilog and SystemVerilog designs into optimized C++ or SystemC models, enabling high-speed, cycle-accurate simulation prior to large-scale production. As a cornerstone of the hardware verification ecosystem, the correctness of Verilator is paramount; compiler faults can lead to silent simulation errors or unexpected failures, undermining the integrity of the hardware development lifecycle. Unlike traditional software compilers, HDL compilers manage unique concurrency and synthesis semantics, potentially introducing distinct bug patterns and complexities. However, while prior research has explored testing techniques for HDL toolchains, there remains a lack of systematic empirical studies characterizing the specific nature of bugs in Verilator. This knowledge gap hinders the development of targeted improvements in compiler robustness and testing strategies. To address this, we present the first comprehensive empirical study of Verilator bugs. We manually collected, analyzed, and categorized a dataset of 488 confirmed bugs from the official repository over three years. Our study investigates bug symptoms, root causes, and the characteristics of triggering test cases, while also evaluating the effectiveness of existing testing techniques. Based on our findings, we provide actionable guidance for developers to enhance Verilator’s reliability and for researchers to design more effective automated testing methodologies for HDL compilers.
-

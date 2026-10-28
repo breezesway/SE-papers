@@ -10,6 +10,8 @@ Count: 31
 
 **Categories:** Testing and Fuzzing
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832216
+
 **中文总结:** 发布可复现 flaky test 数据集 ReproFlake，含 1115 个跨四类别的测试及编译、运行、修复脚本与执行日志。该数据集为 flaky test 复现、修复与研究提供了首个端到端可复现实验环境。
 
 **Abstract:** Flaky tests pass and fail non-deterministically when run on the same version of code. Although many techniques have been proposed to detect, debug, and repair flaky tests, reproducing their failures remains a major challenge due to their inherent nondeterminism. Many datasets related to flaky tests exist to help researchers study them, but these datasets are often composed of disjoint sets of flaky tests, where each dataset provides some unique information over the others, such as flaky tests of many different categories, failure logs of flaky tests, or flaky tests reported by developers vs. flaky tests found by automated tools. In this work, we aim to create a reproducible dataset of flaky tests, which are curated from both developer issue reports and a popular dataset of flaky tests. Compared to prior flaky test datasets, our dataset is the first to provide (1) a reproducible environment to compile the flaky tests, (2) scripts to run the tests to reproduce the failure, (3) scripts to automatically apply the flaky test fixes and ensure that the test is no longer flaky, and (4) execution logs of the flaky test passing and failing. We present ReproFlake, a dataset of 1115 reproducible flaky tests, spread across four different flaky test categories. We create guidelines to help others contribute to this reproducible dataset, as well as demonstrate how to use our dataset to understand the challenges with reproducing flaky test failures (i.e., challenges that researchers may face when using any of the prior flaky test datasets), the characteristics (e.g., location of the fix and its correlation with the flaky test category, as well as the difficulties researchers may face in using our dataset to collect additional information (e.g., code coverage) about flaky tests. Our findings show that error information helps identify flaky test categories and guide repairs, that unresolved compilation failures highlight challenges in building legacy projects, and that knowing typical fix locations helps prioritize repair efforts.
@@ -20,6 +22,10 @@ Count: 31
 **Authors:** Ziqiao Kong (Nanyang Technological University), Wanxu Xia (Beihang University), Zhengwei Li (Bitslab), Yi Lu (BitsLab), Pan Li (Bitslab), Liqun Yang (School of Cyber Science and Technology, Beihang University), Yang Liu (Nanyang Technological University), Xiapu Luo (Hong Kong Polytechnic University), Shaohua Li (The Chinese University of Hong Kong)
 
 **Categories:** Testing and Fuzzing
+
+**Artifact badges:** Published Artifact, Artifacts Available, Artifacts Functional
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832169
 
 **中文总结:** 提出首个 Move 智能合约类型感知 fuzzing 框架 Belobog，基于类型图生成合法交易并集成 concolic 执行器。在 109 个真实项目上检出 100% 关键与 79%  major 漏洞，并成功复现 Cetus 与 Nemo 事件。
 
@@ -36,6 +42,8 @@ We evaluated Belobog on 109 real-world Move smart contract projects. The experim
 
 **Categories:** Testing and Fuzzing
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832137
+
 **中文总结:** 提出面向浏览器特性的 fuzzing 框架 Feazzer，以 HTML 与扩展的混合程序及消息引导机制探索深层浏览器状态。在 Chromium 上覆盖率提升最多 231.1%，发现 39 个未知 bug（含 6 个 CVE）。
 
 **Abstract:** Modern web browsers constitute complex software systems responsible for processing and rendering diverse web content. Despite extensive testing and security measures implemented by browser vendors and the community, the inherent complexity of these systems makes the complete elimination of vulnerabilities practically infeasible. Existing DOM and API fuzzing techniques inadequately address the expanded attack surface introduced by modern browser features and extensions, resulting in a substantial number of elusive vulnerabilities remaining undetected.
@@ -49,6 +57,8 @@ This paper presents Feazzer, an efficient feature-driven browser fuzzing framewo
 
 **Categories:** Testing and Fuzzing
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832295
+
 **中文总结:** CARE 针对法规变更场景，构建 Rule-Requirement-Scenario-Test Case 四层级联关系模型，精准识别需更新的合规测试用例并最大化复用未受影响部分。多领域实验平均 F1 达 90.3%，较现有方法最高提升 164%。
 
 **Abstract:** In response to frequent changes in regulatory rules, this paper proposes CARE, a cascading impact-aware framework for automated compliance testing evolution. Existing approaches often suffer from over-reuse or missed updates because they treat rule changes in isolation and ignore complex interdependencies across testing artifacts. CARE addresses this issue by constructing a unified four-layer cascading relation model spanning Rule-Requirement-Scenario-Test Case, enabling fine-grained traceability across abstraction levels. By explicitly modeling how rule changes propagate and amplify along this chain, the framework precisely identifies impacted scenarios and test cases that need updating, while safely maximizing the reuse of unaffected ones. Experiments conducted on real-world compliance testing tasks across multiple domains show that CARE achieves an average F1 of 90.3% on updated test suites, outperforming existing methods by up to 164% and approaching expert-level effectiveness. Ablation studies further demonstrate that explicit cascading impact modeling and handling are key contributors to these improvements. In addition, CARE substantially reduces manual effort and improves test maintenance efficiency, and indicates strong cross-domain generalization. This work highlights cascading impact propagation as a central challenge in regulation-driven test maintenance and shows that shifting from isolated rule handling to cascading impact-aware evolution is essential for achieving both high test quality and maintenance efficiency.
@@ -59,6 +69,10 @@ This paper presents Feazzer, an efficient feature-driven browser fuzzing framewo
 **Authors:** Shangtong Cao (Beijing University of Posts and Telecommunications), Tianlei Song, Qiuping Yi (Beijing University of Posts and Telecommunications), Tianyu Chen (Microsoft Research Asia), Guoai Xu (Harbin Institute of Technology, Shenzhen), Ningyu He (Hong Kong Polytechnic University, Hong Kong SAR China), Haoyu Wang (Huazhong University of Science and Technology)
 
 **Categories:** Testing and Fuzzing
+
+**Artifact badges:** Published Artifact, Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832230
 
 **中文总结:** CLIR 面向 Cranelift 编译器提出差分测试框架，集成 SSA 合法 IR 生成、活跃性引导指令精炼与跨架构诊断适配策略。72 小时内发现 24 个 bug，独特 bug 数较 cranelift-fuzzgen 等基线高 8–24 倍。
 
@@ -73,6 +87,12 @@ To address these challenges, we propose CLIR, a differential testing framework t
 
 **Categories:** Testing and Fuzzing
 
+**Awards:** ACM SIGSOFT Distinguished Paper Award
+
+**Artifact badges:** Published Artifact, Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832093
+
 **中文总结:** 本文大规模复现 Inozemtseva 与 Papadakis 两项研究，检验 LLM 生成测试套件中覆盖率、变异分与真实缺陷检出率的相关性。发现这些代理指标的有效性高度依赖场景：回归测试设定下仍有参考价值，但被测代码本身含 bug 时则不可靠。
 
 **Abstract:** Recent advances in large language models (LLMs) have driven growing interest in using LLMs to automate test generation. Prior work commonly evaluates generated test suites using proxy metrics such as code coverage and mutation score. However, studies by Inozemtseva et al. and Papadakis et al. show that, for human-written tests, correlations among coverage, mutation, and real-bug detection can largely vanish once test suite size is controlled, raising concerns about the validity of evaluations based on proxy metrics. It also remains unclear whether these conclusions carry over to LLM-generated tests, given that prevailing LLM-based test-generation workflows differ substantially from traditional approaches.
@@ -86,6 +106,8 @@ In this paper, we conduct a large-scale replication study of these two prior wor
 
 **Categories:** Testing and Fuzzing
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832176
+
 **中文总结:** 针对 wasm-opt 适配 marker-based 检测与跨优化级别 differential testing，系统发现 24 种 missed optimizations（20 已修复），并分析 tree IR 设计对优化潜力的约束。
 
 **Abstract:** As WebAssembly (\wasm) expands from web applications to high-performance domains, the standard optimizer, \texttt{wasm-opt}, is critical but frequently suffers from missed optimizations (MOs). This paper presents an experience report on detecting MOs in \texttt{wasm-opt} and understanding their root cause through the lens of \wasm’s tree-structured intermediate representation (tree IR). To this end, we adapt an established marker-based technique from C compilers, overcoming the constraints of \wasm’s structured control flow via a novel structure-aware instrumentation strategy. Complementing this, we design a cross-optimization differential testing strategy leveraging the monotonicity of optimization levels as an oracle. Together, these strategies enable the systematic identification of fine-grained MOs that are overlooked by existing cross-architecture methods. Our evaluation uncovered 24 distinct MOs (20 fixed), demonstrating the high actionability and effectiveness of our approach. Beyond detection, our root cause analysis reveals how \texttt{wasm-opt}’s tree IR and other design choices constrain its optimization potential. We conclude with architectural considerations and future directions for \texttt{wasm-opt} and similar optimizers.
@@ -96,6 +118,8 @@ In this paper, we conduct a large-scale replication study of these two prior wor
 **Authors:** Yiheng Xiong (Singapore Management University), Ting Su (East China Normal University), Jingling Sun (University of Electronic Science and Technology of China), Jue Wang (Nanjing University), Qin Li (Shanghai Key Laboratory of Trustworthy Computing, East China Normal University), Geguang Pu (East China Normal University, China), Zhendong Su (ETH Zurich)
 
 **Categories:** Testing and Fuzzing
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832108
 
 **中文总结:** 提出 iPBT，将自然语言 property 描述经 UI 语义 grounding 与 LLM 合成为可执行 mobile PBT property；在 124 条描述上准确率 95.2%，用户编写时间减少 56%。
 
@@ -108,6 +132,8 @@ In this paper, we conduct a large-scale replication study of these two prior wor
 
 **Categories:** Testing and Fuzzing
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832160
+
 **中文总结:** 提出 PolyHDL，用 LLM prompt learning 与 primitive-cell 多样性反馈生成语法合法 HDL 以 fuzz FPGA 综合/仿真工具；一个月内报告 18 个有效缺陷，覆盖率较 SOTA 提升 13%+。
 
 **Abstract:** Field-Programmable Gate Array (FPGA) synthesis and simulation tools, such as \textit{Vivado}, \textit{Quartus}, \textit{Yosys}, and \textit{Icarus Verilog}, are key components of Electronic Design Automation (EDA) toolchains, translating high-level Hardware Description Language (HDL) codes into low-level gate netlists. However, defects in these compilers can propagate into the synthesized netlists, leading to crashes and functionally incorrect or even insecure hardware implementations and posing significant security risks. Existing fuzz testing approaches face several challenges, including limited diversity in primitive-cell types and a lack of feedback-guided exploration. These issues restrict their ability to thoroughly exercise the compilers and expose deep-seated defects. To address these challenges, we propose PolyHDL, which leverages the prompting Large Language Models (LLMs) for generating valid HDL codes to detect compiler defects in FPGA synthesis and simulation tools. By leveraging prompt learning and integrating feedback-driven guidance from primitive-cell diversity, PolyHDL generates semantically valid HDL codes with diverse primitive-cell combinations, thereby addressing the aforementioned challenges. Furthermore, through equivalence check, PolyHDL effectively reveals potential compiler defects in FPGA synthesis and simulation tools. Experimental results demonstrate that PolyHDL successfully identified and reported 18 valid defects in widely used toolchains, including \textit{Vivado}, \textit{Yosys}, \textit{Icarus Verilog}, and \textit{Quartus} within one month, 16 of which were confirmed by the official technical support, and achieved a 13.1%–13.4% improvement in code coverage over the SOTA approach.
@@ -118,6 +144,12 @@ In this paper, we conduct a large-scale replication study of these two prior wor
 **Authors:** Hang Du (University of California at Irvine), Vijay Krishna Palepu, James Jones (University of California at Irvine)
 
 **Categories:** Testing and Fuzzing
+
+**Awards:** ACM SIGSOFT Distinguished Paper Award
+
+**Artifact badges:** Published Artifact, Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832232
 
 **中文总结:** 首次大规模 controlled experiment 直接度量 killing surviving mutants 对真实 bug 检测的因果影响；642 个 Defects4J bug 中 63 个可通过 principled mutant killing 检出。
 
@@ -130,6 +162,8 @@ In this paper, we conduct a large-scale replication study of these two prior wor
 
 **Categories:** Testing and Fuzzing
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832211
+
 **中文总结:** 提出 IterTestQ 首个跨平台量子计算平台测试方法，通过 ITE（Import-Transform-Export）生成等价 QASM 程序并用 crash/equivalence oracle 检测不一致；在四大平台发现 18 个 bug（15 已确认/修复）。
 
 **Abstract:** Quantum computing platforms are susceptible to quantum-specific bugs, such as incorrectly ordering qubits or incorrectly implementing quantum abstractions. These bugs are difficult to detect and require specialized expertise. The field faces challenges due to a fragmented landscape of platforms and rapid development cycles that often prioritize new features over thorough testing, severely hindering the reliability of quantum software. To address these challenges, we present IterTestQ, the first cross-platform testing approach for quantum computing platforms. The key technical contribution is our novel ITE process, which generates equivalent quantum programs by iteratively (I)mporting them into platform-specific representations, (T)ransforming the program via optimizations and gate conversions, and (E)xporting the program again. To transfer programs across platforms and test cross-platform consistency, IterTestQ leverages QASM, an assembly-level representation supported by most platforms. The approach uses a crash oracle to detect failures during cross-platform transformations and an equivalence oracle to validate the semantic consistency of the generated assembly programs, which are expected to be equivalent by construction. We evaluate IterTestQ on four widely-used quantum computing platforms: Qiskit, PennyLane, Pytket, and BQSKit, revealing 18 bugs, 15 of which are already confirmed or fixed. Our results also demonstrate that IterTestQ complements existing quantum fuzzers (covering tens of thousands of otherwise uncovered lines), is efficient (with 0.00089 seconds per generated program), and that the ITE process is crucial for its effectiveness.
@@ -140,6 +174,8 @@ In this paper, we conduct a large-scale replication study of these two prior wor
 **Authors:** Youshuai Tan (Macau University of Science and Technology), Zhanwei Zhang (The Hong Kong University of Science and Technology (Guangzhou)), Haonan Zhang (University of Waterloo), Lianyu Zheng (The Hong Kong University of Science and Technology (Guangzhou)), Zishuo Ding (The Hong Kong University of Science and Technology (Guangzhou)), Jinfu Chen (Wuhan University), Weiyi Shang (University of Waterloo)
 
 **Categories:** Testing and Fuzzing
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832291
 
 **中文总结:** MGDE 基于条件数理论定位数值不稳定原子操作，并将浮点错误检测建模为 Newton–Raphson 根求解以定向收敛至易错区域。在 GSL 88 个单输入函数上触发 80 个 bug，速度较 ATOMU/FPCC 分别快 41.71× 与 10.17×，并报告 16 个新 bug。
 
@@ -156,6 +192,8 @@ We evaluate MGDE on GNU Scientific Library (GSL) functions and compare against t
 
 **Categories:** Testing and Fuzzing
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832104
+
 **中文总结:** Metamorphic Coverage (MC) 度量蜕变测试中成对输入所执行的差异代码，比行覆盖更能反映测试有效性且比变异测试快 359×。MC 与 64 个蜕变测试发现 bug 中 50 个修复位置重叠，用作反馈指导可多发现 41% bug。
 
 **Abstract:** Metamorphic testing is a widely used methodology that examines an expected relation between pairs of executions to automatically find bugs, such as correctness bugs. We found that code coverage cannot accurately measure the extent to which code is validated and mutation testing is computationally expensive for evaluating metamorphic testing methods. In this work, we propose Metamorphic Coverage (MC), a coverage metric that examines the distinct code executed by pairs of test inputs within metamorphic testing. Our intuition is that, typically, a bug can be observed if the corresponding code is executed when executing either test input but not the other one, so covering more differential code covered by pairs of test inputs might be more likely to expose bugs. While most metamorphic testing methods have been based on this general intuition, our work defines and systematically evaluates MC on five widely used metamorphic testing methods for testing database engines, compilers, and constraint solvers. The code measured by MC overlaps with the bug-fix locations of 50 of 64 bugs found by metamorphic testing methods, and MC has a stronger positive correlation with bug numbers than line coverage. MC is 4x more sensitive than line coverage in distinguishing testing methods’ effectiveness, and the average value of MC is 6x smaller than line coverage while still capturing the part of the program that is being tested. MC required 359x less time than mutation testing. Based on a case study for an automated database system testing approach, we demonstrate that when used for feedback guidance, MC significantly outperforms code coverage, by finding 41% more bugs. Consequently, this work might have broad applications for assessing metamorphic testing methods and improving test-case generation.
@@ -166,6 +204,8 @@ We evaluate MGDE on GNU Scientific Library (GSL) functions and compare against t
 **Authors:** Yulong Lyu (Nanjing University), Ruiqi Hong (Nanjing University), Jiawan Wang (Nanjing University), Jun Sun (Singapore Management University), Lei Bu (Nanjing University)
 
 **Categories:** Testing and Fuzzing
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832132
 
 **中文总结:** MG-Fuzz 从 ADS 决策组件提取自动机模型，结合模型指标与安全指标做多目标模糊测试以发现危险驾驶场景。实验检测到 18 类不同不安全场景，显著拓宽相对 SOTA 工具的覆盖范围。
 
@@ -180,6 +220,10 @@ In this paper, we propose MG-Fuzz, a model-guided, multi-objective fuzzing frame
 
 **Categories:** Testing and Fuzzing
 
+**Artifact badges:** Published Artifact, Artifacts Available, Artifacts Functional
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832218
+
 **中文总结:** NameRTS 将 Python 程序建模为代码元素与 name 节点的二分图，以可达性做细粒度回归测试选择而无需调用图。在 500 commits 基准上平均跳过 69.90% 测试文件、端到端测试时间降 45.59%，99.6% commits 安全。
 
 **Abstract:** Regression test selection (RTS) reduces the cost of regression testing by executing only those tests affected by a code change. Despite extensive study of RTS in statically typed languages such as Java, achieving effective and safe RTS in Python is challenging. Python’s dynamic typing makes precise call-graph construction difficult, which can cause call-graph-based RTS to miss affected tests, and hence, compromise safety. Python’s eager importing mechanism, in contrast, renders file-level dependency analysis overly conservative. This paper presents NameRTS, the first Python RTS approach based on fine-grained dependency analysis. NameRTS models a Python program as a bipartite graph of code element nodes (e.g., classes, functions, global variables) and name nodes (i.e., identifiers used to reference code elements), with edges capturing definitions and references. RTS is formulated as a reachability problem on this graph: a test is selected if any modified code element is reachable from the names used in that test. This design avoids call-graph construction, enabling a conservative analysis amenable to safety. To control dependency cascades introduced by coarse name matching, NameRTS applies two pruning strategies that leverage prior test executions and context information to refine name matching. To evaluate NameRTS, we construct the first Python RTS dataset with a ground truth indicating which test files are affected by each commit. It includes 500 commits drawn from 10 real-world Python projects. We compare NameRTS with the best-performing baseline, BabelRTS, an RTS technique based on coarse file-level dependencies. On this benchmark, NameRTS skips 69.90% of test files on average, outperforming BabelRTS by 146.5%. It also reduces end-to-end testing time by 45.59%, yielding a 107.7% improvement over BabelRTS. In terms of safety, NameRTS selects all affected tests for 99.6% of commits, with only rare misses in exceptional cases. In contrast, BabelRTS is safe for 76.6% of commits. These results demonstrate the effectiveness of NameRTS, paving the way for more efficient regression testing in Python.
@@ -190,6 +234,10 @@ In this paper, we propose MG-Fuzz, a model-guided, multi-objective fuzzing frame
 **Authors:** Xuesong Bai (University of California, Irvine), Hengkai Ye (Pennsylvania State University), Shenghan Zheng (Dartmouth College), Fenglu Zhang (China Telecom), Hong Hu (Pennsylvania State University), Zhou Li (University of California, Irvine)
 
 **Categories:** Testing and Fuzzing
+
+**Artifact badges:** Published Artifact, Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832249
 
 **中文总结:** NCFuzz 利用文档配置知识与配置-报文数据流关系引导网络服务模糊测试，专门发现非默认配置下的 ConfBug。在六种网络服务实现上覆盖率高于基线，并发现 5 个 ConfBug。
 
@@ -202,6 +250,10 @@ In this paper, we propose MG-Fuzz, a model-guided, multi-objective fuzzing frame
 
 **Categories:** Testing and Fuzzing
 
+**Awards:** ACM SIGSOFT Distinguished Paper Award
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832253
+
 **中文总结:** PROBO 采集 44 项 JVM 运行时指标，经 metrics 模型与 performance 模型两阶段贝叶斯优化搜索降低回归测试时间。在 16 个 Java 项目上平均测试时间降 10.7%，较随机搜索与 BOCA 分别快 1.85× 与 2.49×。
 
 **Abstract:** Regression testing is essential for maintaining software quality but often incurs substantial time costs. Prior work has demonstrated that tuning Java Virtual Machine (JVM) configuration flags can reduce test execution time, yet finding effective flag combinations remains challenging due to the vast configuration space and complex interactions between flags. Random search and direct modeling approaches that map flags to testing time have shown limited effectiveness in navigating this complex optimization landscape. We present PROBO (PROfiling-Guided Bayesian Optimization), an iterative approach that leverages JVM runtime metrics (such as garbage collection frequency, just-in-time (JIT) compilation rates, and memory allocation) to guide Bayesian optimization for testing time reduction. Unlike prior work that directly models the relationship from flags to testing time, PROBO decomposes the prediction problem through observable runtime behaviors: a metrics model predicts how flag configurations affect runtime metrics, and a performance model predicts how those metrics affect testing time. PROBO collects 44 runtime metrics using a profiler during test execution, and propagates feature importance scores through both models to identify which flags most strongly influence testing time-predictive metrics. Finally, PROBO generates candidate flag configurations through three complementary strategies guided by expected testing time improvement. We evaluate PROBO on 16 open-source Java projects, comparing against random search and BOCA (a Bayesian optimization baseline). PROBO achieves an average testing time reduction of 10.7% across all projects, outperforming random search (5.8%) by 1.85× and BOCA (4.3%) by 2.49×. PROBO successfully generates configurations that substantially reduce testing time for all 16 projects, with reductions ranging up to 27.4%. With a one-hour time budget for search, PROBO maintains its advantage with 8.0% average reduction, demonstrating practical applicability. Moreover, PROBO-generated configurations remain effective across software evolution, maintaining 8.8% average reduction over 88 future commits per project. Our analysis reveals that JIT compilation metrics, particularly Total Compilation Rate (methods compiled per second) and C1 Compilation Rate (first-tier JIT compilation rate), are the strongest predictors of testing time, accounting for 67.2% of consistently important metrics across projects.
@@ -212,6 +264,10 @@ In this paper, we propose MG-Fuzz, a model-guided, multi-objective fuzzing frame
 **Authors:** Jesse Coultas (University of Illinois Chicago), Joseph Wiseman (University of Illinois Chicago), Luís Pina (University of Illinois Chicago)
 
 **Categories:** Testing and Fuzzing
+
+**Artifact badges:** Published Artifact, Artifacts Available, Artifacts Reusable
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832128
 
 **中文总结:** PropCov 结合静态分析与 PBT 估算属性测试可达最大覆盖率，纠正 JaCoCo 等工具 86% 不可达误报并给出改进建议。在 25 个 Java 项目 293 个属性上仅漏 4% 可达代码，依建议增覆盖后在 4 个项目发现 4 个新 bug。
 
@@ -226,6 +282,12 @@ In this paper, we present PropCov, a tool for understanding coverage in PBT that
 
 **Categories:** Testing and Fuzzing
 
+**Awards:** ACM SIGSOFT Distinguished Paper Award
+
+**Artifact badges:** Published Artifact, Artifacts Available, Artifacts Reusable
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832250
+
 **中文总结:** 重新评估 LLM 等价 mutant 检测（EMD）的泛化能力，发现原数据集存在 method 级数据泄露且 LLM 依赖多数投票捷径。跨算子、语言与新项目数据集上性能显著下降，呼吁采用更真实的跨方法评估设置。
 
 **Abstract:** Mutation testing is a widely used approach for measuring quality of test suites. Equivalent mutant detection (EMD), i.e., determining if a mutant semantically behaves the same as the original code despite some syntactic differences, is a critical problem in mutation testing. A recent study has shown the great promise of LLM-based EMD techniques, reporting substantial improvements over traditional compiler- and machine-learning–based approaches. In this work, we revisit prior results and evaluate the generalization capabilities of LLM-based EMD techniques across two new datasets that differ from the original dataset in mutation operators, programming languages, and source projects. Contrary to prior findings, all studied LLM-based EMD techniques suffer substantial performance degradation on the new datasets. Through extensive analysis, we identify original-method–level data leakage in the original dataset as a key factor inflating earlier results and show that LLMs often rely on a method-wise majority-voting shortcut rather than reasoning about the semantic effects of individual mutations. Based on these findings, we call for the adoption of realistic cross-method evaluation settings and the development of mutation-centric semantic reasoning in future LLM-based EMD research.
@@ -236,6 +298,10 @@ In this paper, we present PropCov, a tool for understanding coverage in PBT that
 **Authors:** Bachir Bendrissou (Imperial College London), Alastair F. Donaldson, Cristian Cadar (Imperial College London)
 
 **Categories:** Testing and Fuzzing
+
+**Artifact badges:** Published Artifact, Artifacts Available, Artifacts Functional
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832229
 
 **中文总结:** 提出 repair-driven greybox fuzzing 及 RepairFuzz：先用 AFL++ 字节级变异破坏输入，再用 CPCT+ 语法修复恢复合法结构。在 Lua/PHP/JS/Ruby 四类解释器上发现 10 个已确认新 bug，其中 9 个未被 Nautilus、Grammarinator 或 AFL++ 发现。
 
@@ -248,6 +314,8 @@ In this paper, we present PropCov, a tool for understanding coverage in PBT that
 
 **Categories:** Testing and Fuzzing
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832185
+
 **中文总结:** 提出 RESTOR，用 GRPO 微调轻量 LLM，从单条 REST API 请求-响应对生成可执行测试断言。工业数据集上关键字段识别 F1 达 85.42%，生产部署将核心业务的自动化用例采纳率从 74.1% 提升至 90% 以上。
 
 **Abstract:** Automated testing for REST APIs has witnessed rapid advancements, yet existing techniques often rely heavily on formal specifications or massive execution logs, rendering them ineffective in agile industrial environments characterized by cold-start features and isolated traffic samples. In this paper, we present RESTOR, a framework that utilizes Group Relative Policy Optimization (GRPO) to fine-tune a lightweight Large Language Model for generating executable test assertions from single request-response pairs. By employing a novel data augmentation pipeline that constructs semantic constraints and valid/invalid logic variations, RESTOR enables the model to internalize testing common sense and distinguish business logic from dynamic noise. Comprehensive evaluations on industrial datasets demonstrate that RESTOR significantly outperforms large-scale generalist models (e.g., DeepSeek-V3.1). Specifically, it achieves a superior F1-score of 85.42% in key field identification by maintaining a high Precision of 81.30%, effectively mitigating the over-generation issues observed in baselines. Moreover, expert reviews confirm its reliability, showing that RESTOR produces the highest volume of semantically Exact Match assertions while minimizing factual errors on noisy data. Finally, deployment in a production environment at a large-scale technology company validates its practical impact: the system raised the automated test case adoption rate from 74.1% to over 90% in core business lines, substantially reducing manual QA effort in high-frequency CI/CD workflows.
@@ -259,6 +327,10 @@ In this paper, we present PropCov, a tool for understanding coverage in PBT that
 
 **Categories:** Testing and Fuzzing
 
+**Awards:** ACM SIGSOFT Distinguished Paper Award
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832105
+
 **中文总结:** 提出 RPCSpecter，从 RPC 规范抽取约束、约束引导变异与双向断言三阶段 fuzz 区块链 RPC 实现。在 Ethereum/Solana 共 6 个客户端上发现 26 个未知 bug，其中 1 个获 $3000 漏洞赏金。
 
 **Abstract:** Blockchain Remote Procedure Calls (RPCs) serve as the primary interface for interaction between decentralized applications and blockchain networks. Despite their critical role, existing RPC implementations are prone to bugs that are often challenging to detect using traditional testing methods. In this paper, we introduce RPCSpecter, an automated framework for constraint-aware fuzz testing of blockchain RPC Implementations. The core of RPCSpecter is a three-stage process: (1) Constraint Extraction, where implicit semantic dependencies from the documented RPC specifications are parsed and converted into executable constraints, (2) Constraint-Guided Mutation, which generates diverse and semantically valid test inputs based on these constraints, and (3) Bidirectional Assertion, which validates both valid and invalid RPC responses through dynamic checks and self-learning mechanisms. We evaluate RPCSpecter   on both Ethereum and Solana, two predominant platforms in the Blockchain ecosystem, with a total of 6 clients, such as Geth, Besu and Agave. The results show that RPCSpecter uncovers a total of 26 previously unknown bugs, including critical errors that are undetectable by existing fuzzers or manual testing, as well as multiple silent semantic inconsistencies. Particularly, 4 of them have been acknowledged, and one of the bugs affecting three major Ethereum clients is confirmed as a vulnerability, with a $3,000 bounty-award. Additionally, we demonstrate how RPCSpecter’s constraint-driven approach significantly improves the efficiency and effectiveness of fuzz testing by systematically guiding mutation to explore boundary conditions and rare edge cases. Our research provides a more robust, scalable, and automated solution for enhancing the reliability and security of blockchain RPC implementations.
@@ -269,6 +341,8 @@ In this paper, we present PropCov, a tool for understanding coverage in PBT that
 **Authors:** Yijia Guo (Zhejiang Normal University), Zhiguo Ding (Zhejiang Normal University), Hong Liang (Zhejiang University), Ming Zhong (Zhejiang Normal University), Dandan Zhao (Zhejiang Normal University), Xuhong Zhang (Zhejiang University), Bo Zhang (China Electric Power Research Institute), Shouling Ji (Zhejiang University), Hao Peng (Zhejiang Normal University)
 
 **Categories:** Testing and Fuzzing
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832107
 
 **中文总结:** 提出 SimiFuzz，用 LinUCB 上下文 bandit 在线学习 seed–worker 配对，平衡个体效率与组内冗余。基于 AFL++ 在 8 个目标 24 小时 10 并行 worker 活动中边覆盖平均提升 28.84%，多发现 29 个唯一 bug 与 9 个 CVE。
 
@@ -283,6 +357,8 @@ To address this challenge, we present SimiFuzz, a context-aware scheduling frame
 
 **Categories:** Testing and Fuzzing
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832289
+
 **中文总结:** 提出 k-sequence 覆盖准则同时刻画 SQL 派生中的父子与兄弟结构关系，并实现定向 fuzzer KSeqFuzz。在 MySQL、MariaDB、TiDB、OceanBase 上发现 58 个新 bug（含 6 个严重 crash），24 小时活动多检出 26% 唯一 bug。
 
 **Abstract:** Testing Relational Database Management Systems (RDBMSs) is inherently challenging because SQL, the primary language for interacting with RDBMSs, exhibits a vast and highly complex grammar with hundreds of interdependent production rules in the Extended Backus–Naur Form. While existing grammar-based testing techniques have made progress in covering SQL syntactic structures, they predominantly focus on \textit{parent-child relationships} in derivation paths, which capture \textit{vertical} expansions from a non-terminal to its alternatives. However, they overlook an equally critical dimension, \textit{sibling-like relationships}, which capture co-occurring alternatives across derivation paths. This oversight results in insufficient coverage of intricate syntactic interactions that may trigger unique behaviors or latent bugs in RDBMSs.
@@ -296,6 +372,8 @@ In this work, we propose \textit{k-sequence}, a novel coverage criterion that ch
 
 **Categories:** Testing and Fuzzing
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832111
+
 **中文总结:** SyzDiversity 提出多样性引导的 Linux 内核模糊测试框架，利用 PoC 种子、社区流行率（CPR）感知的 MAB 调度与 CPR 引导变异提升种子多样性。在 v5.15/v6.14 上相较 SOTA 覆盖率提升 17.4%、漏洞发现能力提升 9.1×，发现 32 个新漏洞（12 个已确认）。
 
 **Abstract:** Linux kernel vulnerabilities can pose severe security threats to the entire software ecosystem. While coverage-guided kernel fuzzers have been proposed to uncover such vulnerabilities, their code coverage and bug-finding capability are still limited due to the lack of seed diversity, which is caused by the compounding effect of initial seed generation, seed scheduling, and seed mutation. To address this limitation, we propose a diversity-guided kernel fuzzer SyzDiversity. Specifically, to mitigate overvaluation of early seeds, SyzDiversity leverages proof-of-concept (PoC) seeds derived from real-world vulnerabilities as initial seeds, and further partitions these seeds into multiple communities. Moreover, to improve diversity guidance in seed scheduling, it leverages a novel metric, community popularity rate (CPR), to model community diversity, and introduces a CPR-aware hierarchical Multi-Armed Bandit (MAB) algorithm that integrates CPR and code coverage as reward signals to prioritize the scheduling of diverse seed communities and seeds. Further, to efficiently populate sparse communities or break through community boundaries, it adopts a CPR-guided seed mutation strategy that adaptively allocates higher mutation frequencies to communities that are more conducive to the diversity evolution of the seeds. Our extensive experiments on Linux kernel versions v5.15 and v6.14 has demonstrated that SyzDiversity improves code coverage and bug-finding capability by 17.4% and 9.1×, respectively, compared to the state-of-the-art kernel fuzzers. It has discovered 32 unique new vulnerabilities, with 12 of them confirmed.
@@ -306,6 +384,8 @@ In this work, we propose \textit{k-sequence}, a novel coverage criterion that ch
 **Authors:** Jinsheng Ba (The Chinese University of Hong Kong, Shenzhen), Zuming Jiang (The University of Hong Kong, Hong Kong SAR China), Zhendong Su (ETH Zurich)
 
 **Categories:** Testing and Fuzzing
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832092
 
 **中文总结:** CPE（Controlled Pushdown Execution）通过白盒禁止特定下推算子并对比执行结果，系统验证分布式 DBMS 的计算下推正确性。在 CockroachDB、TiDB、YugabyteDB 上发现 25 个未知 bug（14 个逻辑错误），为历史 bug 数的 3× 且可复现全部历史 bug。
 
@@ -318,6 +398,8 @@ In this work, we propose \textit{k-sequence}, a novel coverage criterion that ch
 
 **Categories:** Testing and Fuzzing
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832261
+
 **中文总结:** RelocTest 结合模板驱动结构遍历与 LLM 引导补全生成方法搬迁测试用例，并用 LLM 前置条件提取器剪枝无效用例。在 7 个主流重构引擎上发现 56 个未知 bug，其中 19 个已获厂商确认。
 
 **Abstract:** Method relocation refactorings, primarily Move Method and Pull Up/Push Down Method, are indispensable for reducing coupling and enhancing cohesion. Despite their widespread automation in modern refactoring engines, these algorithms remain notoriously error-prone, posing significant risks to software reliability. A primary challenge in testing them lies in the vast search space of complex program structures and the intricate preconditions required for safe method relocation. To address this, we propose \textsc{RelocTest}, a comprehensive testing framework that combines template-driven structural traversal with automated precondition filtering. \textsc{RelocTest}  systematically explores the input space by populating  program templates specially designed for method relocation through a two-stage generation process: (1) \textit{Skeleton Synthesis}, which systematically traverses diverse syntactic structures, and (2) \textit{LLM-Guided Completion}, which leverages Large Language Models to inject diverse, executable code into these skeletons. This hybrid strategy ensures high structural coverage while maintaining test case validity. Furthermore, to optimize testing efficiency, we introduce an \textit{LLM-based Precondition Extractor} that analyzes the implementation of method relocation algorithms to identify and prune test cases destined for rejection. We evaluated \textsc{RelocTest}  on 7 mainstream refactoring engines. Our approach successfully uncovered 56 previously unknown bugs, with 19 already confirmed by tool vendors, demonstrating its effectiveness in hardening industrial-strength refactoring tools.
@@ -328,6 +410,8 @@ In this work, we propose \textit{k-sequence}, a novel coverage criterion that ch
 **Authors:** Maria Christakis (TU Wien), Anastasia Isychev (TU Wien), Samuel Pilz (TU Wien), Florian Tesarek (TU Wien), Valentin Wüstholz (ConsenSys)
 
 **Categories:** Testing and Fuzzing
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832231
 
 **中文总结:** EMT（Equivalence Modulo Taint）以源-汇流一致性定义程序等价，TaintCC 据此生成等价变体测试单个静态污点分析器。在 FlowDroid、Mariana Trench、Pysa、Semgrep 上发现 16 个唯一 bug，无需 ground-truth 标注。
 
@@ -340,6 +424,10 @@ In this work, we propose \textit{k-sequence}, a novel coverage criterion that ch
 
 **Categories:** Testing and Fuzzing
 
+**Awards:** ACM SIGSOFT Distinguished Paper Award
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832192
+
 **中文总结:** SeGa 从产品需求文档构建语义知识库，检索功能条目并推导细粒度业务场景引导 LLM 生成单元测试以暴露业务逻辑 bug。在 4 个工业 Go 项目 60 个真实 bug 上比 4 种 LLM 方法多检出 22–25 个，生产部署另发现 16 个已确认 bug。
 
 **Abstract:** Business logic bugs violate intended business semantics and are particularly prevalent in enterprise software. Yet most existing unit test generation techniques are code-centric, making such bugs difficult to expose. We present SeGa, a semantics-driven unit test generation technique for uncovering business logic bugs. SeGa constructs a semantic knowledge base from product requirement documents, represented as a set of functionality entries that group related requirements under a common business intent. Given a focal method, SeGa retrieves the relevant functionality entries and derives fine-grained business scenarios with explicit preconditions, triggering actions, expected outcomes, and semantic constraints to guide LLM-based test generation. We evaluate SeGa on four industrial Go projects containing 60 real-world business logic bugs. SeGa detects 22~25 more bugs than four state-of-the-art LLM-based techniques and improves precision by 26.9%~34.3%. Deployment across 6 production repositories further uncovers 16 previously unknown business logic bugs that were confirmed and fixed by developers, demonstrating SeGa’s practical value. From our industrial study, we summarize a series of lessons and suggestions for practical use and future research.
@@ -350,6 +438,10 @@ In this work, we propose \textit{k-sequence}, a novel coverage criterion that ch
 **Authors:** Yeqi Fu (National University of Singapore), Kaihang Ji (National University of Singapore), Yuanpeng Wang (Peking University), Zong Cao (Imperial Global Singapore), Jiahao Liu (National University of Singapore), Ding Li (Peking University), Yao Guo (Peking University), Zhenkai Liang (National University of Singapore)
 
 **Categories:** Testing and Fuzzing
+
+**Artifact badges:** Published Artifact, Artifacts Available, Artifacts Reusable
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832152
 
 **中文总结:** WASCII 从 Wasm 自然语言规范构建 Check Tree，对齐运行时源码并经 Clean Room 执行验证后做跨运行时差分测试。在 7 个主流运行时上发现 209 处行为差异，33 个为未知规范一致性问题（18 个已修复）。
 
@@ -364,9 +456,12 @@ In this paper, we introduce WASCII, a novel framework for bridging specification
 
 **Categories:** Testing and Fuzzing
 
+**Artifact badges:** Published Artifact, Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832281
+
 **中文总结:** WITFuzz 对 WIT AST 做结构感知有效性保持变异，并以覆盖率引导的 LLM 策略合成扩展变异池，配合多层构建 oracle 检测 bindgen 两阶段构建破坏。在 12 个 bindgen 上发现 40 个未知 bug（35 个为基线未检出）。
 
 **Abstract:** In the WebAssembly component model, interfaces written in WebAssembly Interface Types (WIT) are packaged and consumed as build-time dependencies, and binding generators (bindgens) translate them into language-specific bindings. Although a WIT package can be spec-valid, it can still break builds—by crashing or timing out during bindgen execution (Phase I), or by causing downstream toolchains to reject the generated bindings after generation appears to succeed (Phase II). Testing bindgens at scale is challenging because WIT is strongly typed and constraint-rich, and Phase II failures require language-specific checking.
 
 We present WITFuzz, a validity-preserving greybox fuzzer for WIT bindgens. WITFuzz mutates resolved WIT abstract syntax trees via structure-aware rewrites expressed in a small domain-specific language, and propagates correlated updates to maintain WIT validity. To overcome coverage plateaus, WITFuzz expands its strategy pool online using coverage-guided, LLM-assisted synthesis, admitting only strategies that pass local validation. WITFuzz further uses a build-aware, multi-layer oracle that combines in-loop checks with selective asynchronous compilation/typechecking of generated bindings to capture non-crashing build breakers. Across 12 bindgens, WITFuzz achieves the highest coverage and uncovers 40 previously unknown Phase I and Phase II build-breaking bugs, including 35 missed by all baselines.
-
