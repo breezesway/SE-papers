@@ -12,6 +12,8 @@ Total in this category: 34 papers
 
 **Awards:** Distinguished Paper Award
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787819
+
 **中文总结:** 提出通过复用不可满足核与满足模型加速 IC3 验证，构建 UCL/SML 库预判定新约束可满足性；在 Kind2 基准上可将求解器调用减少一个数量级并实现 4.35 倍加速且内存更低。
 
 **Abstract:** The IC3 algorithm represents a groundbreaking advancement in the field of model checking. However, its heavy reliance on numerous and frequent constraint-solving calls poses significant challenges when verifying complex programs. We observe that many of the constraints solved within IC3 share remarkable similarities. Based on this observation, we propose an IC3 acceleration verification method by reusing unsatisfiable cores and satisfying models of previous constraints. This method constructs an Unsatisfiable Core Library (UCL) and a Satisfying Model Library (SML) to store and index crucial unsatisfiable cores and satisfying models generated during the verification process. When a new constraint-solving request is received, our method preemptively determines the satisfiability of the constraint using the existing unsatisfiable cores and satisfying models. This approach can significantly reduce the number of required solver calls, thereby enhancing the verification efficiency. We have implemented our method on Kind2 and evaluated it on the standard benchmark suite of Kind2. Experimental evaluation demonstrates that, for those complex examples, our method can reduce the number of solver calls by an order of magnitude, and achieves a 4.35-fold speedup with even less memory consumption.
@@ -24,6 +26,8 @@ Total in this category: 34 papers
 
 **Awards:** Distinguished Paper Award
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764568
+
 **中文总结:** 提出首个精确推断程序终止条件的方法，迭代剔除非终止状态并用数据驱动证明器验证，配合循环集泛化加速收敛；显著优于 Acabar 并生成更准确的终止条件。
 
 **Abstract:** We present the first approach to infer accurate termination conditions of programs. It builds on a simple but effective framework where non-terminating states are iteratively identified and removed, and a termination prover is employed to validate the current condition. We instantiate the framework with data-driven provers and design a multi-way data sharing mechanism to enhance their interaction. Our proofs show that this method is correct, accurate, terminating, and relatively complete. Additionally, we introduce generalization techniques for recurrent sets to accelerate the iteration process. Evaluation on a benchmark of programs from the literature shows that our implementation significantly outperforms the state-of-the-art tool Acabar, producing much more accurate termination conditions, with the proposed techniques playing a crucial role in speeding up the convergence of the process.
@@ -33,6 +37,8 @@ Total in this category: 34 papers
 **Authors:** Dahan Pan (Shanghai Jiao Tong University), Zhuohao Zhang (GoSec Research Group), Yunjia Min (Shanghai Jiao Tong University), Runhan Feng (Purple Mountain Laboratories), Yuanyuan Zhang (Shanghai Jiao Tong University)
 
 **Categories:** Dependability and Security
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773231
 
 **中文总结:** 用 ObfDetector 分析 77,504 个 Google Play 应用，评估 TPL 检测工具在高级混淆（含包层次混淆）下的鲁棒性；库级 F1 可降至 50% 以下、版本级不足 10%。
 
@@ -44,6 +50,8 @@ Total in this category: 34 papers
 
 **Categories:** Dependability and Security
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787772
+
 **中文总结:** 提出 AnchorDiff，以锚节点切片划分版本链并用自适应权重细粒度匹配识别二进制 OSS 版本，应对非线性与小版本更新；在复杂编译配置下优于现有方法。
 
 **Abstract:** Binary Open-Source Software (OSS) is commonly embedded as third-party code within firmware and downstream software architectures, for simplifying the development process. However, vulnerabilities existing in OSS can be propagated through code reuse into embedded firmware and software architectures, posing security risks to these devices. To mitigate the security risks in firmware and software architectures, researchers have identified the versions of extracted firmware or binary software to detect N-day vulnerabilities in OSS. Existing works have achieved several success, but new challenges of non-linear update and minor updates hinder the improvement of the accuracy of binary OSS version identification. In this paper, we propose AnchorDiff, an efficient and accurate framework of binary OSS version identification. AnchorDiff filters out versions with significant updates from all OSS versions as Anchor Nodes which serve as boundaries to partition the entire version chain into sub-regions. The target file’s sub-region is located based on the binary code similarity detection (BCSD) results with the Anchor Nodes ’ function libraries. Finally, AnchorDiff uses the Adaptive Weight Fine-grained Matching (AWM) algorithm to weight the fine-grained matching results and determine the true version of the target binary file. The experimental results show that AnchorDiff achieves the best performance in identifying binary OSS versions with complex compilation configurations in both small and large OSS datasets, with accuracies reaching 90.35% and 97.17% respectively, which are 2.76% and 20.99% higher than the current state-of-the-art (SOTA) work. In terms of database storage, AnchorDiff reduces storage requirements by a factor of 36, compared to the original binary files.
@@ -53,6 +61,8 @@ Total in this category: 34 papers
 **Authors:** Bin Wang, Ao Yang (Peking University), Kedan Li (University of Illinois at Urbana-Champaign), Aofan Liu (Peking University), Hui Li (Xiamen University), Guibo Luo (Peking University), Weixiang Huang (China Mobile Internet CO), Yan Zhuang (China Mobile Internet CO)
 
 **Categories:** Dependability and Security
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787818
 
 **中文总结:** 提出 attention distance，用 LLM 上下文分析计算代码元素间逻辑关联以改进定向模糊测试；38 个漏洞复现实验平均效率提升 3.43×，集成 DAFL/WindRanger 亦一致受益。
 
@@ -64,6 +74,8 @@ Total in this category: 34 papers
 
 **Categories:** Dependability and Security
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787802
+
 **中文总结:** 提出 PScan，以方法约束引导混淆 Java 二进制补丁存在性检测，将匹配形式化为 BIP；准确率 97.1%、较 SOTA 至少提升 15 个百分点，方法误匹配率降至 1.5%。
 
 **Abstract:** Patch presence testing (PPT) is critical for mitigating vulnerabilities introduced by the use of third-party libraries (TPLs) in Java programs. However, the widespread use of obfuscation significantly undermines its accuracy by altering patch-relevant features. To preserve feature consistency before and after obfuscation for reliable comparison, existing studies summarize patch digests using several representative \textit{fuzzy features}. These fuzzy features, designed to generalize obfuscation-prone details, have proven effective in TPL detection. Nevertheless, this approach faces limitations when directly applied to PPT, where finer features are needed to capture subtle patch changes. Although patch digests facilitate feature matching under obfuscation-induced code changes with high efficiency, methods with similar semantic structures—common in TPLs due to factors such as overriding and inheritance—often exhibit identical digests. Relying solely on feature similarity without considering method constraints often results in inaccurate outcomes. To tackle the aforementioned challenges, this paper presents \textit{PScan}, a constraint-guided patch presence testing tool capable of detecting patches in both standard and obfuscated Java binaries (i.e., executables of Java programs). PScan first defines a set of actual constraints that must be satisfied during Java method matching. Guided by these constraints, it maps methods containing critical patch information to their obfuscated counterparts and then leverages these mappings to refine the associated fuzzy features into concrete expressions. Furthermore, leveraging the formalized constraints, PScan formulates the patch digest matching process as a binary integer programming (BIP) model to precisely identify correct method matches. Extensive evaluations on public datasets show that PScan outperforms state-of-the-art methods, improving accuracy by at least 15.0 percentage points and achieving an overall accuracy of 97.1%. Our experiments also reveal that, with these constraints, PScan reduces the method mismatch rate to 1.5%, a 16.9 percentage point reduction relative to the baseline.
@@ -73,6 +85,8 @@ Total in this category: 34 papers
 **Authors:** Hee Yeon Kim (Korea University), Gyunghoon Kim (Korea University), Dong Hoon Lee (Korea University), Wonsuk Choi (Korea University)
 
 **Categories:** Dependability and Security
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773261
 
 **中文总结:** 提出 BTreeFuzz，基于行为树日志构建状态图作为 ROS 程序模糊测试反馈；较 SOTA 每轮多发现 49.31% 唯一 crash，共报告 35 个 bug（11 未知）。
 
@@ -84,6 +98,8 @@ Total in this category: 34 papers
 
 **Categories:** Dependability and Security
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773151
+
 **中文总结:** 提出 Jaralyzer 字节码中心 Java 依赖漏洞扫描器，直接分析 bytecode 应对重编译/重打包等修改；在 56 个 OSS 组件上唯一覆盖全部修改类型且较 Eclipse Steady 多检 28 个真漏洞。
 
 **Abstract:** On average, 71% of the code in typical Java projects comes from open-source software (OSS) dependencies, making OSS dependencies the dominant component of modern software code bases. This high degree of OSS reliance comes with a considerable security risk of adding known security vulnerabilities to a code base. To remedy this risk, researchers and companies have developed various dependency scanners , which try to identify inclusions of known-to-be-vulnerable OSS dependencies. However, there are still challenges that modern dependency scanners do not overcome, especially when it comes to dependency modifications, such as re-compilations, re-bundlings or re-packagings, which are common in the Java ecosystem. To overcome these challenges, we present Jaralyzer, a bytecode-centric dependency scanner for Java. Jaralyzer does not rely on the metadata or the source code of the included OSS dependencies being available but directly analyzes a dependency’s bytecode. Our evaluation across 56 popular OSS components demonstrates that Jaralyzer outperforms other popular dependency scanners in detecting vulnerabilities within modified dependencies. It is the only scanner capable of identifying vulnerabilities across all the above mentioned types of modifications. But even when applied to unmodified dependencies, Jaralyzer outperforms the current state-of-the-art code-centric scanner Eclipse Steady by detecting 28 more true vulnerabilities and yielding 29 fewer false warnings.
@@ -93,6 +109,8 @@ Total in this category: 34 papers
 **Authors:** Sivana Hamer (North Carolina State University), Jacob Bowen (North Carolina State University), Md Nazmul Haque (North Carolina State University), Robert Hines, Chris Madden (Yahoo), Laurie Williams (North Carolina State University)
 
 **Categories:** Dependability and Security
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773194
 
 **中文总结:** 系统映射 SolarWinds、Log4j、XZ Utils 三类供应链攻击技术至 10 个框架 73 项任务，排序优先缓解措施；最高优先级为 RBAC、系统监控与边界防护，并发现三项现有框架均缺失的任务。
 
@@ -104,6 +122,8 @@ Total in this category: 34 papers
 
 **Categories:** Dependability and Security
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773195
+
 **中文总结:** 提出 CoBrA，基于抽象域图与 stretch-relax 算法做上下文/分支敏感 PHP Web 污点分析，准确处理动态函数与控制流；19 个应用中找 54 个 0-day（8 个 CVE），检出率 88.66%、误报 <0.3%。
 
 **Abstract:** PHP, a widely-used programming language in Web development, contains powerful dynamic features (e.g., dynamic function name construction), making static detection of taint-style vulnerabilities like SQL injection and Cross-Site Scripting challenging. State-of-the-art static approaches perform call graph-guided backward dataflow tracking, thus failing to analyze those dynamic PHP features like variable functions and control change statements, which results in high false positives and negatives. In this paper, we design and implement CoBrA, a context-, branch-sensitive approach to detect taint-style vulnerabilities in PHP-based Web applications. The key innovations are the abstract domain graph (ADG), which is used to efficiently guide the analysis and “stretch-relax” algorithm, which enables accurate resolution of PHP dynamic features and efficient inter-procedural taint propagation. Our evaluation of CoBrA’s prototype identified 54 zero-day vulnerabilities in 19 real-world applications with eight Common Vulnerabilities and Exposures (CVE) identifiers assigned, achieved $88.66%$ detection rate with under $0.3%$ false positives on a PHP tarpits dataset, and outperformed four state-of-the-art tools across all test datasets with reasonable time and space consumption.
@@ -113,6 +133,8 @@ Total in this category: 34 papers
 **Authors:** Wenxin Jiang (Socket), Berk Çakar (Purdue University), Mikola Lysenko (Socket, Inc), James C. Davis (Purdue University)
 
 **Categories:** Dependability and Security
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773229
 
 **中文总结:** 提出基于包元数据的 ConfuGuard，扩展至7个包生态检测 typosquatting 等混淆攻击；误报率从80%降至28%，生产部署已确认630起真实攻击。
 
@@ -124,6 +146,8 @@ Total in this category: 34 papers
 
 **Categories:** Dependability and Security
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764525
+
 **中文总结:** 首次系统实证研究 compositional BMC 的 unit proof 内存安全验证，提出系统化构造方法；73个 unit proof 平均87分钟开发，可检出74%复现缺陷并暴露19个新缺陷。
 
 **Abstract:** Memory safety defects pose a major threat to software reliability, enabling cyberattacks, outages, and crashes. To mitigate these risks, organizations adopt Compositional Bounded Model Checking (BMC), using unit proofs to formally verify memory safety. However, methods for creating unit proofs vary across organizations and are inconsistent within the same project, leading to errors and missed defects. In addition, unit proofing remains understudied, with no systematic development methods or empirical evaluations. This work presents the first empirical study on unit proofing for memory safety verification. We introduce a systematic method for creating unit proofs that leverages verification feedback and objective criteria. Using this approach, we develop 73 unit proofs for four embedded operating systems and evaluate their effectiveness, characteristics, cost, and generalizability. Our results show unit proofs are cost-effective, detecting 74% of recreated defects, with an additional 9% found with increased BMC bounds, and 19 new defects exposed. We also found that embedded software requires small unit proofs, which can be developed in 87 minutes and executed in 61 minutes on average. These findings provide practical guidance for engineers and empirical data to inform tooling design.
@@ -133,6 +157,8 @@ Total in this category: 34 papers
 **Authors:** Zhiyang Chen (University of Toronto), Sidi Mohamed Beillahi (University of Toronto), Pasha Barahimi (University of Tehran), Cyrus Minwalla (Bank of Canada), Han Du (Bank of Canada), Andreas Veneris (University of Toronto), Fan Long (University of Toronto)
 
 **Categories:** Dependability and Security
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773266
 
 **中文总结:** 基于37个被黑 DeFi 协议实证发现攻击交易常引入新控制流，提出实时控制流完整性框架 CrossGuard；可阻断35/37起攻击，误报率0.26%。
 
@@ -144,6 +170,8 @@ Total in this category: 34 papers
 
 **Categories:** Dependability and Security
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773176
+
 **中文总结:** 探索7个 SOTA LLM 通过 prompting 生成漏洞样本，VICS 策略在真实代码上成功率达88%；生成数据使下游 DL 漏洞分析精度最高提升36.2%，性能甚至优于直接用 LLM 分析。
 
 **Abstract:** Data-driven approaches have proven to be promising for vulnerability analysis, contingent on quality and sizable training data being available. Several dedicated vulnerability data generation techniques have demonstrated impressive merits, yet they are limited to simple (single-line injection induced) vulnerabilities only and suffer from overfitting to seed samples. Large language models (LLMs) may overcome these fundamental limitations as they are known to be effective at generative tasks. yet it remains unclear how they would fare for the task of vulnerable sample generation. In this paper, we explore the potentials and gaps of seven state-of-the-art (SOTA) LLMs for that task via prompting. We reveal that the LLMs are capable of injecting vulnerabilities, with advanced prompting strategies such as few-shot in-context learning and our new vulnerability-introducing code-change semantics (VICS) guided prompting boosting the effectiveness, achieving up to 93% success rate on a synthetic dataset and 88% on real-world code. The LLMs can effectively perform both single- and multi-line injections, addressing a key limitation of prior work. Notably, they exhibit a strong preference to replacement edits, different from ground-truth patterns, and their effectiveness varies across CWE types. Furthermore, LLMs, particularly with VICS, outperform existing SOTA vulnerability generators %(VulGen and VGX) with success rate improvements of up to 210%-343%. Crucially, the LLM-generated data substantially improves the performance of downstream DL-based vulnerability analysis models, especially with multi-line injections, boosting their accuracy by up to 36.2%. The generated samples also enhances the effectiveness of other LLMs for vulnerability analysis via RAG, with multi-line-injected samples yielding up to 16.5% gains. Most importantly, our findings reveal that, augmenting existing DL models with high-quality, LLM-generated data can lead to vulnerability analysis performance (up to 67.50% accuracy) superior to those of even the most advanced LLMs performing the same analysis (up to 27.40%), indicating the usefulness of the LLM-generated vulnerability data at present and in longer term.
@@ -153,6 +181,8 @@ Total in this category: 34 papers
 **Authors:** Maxwell Levatich (Columbia University), Stephen A. Edwards (Columbia University)
 
 **Categories:** Dependability and Security
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787840
 
 **中文总结:** 提出 CSP，以迭代 value-flow 精炼实现近似流敏感但低成本的 C 程序安全分区；在大规模 C 程序上比全程序流敏感指针分析快一个数量级且不损精度。
 
@@ -164,6 +194,8 @@ Total in this category: 34 papers
 
 **Categories:** Dependability and Security
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787814
+
 **中文总结:** 提出 RL 增强的零样本 RCA 基础模型 FoundRoot，以结构化深度思考分解因果推理；在四个数据集未见系统上 MRR 提升2.9%–42%。
 
 **Abstract:** Root Cause Analysis (RCA) for service systems is critical for ensuring their reliability, while its application remains challenging because of the large number of metrics and the complex causal relationships. Classical RCA methods typically rely on statistical or rule-based approaches, making them difficult to generalize to unseen systems. The introduction of Large Language Models (LLMs) has partly addressed these challenges with their understanding of the domain-specific semantics of metrics and reasoning capabilities. However, they still struggle with incomplete or shallow reasoning when facing a large amount of metrics. To address these limitations, we present FoundRoot, a reinforcement learning (RL)-enhanced LLM foundation model for zero-shot RCA. FoundRoot features a novel structured deep thinking paradigm, which breaks down the RCA reasoning into several goal-oriented substeps, enhancing the completeness and reasoning capability of the causal relationship. We collect and curate diverse open-sourced RCA datasets across different systems and introduce a data augmentation technique to ensure data scalability. We design a two-stage training pipeline that includes supervised fine-tuning (SFT) and RL to align the LLM with the structured deep thinking paradigm, which significantly improves its reasoning quality. Extensive experiments on four datasets show that FoundRoot outperforms both classical and LLM-based methods in RCA accuracy on unseen systems, achieving 2.9%-42% mean reciprocal rank (MRR) improvements.
@@ -173,6 +205,8 @@ Total in this category: 34 papers
 **Authors:** Bowen Cai (University of Minnesota - Twin City), Weihng Bai (University of Minnesota - Twin City), Youshui Lu (Xi'an Jiaotong University), Haoran Xu (Johns Hopkins University), Yuannan Yang (Johns Hopkins University), Yajin Zhou (The Chinese University of Hong Kong), Kangjie Lu (University of Minnesota)
 
 **Categories:** Dependability and Security
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787799
 
 **中文总结:** 识别 DeFi「模仿攻击级联」模式（69%攻击与早期事件高度相似），提出 GenDetect 将单次攻击快速抽象为可泛化检测规则；准确率98%、发现56起此前未披露攻击。
 
@@ -184,6 +218,8 @@ Total in this category: 34 papers
 
 **Categories:** Dependability and Security
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787780
+
 **中文总结:** 提出 Aletheia，用抄袭检测思路从 JS bundle 识别 npm 包版本，爬取 Tranco Top 10 万站点发现 bundle 依赖更新往往快于 CDN 引入且漏洞版本更少。
 
 **Abstract:** Reusable software components, typically distributed as packages, are a central paradigm of modern software development. The JavaScript ecosystem serves as a prime example, offering millions of packages with their use being promoted as idiomatic. However, download statistics on npm raise security concerns as they indicate a high popularity of vulnerable package versions while their real prevalence on production websites remains unknown. Package version detection mechanisms fill this gap by extracting utilized packages and versions from observed artifacts on the web. Prior research focuses on mechanisms for either hand-selected popular packages in bundles or for single-file resources utilizing the global namespace. This does not allow for a thorough analysis of modern web applications’ dependency update behavior at scale. In this work, we improve upon this by presenting Aletheia, a package-agnostic method which dissects JavaScript bundles to identify package versions through algorithms originating from the field of plagiarism detection. We show that this method clearly outperforms the existing approaches in practical settings. Furthermore, we crawl the Tranco top 100,000 domains to reveal that 5% - 20% of domains update their dependencies within 16 weeks. Surprisingly, from a longitudinal perspective, bundled packages are updated significantly faster than their CDN-included counterparts, with consequently up to 10 times fewer known vulnerable package versions included. Still, we observe indicators that few widespread vendors seem to be a major driving force behind timely updates, implying that quantitative measures are not painting a complete picture.
@@ -193,6 +229,8 @@ Total in this category: 34 papers
 **Authors:** Dharun Anandayuvaraj (Purdue University), Tanmay Singla (Purdue University), Zain Alabedin Haj Hammadeh (German Aerospace Center (DLR)), Andreas Lund (German Aerospace Center (DLR)), Alexandra Holloway (Jet Propulsion Laboratory (JPL)), James C. Davis (Purdue University)
 
 **Categories:** Dependability and Security
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773149
 
 **中文总结:** 通过对国家航天研究中心等 HRO 工程师访谈，发现软件失败学习多为非正式、临时性，重复故障与知识流失因缺乏结构化流程而持续存在。
 
@@ -204,6 +242,8 @@ Total in this category: 34 papers
 
 **Categories:** Dependability and Security
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764574
+
 **中文总结:** 从经典代码度量视角分析 LLM 漏洞发现，发现仅用度量训练的分类器可与 SOTA LLM 持平，且 LLM 预测对度量变化存在强因果依赖，暗示其推理较浅。
 
 **Abstract:** Large language models (LLMs) excel in many tasks of software engineering, yet progress in leveraging them for vulnerability discovery has stalled in recent years. To understand this phenomenon, we investigate LLMs through the lens of classic code metrics. Surprisingly, we find that a classifier trained solely on these metrics performs on par with state-of-the-art LLMs for vulnerability discovery. A root-cause analysis reveals a strong correlation and a causal effect between LLMs and code metrics: When the value of a metric is changed, LLM predictions tend to shift by a corresponding magnitude. This dependency suggests that LLMs operate at a similarly shallow level as code metrics, limiting their ability to grasp complex patterns and fully realize their potential in vulnerability discovery.
@@ -213,6 +253,8 @@ Total in this category: 34 papers
 **Authors:** Zongxiong Chen (Fraunhofer FOKUS), Derui Zhu (Technical University of Munich), Kundi Yao (Ontario Tech University), Weiyi Shang (University of Waterloo), Jinfu Chen (Wuhan University), Jiahui Geng (Mohamed bin Zayed University of Artificial Intelligence), Alexander Pretschner (TU Munich), Jens Grossklags (Technical University of Munich), Manfred Hauswirth (Fraunhofer FOKUS), Sonja Schimmler (Fraunhofer FOKUS & TU Berlin)
 
 **Categories:** Dependability and Security
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787777
 
 **中文总结:** 提出 LLM4JMH，直接从源码用 LLM 生成 Java 性能微基准并结合静态分析增强可靠性，在 RxJava 等项目上检测延迟降低最高 52.60% 且发现 6/11 个 Flink 性能 bug。
 
@@ -224,6 +266,8 @@ Total in this category: 34 papers
 
 **Categories:** Dependability and Security
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787845
+
 **中文总结:** 提出 OctopusGuard 多模态 DeFi 代币诈骗检测器，首次引入 K 线图像与 RAG 知识库及 structured CoT 联合推理，在 1495 个合约上 F1 达 0.96。
 
 **Abstract:** Token scams in Decentralized Finance (DeFi) have become more sophisticated, shifting from simple contract exploits to behavior-driven fraud involving obfuscated code, abnormal fund flows, and deceptive market activity. While recent works leverage large language models (LLMs) for vulnerability detection, existing methods still depend on predefined patterns and lack deep semantic reasoning, limiting their ability to detect novel scams. In this paper, we present OctopusGuard, a unified multimodal detector for token scams, which includes three key contributions: (i) K-line information is, for the first time, introduced to token scam detection. A RAG-based knowledge base is constructed by combining K-line images from both benign and scam tokens to enhance training and reasoning. (ii) A novel, structured tool-augmented data chain-of-thought (structured CoT) is designed to integrate code, transaction data, and K-line images into a unified reasoning process. (iii) A multimodal fine-tuning pipeline that jointly trains on structured CoT to learn cross-modal correlations and enhance generalization across diverse scam strategies. We also construct a newly collected, labeled multimodal dataset of 1,495 recent token contracts and conduct extensive experiments. Results demonstrate that OctopusGuard significantly outperforms existing detectors and LLMs in detecting token scams, achieving an F1-score of 0.96.
@@ -233,6 +277,8 @@ Total in this category: 34 papers
 **Authors:** Zexu Wang (Sun Yat-sen University), Jiachi Chen (Sun Yat-sen University), Zewei Lin (Sun Yat-sen University), Wenqing Chen (Sun Yat-sen University), Kaiwen Ning (Sun Yat-sen University), Jianxing Yu (Sun Yat-sen University), Yuming Feng (Peng Cheng Laboratory), Yu Zhang (Harbin Institute of Technology), Weizhe Zhang (Harbin Institute of Technology), Zibin Zheng (Sun Yat-sen University)
 
 **Categories:** Dependability and Security
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773198
 
 **中文总结:** 本文首次系统研究智能合约中的签名重放漏洞（SRV），从审计报告中归纳五类漏洞，并提出结合 LLM 语义理解与静态污点分析的检测工具 LASiR。大规模实验显示 SRV 广泛存在且涉及数百万美元资产，LASiR 的 F1 达 87.90%。
 
@@ -244,6 +290,8 @@ Total in this category: 34 papers
 
 **Categories:** Dependability and Security
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773152
+
 **中文总结:** 针对共享库代码膨胀问题，提出内核辅助去膨胀框架 K-Polarizer，按需加载函数页面而非删除冗余代码，兼顾“一刀切”复用与最小化进程可见代码。评估表明其在 musl-libc 等库上可显著减少 ROP gadget（76.1%）并保持功能透明。
 
 **Abstract:** Prevalent software engineering practices, such as code reuse and the “one-size-fits-all” methodology, have significantly contributed to code bloat. Code debloating, which targets the reduction of extraneous code, emerges as a promising solution to combat this issue. However, current methods that depend on redundant code deletion are at odds with the foundational design philosophy of reusable code components, regardless of whether they are applied offline or at runtime. In this paper, we introduce a kernel-assisted debloating framework, K-Polarizer, that aligns with the “one-size-fits-all” design philosophy of shared libraries. Starting from scratch, K-Polarizer progressively appends dependencies on demand to the underlying page cache associated with offline-reconstructed shared libraries, enabling it to practice the hybrid debloating strategy of “cutting unwanted pages while loading needed functions.” This allows for code sharing among processes while minimizing the global code base, keeping the visible code base for each process to an approximate minimum. Additionally, K-Polarizer integrates layout randomization at load-time to enhance security further. We have thoroughly evaluated K-Polarizer using real-world shared libraries, including musl-libc, glibc, and libFLAC. The results indicate that K-Polarizer operates transparently, preserving the original functionality of the libraries. Furthermore, K-Polarizer provides security guarantees (76.1% gadget reduction on musl-libc) comparable to the leading debloating technique with acceptable overhead, while gracefully handling the scenario of dynamic library loading. Meanwhile, it offers resilience against memory disclosures.
@@ -253,6 +301,8 @@ Total in this category: 34 papers
 **Authors:** Yikun Li (Singapore Management University), Ngoc Tan Bui (Singapore Management University), Ting Zhang (Monash University), Chengran Yang (Singapore Management University, Singapore), Xin Zhou (Singapore Management University, Singapore), Martin Weyssow (Singapore Management University), Jinfeng Jiang (Singapore Management University), Junkai Chen (Singapore Management University, Singapore), Huihui Huang (Singapore Management University, Singapore), Huu Hung Nguyen (Singapore Management University), Chiok Yew Ho (Chinese University of Hong Kong), Jie Tan (University of Groningen), Ruiyin Li (Wuhan University, China; University of Groningen, The Netherlands), Yide Yin (GovTech), Han Wei Ang (GovTech), Frank Liauw (Government Technology Agency Singapore), Eng Lieh Ouh (Singapore Management University, Singapore), Lwin Khin Shar (Singapore Management University), David Lo (Singapore Management University)
 
 **Categories:** Dependability and Security
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787830
 
 **中文总结:** 揭示漏洞数据集标签错误、重复与 CWE 覆盖不足导致 ID 性能无法预测 OOD 泛化，并构建 BenchVul 测试集、TitanVul 训练集及 RVG 合成框架。TitanVul+RVG 在真实 OOD 样本上准确率达 0.932，显著优于现有数据集。
 
@@ -264,6 +314,8 @@ Total in this category: 34 papers
 
 **Categories:** Dependability and Security
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773243
+
 **中文总结:** 提出项目级资源泄漏检测框架 AROP，结合 LLM agent 与数据流分析、修复模式验证。在 JLeaks 上召回 66.1%、精度 91.0%，在 6 个大型开源项目中发现 106 个未知泄漏，28 个补丁已合并。
 
 **Abstract:** Resource leaks cause system performance degradation and crashes. Traditional static analysis approaches rely on predefined rules, limiting their ability to find unknown leaks. Emerging LLM-based methods can locate APIs but face challenges in large-scale projects, including high costs and numerous false positives. To address these limitations, we propose AROP, the first project-level resource leak detection framework integrating LLM-based agents. AROP first extracts project-level metadata to efficiently filter resource-related files. It then employs a detection agent to identify acquisition/release operations, followed by a validation agent and data-flow dependency analysis to reduce false positives. Finally, it determines leaks through leak repair pattern analysis. We evaluated the effectiveness of our tool on the JLeaks benchmark and 6 large-scale real-world open-source projects. On JLeaks, AROP achieved a recall of 66.1% with a precision of 91.0%, which outperformed the current state-of-the-art, INFERROI, surpassing it by 18.2% in precision while maintaining a comparable recall. In evaluation on real-world projects, AROP discovered 106 previously unknown resource leak defects with a precision of 71.3%. We submitted patches for 28 of these defects, all of which have been confirmed and merged by developers.
@@ -273,6 +325,8 @@ Total in this category: 34 papers
 **Authors:** Hongtai Wang (National University of Singapore), Ming Xu (Shanghai Jiao Tong University / National University of Singapore), Yanpei Guo (National University of Singapore), Weili Han (Fudan University), Hoon Wei Lim (Cyber Special Ops-R&D, NCS Group), Jin Song Dong (National University of Singapore)
 
 **Categories:** Dependability and Security
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773249
 
 **中文总结:** 提出 LLM agent RulePilot，以中间表示抽象检测规则语法，从自然语言描述自动生成安全检测规则。文本相似度比基线最高提升 107.4%，真实执行测试中检测准确率更优，可辅助初级分析师编写规则。
 
@@ -284,6 +338,8 @@ Total in this category: 34 papers
 
 **Categories:** Dependability and Security
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764571
+
 **中文总结:** 提出首个 Rust 类型混淆静态检测工具 DeRust，跨过程追踪 unsafe 类型转换到敏感操作的数据流。在 benchmark 上检出全部已知 bug，并在 Top 1000 crate 中发现 54 个新 bug，获 13 个 RustSec ID。
 
 **Abstract:** Rust is a modern programming language designed for strict memory and concurrency safety. Despite the safety checks, unsafe code in Rust can introduce memory safety issues. Unsafe type conversion, which reinterprets data from one type to another type, can alter the type spatial and temporal properties, leading to memory safety and data corruption issues. Since an unsafely converted value could violate a programmer’s intended conversion semantics and allows attackers to access the sensitive memory, type confusion bugs have critical security implications. Despite the increasing number of Rust type confusion bugs, the problem has not been systematically studied and addressed by the Rust community. In this paper, we propose DeRust, the first and a novel static analysis tool for detecting Rust type confusion bugs. By precisely tracking the inter-procedural data flows from unsafe type conversions to sensitive operations, DeRust can effectively and efficiently identify type confusion bugs. Our evaluation shows that DeRust can detect all the type confusion bugs in the benchmark datasets, and further helped report 54 previously unknown bugs in the top 1,000 Rust packages with 13 RustSec IDs assigned. We plan to release the prototype implementation of DeRust and other artifacts to help improve the Rust ecosystem.
@@ -293,6 +349,8 @@ Total in this category: 34 papers
 **Authors:** The Anh Nguyen (Adelaide University), Triet Le (Adelaide University), Muhammad Ali Babar (School of Computer Science, The University of Adelaide)
 
 **Categories:** Dependability and Security
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787796
 
 **中文总结:** 基于 Hugging Face 与 GitHub 312,868 条安全讨论及 753 帖主题分析，构建 AI 供应链 32 类安全问题与 24 类解决方案 taxonomy。揭示模型与数据相关威胁常缺乏成熟解决方案，为 AI 供应链安全提供实证指导。
 
@@ -304,6 +362,8 @@ Total in this category: 34 papers
 
 **Categories:** Dependability and Security
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773199
+
 **中文总结:** 提出静态污点分析框架 TaintP2X，将 LLM 输出建模为污点源并追踪至敏感 sink，在 35 个漏洞真值集上召回 77.1%，并在 GitHub 项目中发现 101 条污点路径。
 
 **Abstract:** Large Language Models (LLMs) have revolutionized numerous domains, enabling the development of LLM-integrated applications that autonomously plan and act through tool calling. While these applications demonstrate remarkable capabilities, their ability to invoke sensitive operations, such as file system interactions, code execution, and database queries, introduces critical security risks. In particular, prompt injection vulnerabilities, combined with security-sensitive sink functions, can lead to a broad class of attacks we define as \textit{Prompt-to-Anything Injection (P2Xi)}. These vulnerabilities, stemming from the misuse of LLM-generated outputs without proper validation, can result in severe consequences such as Remote Command Execution (RCE), file injection, SQL injection, and Server-Side Request Forgery (SSRF). To address this emerging threat, we propose TaintP2X, a novel static taint analysis framework that models LLM-generated outputs as taint sources, tracks their propagation through sensitive sink functions, and employs LLM-assisted analysis to prune false positives. TaintP2X achieves high precision and scalability, systematically identifying P2Xi vulnerabilities. In evaluations, TaintP2X demonstrated a 77.1% recall on a ground truth dataset of 35 vulnerabilities, outperforming state-of-the-art methods, and uncovered 101 taint paths across 75 GitHub repositories, with several vulnerabilities confirmed by developers. These findings highlight the prevalence and impact of P2Xi vulnerabilities and establish TaintP2X as a practical solution for securing LLM-integrated ecosystems.
@@ -313,6 +373,8 @@ Total in this category: 34 papers
 **Authors:** Lige Zhan (Wuhan University), Jiang Ming (Tulane University, USA), Chenke Luo (Tulane University), Guojun Peng (Wuhan University), Jianming Fu (Wuhan University)
 
 **Categories:** Dependability and Security
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764541
 
 **中文总结:** 提出 LibScope，利用周围类上下文将局部相似匹配提升为全局类集合匹配，在 Android 第三方库检测/version 识别上优于 SOTA 方法。
 
@@ -324,6 +386,8 @@ Total in this category: 34 papers
 
 **Categories:** Dependability and Security
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773245
+
 **中文总结:** 首次开发者视角分析 Google Workspace 插件 DevOps 机制，在 5300 个插件中发现 274 个源码泄露等问题，其中 96 个暴露密钥。
 
 **Abstract:** Cloud-based workspace systems, such as Google Workspace and Microsoft OneDrive, have enabled third-party developers to create and upload functionality-rich applications (referred to as \emph{add-ons}). Existing studies have primarily examined user-centric data protection and permission management of this emerging ecosystem, but the underlying \emph{DevOps} mechanisms that regulate add-on development, deployment, and operation remain largely unexplored. In this work, we conduct the first \emph{developer-centric} investigation of these DevOps mechanisms. We propose a hybrid method that combines a static analysis to abstract development and integration (i.e., deployment) (\emph{Dev}) models and a dynamic analysis to add-ons’ runtime operation workflows (\emph{Ops}). It yields insights into the DevOps lifecycle of add-ons, unveiling associated attack surfaces and multiple types of security vulnerabilities, including source code leakage, code tampering and secret key exposure. Our large-scale evaluation of 5,300 Google Workspace add-ons reveals a concerning \emph{status quo} of the ecosystem: 274 add-ons are subject to source code leakage, including widely-used ones with over 100,000 users. Among them, 96 (around one third) expose the secret keys of developers, e.g., PayPal merchant secret key and secret keys to access the developer’s back-end databases.
@@ -333,6 +397,8 @@ Total in this category: 34 papers
 **Authors:** Radu Calinescu (University of York, UK), Simos Gerasimou (Cyprus University of Technology), Sinem Getir Yaman (University of York, UK), Gricel Vázquez (University of York, UK), Micah Bassett (University of York, UK)
 
 **Categories:** Dependability and Security
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773253
 
 **中文总结:** 提出 ULTIMATE 框架，统一建模并验证多模型随机系统间依赖，首次整合多种概率模型检验范式并在案例研究中验证通用性。
 
@@ -345,6 +411,8 @@ Total in this category: 34 papers
 **Categories:** Dependability and Security
 
 **Awards:** Distinguished Paper Award
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773154
 
 **中文总结:** 提出 WhisperCatcher，结合启动阶段流量语义引导静动态分析恢复加密隐私数据传输，F1 95.49%，大规模测量发现 4966 个应用存在同意前传数。
 

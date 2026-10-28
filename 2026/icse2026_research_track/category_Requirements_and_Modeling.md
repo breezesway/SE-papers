@@ -10,6 +10,8 @@ Total in this category: 7 papers
 
 **Categories:** Requirements and Modeling
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773131
+
 **中文总结:** 提出 HyPerf 贝叶斯多层性能建模，分层区分配置不变与随 workload 等外部因素变化的性能影响；以更少训练样本实现更准确的配置性能预测。
 
 **Abstract:** Tuning a software system’s configuration is essential to meet performance requirements. However, not only do configuration options affect performance, but also the system’s interaction with external factors such as the workload. Hence, tuning requires understanding how a specific setting of external factors (e.g., a specific workload) in combination with the system configuration influences performance. Current performance modeling approaches usually do not incorporate external factors, for good reasons: training a separate model per setting is costly and is unlikely to generalize, whereas a single model trained on multiple settings fails to capture variations that are specific to a certain setting . To address this shortcoming, we propose HyPerf, a Bayesian multi-level performance modeling approach that systematically distinguishes between setting-invariant and setting-variant influences, that is, influences that remain consistent across settings versus those that exhibit substantial variation. For this purpose, HyPerf employs a hierarchical structure: The upper level captures general performance trends across multiple settings (e.g., across different workloads), while the lower level refines these estimates with setting-specific deviations (e.g., workload-specific performance variations). With HyPerf, we aim at balancing accuracy and efficiency , achieving robust performance predictions with significantly fewer training samples. Unlike the state of the art, HyPerf is able to identify a minimal set of settings that captures essential performance variations, so that developers can approximate whether all setting-variant influences have been accounted for. Empirical evaluations on ten real-world software systems across up to 35 workloads demonstrates that HyPerf matches or outperforms state-of-the-art approaches while requiring fewer measurements. Notably, HyPerf enables interpretable performance reasoning and can identify minimal workload subsets that capture essential performance variations.
@@ -22,6 +24,8 @@ Total in this category: 7 papers
 
 **Awards:** Distinguished Paper Award
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787823
+
 **中文总结:** 实证分析 Linux 内核 feature model 与历史 SAT 求解器性能，发现即便最优求解器仍无法跟上内核增长，性能约每 7 年减半；警示产品线分析将日益困难。
 
 **Abstract:** The Linux kernel is a highly relevant, yet also highly configurable software system. Kernel developers keep track of this configurability in a feature model, which defines the features of Linux and their dependencies. To support kernel developers in various activities, many (semi-)automated product-line analyses have been proposed over the years. Under the hood, these analyses can often be computed with SAT solvers. Yet, the Linux kernel has constantly been growing in complexity for decades, which increasingly hampers its efficient analysis. At the same time, SAT solvers have been improving in performance for decades, which eases analysis. In this paper, we investigate empirically whether SAT solvers can keep up with the Linux kernel’s feature model. To this end, we analyze historic feature models of Linux with historic SAT solvers from several sources. We find that SAT solvers are generally not able to keep up with Linux. Even the optimal SAT solver is slowing down by 10% every year, meaning that its performance halves every seven years. We conclude that the Linux kernel will become increasingly difficult to analyze if its growth is not counteracted.
@@ -31,6 +35,8 @@ Total in this category: 7 papers
 **Authors:** Shihai Wang (University of Electronic Science and Technology of China), Tao Chen (University of Birmingham)
 
 **Categories:** Requirements and Modeling
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773107
 
 **中文总结:** 提出 LQPR，用轻量语言学诱导匹配将性能需求量化转为分类问题，在 9 个学习基线上 88%+ 场景为 sole best 且成本约低两个数量级。
 
@@ -42,6 +48,8 @@ Total in this category: 7 papers
 
 **Categories:** Requirements and Modeling
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787834
+
 **中文总结:** 提出 LikeThis!，用 GenAI 根据用户评论与截图生成 UI 改进方案供选择，GPT-Image-1 在基准与用户/开发者研究中均显著提升反馈可理解性与可执行性。
 
 **Abstract:** User feedback is crucial for the evolution of mobile apps. However, research suggests that users tend to submit uninformative, vague, or destructive feedback. Unlike recent AI4SE approaches that focus on generating code and other development artifacts, our work aims at empowering users to submit better and more constructive UI feedback with concrete suggestions on how to improve the app. We propose LikeThis!, a GenAI-based approach that takes a user comment with the corresponding screenshot to immediately generate multiple improvement alternatives, from which the user can easily choose their preferred option. To evaluate LikeThis!, we first conducted a model benchmarking study based on a public dataset of carefully critiqued UI designs. The results show that GPT-Image-1 significantly outperformed three other state-of-the-art image generation models in improving the designs to address UI issues while keeping the fidelity and without introducing new issues. An intermediate step in LikeThis! to generate a solution specification before changing the design was key to achieving effective improvement. Second, we conducted a user study with 10 production apps, where 15 users used LikeThis! to submit their feedback on encountered issues. Later, the developers of the apps assessed the understandability and actionability of the feedback with and without generated improvements. The results show that our approach helps generate better feedback from both user and developer perspectives, paving the way for AI-assisted user-developer collaboration.
@@ -51,6 +59,8 @@ Total in this category: 7 papers
 **Authors:** Yike Huang (East China Normal University), Ming Hu (East China Normal University, China), Xiaohong Chen (East China Normal University), Zhi Jin (Peking University, Wuhan University), Shuyuan Xiao (East China Normal University)
 
 **Categories:** Requirements and Modeling
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787806
 
 **中文总结:** 提出 LATO 分层分析驱动方法，模仿“剥洋葱”逐步分解需求并生成 UML 活动图，在开源与工业数据集上节点/关系 F1 相对 SOTA 最高提升 71.1%/52.4%。
 
@@ -62,6 +72,8 @@ Total in this category: 7 papers
 
 **Categories:** Requirements and Modeling
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764536
+
 **中文总结:** 提出 Simulink 代码生成器 AMICA，利用模型语义与数据流图规则合成硬件专用指令，在多个平台上比 Embedded Coder/Mercury 快 1.20–6.54 倍并缩小代码体积。
 
 **Abstract:** Simulink has become a pivotal tool in embedded scenarios, offering a model-driven approach for embedded software development. Given the tight performance and resource constraints in embedded applications, it is crucial to ensure the efficiency of the code generated from Simulink models. Code generators implement various optimizations to enhance performance. However, they neglect the potential of hardware-specific instructions available in modern processors, such as saturation-type instructions, which accomplish complex operations in fewer cycles. Moreover, relying on state-of-the-art compilers to use these instructions is also not as effective as expectation, due to their complex semantics. This paper proposes AMICA, an efficient code generator for Simulink models with hardware-specific instruction synthesis. The key insight of AMICA is to leverage model semantics to effectively synthesize the appropriate instructions. AMICA first converts the model into the dataflow graph and crafts a series of optimization rules represented as dataflow subgraph with constraints related to block parameters, data types, and other critical properties. Then, AMICA iteratively matches these rules with dataflow graph to obtain the optimizable candidates. The candidate that maximizes latency reduction is chosen to update the dataflow graph. Finally, AMICA synthesizes the appropriate instructions for optimizable blocks in accordance with instruction syntax and block properties. We implemented and evaluated AMICA on benchmark Simulink models. Compared with the state-of-the-art code generators Simulink Embedded Coder and Mercury, the code generated by AMICA is 1.20$\times$ - 6.54$\times$ faster in terms of execution time across different platforms. Besides, AMICA reduces 6% - 53% assembly code size of the compiled programs, while performing similarly in terms of data segment size and BSS segment size.
@@ -71,6 +83,8 @@ Total in this category: 7 papers
 **Authors:** Zhujun Wu (East China Normal University Shanghai, China), Xiaohong Chen (East China Normal University), Zhi Jin (Peking University, Wuhan University), Ming Hu (East China Normal University, China), Dongming Jin (Peking University, China)
 
 **Categories:** Requirements and Modeling
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773109
 
 **中文总结:** 提出 ReqCompleter，以用例-实体-操作闭环融合用例模型、E-R 图与 CRUD 矩阵迭代补全需求，完整性提升 20–88% 且幻觉率下降 2.4–13.9%。
 

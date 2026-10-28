@@ -10,6 +10,8 @@ Total in this category: 17 papers
 
 **Categories:** Analytics
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787790
+
 **中文总结:** 首次全面研究 Linux 内核并发缺陷，发现 27% 仅在特定中断处理时出现、约半数涉及驱动且 69.3% 源于设备控制路径并发，揭示现有检测方法在 OS 内核场景下的关键盲区。
 
 **Abstract:** Concurrency bugs, which arise from unexpected instruction orderings of concurrent execution contexts, are notoriously difficult to detect and diagnose due to their non-deterministic nature. Studies of concurrency bugs in user-space applications have shed light on common concurrency bug characteristics, informing the design of effective solutions for their detection, diagnosis, and repair. However, far less is known about concurrency bugs in operating system kernels, where low-level systems programming and complex execution patterns introduce new challenges. To address this gap, this paper presents the first comprehensive study of concurrency bugs in the Linux kernel. Our study reveals that kernel concurrency bugs exhibit surprisingly different characteristics compared to their counterparts in applications. For instance, 27.0% of kernel concurrency bugs only occur when certain interrupts are handled, which are rarely considered by existing bug discovery approaches. In addition, half of the bugs involve kernel driver code, but about 69.3% of these happen due to concurrent device operations on the control paths, such as device registration and deregistration, which suggests the driver control path should be a primary focus for concurrency bug discovery. Our findings reveal challenges and gaps in the existing approaches to finding kernel concurrency bugs. By shedding light on these challenges, this work paves the way for new operating system designs, testing tools, and verification efforts that will make modern operating systems more reliable and secure.
@@ -19,6 +21,8 @@ Total in this category: 17 papers
 **Authors:** Shaoxuan Yun (Beijing University of Posts and Telecommunications), Yuchao Zhang (Beijing University of Posts and Telecommunications), Zhikun Shi (Beijing University of Posts and Telecommunications), Liu Wang (Huazhong University of Science and Technology), Yi Wang (Beijing University of Posts and Telecommunications), Yu Bai (Beijing University of Posts and Telecommunications)
 
 **Categories:** Analytics
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773117
 
 **中文总结:** 对 313,647 个 Hugging Face Spaces 仓库开展首例大规模密钥泄露研究，提出 Secret Reviewer 结合静态分析与 LLM 检测；发现 9,149 个泄露仓库、11,557 个唯一密钥且 30% 仍有效。
 
@@ -30,6 +34,8 @@ Total in this category: 17 papers
 
 **Categories:** Analytics
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764533
+
 **中文总结:** 基于 510 个可执行 Node.js 包与 217 个 WebAssembly 模块开展首例 Node.js 中 Wasm 使用实证，揭示 C/C++/Rust 移植库维护不足、JS-Wasm 互操作测试缺失及引擎优化机会。
 
 **Abstract:** WebAssembly code executes within a host environment, such as JavaScript running on Node.js. Despite the increasing popularity of mixed JavaScript-WebAssembly applications, the interactions between these two languages and the effect of WebAssembly usage on the NPM ecosystem, are currently not well understood, forcing developers of program analyses and runtime engines and ecosystem tooling authors to make assumptions that may not hold in practice. Moreover, there currently is no executable dataset of WebAssembly modules that allows for studying how WebAssembly is used at runtime within Node.js packages. This paper presents the first comprehensive study of WebAssembly usage in Node.js code. The study is enabled by a novel dataset that we collect comprising 510 executable Node.js packages that exercise 217 unique WebAssembly modules. We study dependencies among packages that use WebAssembly, how JavaScript and WebAssembly interoperate, and the implications for security, efficiency and reliability in the WebAssembly-JavaScript ecosystem. The study provides several insights and future research opportunities, including: (i) a lack of maintenance of WebAssembly binaries that are ports of C/C++/Rust libraries, which motivates future work on cross-language package maintenance, (ii) a lack of testing of WebAssembly usage from JavaScript, which motivates work on targeted testing techniques; (iii) relatively little dynamism in WebAssembly usage, allowing for pragmatic assumptions in program analyses; and (iv) untapped optimization opportunities in engine caching and client-specific debloating. Beyond these insights, we envision our dataset to provide a basis for future studies, program analyses, and work on WebAssembly engine design.
@@ -39,6 +45,8 @@ Total in this category: 17 papers
 **Authors:** Zhi Chen (Singapore Management University), Wei Ma (Singapore Management University), Lingxiao Jiang (Singapore Management University)
 
 **Categories:** Analytics
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773140
 
 **中文总结:** 对 SWE-Bench 上 8 个 top agent 的 3,977 条求解与 3,931 条测试轨迹做过程级错误分析，揭示 ModuleNotFoundError/TypeError 等高频错误及 SWE-Bench 平台 3 个已确认缺陷。
 
@@ -50,6 +58,8 @@ Total in this category: 17 papers
 
 **Categories:** Analytics
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764526
+
 **中文总结:** 首例系统研究 Java 模块强封装破坏（BSE），分析 4,079 个 GitHub issue 的症状、来源与修复；揭示模块开发者与用户之间的封装张力及迁移 Java 9+ 的安全维护风险。
 
 **Abstract:** As an increasing number of software systems reach sizes of hundreds of millions of lines of code, relying solely on code-level abstractions is impractical, posing profound challenges to software maintenance. Java Module Platform System (JPMS) provides architectural abstractions that enable Java engineers to control the required and provided interfaces of a module. Despite numerous advantages of enforced strong encapsulation provided by JPMS, developers still break those encapsulations to access the internal elements of a module. Such practice is referred to as Breaking the Strong Encapsulation (BSE). This behavior not only complicates the migration to newer versions (e.g., Java 9) but also threatens the integrity and safety of software projects. Since the BSE problem is still underexplored, in this work, we conduct the first empirical study to identify and characterize this widespread and impactful problem. We first collect a comprehensive dataset containing 4,079 GitHub issues and then investigate those issues from various perspectives, including symptoms, abuse sources, desired functionalities, and resolutions. Our empirical study highlights a tension in the Java module system: module developers aim to enforce strong encapsulation while module users frequently attempt to break the encapsulation. Our finding also emphasizes the need for both practitioners and researchers to develop effective strategies to mitigate these problems, offering an understanding of BSE characteristics to inform future detection and repair efforts.
@@ -59,6 +69,8 @@ Total in this category: 17 papers
 **Authors:** Sabato Nocera (University of Salerno), Sira Vegas (Universidad Politecnica de Madrid), Giuseppe Scanniello (University of Salerno), Massimiliano Di Penta (University of Sannio, Italy), Natalia Juristo (Universidad Politecnica de Madrid)
 
 **Categories:** Analytics
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787786
 
 **中文总结:** 将队列研究设计引入软件仓库挖掘，复用 Khomh 等数据因果评估 11 种 code smell 对类变更/缺陷倾向的影响；smell 总体显著增加变更倾向但对缺陷倾向影响有限且因类型而异。
 
@@ -70,6 +82,8 @@ Total in this category: 17 papers
 
 **Categories:** Analytics
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787824
+
 **中文总结:** 对 5,954 个 WebGL 应用开展首例 GPU 加速 Web 应用实证，跨设备/系统/浏览器测量性能缺陷及开发实践根因，并提出面向开发者与浏览器厂商的改进策略。
 
 **Abstract:** Driven by the rapid advancement of Web immersive experiences, the demand for GPU acceleration in Web applications has become an essential component of the Web ecosystem. However, little is known about the current practices of GPU-accelerated Web applications. To bridge the knowledge gap, we conduct the first comprehensive empirical study of real-world Web applications that leverage the Web Graphics Library (WebGL) for GPU acceleration, i.e., WebGL applications. We construct a dataset consisting of 5,954 real-world WebGL applications and develop a measurement tool to evaluate how these applications perform across various devices, operating systems, and browsers. Our findings reveal the performance defects in these applications, along with the root causes stemming from undesired development practices. Based on the findings, we propose actionable strategies for developers and browser vendors to mitigate the performance defects.
@@ -79,6 +93,8 @@ Total in this category: 17 papers
 **Authors:** Rahil Mehta (Oregon State University), Pushpak Katkhede (Oregon State University), Manish Motwani (Oregon State University)
 
 **Categories:** Analytics
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787787
 
 **中文总结:** 发布首个 REST API 真实缺陷基准 Defects4REST，含50项目607缺陷及6类13子类分类法；评估显示 SOTA 测试工具仅检出30个样本缺陷中的10%（3/30）。
 
@@ -90,6 +106,8 @@ Total in this category: 17 papers
 
 **Categories:** Analytics
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773177
+
 **中文总结:** 分析1193个 Stack Overflow 能耗问题，揭示定位使用平衡、数据处理效率等核心议题及跨硬件/OS/语言层关切；为分层节能开发提供实践启示。
 
 **Abstract:** Energy consumption of software applications has emerged as a critical concern for developers to contemplate in their daily development processes. Previous studies have surveyed a limited number of developers to understand their viewpoints on energy consumption. We complement these studies by analyzing a meticulously curated dataset of 1,193 Stack Overflow (SO) questions concerning energy consumption. These questions capture real-world energy-related challenges in practice. To understand practitioners’ perceptions, we investigate the intentions behind these questions, semantic topics, and associated technologies (e.g., programming languages). Our results reveal that: (i) the most prevalent energy consumption topic is about balancing Positioning usage; (ii) efficiently handling data is particularly challenging, with these questions having the longest response times; (iii) practitioners primarily ask questions to understand a concept or API related to energy consumption; and (iv) practitioners are concerned about energy consumption across multiple levels—hardware, operating systems, and programming languages—during energy efficient software development. Our findings raise awareness about energy consumption’s impact on software development. We also derive actionable implications for energy optimization at different levels (e.g., optimizing API usage or hardware accesses) during energy-aware software development.
@@ -99,6 +117,8 @@ Total in this category: 17 papers
 **Authors:** Dawei Chen (Xi'an Jiaotong University), Wuxia Jin (Xi'an Jiaotong University), Hui Guo (Xi'an Jiaotong University), Guanlin Qiao (Xi'an Jiaotong University), Peng Di (Ant Group & UNSW Sydney), Ting Liu (Xi'an Jiaotong University)
 
 **Categories:** Analytics
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764521
 
 **中文总结:** 对3066个项目版本分析12种 JS/TS 特征替代用法，揭示12种使用模式（7种为 code smell）；并提出 DiTU 大规模特征检测方法。
 
@@ -110,6 +130,8 @@ Total in this category: 17 papers
 
 **Categories:** Analytics
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773113
+
 **中文总结:** 提出 IntelliRadar 平台，用 LLM 与 Least-to-Most 提示从多源情报抽取恶意包信息，数据库含 3.4 万+ NPM/PyPI 恶意包且比 OSV/Snyk 多识别数千条并更早发现威胁。
 
 **Abstract:** Malicious packages in public registries have significantly threatened the software supply chain (SSC) security in modern software engineering. Current software component analysis (SCA) tools have been applied to detect and report these threats to protect downstream users. However, existing SCA tools rely heavily on databases of known malicious components, while existing databases such as OSV and Snyk often have delays in data updates and incomplete information. This inadequacy is particularly evident in their limited coverage of non-structured intelligence sources like social media platforms and developer forums, where emerging threats are often first reported. Consequently, the lifecycle of malicious packages is extended, posing serious threats to downstream users. To address this, we developed a novel and comprehensive approach to construct a platform IntelliRadar to pinpoint the collection, processing, and extraction of malicious components intelligence. Specifically, by exhaustively searching and snowballing the public sources of malicious package intelligence, and incorporating large language models (LLMs) with domain-specialized Least to Most prompts, IntelliRadar ensures the coverage, timeliness, and accurate information extraction of malicious package intelligence. As a result, we constructed a comprehensive malicious package database containing 34,313 malicious NPM and PyPI packages. Our evaluation shows that IntelliRadar achieves high performance (97.91% precision) on malicious package intelligence extraction. Compared to existing databases, IntelliRadar identifies 7,542 more malicious packages than OSV and 12,684 more than Snyk. Furthermore, 76.6% of NPM components and 70.3% of PyPI components in IntelliRadar were collected earlier than in Snyk’s database. IntelliRadar is also more cost-efficient, with a cost of $0.003 per piece of malicious package intelligence and only $7 per month for continuous monitoring. Furthermore, we identified and received confirmation for 1,981 malicious packages in downstream package manager mirror registries through the implementation of IntelliRadar.
@@ -119,6 +141,8 @@ Total in this category: 17 papers
 **Authors:** Filippo Schiavio (USI Lugano), Walter Binder (USI Lugano)
 
 **Categories:** Analytics
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773165
 
 **中文总结:** 提出 JEDI，将 SQL 基准自动转换为含 Stream API 与命令式实现的 Java 微基准，用于分析并行化策略并指导 Stream API 性能优化。
 
@@ -130,6 +154,8 @@ Total in this category: 17 papers
 
 **Categories:** Analytics
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764531
+
 **中文总结:** 构建 StarScout 对 GitHub 五年元数据做全球纵向 fake star 检测，发现 2024 年起活动激增、600 万疑似 fake star，多数用于短期推广钓鱼/恶意仓库。研究指出 fake star 长期反而成为声誉负担。
 
 **Abstract:** GitHub, the de-facto platform for open-source software development, provides a set of social-media-like features to signal high-quality repositories. Among them, the star count is the most widely used popularity signal, but it is also at risk of being artificially inflated (i.e., \emph{faked}), decreasing its value as a decision-making signal and posing a security risk to all GitHub users. In this paper, we present a systematic, global, and longitudinal measurement study of fake stars in GitHub. To this end, we build StarScout, a scalable tool able to detect anomalous starring behaviors across the entire GitHub metadata in the last five years. Analyzing the data collected using StarScout, we find that: (1) fake-star-related activities have rapidly surged since 2024; 2) the accounts and repositories in fake star campaigns have highly trivial activity patterns; (3) the majority of fake stars are used to promote short-lived phishing malware repositories; the remaining ones are mostly used to promote AI/LLM, blockchain, tool/application, and tutorial/demo repositories; (4) while repositories may have acquired fake stars for growth hacking, fake stars only have a promotion effect in the short term (i.e., less than two months) and become a liability in the long term. Our study has implications for platform moderators, open-source practitioners, and supply chain security researchers.
@@ -139,6 +165,8 @@ Total in this category: 17 papers
 **Authors:** Mohammadali Sefidi Esfahani (Concordia University), Fahimeh Hajari (Concordia University), Peter Rigby (Concordia University; Meta)
 
 **Categories:** Analytics
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764545
 
 **中文总结:** 研究在知识流失风险 PR 上额外推荐 reviewer 以缓解人员流动，TurnoverRec++ 可将 turnover 风险降 82% 但需 16.6% PR 加审，FarAwareRec 以 1.9% 额外审阅降 42% 风险。
 
@@ -150,6 +178,8 @@ Total in this category: 17 papers
 
 **Categories:** Analytics
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787836
+
 **中文总结:** 实证研究 Debian/Ubuntu/Fedora/openEuler 间同源包补丁共享，发现大量同源包但跨发行版补丁传播中位延迟可达 530 天，并贡献 15 个补丁至 openEuler。
 
 **Abstract:** As a cornerstone of cloud computing and artificial intelligence, the Linux operating system has given rise to many popular distributions (distros), such as Fedora and Debian. A distro includes a rich collection of software packages derived from third-party open-source projects (upstream). Due to the nature of reusing upstream, some packages originate from the same upstream projects, noted as homologous packages. Maintaining packages is a core but tedious task for distros, which relies on continuously developing code patches. The maintenance of homologous packages could benefit from cross-distro collaboration. However, their shared origin may also lead to redundant efforts and delayed reuse of valuable maintenance work performed by other distros. To measure potential inefficiencies and explore possible solutions, this paper conducts an empirical study of patch sharing among homologous packages across four representative distros spanning three distinct families: Debian, Ubuntu, Fedora, and openEuler. We find that homologous packages are prevalent across distros, even across different distro families. Specifically, there are 13,873 homologous packages shared between Debian and Fedora, accounting for 40.3% and 56.1% of all packages in Debian and Fedora, respectively. For homologous packages with the same upstream version, we found that 19.5% of the patches are shared between Fedora and Debian, and 46.7% between Fedora and openEuler. However, these shared patches often exhibit remarkable propagation latency, with a median lag of 530.0 days between Fedora and Debian and 169.0 days between Fedora and openEuler. These results highlight the importance and necessity of cross-distro-family patch recommendations. We identified 17 shared Fedora-exclusive patches and contributed them to openEuler, among which 15 patches were successfully merged, demonstrating the potential of cross-distro-family patch recommendation and inspiring further research in this area.
@@ -159,6 +189,8 @@ Total in this category: 17 papers
 **Authors:** Rachna Raj (Concordia University), Diego Elias Costa (Concordia University, Canada)
 
 **Categories:** Analytics
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773244
 
 **中文总结:** 提出社区分析视角评估 OSS 库 API 实际使用率与测试覆盖，10 个 Java 库平均仅 16% API 被生态使用且 27% 已用 API 测试不足。
 
@@ -171,6 +203,8 @@ Total in this category: 17 papers
 **Categories:** Analytics
 
 **Awards:** Distinguished Paper Award
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773223
 
 **中文总结:** 基于 649 个真实智能网联汽车漏洞做首项大规模实证，补充 1 个新位置与 13 种新漏洞类型，并公开数据集支持后续研究。
 

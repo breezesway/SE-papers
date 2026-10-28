@@ -12,6 +12,8 @@ Total in this category: 72 papers
 
 **Awards:** Distinguished Paper Award
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773110
+
 **中文总结:** 评估 8 款 Python SAST 工具在合成与真实漏洞数据集上的表现；单工具在真实集最多检出 40%，全部工具聚合仅 66.7%，并给出根因分析与改进建议。
 
 **Abstract:** Python is currently the most popular programming language and ensuring the security of Python applications has become a critical concern. Static Application Security Testing (SAST) tools have been introduced to address this need, claiming to support a wide range of Common Weakness Enumerations (CWEs). However, the ability of these tools to detect real-world vulnerabilities in Python programs has not been comprehensively evaluated. In this paper, we selected eight SAST tools from 117 existing ones based on well-designed criteria. Based on the synthetic and real-world dataset, we evaluated and compared these SAST tools from different perspectives including effectiveness and efficiency. Our results reveal significant limitations in current SAST tools: although perform well on the synthetic dataset, a single tool detects no more than 40% of the vulnerabilities in our real-world dataset. Even when aggregating the outputs of all evaluated tools, only 66.7% of the real-world vulnerabilities are identified. To further understand these shortcomings, we performed a root cause analysis of the detection results and identified useful insights for both SAST tool developers and users, focusing on tool development, evaluation, and selection.
@@ -21,6 +23,8 @@ Total in this category: 72 papers
 **Authors:** Lara Khatib (University of Waterloo), Noble Saji Mathews (University of Waterloo, Canada), Mei Nagappan (University of Waterloo)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773127
 
 **中文总结:** 提出 AssertFlip，先让 LLM 生成通过 buggy 行为的 passing test 再反转为 bug 复现测试（BRT）；在 SWT-Bench-Verified 上 fail-to-pass 成功率 43.6%，优于已知方法。
 
@@ -32,6 +36,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773193
+
 **中文总结:** 提出网络级微服务故障注入测试方法 Reynard，动态建模系统弹性行为并剪枝故障组合空间；在工业系统中发现未知弹性缺陷且开销低、易集成现有基准。
 
 **Abstract:** Microservice architectures are inherently vulnerable to partial failures, and they rely on resilience patterns to tolerate them. However, it is challenging to design and implement the resilience logic. Unforeseen interactions with faulty services can lead to errors in dependent services, resulting in incorrect system behavior. Fault injection testing techniques aim to uncover these errors by examining the system’s behavior in response to different fault combinations. However, existing automated techniques primarily focus on service-level fault injection, which limits their broader applicability. We present an automated fault-injection testing method that operates at the network level, enabling broad applicability. The method models the system’s resilience behaviors dynamically through the observed test executions and uses this information to reduce the set of fault combinations to explore. We implemented our method in a prototype tool, called Reynard. Our evaluation demonstrates that Reynard efficiently explores system executions by significantly reducing the number of fault combinations to test. It incurs minimal overhead and can be easily integrated into existing benchmarks. Furthermore, we applied Reynard to test an industrial system, showcasing its applicability and effectiveness in a real-world context. Moreover, we uncovered a previously unknown resilience bug.
@@ -41,6 +47,8 @@ Total in this category: 72 papers
 **Authors:** Wen Zhang (University of Georgia), Botang Xiao (University of Georgia), Qingchen Kong (University of Georgia), Boyang Yi (University of Georgia), Suxin Ji (University of Georgia, USA), Yage Hu (University of Georgia), Songlan Wang (University of Georgia), Wenwen Wang (University of Georgia)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773234
 
 **中文总结:** 提出 BFix，首个二进制级内存泄漏自动修复工具，克服无源码场景的分析挑战；修复效果与效率接近源码级 SOTA，对二进制体积与性能影响可忽略。
 
@@ -52,6 +60,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787770
+
 **中文总结:** 提出随机化框架优化 Ethereum 矿工 gas 收入，通过采样排列 profiling、决策树学习交易 gas 依赖并编码为 ILP 求解最优区块组成；应对交易顺序影响 gas 的组合爆炸问题。
 
 **Abstract:** In cryptocurrency networks, transaction-fee revenue serves as the primary financial incentive for miners to participate in the consensus mechanism, securing the network by validating transactions and extending the blockchain. Maximizing this revenue is therefore a key optimization problem for miners. While this has been studied for UTXO blockchains like Bitcoin, where transaction fees are fixed, we focus on Ethereum, where the challenge is significantly greater. On Ethereum, the fee paid by a transaction depends on its execution cost (gas), which can change based on the ordering of preceding transactions in a block. This creates a combinatorial explosion, as miners must select not only a subset of transactions but also their optimal permutation to maximize revenue. In this work, we present a randomized framework to address this problem. Our approach first uses randomized testing, executing sample permutations of pending transactions to profile their gas usage. From this data, we employ decision trees to learn transaction interdependencies, identifying a small “neighborhood” of transactions that influence each other’s execution costs. These dependencies are then encoded as a set of logical rules that predict gas usage based on local transaction ordering. Finally, we translate these rules and other constraints (e.g., block gas limit, nonce ordering) into an integer linear programming (ILP) instance, which we solve to find a block composition that maximizes total tip revenue. Our experimental results demonstrate significant gains: our method outperforms real-world Ethereum miners by an average of 73.45 percent per block, which corresponds to roughly 63 million USD per annum.
@@ -61,6 +71,8 @@ Total in this category: 72 papers
 **Authors:** Haoyang Ma (Hong Kong University of Science and Technology), Alastair F. Donaldson (Imperial College London), Qingchao Shen (Tianjin University), Yongqiang Tian (Monash University), Junjie Chen (Tianjin University), Shing-Chi Cheung (Hong Kong University of Science and Technology)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773237
 
 **中文总结:** 提出 bounded exhaustive random program generation 与工具 Erwin，基于 bug-prone qualifier 模板约束 Solidity 编译器测试空间；发现 26 个 bug（23 未知、18 确认、10 已修复）。
 
@@ -72,6 +84,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764535
+
 **中文总结:** 提出 MAdroid 多 agent LLM 框架（Coordinator/Operator/Observer）自动化多用户交互功能测试；41 个任务中 82.9% 成功、动作相似度 96.8%，回归测试发现 11 个多用户 bug。
 
 **Abstract:** The growing dependence on mobile phones and their apps has made multi-user interactive features—like chat calls, live streaming, and video conferencing—indispensable for bridging the gaps in social connectivity caused by physical and situational barriers. However, automating these interactive features for testing is fraught with challenges, owing to their inherent need for timely, dynamic, and collaborative user interactions, which current automated testing methods inadequately address. Inspired by the concept of agents designed to autonomously and collaboratively tackle problems, we propose MAdroid, a novel multi-agent approach powered by the Large Language Models (LLMs) to automate the multi-user interactive task for app feature testing. Specifically, MAdroid employs two functional types of multi-agents: user agents (Operator) and supervisor agents (Coordinator and Observer). Each agent takes a specific role: the Coordinator directs the interactive task; the Operator mimics user interactions on the device; and the Observer monitors and reviews the task automation process. Our evaluation, which included 41 multi-user interactive tasks, demonstrates the effectiveness of our approach, achieving 82.9% of the tasks with 96.8% action similarity, outperforming the ablation studies and state-of-the-art baselines. Additionally, a preliminary investigation underscores MAdroid’s practicality by helping identify 11 multi-user interactive bugs during regression app testing, confirming its potential value in real-world software development contexts.
@@ -81,6 +95,8 @@ Total in this category: 72 papers
 **Authors:** Xuezhi Song (Fudan University), Yijian Wu (Fudan University), Bihuan Chen (Fudan University), Zhengjie Lu (Fudan University), Shuning Liu (Fudan University), Xin Peng (Fudan University)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773182
 
 **中文总结:** 分析 280 个 Java 回归 bug 的引入变更与根因（内在错误 vs 兼容性错误），验证 LLM 检测能力有限并构建 LLM4Reg 显著提升精度、召回与解释能力。
 
@@ -92,6 +108,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764548
+
 **中文总结:** 提出 CombCT，首次将组合测试用于探索编译器优化序列以发现缺陷；在 GCC/LLVM 上检出更多序列相关 bug，并发现14个此前未知缺陷（13个已确认或修复）。
 
 **Abstract:** Compilers, as fundamental software, are essential for various applications, making their reliability crucial. Modern compilers like GCC and LLVM offer numerous optimizations to improve performance. Empirical studies present that most bugs occur during compiler optimization, especially with specific optimization sequences, yet little attention has been paid to this in compiler testing. The vast optimization sequence space challenges existing methods, leaving this important research direction in its early stages and in need of effective solutions. In this work, we propose a novel and effective compiler testing approach dubbed CombCT, aimed at boosting compiler testing. CombCT is the first approach that leverages the power of combinatorial testing for compiler testing, making it be capable of effectively exploring optimization sequences. Besides, CombCT incorporates three new techniques, i.e., dynamic optimization sequence adaption, partial sequence selection, and diversity augmentation, to enhance its effectiveness. Extensive experiments on various versions of GCC and LLVM demonstrate that CombCT detects much more unique bugs, which are caused by certain optimization sequences, than current state-of-the-art methods, indicating its superiority. Moreover, CombCT has disclosed 14 previously unknown bugs in the latest versions of GCC and LLVM, 13 of which have been confirmed or fixed, showing its practical value.
@@ -101,6 +119,8 @@ Total in this category: 72 papers
 **Authors:** Yuheng Shen, Jianzhong Liu (Tsinghua University), Yuhan Chen (Central South Sniversity), Yifei Chu (Tsinghua University), Qiang Zhang (Hunan University), Guoyu Yin (Central South University), Heyuan Shi (Central South University), Yu Jiang (Tsinghua University)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773136
 
 **中文总结:** 提出内核模糊测试器 CSGO，联合变异运行时参数与系统调用以触达更深内核状态；平均覆盖率提升21%，发现21个未知 bug（8个已修复）。
 
@@ -112,6 +132,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773147
+
 **中文总结:** 提出 Crucio，通过分解森林提取短样本在黑盒场景推断 C/C++/Java 等复杂语言文法；是唯一能在合理时间内完成推断的方法，recall 与 F1 显著优于 Arvada 等 SOTA。
 
 **Abstract:** Grammar inference for complex programming languages remains a significant challenge, as existing approaches fail to scale to real-world datasets within practical time constraints. In our experiments,none of the state-of-the-art tools, including Arvada, Treevada and Kedavra were able to infer grammars for complex languages such as C, C++, and Java within 48 hours. Arvada and Treevada perform grammar inference directly on full-length input examples, which proves inefficient for large files commonly found in such languages. While Kedavra introduces data decomposition to create shorter examples for grammar inference, its lexical analysis still relies on the original inputs. Additionally, its strict no-overgeneralization constraint limits the construction of complex grammars. To overcome these limitations, we propose Crucio, which builds a decomposition forest to extract short examples for lexical and grammar inference via a distributional matrix. Experimental results show that Crucio is the only method capable of successfully inferring grammars for complex programming languages (where the number of nonterminals is up to 17× greater than in prior benchmarks) within reasonable time limits. On the prior simple benchmark, Crucio achieves an average recall improvement of 1.37× and 1.19× over Treevada and Kedavra, respectively, and improves F1 scores by 1.21× and 1.13×.
@@ -121,6 +143,8 @@ Total in this category: 72 papers
 **Authors:** Jiaqiang Yao (College of Computer, National University of Defense Technology), Meixi Liu (National University of Defense Technology, Changsha, China), Zhenbang Chen (College of Computer, National University of Defense Technology), Yongchao Xing (College of Computer, National University of Defense Technology), Jinjian Luo (College of Computer, National University of Defense Technology), Yunlai Luo (National University of Defense Technology), Guofeng Zhang (College of Computer, National University of Defense Technology), Yufeng Zhang (Hunan University), Ji Wang (National University of Defense Technology)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773273
 
 **中文总结:** 提出面向上下文无关属性的模糊测试框架 CFPOFuzz，含基于监控状态与控制流的变异算法；生成首个目标输入速度提升3.83×，发现7个零日漏洞。
 
@@ -132,6 +156,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764577
+
 **中文总结:** 提出面向回归失败调试的 CoReX，在双版本切片中保留理解失败所需上下文并剔除冗余计算；在相关指标上优于现有 dual-version 切片方法。
 
 **Abstract:** Troubleshooting regression failures is one of the most frequent yet time-consuming development tasks. To help with this task, numerous approaches aim to narrow down developers’ attention to the subset of code statements relevant to the failure. The most prominent of these approaches are based on program slicing, as slicing not only identifies a subset of relevant statements but also maintains the flow of information between these statements. By surveying more than 50 practitioners from eight different countries, we observe that existing dual-version slicing-based approaches have two main limitations: (a) to minimize the number of statements presented to the developer, they omit contextual information required to truly understand the failure and (b) to keep information propagation between the statements in the slice intact, they include lengthy computations that are not necessary to understand the failure. We use these observations to define a new dual-version slicing approach for regression scenarios, called CoReX. We quantitatively evaluate CoReX on a large number of subjects and metrics used in prior work, calculating the reduction rate it achieves and its alignment with developers’ expectations. The results of our evaluation show that CoReX outperforms other existing dual-version slicing techniques on both metrics. We believe our work provides grounds for efficient integration of slicing-based approaches into development workflows.
@@ -141,6 +167,8 @@ Total in this category: 72 papers
 **Authors:** Wenyuan Xu (Aarhus University), Alexi Turcotte (CISPA), Cristian-Alexandru Staicu (CISPA Helmholtz Center for Information Security)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764564
 
 **中文总结:** 提出 D-Bundlr，解包 JavaScript bundle 并还原库源码以恢复静态分析；使 CodeQL 在已知漏洞基准上恢复89%检出，popular 网站扫描多产出约3200条告警。
 
@@ -152,6 +180,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773141
+
 **中文总结:** 提出变异推断工具 WarpL，对比原程序与性能正常 mutant 的机器码定位 Wasm 运行时次优编译指令；12个真实问题中10个定位到精确根因，并诊断 Wasmtime 6个未知问题。
 
 **Abstract:** Performance debugging in WebAssembly (Wasm) runtimes is essential for ensuring the robustness of Wasm, especially since performance issues have frequently occurred in Wasm runtimes, which can significantly degrade the capabilities of hosted services. Many performance issues in Wasm runtimes result from suboptimal compilation of input Wasm programs, for which existing performance debugging methods primarily designed for application-level inefficiencies are not well-suited. In this paper, we present WarpL, a novel mutation-based approach that aims to identify the exact suboptimal instruction sequences responsible for the performance issues in Wasm runtimes, thereby narrowing down the root causes. Specifically, WarpL obtains a functionally similar mutant in which the performance issue does not manifest, and isolates the exact suboptimal instructions by comparing the machine code of the original and mutated programs. We implement WarpL as an open-source tool and evaluate it on 12 real-world performance issues across three widely used Wasm runtimes. WarpL identified the exact causes in 10 out of 12 issues. Notably, we have used WarpL to successfully diagnose six previously unknown performance issues in Wasmtime.
@@ -161,6 +191,8 @@ Total in this category: 72 papers
 **Authors:** Yuqi Huai (University of California, Irvine), Yuntianyi Chen (University of California, Irvine), Ziwen Wan (University of California, Irvine), Alfred Chen (University of California, Irvine), Joshua Garcia (University of California, Irvine)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773252
 
 **中文总结:** 提出 DeFT，从非确定性 ADS 场景测试中提取规划模块确定性单元测试；可复现658次碰撞失败，失败复现时间减少43.69%–77.64%。
 
@@ -172,6 +204,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773180
+
 **中文总结:** 提出考虑覆盖元素依赖关系的 discovery probability 估计器以更准确评估测试残余风险；median absolute error 约为 Good-Turing 估计器的1/5，可避免约7×无效测试时间。
 
 **Abstract:** However much we test a software system, some \emph{residual risk} of undiscovered bugs always remains. If we model test generation as a sampling process, a residual risk can be defined as the probability that the next test input reveals a bug. This risk is upper-bounded by the \emph{discovery probability (DP)}, i.e., the probability that the next test input covers new code, which itself is upper-bounded by the \emph{coverage rate}, i.e., the expected number of new coverage elements per test input. Prior work introduced the \emph{Good-Turing estimator (GoTu)} to estimate residual risk via coverage rate. However, we find that GoTu substantially overestimates, leading to undue optimism in bug finding because (i) the coverage rate is only a loose upper bound, and (ii) it ignores \emph{dependencies} among coverage elements. We propose \emph{dependency-aware DP estimation} for residual risk analysis. Our estimator directly estimates DP \emph{and} accounting for coverage dependencies using Ma and Chao’s sample coverage estimation. A naive implementation requires space proportional to the number of coverage elements and executions, which can be prohibitively large. To make it practical, we introduce two optimizations: dependency-aware node removal, which reduces the number of coverage elements to observe, and online singleton cluster maintenance, which eliminates the need to record observed coverage elements in each execution. A comparison of our estimator and GoTu on real-world software from FuzzBench demonstrates a substantial reduction in estimation error. If we stopped the campaign when the estimate of residual risk falls below a certain threshold, GoTu would lead a tester to waste $7\times$ more time than our estimator before deciding to stop. Our estimator achieves a median absolute error of only one-fifth that of GoTu. Finally, our bug-based analysis shows that our estimator achieves one to two orders of magnitude lower error than GoTu in residual risk estimation.
@@ -181,6 +215,8 @@ Total in this category: 72 papers
 **Authors:** Guy Farrelly (The University of Adelaide, Adelaide), Michael Chesser (University of Adelaide), Seyit Camtepe (CSIRO Data61), Damith C. Ranasinghe (University of Adelaide)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787828
 
 **中文总结:** 提出 DyMA-Fuzz，在重宿主固件 fuzzing 中抽象 DMA 接口并自动注入 fuzz 数据；覆盖率最高提升122%，发现 SOTA 遗漏漏洞。
 
@@ -192,6 +228,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773126
+
 **中文总结:** 提出 E-Test，从生产监控执行中识别未测场景并用 LLM 增广测试套件；F1 达0.55，显著优于回归/现场测试（0.34）与 vanilla LLM（0.39）。
 
 **Abstract:** Test suites are inherently imperfect, and testers can always enrich a suite with new test cases that improve its quality and, consequently, the reliability of the target software system. However, finding test cases that explore execution scenarios beyond the scope of an existing suite can be extremely challenging and labor-intensive, particularly when managing large test suites over extended periods. In this paper, we propose E-Test, an approach that reduces the gap between the execution space explored with a test suite and the executions experienced after testing by augmenting the test suite with test cases that explore execution scenarios that emerge in production. E-Test (i) identifies executions that have not yet been tested from large sets of scenarios, such as those monitored during intensive production usage, and (ii) generates new test cases that enhance the test suite. E-Test leverages Large Language Models (LLMs) to pinpoint scenarios that the current test suite does not adequately cover, and augments the suite with test cases that execute these scenarios. Our evaluation on a dataset of 1,975 scenarios, collected from highly-starred open-source Java projects already in production and Defects4J, demonstrates that E-Test retrieves not-yet-tested execution scenarios significantly better than state-of-the-art approaches. While existing regression testing and field testing approaches for this task achieve a maximum F1-score of 0.34, and vanilla LLMs achieve a maximum F1-score of 0.39, E-Test reaches 0.55. These results highlight the impact of E-Test in enhancing test suites by effectively targeting not-yet-tested execution scenarios and reducing manual effort required for maintaining test suites.
@@ -201,6 +239,8 @@ Total in this category: 72 papers
 **Authors:** Juanen Li (Tsinghua University), Peng Qian (Zhejiang University), Guanyan Li (University of Oxford), Rui Wang (Beijing Normal University), Peixin Wang (East China Normal University), Zhiqing Tang (Beijing Normal University), Fuchen Ma (Tsinghua University), Yuanliang Chen (Tsinghua University), Lun Zhang (GoPlus Security)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773166
 
 **中文总结:** 提出 LLM 引导智能合约 fuzzing EchoFuzz，生成漏洞函数调用序列 VFCS 并迭代引导探索；分支覆盖率提升29%、多发现62%漏洞，并发现37个未知漏洞。
 
@@ -212,6 +252,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773204
+
 **中文总结:** 提出 mkcheck2，结合 eBPF 系统调用追踪与增量分析验证构建依赖；开销较 ptrace 方案最高降99.7%，每 commit 平均分析时间从1267s 降至24s。
 
 **Abstract:** Build systems are fundamental to modern software development, but maintaining correct dependency specifications remains a significant challenge. Dependency-related errors, including missing and redundant dependencies, account for over 50% of build errors in large-scale software projects. Existing tools for detecting such errors suffer from two major limitations: high runtime overhead due to ptrace-based system call tracing, and the need to verify all edges in the build dependency graph. This paper presents mkcheck2, a novel approach that combines extended Berkeley Packet Filter (eBPF)-based system call tracing with incremental analysis to enable efficient dependency verification. Our evaluation on a diverse set of open-source projects demonstrates that mkcheck2 reduces the overhead of dependency error detection by up to 99.7% compared to existing ptrace-based approaches while maintaining detection accuracy. Across the entire 300-project Make corpus, the incremental analysis technique lowers the mean analysis time per commit from 1267.49 seconds to just 23.56 seconds, making continuous dependency verification practical in real-world development environments.
@@ -221,6 +263,8 @@ Total in this category: 72 papers
 **Authors:** Yiyuan Guo (The Hong Kong University of Science and Technology, Ant Group), Charles Zhang (Hong Kong University of Science and Technology)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773183
 
 **中文总结:** 提出分阶段 must-kill 推断与树状数据结构，加速路径敏感数据依赖分析中的 strong update；显著提速并扩大可分析状态覆盖。
 
@@ -232,6 +276,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773264
+
 **中文总结:** 提出 ParaSuit 为每个程序自配置符号执行参数；在12个 C 程序上分支覆盖率平均高26%，独有发现4个 bug。
 
 **Abstract:** We present ParaSuit, a self-configuring technique that enhances symbolic execution by autonomously adjusting its parameters tailored to each program under test. Modern symbolic execution tools are typically equipped with various external parameters to effectively test real-world programs. However, the need for users to fine-tune a multitude of parameters for optimal testing outcomes makes these tools harder to use and limits their potential benefits. Despite recent efforts to improve this tuning process, existing techniques are not self-configuring; they cannot dynamically identify which parameters to tune for each target program, and for each manually selected parameter, they sample a value from a fixed, user-defined set of candidate values that is specific to that parameter and remains unchanged across programs. The goal of this paper is to automatically configure symbolic execution parameters from scratch for each program. To this end, ParaSuit begins by automatically identifying all available parameters in the symbolic execution tool and evaluating each parameter’s impact through interactions with the tool. It then applies a specialized algorithm to iteratively select promising parameters, construct sampling spaces for each, and update their sampling probabilities based on data accumulated from symbolic execution runs using sampled parameter values. We implemented ParaSuit on KLEE and assessed it across 12 open-source C programs. The results demonstrate that ParaSuit significantly outperforms the state-of-the-art method without self-configuring parameters, achieving an average of 26% higher branch coverage. Remarkably, ParaSuit identified 11 unique bugs, four of which were exclusively discovered by ParaSuit.
@@ -241,6 +287,8 @@ Total in this category: 72 papers
 **Authors:** Pengyue Jiang (Cornell University), Kevin Guan (Cornell University), M. Mahdi Khosravi (Middle East Technical University), Moustafa Ismail (Middle East Technical University), Marcelo d'Amorim (North Carolina State University), Owolabi Legunsen (Cornell University)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787833
 
 **中文总结:** 提出 FineMOP，以细粒度分析加速演化感知运行时验证，减少无关 spec 重监控；较类级方法最高快4.86×，每修订少重监控81.04% spec，仍发现99.68%新违规。
 
@@ -252,6 +300,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787765
+
 **中文总结:** 提出 FrameShift，检测输入格式 relation field 以避免 frameshift 破坏性变异；集成 AFL++/LibAFL 后覆盖率有时提升超50%。
 
 **Abstract:** Coverage-guided fuzzers are powerful automated bug-finding tools. They mutate program inputs, observe coverage, and save any input that hits an unexplored path for future mutation. Unfortunately, without knowledge of input formats—for example, the relationship between formats’ data fields and sizes—fuzzers are prone to generate destructive frameshift mutations. These time-wasting mutations yield malformed inputs that are rejected by the target program. To avoid such breaking mutations, this paper proposes a novel, lightweight technique that preserves the structure of inputs during mutation by detecting and using relation fields. Our technique, FrameShift, is simple, fast, and does not require additional instrumentation beyond standard coverage feedback. We implement our technique in two state-of-the-art fuzzers, AFL++ and LibAFL, and perform a 12+ CPU-year fuzzer evaluation, finding that FrameShift improves the performance of the fuzzer in each configuration, sometimes increasing coverage by more than 50%. Furthermore, through a series of case studies, we show that our technique is versatile enough to find important structural relationships in a variety of formats, even generalizing beyond C/C++ targets to both Rust and Python.
@@ -261,6 +311,8 @@ Total in this category: 72 papers
 **Authors:** Shiyu Qiu (Huazhong University of Science and Technology), Ming Wen (Huazhong University of Science and Technology), Zifan Xie (Huazhong University of Science and Technology), Hai Jin (Huazhong University of Science and Technology)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773212
 
 **中文总结:** 提出 InterFuzz，以异构程序图 HPG 引导生成复杂类间结构的 Java 测试；在 HotSpot/ART/R8 发现24个新 bug（20确认，16与类间结构相关）。
 
@@ -272,6 +324,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764551
+
 **中文总结:** 提出 Mad-Eye，融合 JavaScript 与 WebAssembly 的跨语言 fuzzing；在 V8/SpiderMonkey/JSC 发现21个未知漏洞（18确认，13已修复）。
 
 **Abstract:** JavaScript engines are a fundamental part of modern browsers, and many efforts have been invested in testing them to enhance their security. However, the incorporation of WebAssembly into JavaScript engines introduces new attack surfaces that have not received sufficient attention. Existing fuzzers for JavaScript engines primarily focus on JavaScript, neglecting WebAssembly code and its interactions with JavaScript. We introduce Mad-Eye, the first fuzzer that can test the JavaScript-WebAssembly interaction using a novel cross-language code fusion technique. Evaluations of Mad-Eye on V8, SpiderMonkey, and JavaScriptCore detected 21 previously unknown vulnerabilities, with 18 confirmed and 13 fixed and merged into mainstream browsers, who acknowledged our reports with vulnerability bounties.
@@ -281,6 +335,8 @@ Total in this category: 72 papers
 **Authors:** Siwei Wei (State Key Laboratory of Computer Science, Institute of Software, Chinese Academy of Sciences, and University of Chinese Academy of Sciences Beijing, China), Yan Cai (Institute of Software at Chinese Academy of Sciences)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764561
 
 **中文总结:** 提出 generator solving：为符号执行中的 SMT 约束生成可重复采样解的生成器而非单次解，并实现 GenSlv，在 KLEE 等工具上可将分支覆盖提升最多一倍以上。
 
@@ -292,6 +348,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773161
+
 **中文总结:** 提出 GPTrace，用 LLM 嵌入向量对崩溃相关数据进行相似度聚类以去重 fuzz 崩溃，在 30 万+ 崩溃样本上优于传统栈迹比对等基线。
 
 **Abstract:** Fuzzing is a highly effective method for uncovering software vulnerabilities, but analyzing the resulting data typically requires substantial manual effort. This is amplified by the fact that fuzzing campaigns often find a large number of crashing inputs, many of which share the same underlying bug. Crash deduplication is the task of finding such duplicate crashing inputs and thereby reducing the data that needs to be examined. Many existing deduplication approaches rely on comparing stack traces or other information that is collected when a program crashes. Although various metrics for measuring the similarity of such pieces of information have been proposed, many do not yield satisfactory deduplication results. In this work, we present GPTrace, a deduplication workflow that leverages a large language model to evaluate the similarity of various data sources associated with crashes by computing embedding vectors and supplying those as input to a clustering algorithm. We evaluate our approach on over 300 000 crashing inputs belonging to 50 ground truth labels from 14 different targets. The deduplication results produced by GPTrace show a noticeable improvement over hand-crafted stack trace comparison methods and even more complex state-of-the-art approaches that are less flexible.
@@ -301,6 +359,8 @@ Total in this category: 72 papers
 **Authors:** Muhammad Talha Paracha (Ruhr University Bochum), Kyle Posluns (Northeastern University), Kevin Borgolte (Ruhr University Bochum), Martina Lindorfer (TU Wien), David Choffnes (Northeastern University)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773203
 
 **中文总结:** 提出 MLCerts，利用生成式语言模型“幻觉”合成 TLS 证书做差分测试，在 OpenSSL 等 5 个实现上发现的实现差异比 Transcert 多 30%、比 Frankencerts 多一个数量级。
 
@@ -312,6 +372,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773156
+
 **中文总结:** 对多种输入文法挖掘工具做系统评测，指出仅用短输入检验会高估精度，用 k-path 覆盖衡量深层多样性后多种方法在 JSON、Tiny-C 等语言上精度显著下降。
 
 **Abstract:** To generate valid test inputs for a system, one needs a \emph{specification} of its input language—typically a \emph{context-free grammar} that describes input syntax. But where can one get such a grammar from? In the past years, the field of \emph{input grammar mining} has emerged, with creative approaches to extract input grammars from inputs, code, or both. But how good are these approaches? In particular; How \emph{accurate} are the grammars they mine? In this study, we systematically \emph{evaluate} grammar miners for these questions. Notably, we find that the previous evaluations conducted by the respective authors—producing a set of inputs from a golden grammar and having them checked by the mined grammar, or vice versa—are insufficient, as they have a strong bias towards short, possibly unrealistic inputs. We therefore also measure the \emph{diversity} of the mined grammars using \emph{$k$-path coverage} with varying depths~$k$ to find how many \emph{combinations} of grammar elements are actually represented. Ideally, a mined grammar should have perfect precision and recall regardless of the depth $k$. However, our results show that for all approaches presented so far, precision and recall can drop significantly compared to reported results when increasing~$k$ and thus checking for ``deeper'' diversity, especially for complex input languages such as Lisp, JSON, or Tiny-C. For instance, the Tiny-C grammar mined by Arvada achieves a precision of 75% when considering $k$-paths with $k = 1$ (the originally reported precision was 73%), but this drops to 46% for $k = 5$. White-box approaches based on program analysis, such as Mimid and Stalagmite, are more stable with varying depth $k$, but can be challenged by complex parsers such as mjs. Raising the bars for evaluation, our study shows that there is still room for improvement in grammar mining.
@@ -321,6 +383,8 @@ Total in this category: 72 papers
 **Authors:** Saba Alimadadi (Simon Fraser University), Golnaz Gharachorlu (University of Ottawa)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787804
 
 **中文总结:** 提出 PyTation，结合 7 个面向 Python 反模式的变异算子与静/动态混合分析做变异测试，在 13 个项目上生成与通用工具互补的变异体并暴露高覆盖测试套件不足。
 
@@ -332,6 +396,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773247
+
 **中文总结:** 重评调用图剪枝 ML 方法，指出原评测存在数据集与标签问题；新数据集与多框架实验显示剪枝提升精度但以显著覆盖损失为代价。
 
 **Abstract:** Recently proposed call graph pruning techniques, which use machine learning to predict and reduce false positives in static call graphs, have reported impressive results and demonstrated practicality for downstream analyses. However, as we research the methodology of how datasets are created and how evaluation is conducted in these research projects, we identify many risk factors that may make the reported results incomplete or even invalid. We further investigate these factors and provide empirical evidence to demonstrate they indeed result in misleading results. Motivated by these findings, we propose an empirical re-evaluation of existing call graph pruning techniques to assess their effectiveness. We first construct a new dataset of real-world programs, applying three complementary labeling approaches, resulting in 41,952 labels. To provide a full picture of these techniques, we utilize three popular call graph analysis frameworks (WALA, Doop, and OPAL) and seven tool configurations. Our results show that pruning is not as effective as reported in prior work, improving precision at the cost of significant coverage loss. We further train more general models across analysis tools and configurations, and explore the impact of data splitting and balancing. We find these models often match or outperform the existing configuration-specific ones, indicating their applicability in more general settings. Finally, we highlight the open challenges and potential solutions, including the need for better datasets as well as improved feature engineering.
@@ -341,6 +407,8 @@ Total in this category: 72 papers
 **Authors:** Zhijie Zhong (School of Software Engineering, Sun Yat-sen University), Yuhong Nan (Sun Yat-sen University), Mingxi Ye (Sun Yat-sen University), Qing Xue (Sun Yat-sen University), Jiashui Wang (Zhejiang University), Long Liu, Xinlei Ying, Zibin Zheng (Sun Yat-sen University)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773103
 
 **中文总结:** 提出 EthCRAFT，通过探索区块链客户端状态空间构造上下文并对 RPC 做差分 fuzz，在以太坊客户端中发现 6 个新 bug 且 3 个获基金会漏洞赏金。
 
@@ -352,6 +420,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787809
+
 **中文总结:** 提出 Canto 持续学习框架，结合日志语义、故障特征与代表性样本混合训练，在工业级故障定位上比 6 个持续学习基线效果提升 17.30%–45.23%。
 
 **Abstract:** Learning-based fault localization has achieved promising results. However, as software and tests are constantly evolving, models trained on old data become ineffective on new data. Particularly, in the context of system testing for large-scale software, each iteration generates a large volume of new data. This makes retraining the model from scratch incur an unacceptable time overhead, while merely fine-tuning on new data leads to catastrophic forgetting. Continual learning offers an effective method for models to avoid catastrophic forgetting during this iterative process. However, existing continual learning methods are not specifically designed for fault localization or for large-scale software system testing scenarios, which leads to their direct application yielding sub-optimal effectiveness. In response, we propose Canto, a novel continual learning framework specifically designed for large-scale software fault localization. Canto first extracts fine-grained program semantics from logs, then utilizes fault characteristics to enhance the weights of certain semantics. Finally, Canto uses an unsupervised algorithm to obtain corresponding embeddings and selects representative exemplars based on clustering. Subsequently, Canto mixes the representative exemplars with new samples for training and adjusts the loss weight according to the model’s degree of mastery over the sample. This allows the model to focus more on samples that are not yet well-mastered during the training process, thereby enabling it to learn new faults while mitigating the forgetting of old ones. In extensive evaluations against 6 continual learning baselines, Canto demonstrates superior performance, improving overall effectiveness by 17.30% to 45.23%.
@@ -361,6 +431,8 @@ Total in this category: 72 papers
 **Authors:** Xin Wang (The Hong Kong University of Science and Technology (Guangzhou)), Zhenhao Li (York University), Zishuo Ding (The Hong Kong University of Science and Technology (Guangzhou))
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787774
 
 **中文总结:** 提出 LLM4Perf 反馈式采样框架，用 LLM 做配置空间剪枝与策略 refinement，在 112 个评估场景中 68.8% 为最佳且还能增强传统采样方法。
 
@@ -372,6 +444,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773169
+
 **中文总结:** 提出 LoopSCC，用 SPath 图与 SCC 振荡区间摘要复杂多分支嵌套循环，集成 Angr 后在 11 个 IoT 项目发现 18 个未知漏洞（7 个获 CVE）。
 
 **Abstract:** Analyzing programs with loops is a challenging task, suffering from potential issues such as the indeterminate number of iterations and exponential growth of control flow complexity. Loop summarization based on static symbolic analysis receives increasing focus in the field of loop program analysis. However, current loop summarization methods are only suitable for single-branch loops or multi-branch loops with simple cycles and fail to handle complex multi-branch nested loops with intricate non-functional variables and irregular jumps between multiple branches. In this paper, we propose a novel loop summarization approach based on symbolic analysis to address the complex loops mentioned above and develop a tool named LoopSCC. For a non-nested loop, LoopSCC constructs an \textit{SPath Graph}, where each node represents a path from entry to exit of the control flow graph of the loop and contracts it to an acyclic graph by collapsing each strongly connected component (SCC) into a single node. The summarization of a loop is the disjunction of the summaries of each path in the acyclic graph. For non-functional variables and irregular jumps, we iteratively model a valid value and refine the conditions until reaching the minimum. We introduce the oscillation interval, within which SPaths in the SCC can jump between one another. Outside this interval, no such jumps occur. This allows us to transform loop iteration transitions into a piecewise function, then summarize the interest variables according to the piecewise function. For nested loops, we construct summaries using the approaches above and apply them sequentially from the innermost loop to the outermost. Comparing state-of-the-art loop summarization tools, LoopSCC can handle more types of loops with 100% precision. We integrated LoopSCC with the symbolic execution tool, Angr, to enhance its efficiency, which enabled the detection of 18 previously unknown vulnerabilities across 11 IoT projects, 7 of which were assigned CVEs. The LoopSCC is publicly available at https://anonymous.4open.science/r/LoopSCC-386F .
@@ -381,6 +455,8 @@ Total in this category: 72 papers
 **Authors:** Gwihwan Go (Tsinghua University), Quan Zhang (East China Normal University), Chijin Zhou (East China Normal University), Zhao Wei (Tencent), Yu Jiang (Tsinghua University)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773189
 
 **中文总结:** 提出 LSPRAG，复用 LSP 实时检索符号定义/引用作为 LLM 单元测试上下文，在 Java/Go/Python 上 line coverage 相对基线最高提升 174%–213%。
 
@@ -392,6 +468,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773240
+
 **中文总结:** 提出 FLAMES，用语义引导 best-first 搜索替代 beam search 做 LLM APR，在 Defects4J 上内存降最高 83% 且多修 10 个 bug（共 133 个）。
 
 **Abstract:** Fixing software bugs is crucial yet demands significant resources from developers. Automated Program Repair (APR) is a promising solution to address this challenging task. The emergence of Large Language Models (LLMs) has opened a new era of LLM-based APR, substantially advancing the APR field further. LLM-based APR methods face significant challenges regarding memory inefficiency, hindering their scalability and effectiveness. This is largely due to the beam search utilized in the patch generation phase of LLM-based APR, which requires large beam sizes to search for more potentially good repair candidates. In this paper, we first show that increases in beam size, even for small-sized LLMs (1B-7B params), require extensive GPU usage, leading to up to 80% of recurring crashes due to memory overloads in LLM-based APR. Seemingly simple solutions to reduce memory consumption are (1) to quantize LLM models, i.e., converting the weights of an LLM from high-precision values to lower-precision ones, and (2) to make beam search sequential, i.e., forwarding each beam through the model sequentially and then concatenating them back into a single output. However, we show that these approaches still do not work via both theoretical analysis and experiments. To address this, we introduce FLAMES, a novel LLM-based APR technique that employs semantic-guided patch generation to enhance repair effectiveness and memory efficiency. Unlike conventional methods that rely on beam search, FLAMES utilizes greedy decoding to enhance memory efficiency while steering the search towards more potentially good repair candidates via a semanticguided best-first search algorithm. At each decoding step, FLAMES uses semantic feedback from test validation, such as the number of passing and failing test cases, to select the most promising token to explore further. Our empirical evaluation on Defects4J shows that FLAMES substantially reduces memory consumption by up to 83% compared to LLM-based APR without compromising time efficiency. Moreover, FLAMES correctly fixes 133 bugs on Defects4J, fixing 10 bugs more than the best baseline. Additionally, these improvements also generalize to the HumanEval-Java and TransformedD4J datasets, where FLAMES generates 12% and 36.5% more correct patches, respectively, than the best baseline.
@@ -401,6 +479,8 @@ Total in this category: 72 papers
 **Authors:** Luxia Lin (Institute of Software, Chinese Academy of Sciences, China), xudong zhang, Shihao Zhu (State Key Laboratory of Computer Science,Institute of Software,Chinese Academy of Sciences,China), Yan Cai (Institute of Software at Chinese Academy of Sciences)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787841
 
 **中文总结:** 提出 MAPFFuzz 蜕变 fuzz 框架，联合变异地图与智能体配置并用语义 oracle 检测 MAPF 求解器完备性与最优性失败，在 PIBT 等求解器上发现大量次优与不可解案例。
 
@@ -412,6 +492,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787808
+
 **中文总结:** 提出 META²V2V 蜕变测试框架，向 V2V 共享信息注入四类扰动并用 soundness/robustness MR 评估多车 ADS，相对随机测试多发现 733.3%/133.0% 违规场景。
 
 **Abstract:** In next-generation traffic, multiple intelligent vehicles equipped with autonomous driving systems (ADS) operate simultaneously. These vehicles share real-time information through vehicle-to-vehicle (V2V) communication during operation and make decisions based on this mutual perception. In this paper, we present a novel METAmorphic testing framework to evaluate ADS performance in multi-vehicle scenarios, addressing the META information shared during V2V communication (META²V2V). META²V2V interacts with the shared information by systematically injecting four types of controlled common perturbations into V2V data streams and observing how these disruptions affect the vehicles’ mutual perception and subsequent interactions. META²V2V assesses ADS decisions from two aspects: soundness and robustness, by introducing soundness metamorphic testing relations (S-MRs) and robustness metamorphic relations (R-MRs), respectively. Specifically, S-MRs claim that the performance of ADS under perfect information should outperform that under perturbations, whereas R-MRs claim that the performance of ADS should not degrade too much under information perturbations. Furthermore, META²V2V employs multi-objective search-based testing conducted from two directions to efficiently generate test groups that violate S-MRs and R-MRs, respectively. Experimental results demonstrate that, compared to random testing, our approach can identify 733.3% and 133.0% more violations that reveal soundness and robustness issues.
@@ -421,6 +503,8 @@ Total in this category: 72 papers
 **Authors:** Jia Li (The Chinese University of Hong Kong), Jiacheng Shen (Duke Kunshan University), Yuxin Su (Sun Yat-sen University), Michael Lyu (The Chinese University of Hong Kong)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773228
 
 **中文总结:** 提出 MioHint，结合语句级数据依赖检索与 LLM 做白盒 REST API 请求变异，在 16 个服务上 line coverage 比 EvoMaster 平均高 4.95%，变异准确率提升 67 倍。
 
@@ -432,6 +516,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787829
+
 **中文总结:** 提出 Foresee，用 misbehavior forecaster 识别仿真近失事件并局部 fuzz，在 CARLA 上比随机与 SOTA 预测器多暴露 128.70%/38.09% 失败且更快，可与 DriveFuzz 互补。
 
 **Abstract:** Simulation-based testing is the standard practice for assessing the reliability of self-driving cars’ software before deployment. Existing bug-finding techniques are either unreliable or expensive. We build on the insight that near misses observed during simulations may point to potential failures. We propose Foresee, a technique that identifies near misses using a misbehavior forecaster that computes possible future states of the ego-vehicle under test. Foresee performs local fuzzing in the neighborhood of each candidate near miss to surface previously unknown failures. In our empirical study, we evaluate the effectiveness of different configurations of Foresee using several scenarios provided in the CARLA simulator on both end-to-end and modular self-driving systems and examine its complementarity with the state-of-the-art fuzzer DriveFuzz. Our results show that Foresee is both more effective and more efficient than the baselines. Foresee exposes 128.70% and 38.09% more failures than a random approach and a state-of-the-art failure predictor while being 2.49× and 1.42× faster, respectively. Moreover, when used in combination with DriveFuzz, Foresee enhances failure detection by up to 93.94%.
@@ -441,6 +527,8 @@ Total in this category: 72 papers
 **Authors:** Isabel Amaral (INESC TEC, Faculty of Engineering, University of Porto), Alexandra Mendes (Faculty of Engineering, University of Porto & INESC TEC), José Campos (Faculty of Engineering of the University of Porto, Portugal)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787816
 
 **中文总结:** 提出 MutDafny，用 32 个 Dafny 变异算子评估形式化规约强度，在 794 个项目中平均每 241 行代码发现一处需加强的真实弱规约。
 
@@ -452,6 +540,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773222
+
 **中文总结:** 提出 context-aware tabulation（CAT），在 CFL 可达性分析中加入受限上下文敏感性以剔除无效边，在三类客户端上加速 1.49x–2.13x 且内存降 24%–50%。
 
 **Abstract:** Context-free language (CFL) reachability is a widely used framework for formulating static program analyses. Operating over edge-labeled graphs, the standard algorithm performs context-free tabulation by iteratively deriving new edges that summarize paths whose labels conform to the production rules of a context-free grammar. However, as the term ``context-free'' suggests, these derivations are made without considering the surrounding context of inferred edges, often resulting in unproductive edges that do not contribute to the final reachability result. In this paper, we present \emph{context-aware tabulation} (CAT), a novel approach that incorporates a restricted form of context sensitivity into CFL-reachability analysis to eliminate such unproductive edges. Comprehensive experiments on three widely studied clients show that CAT significantly accelerates reachability solving—achieving speedups of 1.75x, 1.49x, and 2.13x—and also reduces memory usage by 33.28%, 24.24%, and 50.15%, respectively, compared to a state-of-the-art solver.
@@ -461,6 +551,8 @@ Total in this category: 72 papers
 **Authors:** Jikai Wang (Huazhong University of Science and Technology), Ningyu He (Hong Kong Polytechnic University), Tianming Liu (Huazhong University of Science and Technology), Junhai Wang (Huazhong University of Science and Technology), Haoyu Wang (Huazhong University of Science and Technology)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787762
 
 **中文总结:** 提出 NotDec WebAssembly 反编译框架，扩展类型检查、Retypd 过程间类型恢复与 Memory SSA，Juliet/Howard 重编译成功率 100%，结构体成员访问恢复率 85.33%。
 
@@ -472,6 +564,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773128
+
 **中文总结:** 研究灰盒模糊测试中变异算子顺序的交互效应，发现顺序显著影响效果，并提出 MuoFuzz，通过学习的条件概率选择更有潜力的变异序列。在 FuzzBench 与 MAGMA 上覆盖率最高，并发现 AFL++ 与 MOPT 遗漏的 bug。
 
 **Abstract:** A greybox fuzzer is an automated software testing tool that generates new test inputs by applying randomly chosen mutators (e.g., flipping a bit or deleting a block of bytes) to a seed input in random order, and adds all coverage-increasing inputs to the corpus of seeds. We hypothesize that the order in which mutators are applied to a seed input has an impact on the effectiveness of greybox fuzzers. In our experiments, we fit a linear model to a dataset that contains the effectiveness of all possible mutator pairs and indeed observe the conjectured interaction effect. This points us to more efficient fuzzing by choosing the most promising mutator sequence with higher likelihood. We propose MuoFuzz, a greybox fuzzer that learns and chooses the most promising mutator sequences. MuoFuzz learns the conditional probability that the next mutator will yield an interesting input given the previously selected mutator. Then, it samples from the learned probability using a random walk to generate mutator sequences. We compare the performance of MuoFuzz to AFL++, which uses a fixed selection probability, and MOPT, which optimizes the selection probability of each mutator in isolation. Experimental results on the FuzzBench and MAGMA benchmarks show that MuoFuzz achieves the highest code coverage, and finds four bugs missed by AFL++ and one missed by both AFL++ and MOPT.
@@ -481,6 +575,8 @@ Total in this category: 72 papers
 **Authors:** Verya Monjezi (University of Illinois Chicago), Ashish Kumar (Pennsylvania State University), Ashutosh Trivedi (University of Colorado Boulder), Gang (Gary) Tan (Pennsylvania State University), Saeid Tizpaz-Niari (University of Illinois Chicago)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773175
 
 **中文总结:** 基于因果理论提出评估公平 ML 最佳实践鲁棒性的测试框架，在邻域数据集中检验公平性干预是否仍成立。跨多个公平敏感任务识别出在标签噪声、缺失数据与分布偏移下仍保持鲁棒的建议实践。
 
@@ -492,6 +588,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773215
+
 **中文总结:** 提出在线交互式贝叶斯推断调试方法及 IDE 内工具，降低概率程序调试所需时间与专业知识门槛。18 名有经验参与者的用户研究显示，该方法显著缩短推断调试任务耗时并降低难度。
 
 **Abstract:** Probabilistic programming is a rapidly developing programming paradigm which enables the formulation of Bayesian models as programs and the automation of posterior inference. It facilitates the development of models and conducting Bayesian inference, which makes these techniques available to practitioners from multiple fields. Nevertheless, probabilistic programming is notoriously difficult as identifying and repairing issues with inference requires a lot of time and deep knowledge. Through this work, we introduce a novel approach to debugging Bayesian inference that reduces time and required knowledge significantly. We discuss several requirements a Bayesian inference debugging framework has to fulfill, and propose a new tool that meets these key requirements directly within the development environment. We evaluate our results in a study with 18 experienced participants and show that our approach to online and interactive debugging of Bayesian inference significantly reduces time and difficulty on inference debugging tasks.
@@ -501,6 +599,8 @@ Total in this category: 72 papers
 **Authors:** Qingchao Shen (Tianjin University), Zan Wang (Tianjin University), Haoyang Ma (Hong Kong University of Science and Technology), Yongqiang Tian (Monash University), Lili Huang (College of Intelligence and Computing, Tianjin University), Zibo Xiao (College of Intelligence and Computing, Tianjin University), Junjie Chen (Tianjin University), Shing-Chi Cheung (Hong Kong University of Science and Technology)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773216
 
 **中文总结:** 提出面向深度学习编译器的优化感知测试生成方法 OATest，从文档测试中提取模式并嵌入匹配的计算图结构以触发特定优化。在 TVM 与 ONNXRuntime 上发现 56 个未知 bug，其中 42 个已获确认。
 
@@ -512,6 +612,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773270
+
 **中文总结:** 提出上下文敏感输入生成语言与工具 Goblin，在 CFG 上标注语义约束并支持任意 SMT 理论求解，保证解的 soundness 与 completeness。集成到协议模糊器后验证了其在复杂约束输入生成上的有效性。
 
 **Abstract:** Grammar-based fuzzers have shown immense promise in identifying bugs in software systems that have highly-structured and intricate input formats (\eg, XML). Many of the existing grammar-based fuzzers rely on context-free grammars (CFGs) to represent the target’s input structure. CFGs, however, are often insufficient to precisely capture many application input formats containing context-sensitive constraints. Application-specific fuzzers, albeit effective, lack generality to be adapted to new applications. In this paper, we present Goblin, a new input generation language and tool that helps bridge this gap. Given a context-free grammar annotated with semantic constraints, Goblin generates inputs that both conform to the grammar and satisfy the constraints. While a few prior techniques target this problem, our method is distinguished by: $(i)$ support for constraint solving over arbitrary SMT theories (e.g., bitvectors, integers, strings); $(ii)$ a minimal core input language with formal semantics that is smaller and less complex than prior work; and $(iii)$ a shift from global constraints to local, production rule constraints, which enables easier integration with certain fuzzing workflows. Goblin’s input generation approach is inspired by DPLL-style SAT solvers and enjoys the following formal guarantees: \emph{solution soundness}, \emph{solution completeness}, and \emph{refutation soundness}. In addition to comparing Goblin with prior work, we demonstrate its effectiveness by incorporating it into a grammar-based network protocol fuzzer.
@@ -521,6 +623,8 @@ Total in this category: 72 papers
 **Authors:** Sifis Lagouvardos (University of Athens), Yannis Bollanos (Dedaub), Michael Debono (Friendly Maltese Citizens), Neville Grech (Dedaub Limited), Yannis Smaragdakis (University of Athens)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773121
 
 **中文总结:** 提出精确静态分析以从已部署 EVM 字节码识别链上 storage 数据结构，处理 mapping/array 等动态布局。相较 SOTA 工具精度 95.70%、召回至少 94.96%，且常比编译器自身 storage 描述更完整。
 
@@ -532,6 +636,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764539
+
 **中文总结:** 定义智能以人为中心生态系统（SHE）失败问题，提出 SEM 方法，用去噪自编码器与 Transformer 基于指标重构误差预测即将发生的系统级失败。旧金山拼车生态实验表明 SEM 可提前预警并支持持续学习泛化。
 
 **Abstract:** Smart cities, smart grids, and in general Smart Human-centric Ecosystems (SHEs) emerge from the co-existence of many systems that operate according to independently owned specifications, and evolve over time. SHEs may fail despite the correct behavior of the systems that comprise the SHE. Fully testing SHEs on testbed to prevent failures in production is impossible, and scenarios that may lead to catastrophic SHE failures are unavoidable. In this paper we frame the core issues of SHE failures, and propose Smart human-centric Ecosystem Monitoring, SEM, an approach that predicts SHE failures to enable corrective actions for mitigating the catastrophic effects of failures. SEM identifies failure-prone scenarios from the reconstruction error of SHE indicators, that is, metric values that SEM collects from the SHE at constant frequency. SEM computes the reconstruction error with a suitably trained denoising autoencoder combined with a Transformer architecture. The results of experimenting with a peer-to-peer ride-sharing ecosystem operating in San Francisco confirm that SEM can effectively predict SHE failures early enough to activate preventing actions, and indicate the generalizability of SEM with continual learning. The main contributions of the paper are the definition and the exemplification of the impact of failures in SHEs, and an approach to detect incoming failures before otherwise inevitable disruptive effects.
@@ -541,6 +647,8 @@ Total in this category: 72 papers
 **Authors:** Xinyue Liu (Chongqing University), Haipeng Cai (University at Buffalo, SUNY), Lukasz Ziarek (University at Buffalo)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773146
 
 **中文总结:** 提出 Web 库版本检测算法 PTV，从树森林中提取各版本最独特结构以压缩特征 footprint。在 556 库 30810 版本上空间需求最高降 99%，并在 200 个高流量网站检测到 190 个漏洞。
 
@@ -552,6 +660,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764555
+
 **中文总结:** 提出 PyXray，通过分析 Python 可调用对象内存布局中的原生函数指针动态构建跨语言调用图，无需执行输入。可在数分钟内分析 NumPy/PyTorch 等大型包，精度与召回显著优于静态分析，支持跨语言漏洞与膨胀分析。
 
 **Abstract:** A great number of software packages combine code in high-level languages, such as Python, with binary extensions compiled from low-level languages such as C, C++ or Rust to either boost efficiency or enable specific functionalities. In this context, high-level function calls can trigger native (binary) code execution. This setup introduces challenges for call graph generation. Accurate call graphs are essential for various applications, including vulnerability management and software maintenance, as they help track execution paths, assess security risks, and identify unused or redundant code. This work tackles the problem of cross-language call graph construction in Python. Instead of relying on static analysis, which struggles with identifying Python-native interactions, we propose a dynamic analysis technique which does not require inputs to execute code. Our approach is based on two key insights: (1) when a binary extension is imported from Python code, all its objects (e.g., functions) are loaded into memory, and (2) the layout of callable Python objects contains pointers to the native functions they invoke. By analyzing these memory layouts for every loaded object, we identify corresponding graph edges, which link Python functions to the native functions they eventually invoke. This is an essential element for constructing call graphs across language boundaries. We implement this approach in PyXray, a tool that efficiently analyzes massive Python packages such as NumPy and PyTorch in minutes, while significantly outpeforming existing static analysis methods in terms of precision and recall. PyXray enables two key applications: (1) cross-language vulnerability management, by identifying whether a Python package potentially calls a vulnerable native function and (2) cross-language bloat analysis, by quantifying unnecessary code across Python and native components.
@@ -561,6 +671,8 @@ Total in this category: 72 papers
 **Authors:** Jiayi Zhang (Nanyang Technological University), Kevin Huang, Jian Zhang (Beihang University), Yang Liu (Nanyang Technological University), Chunyang Chen (TU Munich)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764534
 
 **中文总结:** 提出 agent 框架 ReinFix，在推理与修复阶段自主搜索内部（变量定义等）与外部（历史相似修复）repair ingredients。Defects4J V1.2 修复 146 个 bug，比 SOTA 多 32 个，在无泄露风险的新 benchmark 上仍最佳。
 
@@ -572,6 +684,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773138
+
 **中文总结:** 提出面向 Rust OS 内核的 RusyFuzz，基于 MIR 中编译器插入断言做未处理异常引导的模糊测试，并用轻量日志插桩替代 KCOV。在 Asterinas、Redox、RuxOS 上发现 70 个已确认漏洞，bug 数约为 Trinity 两倍、覆盖率提升 14.4%。
 
 **Abstract:** Rust’s strong type system and ownership model eliminate many traditional memory safety issues in OS kernels. However, logic errors—such as unchecked indexing and failed unwrap operations—can still cause panic!s that crash the entire system. Existing kernel fuzzers, designed primarily for C-based kernels and reliant on KCOV, treat all crashes uniformly and fail to account for Rust-specific failure modes. We present RusyFuzz, the first fuzzing framework tailored to Rust OS kernels that explicitly targets panic-prone code paths using an unhandled-exception-guided strategy. RusyFuzz analyzes the compiler-inserted assertions within the Rust MIR, performs backward slicing to link these assertions to system call arguments, and uses constraint solving to synthesize inputs that trigger panics. In the absence of built-in coverage support, RusyFuzz employs a lightweight, log-based instrumentation method to enable coverage-guided fuzzing. We evaluate RusyFuzz on three emerging Rust-based kernels: Asterinas, Redox OS, and RuxOS. RusyFuzz discovers 70 previously unknown and developer-confirmed vulnerabilities. Compared to Trinity, it uncovers over twice as many bugs while improving line coverage by 14.4%. These results demonstrate that unhandled-exception-guided fuzzing is critical for uncovering logic bugs and enhancing the reliability of Rust OS kernels, providing the first systematic methodology for detecting such vulnerabilities.
@@ -581,6 +695,8 @@ Total in this category: 72 papers
 **Authors:** Siwei Luo (Macquarie University), Yang Zhang, Yao Deng (Macquarie University), Linfeng Liang (Macquarie University), Xi Zheng (Macquarie University)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773232
 
 **中文总结:** 提出 SAFE 框架，结合 RAG、CoT 与自验证从多模态事故报告重建 ADS 测试场景。路网/参与者/环境提取准确率分别达 93.8%、80%、100%，在相同 ADS 设置下比 LCTGen/AC3R 多检出 39/71 个安全违规。
 
@@ -592,6 +708,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773242
+
 **中文总结:** 提出 Scalpel，在自动驾驶 DL 框架测试中通过组装 head/neck/backbone 等模型组件生成满足多输入/多模态/多级特征需求的测试模型。在 Apollo 发现 16  crash 与 21 个 NaN/不一致 bug，生成与检 bug 效率分别提升 27.44× 与 8.5×。
 
 **Abstract:** Deep learning (DL) plays a key role in autonomous driving systems. DL models support perception modules, equipped with tasks such as object detection and sensor fusion. These DL models en- able vehicles to process multi-sensor inputs to understand complex surroundings. Deploying DL models in autonomous driving systems faces stringent challenges, including real-time processing, limited computational resources, and strict power constraints. To address these challenges, automotive DL frameworks (e.g., PaddleInference) have emerged to optimize inference efficiency. However, these frameworks encounter unique quality issues due to their more complex deployment environments, such as crashes stemming from limited scheduled memory and incorrect memory allocation. Unfortunately, existing DL framework testing methods fail to detect these quality issues due to the failure in deploying generated test input models, as these models lack three essential capabilities: (1) multi-input/output tensor processing, (2) multi-modal data processing, and (3) multi-level data feature extraction. These capabilities necessitate specialized model components, which existing testing methods neglect during model generation. To bridge this gap, we propose Scalpel, an automotive DL frameworks testing method that generates test input models at the model component level. Scalpel generates models by assembling model components (heads, necks, backbones) to support capabilities required by autonomous driving systems. Specifically, Scalpel maintains and updates a repository of model components, generating test inputs by selecting, mutating, and assembling them. Successfully generated models are added back to enrich the repository. Newly generated models are then deployed within the autonomous driving system to test automotive DL frameworks via differential testing. The experimental results demonstrate that Scalpel outperforms existing methods in both effectiveness and efficiency. In Apollo, Scalpel detects 16 crashes and 21 NaN & inconsistency bugs. All detected bugs have been reported to open-source communities, with 10 crashes confirmed. Scalpel achieves 27.44$\times$ and 8.5$\times$ improvements in model generation efficiency and bug detection efficiency. Additionally, Scalpel detects nine crashes and 16 NaN & inconsistency bugs in Autoware, which shows its excellent generalization.
@@ -601,6 +719,8 @@ Total in this category: 72 papers
 **Authors:** Leon Weiß (Ruhr University Bochum), Tobias Holl (Ruhr University Bochum), Kevin Borgolte (Ruhr University Bochum)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773179
 
 **中文总结:** 提出 StorFuzz，通过自动插桩 memory store 捕获“数据覆盖”以突破仅依赖控制流覆盖的 fuzzing 平台期，多样化饱和 corpus 引导探索。在 OSS-Fuzz 长期 campaign 上为 7 个项目发现 50 个新 bug，其中部分存在 14 年。
 
@@ -612,6 +732,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787825
+
 **中文总结:** 提出 SymRadar，在 PoC 附近对补丁函数做欠约束符号执行并支持多补丁批量验证，比现有 AVR 补丁验证方法更有效且高效。
 
 **Abstract:** In this paper, we tackle the problem of patch verification. While automated vulnerability repair (AVR) techniques are gaining traction, it is not sufficient to merely generate patches; providing evidence of their correctness is also essential. However, the current state-of-the-art patch verification methods are not sufficiently effective. To address this issue, we propose SymRadar, a patch verification tool that performs under-constrained symbolic execution (UC-SE) on the patched function. Unlike standard UC-SE, SymRadar conducts UC-SE in the vicinity of the crash-inducing input. We demonstrate that SymRadar is more effective than existing patch verification methods. Another challenge in verifying patches generated by AVR tools is the large number of patches generated. To address this, we propose a novel optimization technique that allows SymRadar to handle multiple patches efficiently. Our experimental evaluation demonstrates that SymRadar is both effective and efficient in verifying patches generated by AVR tools.
@@ -621,6 +743,8 @@ Total in this category: 72 papers
 **Authors:** Seyed Amir Mousavi (PhD Student at University of Texas at San Antonio), Xiaoyin Wang (University of Texas at San Antonio)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787817
 
 **中文总结:** 提出 AR 测试框架 TARIPlay，从回放视频中检测、跟踪并筛选可交互区域以驱动自动化测试，分支覆盖率显著高于 Monkey（55.8% vs 41.98%）。
 
@@ -632,6 +756,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764543
+
 **中文总结:** 提出 HAFuzz，将 LTL 时序规范与自适应 fuzzing 结合检测智能家居 IFTTT 类集成违规，典型场景下约 50ms 内发现违规并验证 3343 条规范。
 
 **Abstract:** The convergence of Internet of Things (IoT) and Home Automation (HA) has revolutionized human-device interaction, typically through Trigger-Action Programming paradigms such as If This Then That (IFTTT). While empowering user-customized automation, this integration introduces critical challenges: unexpected behaviors from improper rule configurations, and cybersecurity threats propagated through interconnected rule chains. Although existing research demonstrates that linear temporal logic (LTL) specifications can formally characterize these risks for model checking verification, conventional methodologies suffer from two fundamental limitations: the inherent state space explosion problem constraining efficiency, and restricted expressiveness of model patterns hindering scalability. Furthermore, the HA-IoT domain notably lacks standardized benchmark datasets for validating LTL-related methods. To address these critical gaps, we propose HAFuzz - an innovative framework that synergizes formal modeling with adaptive fuzzing techniques for efficient temporal specification violation detection. We further incorporate manually curated specifications with large language model (LLM)-driven mutation generation, enabling systematic test case augmentation. Experimental evaluations demonstrate HAFuzz achieves violation detection within 50ms per integration under typical scenarios, showing superior efficiency improvement compared with conventional model checking approaches. Comprehensive validation involving 3,343 LTL specifications confirms HAFuzz’s accuracy and effectiveness in identifying critical violations, particularly in large-scale deployments characterized by intricate rule interdependencies and specifications that feature complex temporal logic patterns.
@@ -641,6 +767,8 @@ Total in this category: 72 papers
 **Authors:** Owain Parry (University of Sheffield), Gregory Kapfhammer (Allegheny College), Michael Hilton (Carnegie Mellon University), Phil McMinn (University of Sheffield)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773125
 
 **中文总结:** 首次系统刻画“flimsiness”（对被测代码变异诱发的测试不稳定），在 28 个 Python 项目中 54% 出现该现象，结合变异可发现远多于单纯重跑的 flaky 测试。
 
@@ -652,6 +780,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787842
+
 **中文总结:** 提出 TestifAI，用部分模型断层扫描从低阶扰动测试结果重建高阶组合扰动下的鲁棒性，误差低于 7% 且推理次数减少 60–80%。
 
 **Abstract:** As AI systems are increasingly deployed in safety-critical applica- tion domains (e.g., autonomous driving), associated risks increase too. Deep learning models underlying modern AI systems, therefore, must undergo thorough testing to ensure their correct behaviour. A single robustness test involves thousands of inferences to empir- ically verify if a model’s outputs remain stable under a bounded perturbation of its inputs. However, existing testing frameworks lack the means to systematically explore and summarise robustness across a combinatorial space of perturbations. We propose TestifAI, a deep learning testing framework for ef- ficient and accurate estimation of robustness against combinations of perturbations. TestifAI enables users to specify the operational conditions of an AI system as structured spaces of semantic input perturbations (e.g., image blur, brightness and zoom) and their dis- crete severity levels (e.g., low, medium and high). Within this space, users can query model robustness for any combination (e.g., “low blur, high brightness, and medium zoom”). To achieve efficiency and accuracy, TestifAI introduces partial model tomography, a novel ap- proach to reconstructing model behaviour in a multi-perturbation space from tests that apply only a small number of perturbations (lower-order projections). Namely, to estimate robustness against at least three perturbations, TestifAI trains an auxiliary model on the results of tests involving up to two perturbations only, hence avoid- ing execution of an exponential number of tests. Our experiments on five image and language classification tasks show that TestifAI can predict higher-order (3 and 4 perturbations) test outcomes from low-order (1 and 2 perturbations) observations with an aggregate robustness estimation error of less than 7%, while reducing the number of inferences by 60–80%.
@@ -661,6 +791,8 @@ Total in this category: 72 papers
 **Authors:** M M Abid Naziri (North Carolina State University), Shinhae Kim (Cornell University), Feiran Qin (North Carolina State University), Saikat Dutta (Cornell University), Marcelo d'Amorim (North Carolina State University)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787800
 
 **中文总结:** 提出神经符号方法 Centaur，动态学习 DL 库 API 输入约束并用 SMT 生成合法测试输入，在 PyTorch/TensorFlow 上覆盖更多分支并发现 23 个新 bug。
 
@@ -672,6 +804,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764527
+
 **中文总结:** 提出 Testora，用 LLM 生成测试并借 PR 自然语言信息区分预期与非预期行为差异，在 Python 项目中发现 19 个回归 bug 且单 PR 成本约 $0.003。
 
 **Abstract:** As software is evolving, code changes can introduce regression bugs or affect the behavior in other unintended ways. Traditional regression test generation is impractical for detecting unintended behavioral changes, because it reports all behavioral differences as potential regressions. However, most code changes are intended to change the behavior in some way, e.g., to fix a bug or to add a new feature. This paper presents Testora, an automated approach that detects regressions by comparing the intentions of a code change against behavioral differences caused by the code change. Given a pull request (PR), Testora queries an LLM to generate tests that exercise the modified code, compares the behavior of the original and modified code, and classifies any behavioral differences as intended or unintended. For the classification, we present an LLM-based technique that leverages the natural language information associated with the PR, such as the title, description, and commit messages – effectively providing a natural language oracle for regression testing. Applying Testora to PRs of complex and popular Python projects, we find 19 regression bugs and 11 PRs that, despite having another intention, coincidentally fix a bug. Out of 13 regressions reported to the developers, 10 have been confirmed and 8 have already been fixed. The costs of using Testora are acceptable for real-world deployment, with 12.3 minutes to check a PR and LLM costs of only $0.003 per PR. We envision our approach to be used before or shortly after a code change gets merged into a code base, providing a way to early on detect regressions that are not caught by traditional approaches.
@@ -681,6 +815,8 @@ Total in this category: 72 papers
 **Authors:** Mengzhuo Chen (Institute of Software, Chinese Academy of Sciences), Zhe Liu (Institute of Software, Chinese Academy of Sciences), Chunyang Chen (TU Munich), Junjie Wang (Institute of Software at Chinese Academy of Sciences), Yangguang Xue (University of Chinese Academy of Sciences), Boyu Wu (Institute of Software at Chinese Academy of Sciences), Libin Wu (Institute of Software Chinese Academy of Sciences), Qing Wang (Institute of Software at Chinese Academy of Sciences)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764538
 
 **中文总结:** 提出 InterDroid，通过多模态检索与全局/局部记忆植入增强 LLM 跨应用 GUI 测试，在 100 个跨应用功能上覆盖与准确率大幅提升并发现 43 个新崩溃。
 
@@ -692,6 +828,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787797
+
 **中文总结:** 提出 SAFUS fuzzing 流水线验证小型无人机状态转换与失效保护，在仿真与实机测试中均发现开发团队此前未检出的失败点并生成故障树。
 
 **Abstract:** The increasing deployment of small Uncrewed Aerial Systems (sUAS) in diverse and often safety-critical environments demands rigorous validation of onboard decision logic under various conditions. In this paper, we present SAFUS, a fuzzing pipeline that validates core behavior associated with state transitions, automated failsafes, and human operator interactions in sUAS applications operating under various timing conditions and environmental disturbances. We create fuzzing scenarios to detect behavioral deviations, and then dynamically generate associated Fault Trees to visualize states, modes, and environmental factors that contribute to the failure, thereby helping project stakeholders to analyze the failure and identify its root causes. We validated SAFUS against a real-world sUAS system and were able to identify several points of failure not previously detected by the system’s development team. The fuzzing was conducted in a high-fidelity simulation environment, and outcomes were validated on physical sUAS in a real-world field testing setting. The findings from the study demonstrated SAFUS’ ability to uncover diverse state transition failures, and to provide a practical and scalable solution for detecting a broad range of state-related failures in an sUAS application.
@@ -701,6 +839,8 @@ Total in this category: 72 papers
 **Authors:** Xintong Zhou (University of Waterloo), Zhenyang Xu (University of Waterloo), Chengnian Sun (University of Waterloo)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787827
 
 **中文总结:** 提出 Flip，用可行性驱动实例生成系统验证混合整数规划求解器，在 5 个主流求解器中发现 52 个已确认 bug（39 个已修复）。
 
@@ -712,6 +852,8 @@ Total in this category: 72 papers
 
 **Categories:** Testing and Analysis
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773230
+
 **中文总结:** 提出 VAFuzz，将变体感知动态分析融入配置 fuzzing，在 25 个程序中 21 个覆盖更高并发现更多包括未知漏洞在内的缺陷。
 
 **Abstract:** Modern software systems often provide a vast configuration space to enhance reusability and adaptability, but this configurability also significantly complicates bug finding. While existing static and dynamic variability-aware analysis approaches systematically explore the configuration space, they often suffer from scalability limitations. Conversely, grey-box fuzzing has demonstrated remarkable success in vulnerability detection through lightweight, iterative input space exploration, yet the state-of-the-art configuration fuzzers overlook the potential of integrating variability-aware analysis within the fuzzing process. In this paper, we present VAFuzz, a novel variability-aware fuzzer that integrates principled dynamic variability-aware analysis within the fuzzing process to enhance configuration space exploration. VAFuzz introduces new variability-aware seed selection and mutations to drive the fuzzing process. These are enabled by a new presence condition seed queue that tracks coverage and crash contributions across the configuration space, and a map that captures the relationship between data seeds and presence conditions. Our evaluation on a diverse set of programs show that VAFuzz outperforms the state-of-the-art configuration fuzzers on 21 out of 25 programs in terms of code coverage. It also detects more vulnerabilities than these baselines, including previous unknown bugs.
@@ -721,6 +863,8 @@ Total in this category: 72 papers
 **Authors:** Shenao Wang (Huazhong University of Science and Technology), Zhao Liu (360 AI Security Lab), Yanjie Zhao (Huazhong University of Science and Technology), Quanchen Zou (360 AI Security Lab), Haoyu Wang (Huazhong University of Science and Technology)
 
 **Categories:** Testing and Analysis
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773139
 
 **中文总结:** 提出 VDBFuzz 专门 fuzz 向量数据库边界条件，在 8 个 VDBMS 上覆盖最高达 SOTA 3 倍并发现 19 个新崩溃 bug。
 

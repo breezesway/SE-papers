@@ -84,7 +84,6 @@ AI 会议则为单份 digest：`{VENUE}{YEAR}_SE_Coding_Papers.md`。
 
 以下信息尚未补全，后续会陆续更新：
 
-- **ICSE'26**：每篇论文的 PDF 链接
 - **ISSTA'26**：每篇论文的 PDF 链接；awarded papers 信息
 - **ASE'26**：全部论文的 PDF 链接；awarded papers 信息；部分论文尚缺 abstract，对应中文总结亦待补全（目前约 146/181 篇无摘要）
 - **NeurIPS'26**：软工 / Coding 相关论文 digest 尚未整理

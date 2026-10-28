@@ -10,6 +10,8 @@ Total in this category: 30 papers
 
 **Categories:** Human and Social Aspects
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773172
+
 **中文总结:** 对39名盲/low vision 软件从业者访谈 GenAI 工作使用；发现生产力与无障碍收益并存，但幻觉风险更高且组织政策常限制使用。
 
 **Abstract:** The software development workplace poses numerous technical and collaborative accessibility challenges for blind and low vision software professionals (BLVSPs). Though Generative AI (GenAI) is increasingly adopted within the software development industry and has been a rapidly growing topic of interest in research, to date, the unique perspectives of BLVSPs have yet to be consulted. We report on a qualitative study involving 39 semi-structured interviews with BLVSPs about what the introduction of GenAI has meant for their work. We found that BLVSPs used GenAI for many software development tasks, resulting in benefits such as increased productivity and accessibility. However, significant costs were also accompanied by GenAI use as they were more vulnerable to hallucinations than their sighted colleagues. Sometimes, organizational policies prevented use. Based on our findings, we discuss the higher-risks and higher-returns that BLVSPs had to carefully weigh when deciding whether and when to use GenAI tools for work.
@@ -21,6 +23,8 @@ Total in this category: 30 papers
 **Categories:** Human and Social Aspects
 
 **Awards:** Distinguished Paper Award
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764540
 
 **中文总结:** 通过灰文献与公司访谈探索 SRE 中 toil（重复手工运维）的定义与影响，发现业界虽认同减 toil 有益，但在成本、复杂度与岗位影响上存在消除阻力。
 
@@ -34,6 +38,8 @@ Total in this category: 30 papers
 
 **Awards:** Distinguished Paper Award
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773155
+
 **中文总结:** 对 27 团队 54 名开发者配对访谈，发现 GenAI 工具使用差异主要来自工具认知（协作者 vs 功能）、参与方式与遇挫策略，并揭示“生产力压力悖论”。
 
 **Abstract:** Despite the widespread availability of generative AI tools in software engineering, developer adoption remains uneven. This unevenness is problematic because it hampers productivity efforts, frustrates management’s expectations, and creates uncertainty around the future roles of developers. Through paired interviews with 54 developers across 27 teams – one frequent and one infrequent user per team – we demonstrate that differences in usage result primarily from how developers perceive the tool (as a collaborator vs. feature), their engagement approach (experimental vs. conservative), and how they respond when encountering challenges (with adaptive persistence vs. quick abandonment). Our findings imply that widespread organizational expectations for rapid productivity gains without sufficient investment in learning support creates a “Productivity Pressure Paradox” undermining the very productivity benefits that motivate adoption.
@@ -43,6 +49,8 @@ Total in this category: 30 papers
 **Authors:** Mohamed Ouf (Queen’s University), Shayan Noei (Queen's University), Zeph Van Iterson (Queen's University), Mariam Guizani (Queen's University, Canada), Ying Zou (Queen's University, Kingston, Ontario)
 
 **Categories:** Human and Social Aspects
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787782
 
 **中文总结:** 对比 422 个 OSS4SG 与 617 个常规 OSS 项目，发现 OSS4SG 社区更稳定粘性（63.4%）而常规 OSS 更磁吸高流动（75.4%），且 OSS4SG 更依赖核心贡献者处理 issue 与代码质量。
 
@@ -54,6 +62,8 @@ Total in this category: 30 papers
 
 **Categories:** Human and Social Aspects
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773219
+
 **中文总结:** 比较 LLM perplexity 与开发者 EEG fixation-related potentials 理解易混淆代码，发现困惑位置与幅度相关；据此提出数据驱动的 LLM 方法定位人类同样困惑的代码区域。
 
 **Abstract:** Already today, humans and programming assistants based on large language models (LLMs) collaborate in everyday programming tasks. Clearly, a misalignment between how LLMs and programmers comprehend code can lead to misunderstandings, inefficiencies, low code quality, and bugs. A key question in this space is whether humans and LLMs are confused by the same kind of code. This would not only guide our choices of integrating LLMs in software engineering workflows, but also inform about possible improvements of LLMs. To this end, we conducted an empirical study comparing an LLM to human programmers comprehending clean and confusing code. We operationalized comprehension for the LLM by using \emph{LLM perplexity}, and for human programmers using \emph{neurophysiological responses} (in particular, EEG-based fixation-related potentials). We found that LLM perplexity spikes correlate both in terms of location and amplitude with human neurophysiological responses that indicate confusion. This result suggests that LLMs and humans are similarly confused about the code. Based on these findings, we devised a data-driven, LLM-based approach to identify regions of confusion in code that elicit confusion in human programmers.
@@ -63,6 +73,8 @@ Total in this category: 30 papers
 **Authors:** Jiayi Sun (University of Toronto), Hongbo Fang (University of Chicago), Junming Zhang (University of Toronto), Jiakai Shi (University of Toronto), Ruitao Lai (University of Toronto), Anita Ihuman (CHAOSS), Richard Littauer (Te Herenga Waka Victoria University of Wellington), Shurui Zhou (University of Toronto)
 
 **Categories:** Human and Social Aspects
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773268
 
 **中文总结:** 大规模分析 GitHub OSS 行为准则（CoC）演化与影响，发现采纳 CoC 后长期吸引更多新贡献者并减少老贡献者流失，为 CoC 维护最佳实践提供统计证据。
 
@@ -74,6 +86,8 @@ Total in this category: 30 papers
 
 **Categories:** Human and Social Aspects
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787838
+
 **中文总结:** 对 1,355 名开发者调查 PR 文件排序对 code review 的影响，仅 10.2% 认为字母序最优、57.6% 称增加上下文切换、63.9% 担心漏 bug；66% 期望依赖感知或自定义排序。
 
 **Abstract:** Effective code review is central to maintaining software quality, yet little is known about how the ordering of changed files in Pull Requests (PRs) influences review effectiveness. Most popular code review tools default to alphabetical ordering, favoring predictability over contextual relevance. While prior studies examined how file position shapes reviewer attention, it remains unclear how such ordering influences cognitive load and perceived thoroughness, which can potentially introduce usability barriers, overlooked defects, and review inefficiencies that ultimately undermine software reliability. This study presents the first large-scale survey of 1,355 professional developers across 182 widely used open-source projects to investigate how file ordering impacts review behavior, comprehension, and perceived effectiveness. Our mixed-methods analysis reveals that only 10.2% of reviewers consider alphabetical ordering optimal, underscoring its cognitive misalignment with how they interpret code changes. Although some developers appreciate its predictability, more than half (57.6%) note that it increases context switching, disrupts logical reasoning, and contributes to review fatigue, with 63.9% expressing concern that the default ordering may cause them to miss bugs. We further identify key challenges in multi-file reviews and elicit developers’ expectations for improved tooling, including dependency-aware grouping and customizable file ordering (requested by 66% of reviewers). These findings highlight the need for reviewer-centric interface designs that better align tool behavior with human cognition.
@@ -83,6 +97,8 @@ Total in this category: 30 papers
 **Authors:** Xinyi Zhou (University of Southern California), Zeinabsadat Saghi (University of Southern California), Sadra Sabouri (University of Southern California), Rahul Pandita (GitHub, Inc.), Mollie McGuire (Naval Postgraduate Schoo), Souti Chattopadhyay (University of Southern California)
 
 **Categories:** Human and Social Aspects
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773104
 
 **中文总结:** 对 LLM 辅助编程开展首个认知偏差混合方法研究，建立含15类90种偏差的新分类体系；发现约48.8%编程行为存在偏差，LLM 交互中偏差占比达56.4%。
 
@@ -94,6 +110,8 @@ Total in this category: 30 papers
 
 **Categories:** Human and Social Aspects
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773181
+
 **中文总结:** 基于160万开发者14年协作网络分析 OSS 性别同质性与留存关系；女性同质协作使流失风险最高降低20.7%，揭示同质纽带的社会支持作用。
 
 **Abstract:** Understanding how social connections shape participation is critical for sustaining open-source software (OSS) communities. We analyze longitudinal collaboration networks of 1.6 million developers over 14 years (2008–2022) using the World of Code dataset, focusing on gender homophily, developers’ preference to collaborate with others of the same gender, and its relationship to retention. We find strong evidence of gender homophily beyond demographic baselines, with same-gender ties among women exceeding random expectations by over 200%. While women tend to form homophilous ties, men show a preference for cross-gender collaboration, and these patterns shift over time as the OSS ecosystem evolves. Most notably, we find that developers—especially women—who collaborate with other women experience significantly lower dropout risk, with hazard rates up to 20.7% lower. These retention effects only become visible after accounting for activity levels, revealing a Simpson’s Paradox in prior analyses. Our results suggest that homophilous ties offer social support that improves developer persistence, highlighting the importance of inclusive, gender-diverse networks for sustaining participation in OSS projects.
@@ -103,6 +121,8 @@ Total in this category: 30 papers
 **Authors:** Yiliang Zhao (Peking University), Hengzhi Ye (Peking University), Minghui Zhou (Peking University), Huaimin Wang
 
 **Categories:** Human and Social Aspects
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773241
 
 **中文总结:** 收集 Reddit、LWN、GitHub 等社区讨论并辅以77人调查，系统梳理 CVE 生态对各参与方的影响与内在问题；据此提出改进 CVE 流程效率与健康度的建议。
 
@@ -114,6 +134,8 @@ Total in this category: 30 papers
 
 **Categories:** Human and Social Aspects
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764519
+
 **中文总结:** 通过22名维护者访谈归纳依赖弃用影响四因素，并构建 LLM 分类器预测弃用影响；124名维护者用户研究显示分类器有效且理论化解释有助于决策。
 
 **Abstract:** Despite the inevitable risk that depending on abandoned open source dependencies poses, many developers feel a lack of resources and guidance on how to deal with this. Automated detection of abandonment is feasible, but not all abandoned dependencies impact a downstream project equally.In this paper, we perform a need-finding interview study with 22 open source maintainers to explore what makes the abandonment of certain dependencies impactful to their project, as well as their information needs and design requirements for such an automated notification tool. We find four main factors, the depth of integration, the availability of alternatives, the importance of the functionality, and external environmental pressures. Using this emerging theory, we then build an LLM-based classifier to predict the impact of a dependency’s abandonment in a given context, and evaluate it with an independent user study with 124 open source maintainers. Our results show that the classifier is effective at predicting whether a dependency’s abandonment would be impactful to a project, and that theory-based explanations given by the LLM are useful to developers when making judgments about the potential impactfulness of a given dependency’s abandonment.
@@ -123,6 +145,8 @@ Total in this category: 30 papers
 **Authors:** Agnia Sergeyuk (JetBrains Research), Eric Huang (University of California, Irvine), Dariia Karaeva (JetBrains), Anastasiia Serova (JetBrains), Yaroslav Golubev (JetBrains Research), Iftekhar Ahmed (University of California at Irvine)
 
 **Categories:** Human and Social Aspects
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787811
 
 **中文总结:** 结合800开发者两年遥测与62人调查分析 IDE AI 长期使用影响；遥测显示 AI 用户产出与删除代码均显著增加，而自报感知变化较小。
 
@@ -134,6 +158,8 @@ Total in this category: 30 papers
 
 **Categories:** Human and Social Aspects
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773135
+
 **中文总结:** 对 GitHub 上 3500 万+ PR 做准实验，量化核心贡献者离场对吞吐、接受率与合并时间的影响，发现高提交占比贡献者离场影响最大，而资深贡献者离场主要拖慢合并。
 
 **Abstract:** The sustainability of Open Source Software (OSS) projects often depends on a small group of core contributors. When these contributors disengage, projects may face disruption; however, the consequences of such disengagement on OSS contribution workflows remain underexplored. This paper presents a large-scale quasi-experimental study quantifying the impact of core contributor disengagement on pull request (PR) throughput, acceptance rate, and time to merge. We analyzed over 35 million PRs across 50,804 GitHub repositories, identifying 95,958 disengagement bursts (one or more core contributors becoming inactive for >365 days within the same week) involving 174,887 contributors. Using Difference-in-Differences with matched control groups, we found that the impact varies substantially with contributor and project characteristics. Disengagements of contributors with a high share of commits lead to pronounced declines in throughput and acceptance, while long-tenured contributors’ disengagements have milder effects on those metrics but increase merge time, suggesting loss of tacit project knowledge. These findings provide empirical evidence of how core contributors’ disengagement influences OSS workflows and highlight structural factors associated with project resilience.
@@ -143,6 +169,8 @@ Total in this category: 30 papers
 **Authors:** Kezia Devathasan (University of Victoria), Jayani Samaraweera (University of Victoria), Dana Damian (University of Victoria)
 
 **Categories:** Human and Social Aspects
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773196
 
 **中文总结:** 通过 33 名软件从业者的访谈研究视角采（PT）与团队绩效的关系，发现 PT 可提升动机、包容性与建设性冲突。识别心理安全与开放沟通等克服 PT 障碍的因素，为提升 SE 团队协作提供实证依据。
 
@@ -154,6 +182,8 @@ Total in this category: 30 papers
 
 **Categories:** Human and Social Aspects
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787791
+
 **中文总结:** 对 43 国 110 名移动开发者开展混合方法调查，比较 iOS/Android 与经验水平对无障碍实践的影响。发现开发者虽重视无障碍但多依赖平台指南、测试偏晚，文本类特性实现较好而 API 与组织约束是主要障碍。
 
 **Abstract:** As mobile applications (apps) become ubiquitous in everyday life, it is crucial for developers to prioritize accessibility for users with diverse abilities. While previous research has identified widespread accessibility issues and raised awareness of developer challenges, there remains a lack of cross-platform, globally representative insights into how practitioners approach accessibility in practice. This paper presents findings from a mixed-methods survey of 110 mobile app developers across 43 countries, examining how platform ecosystems (iOS vs. Android) and developer experience shape accessibility practices. Results show that while developers recognize the importance of accessibility, they often rely on platform-specific guidelines and typically perform compliance testing late in the development process. Developers primarily implement text-focused features while struggling with API limitations and organizational constraints. Through systematic cross-platform comparison, we identify novel platform-specific barriers and demonstrate how accessibility practices differ across developer experience levels. Our findings offer new insights into the challenges of achieving accessibility in practice and provide actionable steps for various stakeholders to promote more consistent and inclusive app development.
@@ -163,6 +193,8 @@ Total in this category: 30 papers
 **Authors:** Yuhang Liu (Institute of Computing Technology, Chinese Academy of Sciences), Chenchen Ji (Institute of Software, Chinese Academy of Sciences), Haoquan Li (Institute of Computing Technology, Chinese Academy of Sciences), Jiageng Yu (The Institute of Software, Chinese Academy of Sciences), Mingyu Chen (Institute of Computing Technology, Chinese Academy of Sciences), Yanjun Wu (Institute of Software, Chinese Academy of Sciences), Yungang Bao (State Key Lab of Processors, Institute of Computing Technology, CAS; University of Chinese Academy of Sciences)
 
 **Categories:** Human and Social Aspects
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773168
 
 **中文总结:** 提出 RISC-V 软件生态成熟度自动评估 oracle Sapling，覆盖 5 域 30 组件 6 维度并做跨层聚合。评估显示生态仍在发展但稳步进步，并给出 13 条洞察与 5 条战略建议。
 
@@ -174,6 +206,8 @@ Total in this category: 30 papers
 
 **Categories:** Human and Social Aspects
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773157
+
 **中文总结:** 对 PyPI 许可证变体做首项实证研究，发现仅 2% 为实质修改但 10.7% 下游依赖存在不兼容。提出 LV-Parser（准确率 0.936、成本降 30%）与 LV-Compat（多检出 5.2 倍不兼容包，精度 0.98）。
 
 **Abstract:** Open-source licenses establish the legal foundation for software reuse, yet license variants, including both modified standard licenses and custom-created alternatives, introduce significant compliance complexities. Despite their prevalence and potential impact, these variants are poorly understood in modern software systems, and existing tools do not account for their existence, leading to significant challenges in both effectiveness and efficiency of license analysis. To fill this knowledge gap, we conduct a comprehensive empirical study of license variants in the PyPI ecosystem. Our findings show that textual variations in licenses are common, yet only 2% involve substantive modifications. However, these license variants lead to significant compliance issues, with 10.7% of their downstream dependencies found to be license-incompatible. Inspired by our findings, we introduce LV-Parser, a novel approach for efficient license variant analysis leveraging diff-based techniques and large language models, along with LV-Compat, an automated pipeline for detecting license incompatibilities in software dependency networks. Our evaluation demonstrates that LV-Parser achieves an accuracy of 0.936 while reducing computational costs by 30%, and LV-Compat identifies 5.2 times more incompatible packages than existing methods with a precision of 0.98. This work not only provides the first empirical study into license variants in software packaging ecosystem but also equips developers and organizations with practical tools for navigating the complex landscape of open-source licensing.
@@ -183,6 +217,8 @@ Total in this category: 30 papers
 **Authors:** Miikka Kuutila (Dalhousie University), Paul Ralph (Dalhousie University), Huilian Sophie Qiu (University of Goettingen), Ronnie de Souza Santos (University of Calgary), Morakot Choetkiertikul (Mahidol University, Thailand), Amin Milani Fard (New York Institute of Technology), Rana Alkadhi (King Saud University), Xavier Devroey (University of Namur), Gregorio Robles (Universidad Rey Juan Carlos), Hideaki Hata (Shinshu University), Sebastian Baltes (Heidelberg University), Hera Arif (Dalhousie University), Vladimir Kovalenko (JetBrains Research), Shalini Chakraborty (University of Bayreuth), Eray Tüzün (Bilkent University), Gianisa Adisaputri (Dalhousie University)
 
 **Categories:** Human and Social Aspects
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773124
 
 **中文总结:** 对 224 名软件从业者做 PLS-SEM 调查，模型对离职意向的解释力显著高于以往 SE 研究。工作满意度与 job embeddedness 显著负向预测离职意向，组织公平感是 embeddedness 最强前因。
 
@@ -194,6 +230,8 @@ Total in this category: 30 papers
 
 **Categories:** Human and Social Aspects
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773226
+
 **中文总结:** 提出 IDE 集成工具 TaCoS，基于 IDE/浏览器活动自动生成任务上下文摘要；32 人实验显示其最短恢复时间与最高主观帮助度，但时间线条件成功率更高。
 
 **Abstract:** Interruptions are a frequent challenge in software development, requiring developers to reconstruct both the mental and working context of their tasks. While prior work has proposed visual timelines or manual notes to aid resumption, these approaches either require effort or lack support for mental context reconstruction. Recent advances in large language models (LLMs) offer new opportunities to support task resumption through automatically generated summaries. We present TaCoS, an IDE-integrated tool that generates task context summaries from IDE and browser activity, combining inferred intent, implementation steps, and links to relevant artifacts. We evaluated TaCoS in a controlled lab study with 32 software developers who resumed three programming tasks. Each task was resumed using one of three cues: a manual note, a timeline of recent edits, or a TaCoS-generated summary. The generated summary led to the shortest resumption and edit lag, and was rated as the most helpful cue overall. However, the timeline condition achieved the highest task success rate. Participants valued the summaries’ structured, low-effort presentation of past activity, but noted that they often lacked forward-looking information, which was typically present in the self-authored manual notes. These findings highlight the potential of combining automated summarization with lightweight user annotations to support task resumption in development environments.
@@ -203,6 +241,8 @@ Total in this category: 30 papers
 **Authors:** Miikka Kuutila (Dalhousie University), Paul Ralph (Dalhousie University), Huilian Sophie Qiu (University of Goettingen), Ronnie de Souza Santos (University of Calgary), Morakot Choetkiertikul (Mahidol University, Thailand), Amin Milani Fard (New York Institute of Technology), Rana Alkadhi (King Saud University), Xavier Devroey (University of Namur), Gregorio Robles (Universidad Rey Juan Carlos), Hideaki Hata (Shinshu University), Sebastian Baltes (Heidelberg University), Vladimir Kovalenko (JetBrains Research), Shalini Chakraborty (University of Bayreuth), Eray Tüzün (Bilkent University), Hera Arif (Dalhousie University), Gianisa Adisaputri (Dalhousie University), kelly Garces Pernett (Universidad de los Andes), Anielle Severo Lisboa de Andrade (Catholic Pontifical University of Rio Grande do Sul), Eyram Amedzor (Dalhousie University), Bimpe Ayoola (Dalhousie University), Keisha Gaspard-Chickoree (Dalhousie University), Arazoo Hoseyni (Dalhousie University)
 
 **Categories:** Human and Social Aspects
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773106
 
 **中文总结:** 开发并验证软件基础设施态度量表 SIAS，区分技术与社会技术基础设施两因子结构，在 225 名软件从业者中显示良好信效度。
 
@@ -214,6 +254,8 @@ Total in this category: 30 papers
 
 **Categories:** Human and Social Aspects
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787813
+
 **中文总结:** 评估 ICSE 2015–2024 年 100 个复制包（约 650 人时），仅 40% 可完全执行、35% 可复现原结果，并总结 13 类执行失败原因与改进建议。
 
 **Abstract:** Replication packages are crucial for enabling transparency, validation, and reuse in software engineering (SE) research. While artifact sharing is now a standard practice and even expected at premier SE venues such as ICSE, the practical usability of these replication packages remain underexplored. In particular, there is a marked lack of studies that comprehensively examine the executability and reproducibility of replication packages in SE research. In this paper, we aim to fill this gap by evaluating 100 replication packages published in ICSE proceedings over the past decade (2015 - 2024). We assess the (1) executability of the replication packages, (2) efforts and modifications required to execute them, (3) challenges that prevent executability, and (4) reproducibility of the original findings for those that are executable. We spent approximately 650 person-hours in total to execute the artifacts and reproduce the study findings. Our analysis shows that only 40 of the 100 evaluated artifacts were fully executable. Among these, 32.5% ran without any modification. However, even executable artifacts required varying levels of effort: 17.5% required low effort, while 82.5% required moderate to high effort to execute successfully. We identified five common types of modifications and 13 challenges that lead to execution failure, encompassing environmental, documentation, and structural issues. Among the executable artifacts, only 35% (14 out of 40) reproduced the original results. These findings highlight a notable gap between artifact availability, executability, and reproducibility. Our study proposes three actionable guidelines to improve the preparation, documentation, and review of research artifacts, thereby strengthening the rigor and sustainability of open science practices in SE research.
@@ -223,6 +265,8 @@ Total in this category: 30 papers
 **Authors:** Mia Mohammad Imran (Missouri University of Science and Technology), Robert Zita (Elmhurst University), Rahat Rizvi Rahman (Virginia Commonwealth University), Preetha Chatterjee (Drexel University, USA), Kostadin Damevski (Virginia Commonwealth University)
 
 **Categories:** Human and Social Aspects
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787839
 
 **中文总结:** 基于 GitHub 讨论构建毒性脱轨数据集，用 LtM 提示生成对话动态摘要预测脱轨，Qwen/Llama 上 F1 达 0.901/0.852。
 
@@ -234,6 +278,8 @@ Total in this category: 30 papers
 
 **Categories:** Human and Social Aspects
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773187
+
 **中文总结:** 提出 TraceCoder 多智能体框架，通过运行时 trace 因果分析与历史教训学习迭代修复 LLM 生成代码，Pass@1 相对 SOTA 最高提升 34.43%。
 
 **Abstract:** Large Language Models (LLMs) often generate code with subtle yet critical bugs, particularly for complex tasks. Existing automated methods for repairing LLM-generated code are limited by their reliance on superficial outcomes, such as simple pass/fail results. This \enquote{black-box} approach offers little insight into the program’s internal dynamics, hindering precise error localization. Furthermore, the absence of a mechanism to learn from past failures leads to inefficient repair cycles that often repeat the same mistakes. To address these limitations, we introduce TraceCoder, a collaborative multi-agent framework that mimics the observe-analyze-repair process of human experts. The framework first instruments the code with diagnostic print statements to capture fine-grained runtime traces, providing deep visibility into its internal execution. It then conducts causal analysis on these traces to accurately identify the root cause of the error. This process is further enhanced by a novel Historical Lesson Learning Mechanism, which distills insights from prior failed repair attempts to inform subsequent correction strategies and prevent recurrence of similar mistakes. To ensure stable convergence, a Rollback Mechanism enforces that each repair iteration constitutes a strict improvement toward the correct solution. Comprehensive empirical evaluations demonstrate that TraceCoder achieves up to a 34.43% relative improvement in Pass@1 accuracy over state-of-the-art baselines. Ablation studies verify the significance of each system component, with the iterative repair process alone contributing a 65.61% relative gain in accuracy. Furthermore, TraceCoder significantly outperforms leading iterative methods in terms of both accuracy and cost-efficiency.
@@ -243,6 +289,8 @@ Total in this category: 30 papers
 **Authors:** Alina Mailach (Leipzig University), Janet Siegmund (Chemnitz University of Technology), Sven Apel (Saarland University), Norbert Siegmund (Leipzig University)
 
 **Categories:** Human and Social Aspects
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764520
 
 **中文总结:** 重复 ICSE'15 关于内外部效度观点的调查（790 条开放回答），发现十年间意识提高但社区在效度权衡与复制规范上仍严重分歧。
 
@@ -254,6 +302,8 @@ Total in this category: 30 papers
 
 **Categories:** Human and Social Aspects
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787789
+
 **中文总结:** 分析开发者调查筛题有效性，估计最多 86% 被筛掉者可能是真开发者，且多数筛题可被 LLM/机器人绕过，建议优先改进招募策略而非筛题。
 
 **Abstract:** Quantitative research on software development practice often depends on the results of anonymous online surveys. However, it is difficult to be sure that the respondents to such surveys are, in fact, developers. The problem is greater if survey responses are paid for, incentivising respondents to game the system and attracting the attention of bots and professional survey farms. One solution is to include screening questions in the survey to assess respondents’ coding skills. However, this introduces the risk of unfairly excluding considered responses from developers who spent time and energy on the survey. It also risks skewing results by excluding hasty developers and those who are technically weak. We reviewed the responses of all 86 developers who were excluded from analysis of a large unpaid developer survey (n=1,100) because they answered screening questions incorrectly. Based on this review, we estimate that up to 86% of the developers who were excluded were genuine developers. The advent of LLMs casts further doubt on the use of screening questions. Investigating LLM ability, we found that five sample LLMs could answer the first code screening question correctly, and three were able to answer the second. We explored other screening questions and techniques that are typically used in SE surveys, finding that most are susceptible to fraud via LLM use, bots and survey farms. Recruitment strategy may be a better screening technique. We recommend that if survey respondents are compensated only known developers should be invited. Surveys that are widely distributed, e.g. on social media, should not compensate respondents. Instead, researchers should focus on good survey design and imaginative recruitment strategies.
@@ -263,6 +313,8 @@ Total in this category: 30 papers
 **Authors:** Marvin Wyrich (Saarland University), Lloyd Montgomery (University of Hamburg, Germany)
 
 **Categories:** Human and Social Aspects
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773188
 
 **中文总结:** 对 100 份 SE 招聘启事做主题分析，发现雇主除技术外还强调文化契合、成长意愿、使命感与人际协作等社会技术期望。
 
@@ -274,6 +326,8 @@ Total in this category: 30 papers
 
 **Categories:** Human and Social Aspects
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773145
+
 **中文总结:** 提出 WhyFlow 交互式污点分析调试器，支持 why/why-not/what-if 问答与推测分析，用户研究准确率比 CodeQL 高 21% 且心理负荷降 45%。
 
 **Abstract:** Taint analysis is a security analysis technique used to track the flow of potentially dangerous data through an application and its dependent libraries. Investigating why certain unexpected flows appear and why expected flows are missing is an important sensemaking process during end-user taint analysis. Existing taint analysis tools often do not provide this end-user debugging capability, where developers can ask why, why-not, and what-if questions about dataflows and reason about the impact of configuring sources and sinks, and models of 3rd-party libraries that abstract permissible and impermissible data flows. Furthermore, a tree-view or a list-view used in existing taint-analyzer’s visualization makes it difficult to reason about the global impact on connectivity between multiple sources and sinks. Inspired by the insight that sensemaking tool-generated results can be significantly improved by a QA inquiry process, we propose WhyFlow, a first end-user question-answer style debugging interface for taint analysis. It enables a user to ask why, why-not, and what-if questions to investigate the existence of suspicious flows, the non-existence of expected flows, and the global impact of third-party library models. WhyFlow performs speculative what-if analysis, to help a user in debugging how different connectivity assumptions affect overall results. A user study with 12 participants shows that participants using WhyFlow achieved 21% higher accuracy on average, compared to CodeQL. They also reported a 45% reduction in mental demand (NASA-TLX) and rated higher confidence in identifying relevant flows using WhyFlow. This shows WhyFlow’s potential to significantly reduce sensemaking effort.
@@ -283,6 +337,8 @@ Total in this category: 30 papers
 **Authors:** Claudia Maria Cutrupi (Norwegian University of Science and Technology (NTNU)), Mia Bjørndal (Norwegian University of Science and Technology (NTNU)), Anh Nguyen-Duc (University of South Eastern Norway), Letizia Jaccheri (Norwegian University of Science and Technology (NTNU))
 
 **Categories:** Human and Social Aspects
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787803
 
 **中文总结:** 以叙事研究与性别互换 persona 呈现北欧女性 SE 职业路径，揭示自我怀疑、心理健康与“好女孩综合征”等留存障碍及组织透明化需求。
 
@@ -294,6 +350,8 @@ Total in this category: 30 papers
 
 **Categories:** Human and Social Aspects
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773150
+
 **中文总结:** 对 30 名开发者做质性研究，考察其在隐私场景下使用个人知识、网络资源与 AI 助手的表现，发现三者均难提供可操作的 GDPR/CCPA 合规指导。
 
 **Abstract:** Since the introduction of the European General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA), software developers increasingly have to make privacy-related decisions during system design and implementation. However, past research showed that they often lack legal expertise and struggle with privacy-compliant development. To shed light on how effective current information sources are in supporting them with privacy-sensitive implementation, we conducted a qualitative study with 30 developers. Participants were presented with a privacy-sensitive scenario and asked to identify privacy issues and suggest measures using their knowledge, online resources, and an AI assistant. We observed developers’ decision-making in think-aloud sessions and discussed it in follow-up interviews. We found that participants struggled with all three sources: personal knowledge was insufficient, web content was often too complex, and while AI assistants provided clear and user-tailored responses, they lacked contextual relevance and failed to identify scenario-specific issues. Our study highlights major shortcomings in existing support for privacy-related development tasks. Based on our findings, we offer recommendations for more accessible, understandable, and actionable privacy resources for developers.
@@ -303,6 +361,8 @@ Total in this category: 30 papers
 **Authors:** Masudul Hasan Masud Bhuiyan (CISPA Helmholtz Center for Information Security, Germany), Manish Kumar Bala Kumar (CISPA Helmholtz Center for Information Security), Cristian-Alexandru Staicu (Endor Labs)
 
 **Categories:** Human and Social Aspects
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787766
 
 **中文总结:** 分析 2015–2025 年 91.4 亿 GitHub 交互与 62500 仓库，发现中韩俄等多语言参与持续增长，但非英语项目可见度与协作参与度仍偏低。
 

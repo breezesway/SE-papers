@@ -10,6 +10,8 @@ Total in this category: 6 papers
 
 **Categories:** Architecture and Design
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773105
+
 **中文总结:** 提出 CCLInsight 原语级 GPU 集合通信库（xCCL）剖析工具，揭示参数对 NCCL/MSCCL 效率与扩展规律的影响；调参后 microbenchmark 最高 40.64× 加速，LLM 训练最高 3.00×。
 
 **Abstract:** As distributed AI workloads scale in complexity, GPU-based collective communication libraries (xCCLs) such as NCCL are becoming increasingly critical for efficient data movement across heterogeneous hardware. Characterizing and optimizing the interactions between hardware architectures, communication algorithm designs, and low-level primitive configurations is essential to fully utilize GPU and interconnect resources while ensuring scalability. However, existing analysis methods often lack depth, limiting optimization insights, leaving significant performance gains untapped, or lack generality. To address these limitations, we propose a novel primitive-based profiling and analysis method that integrates architectural, algorithmic, and primitive-level insights to comprehensively qualify and quantify performance-critical parameters in GPU-based CCLs that we implement and test in our tool CCLInsight. Evaluating three large-scale GPU clusters with diverse GPU architectures featuring up to 64 H100s, 64 RTX 5000s, and 256 A100s, CCLInsight uncovers critical parameter influences on communication efficiency and scalability, as well as exposing a new CCL performance scaling law. Adjusting parameters based on this analysis, we demonstrate a 43.90% improvement in NCCL and a 40.64× speedup in MSCCL over default configurations in the collective communication microbenchmark, while also improving NCCL and MSCCL performance on LLM training workloads (GPT- 3, LLaMA2, DeepSeek-R1) by up to 2.27× and 3.00×, respectively, on a 256-GPU H200 cluster. These contributions establish CCLInsight as a useful tool for xCCL characterization and optimization in distributed AI environments.
@@ -19,6 +21,8 @@ Total in this category: 6 papers
 **Authors:** gyt (Tsinghua University), Han Zhang (Tsinghua University), Zhiheng Wu (Tsinghua University), Yahui Li (Tsinghua University,China), Jilong Wang (Tsinghua university), Xia Yin (Tsinghua University)
 
 **Categories:** Architecture and Design
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764518
 
 **中文总结:** 提出非侵入式分布式追踪 DeepTrace，内核 eBPF 与用户态协同并基于方法级延迟分布重建因果链；采集开销降89%、精度提升51%。
 
@@ -30,6 +34,8 @@ Total in this category: 6 papers
 
 **Categories:** Architecture and Design
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787801
+
 **中文总结:** 提出 LogFold，识别结构化 token 冗余并做类型感知混合编码压缩日志，在 16 个数据集上平均压缩比提升 11.11%，速度约 9.842 MB/s。
 
 **Abstract:** Logs are essential for diagnosing failures and conducting retrospective studies, leading many software organizations to retain log messages for a long time. Nevertheless, the volume of generated log data grows rapidly as software systems grow, necessitating an effective compression method. Apart from general-purpose compressors (e.g., Gzip, Bzip2), many recent studies developed log-specific compression algorithms, but they offer suboptimal performance because of (1) overlooking redundancies within certain complex tokens, and (2) lacking a fine-grained encoding strategy for diverse token types. This work uncovers a new redundancy pattern in structured tokens and proposes a new type-aware encoding strategy to improve log compression. Building on this insight, we introduce LogFold, a novel log compression method consisting of four components: a token analyzer to classifies tokens as structured, unstructured, or static types; a processor that mines recurring patterns within structured tokens based on their delimiter skeletons; a hybrid encoder that tailors data representation according to token types; and a packer that compresses the output into an archive file. Extensive experiments on 16 public log datasets demonstrate that LogFold surpasses state-of-the-art baselines, achieving average compression ratio improvements by 11.11%, with a compression speed of 9.842 MB/s. Ablation studies further indicate the importance of each component. We also conduct sensitivity analyses to verify LogFold’s robustness and stability across various internal settings.
@@ -39,6 +45,8 @@ Total in this category: 6 papers
 **Authors:** Zhuangbin Chen (Sun Yat-sen University), Juzheng Zheng (School of Software Engineering, Sun Yat-sen University), Zibin Zheng (Sun Yat-sen University)
 
 **Categories:** Architecture and Design
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773239
 
 **中文总结:** 提出 Metronome 差异化延迟调度，用随机森林预测函数执行时间以在 serverless 中选择数据/基础设施局部性节点，在 OpenLambda 上平均执行时间降 64.88%–95.83%。
 
@@ -50,6 +58,8 @@ Total in this category: 6 papers
 
 **Categories:** Architecture and Design
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773114
+
 **中文总结:** 提出 SemRef，结合 LLM 语义理解与依赖分析自动精炼现有架构恢复工具结果。在 9 项目×10 工具上归一化增益 17.72%–43.35%，并输出层次化模块摘要提升可理解性，成本随项目规模线性扩展。
 
 **Abstract:** Understanding the architecture is crucial for effectively maintaining and managing large software systems. However, discrepancies often exist between the designed and implemented architectures, which can pose significant risks. To identify these discrepancies, architects need to extract the architecture from the system implementation, which is both time-consuming and error-prone. To simplify this procedure, many automatic architecture recovery techniques have been developed. Yet, their accuracy is often limited. Architects must still invest significant effort in refining recovery results to ensure they accurately reflect the implemented architecture. To reduce such manual effort, we introduce SemRef, a framework that combines LLMs with dependency analysis to automatically refine architectures recovered by existing architecture recovery tools. By leveraging the LLM’s semantic understanding capabilities and integrating structural dependencies, SemRef enhances both the accuracy and the comprehension of recovered architectures. To evaluate SemRef, we tested on 9 projects with published ground-truth architectures and 10 state-of-the-art architecture recovery tools. 5 commonly used metrics are adopted to evaluate the effectiveness of SemRef. The results show that SemRef improves accuracy across various metrics, with normalized gains ranges from 17.72% to 43.35%. Specifically, for MoJoFM and $a2a_{adj}$ metrics, SemRef achieves relative improvements of 118.57% and 100.41%, respectively. Moreover, SemRef is highly scalable. It maintains stable performance across projects ranging from thousands to trillions of lines of code with the cost scale linearly with project size. Further, we test SemRef on various LLMs to demonstrate its generalizability across different models. Beyond improving accuracy, the integration of LLMs enables SemRef to provide a structured module hierarchy and hierarchical module summaries, which further enhance the comprehensibility of recovered architectures.
@@ -59,6 +69,8 @@ Total in this category: 6 papers
 **Authors:** Wei Ding (Central China Normal University), Ran Mo (Central China Normal University), Chaochao Wu (Central China Normal University), Haopeng Song (Central China Normal University)
 
 **Categories:** Architecture and Design
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773263
 
 **中文总结:** 提出 SSAR，融合文件间语义相似度与结构依赖构建加权图，用优化社区检测做架构模块化恢复。在 9 个有 ground truth 项目上 MoJoFM/a2a/c2ccvg 等指标提升 5%–500%，执行时间最高降 99%。
 

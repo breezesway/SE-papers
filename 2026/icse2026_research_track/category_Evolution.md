@@ -10,6 +10,8 @@ Total in this category: 13 papers
 
 **Categories:** Evolution
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773133
+
 **中文总结:** 基于 GitHub 68,274 次回滚构建大规模 actionable warning 数据集，提出两阶段 ACWRecommender 识别并排序高概率真实缺陷的警告；在 10 个项目中 27/60 条推荐警告获开发者确认。
 
 **Abstract:** The use of static analysis tools has gained increasing popularity among developers in the last few years. However, the widespread adoption of static analysis tools is hindered by their high false alarm rates (up to 90%). Previous studies have introduced the concept of actionable warnings and built machine-learning method to distinguish actionable warnings from false alarms. However, according to our empirical observation, the current assumption used for actionable warning(s) collection is rather shaky and inaccurate, leading to a large number of invalid actionable warnings. To address this problem, in this study, we build the first large actionable warning dataset by mining 68,274 reversions from Top-500 GitHub C repositories, we then take one step further by assigning each actionable warning a weak label regarding its likelihood of being a real bug. Following that, we propose a two-stage framework called ACWRecommender to automatically identify actionable warnings and recommend the actionable warnings with high probability to be real bugs (AWHB). Our approach warms up the pre-trained model UniXcoder to identify actionable warnings (coarse-grained detection stage) and rerank AWHB to the top by weakly supervised learning (fine-grained reranking stage). Experimental results show that our proposed model outperforms several baselines by a large margin in terms of nDCG and MRR for AWHB recommendation. Moreover, we ran our tool on 10 randomly selected projects and manually checked the top-ranked warnings from 2,197 reported warnings, we reported top-60 recommended warnings to developers, 27 of them were already confirmed by developers as real bugs. Developers can quickly find real bugs among the massive amount of reported warnings, which verifies the practical usage of our tool.
@@ -19,6 +21,8 @@ Total in this category: 13 papers
 **Authors:** Simin Wang (Department of Computer Science, Southern Methodist University, Dallas, Texas, USA 75275-0122), Liguo Huang (Southern Methodist University), Shiyi Wei (University of Texas at Dallas), Amiao Gao (Department of Computer Science, Southern Methodist University, Dallas, Texas, USA 75275-0122), Ruiqi Hu (Department of Statistics and Data Science), Vincent Ng (Human Language Technology Research Institute, University of Texas at Dallas, Richardson, TX 75083-0688)
 
 **Categories:** Evolution
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787831
 
 **中文总结:** 对 1,000 个漏洞开展短语级 VT/CP/AF 实体与跨 NL-代码关系实证，构建结构化分类并评估自动化抽取；ELECTRA 与 LLM 方法在实体抽取上优于其他方案。
 
@@ -30,6 +34,8 @@ Total in this category: 13 papers
 
 **Categories:** Evolution
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764530
+
 **中文总结:** 提出 Realistic Distribution Setting 与 EasyLink，用向量检索+LLM 重排恢复 issue-commit 链接；20 个项目 Precision@1 达 75.91%，较 SOTA 提升四倍以上。
 
 **Abstract:** Issue-commit linking, which connects issues with commits that fix them, is crucial for software maintenance. Existing approaches have shown promise in automatically recovering these links. Evaluations of these techniques assess their ability to identify genuine links from plausible but false links. However, these evaluations overlook the fact that, in reality, when a repository has more commits, the presence of more plausible yet unrelated commits may interfere with the tool in differentiating the correct fix commits. To address this, we propose the Realistic Distribution Setting (RDS) and use it to construct a more realistic evaluation dataset that includes 20 open-source projects. By evaluating tools on this dataset, we observe that the performance of the state-of-the-art deep learning-based approach drops by more than half, while the traditional Information Retrieval method, VSM, outperforms it. Inspired by these observations, we propose \textbf{EasyLink}, which utilizes a vector database as a modern Information Retrieval technique. To address the long-standing problem of the semantic gap between issues and commits, EasyLink leverages a large language model to rerank the commits retrieved from the database. Under our evaluation, EasyLink achieves an average Precision@1 of 75.91%, improving over the state-of-the-art by over four times. Additionally, this paper provides practical guidelines for advancing research in issue-commit link recovery.
@@ -39,6 +45,8 @@ Total in this category: 13 papers
 **Authors:** Huimin Hu (CISPA Helmholtz Center for Information Security), Michael Pradel (CISPA Helmholtz Center for Information Security)
 
 **Categories:** Evolution
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773267
 
 **中文总结:** 提出语言无关 CodeMapper，分两阶段候选区域搜索与相似度选择，将指定代码区域映射到另一 commit；四数据集精确匹配率 71.0%–94.5%，较最佳基线提升 1.5–58.8 个百分点。
 
@@ -50,6 +58,8 @@ Total in this category: 13 papers
 
 **Categories:** Evolution
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3787826
+
 **中文总结:** 提出黑盒交互驱动的 CRUDinfer，自动推断 REST API 操作的 CRUD 语义；在基准 API 上整体推断精度超过95%。
 
 **Abstract:** REST APIs are the de facto standard for web service interaction, praised for flexibility and simplicity of adoption. Nevertheless, the lack of mandatory implementation guidelines for REST APIs has led to the diffusion of poor-quality and difficult-to-maintain web services. A key concern in this context is the misuse of CRUD (Create, Read, Update, and Delete) semantics of API operations. While best practices suggest mapping CRUD verbs to HTTP methods ( POST , GET , PUT/PATCH , and DELETE , respectively), many implementations fail to adhere to such a guideline. This common anti-pattern makes interaction with the API ambiguous, hindering maintainability and decreasing the effectiveness of automated REST API testing. In this paper, we propose CRUDinfer , a novel approach to automatically infer REST API operation CRUD semantics by leveraging (black-box) interactions with the API. The approach incrementally refines the knowledge about API operations’ CRUD semantics via CRUD test scenarios . Specifically, it employs interaction patterns typical of each CRUD semantics verb to craft test scenarios (i.e., HTTP interactions) for API operations with the aim of confirming their semantics. Testing failures indicate a mismatch between the intended CRUD semantics and the actual implementation. Thus, it refines API operations’ CRUD semantics knowledge through improved test scenarios. Empirical evaluation indicates high inference capabilities for \tool, with an overall precision higher than 95% on the considered benchmark REST APIs.
@@ -59,6 +69,8 @@ Total in this category: 13 papers
 **Authors:** Alexander Schultheiß (Humboldt University of Berlin), Alexander Boll (University of Bern), Paul Maximilian Bittner (TU Braunschweig), Sandra Greiner (University of Southern Denmark), Thomas Thüm (TU Braunschweig), Timo Kehrer (University of Bern)
 
 **Categories:** Evolution
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764537
 
 **中文总结:** 分析40万+ cherry-pick 场景并研究 GNU patch 与 Git cherry-pick 失效模式，提出语言无关 mpatch；自动正确应用补丁数比现有工具多44%。
 
@@ -70,6 +82,8 @@ Total in this category: 13 papers
 
 **Categories:** Evolution
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773205
+
 **中文总结:** 提出 Diffploit，基于版本间行为差异迭代驱动 LLM 迁移跨版本 exploit；在689个迁移任务中成功率84.2%，并修正5份 CVE 影响范围、发现111个未报告漏洞版本。
 
 **Abstract:** Exploits are commonly used to demonstrate the presence of library vulnerabilities and validate their impact across different versions. However, their direct application to alternative versions often fails due to breaking changes introduced during evolution. These failures stem from both changes in triggering conditions (e.g., API refactorings) and broken dynamic environments (e.g., build or runtime errors), which are challenging to interpret and adapt manually. Existing techniques primarily focus on code-level trace alignment through fuzzing, which is both time-consuming and insufficient for handling environment-level failures. Moreover, they often fall short when dealing with complicated triggering condition changes across versions. To overcome this, we propose Diffploit, an iterative, diff-driven exploit migration method structured around two key modules: the Context Module and the Migration Module. The Context Module dynamically constructs contexts derived from analyzing behavioral discrepancies between the target and reference versions, which capture the failure symptom and its related diff hunks. Leveraging these contexts, the Migration Module guides an LLM-based adaptation through an iterative feedback loop, balancing exploration of diff candidates and gradual refinement to resolve reproduction failures effectively. We evaluate Diffploit on a large-scale dataset containing 102 Java CVEs and 689 version-migration tasks across 79 libraries. Diffploit successfully migrates 84.2% exploits, outperforming the change-aware test repair tool TARGET by 52.0% and the rule-based tool in IDEA by 61.6%. Beyond technical effectiveness, Diffploit identifies 5 CVE reports with incorrect affected version ranges, three of which have been confirmed. It also discovers 111 unreported vulnerable versions in the GitHub Advisory Database.
@@ -79,6 +93,8 @@ Total in this category: 13 papers
 **Authors:** Md Shahidul Islam (University of Manitoba), S M Ashik Aowal (American International University-Bangladesh), Md Sharif Uddin (University of Saskatchewan), Shaiful Chowdhury (University of Manitoba)
 
 **Categories:** Evolution
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773238
 
 **中文总结:** 构建更准确的 CodeShovel 与 HistoryFinder 评测 oracle，并提出 HistoryFinder 工具，在 400 个方法上于精度、召回与 F1 上 consistently 优于 CodeShovel、CodeTracker 等基线。
 
@@ -90,6 +106,8 @@ Total in this category: 13 papers
 
 **Categories:** Evolution
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773160
+
 **中文总结:** 提出 MINES，从 API 与增强数据库 schema 推断可解释不变量做 Web API 异常检测，在多个基准上对篡改攻击 recall 比 LogRobust 等提升 14%+ 且近零误报。
 
 **Abstract:** Detecting the anomalies of web applications, important infrastructures for running modern companies and governments, is crucial for providing reliable web services. Many modern web applications operate on web APIs (e.g., RESTful, SOAP, and WebSockets), their exposure invites intended attacks or unintended illegal visits, causing abnormal system behaviors. However, such anomalies can share very similar logs (sometimes even identical logs) with normal logs, missing crucial information (which could be in database) for log discrimination. Further, log instances can be also noisy, which can further mislead the state-of-the-art log learning solutions to learn spurious correlation, resulting superficial models and rules for anomaly detection. In this work, we propose MINES which infers explainable API invariants for anomaly detection from the schema level instead of detailed raw log instances, which can (1) significantly discriminate noise in logs to identify precise normalities and (2) detect abnormal behaviors beyond the instrumented logs (e.g., regarding the database state or session state). Our learned invariants can capture API preconditions such as (1) what is the legitimate database state to initiate the call events? and (2) what are the constraints to satisfy between different API calls? Then we translate the invariants into executable Python code to verify its consistency with the runtime logs. Technically, MINES (1) converts API signatures into table schema to enhance the original database shema; and (2) infers the potential database constraints (such as reference constraint and check constraints) on the enhanced database schema to capture the potential relationships between APIs and database tables. MINES uses LLM for extracting potential relationship based on two given table structures; and use normal log instances to reject and accept LLM-generated invariants. Finally, MINES translates the inferred constraints into invariants to generate Python code for verifying the runtime logs. We extensively evaluate MINES on 76 types of web-tamper attacks on the benchmarks of Train-Ticket, NiceFish, Gitea, Mastodon, and NextCloud against baselines such as LogRobust, LogFormer, and WebNorm. The results show that MINES achieves high recall (more than 14% over LogRobust, LogFormer, and WebNorm) for the anomalies while introducing almost zero false positives, indicating a new state-of-the-art.
@@ -99,6 +117,8 @@ Total in this category: 13 papers
 **Authors:** Rui Lu (East China Normal University), Lyuye Zhang (Nanyang Technological University), Kaixuan Li (Nanyang Technological University), Min Zhang (East China Normal University), Yixiang Chen (East China Normal University)
 
 **Categories:** Evolution
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773233
 
 **中文总结:** 提出 DepUpdater，在 Java 依赖升级中同时最小化 technical lag、破坏性变更与冗余依赖，实验显示比现有依赖管理工具更有效平衡兼容与版本滞后。
 
@@ -112,6 +132,8 @@ Total in this category: 13 papers
 
 **Awards:** Distinguished Paper Award
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773235
+
 **中文总结:** 识别 5 种导致 React 多余重渲染的反模式，提出静态分析与自动重构规则。7,758 个仓库中 92.1% 存在至少一种反模式，23 个项目实验平均减少 33.3% 渲染操作与 20.54% 渲染时间且基本保持行为不变。
 
 **Abstract:** React is an extremely popular framework for constructing user interfaces (UIs). A React UI is organized as a tree of components, each of which is defined by a function that returns a literal written in JSX, a syntactic extension of JavaScript consisting of a combination of XML tags, executable JavaScript code, and references to sub-components. React supports incremental re rendering by maintaining an in-memory representation of a web page’s Document Object Model (DOM) and automatically calculating a set of minimal changes that must be applied to the DOM when state changes occur. However, React’s semantics are complex and subtle, and programmers often write code that gives rise to unnecessary re-rendering, which hurts performance and responsiveness. We identify 5 React anti-patterns that give rise to unnecessary re-rendering, present a static analysis for detecting them, and rewrite rules that suggest how to refactor the code to improve rendering performance. The static analysis is potentially unsound, so developers should carefully review the suggested refactorings. A survey of 7,758 React repositories showed that 92.1% of them exhibit at least one anti-pattern, and careful experimental evaluation on 23 React projects revealed that the suggested refactoring reduces the number of rendering operations by 33.3% on average while preserving application behavior in all but one case. With a small increase in code complexity, we find an average reduction in rendering time of 20.54%, and three case studies reveal that the refactorings can greatly improve application responsiveness as the number of components scales.
@@ -122,6 +144,8 @@ Total in this category: 13 papers
 
 **Categories:** Evolution
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3764557
+
 **中文总结:** 构建安全相关代码审查数据集 SeRe，用主动学习集成分类从 37 万+ 原始 review 中提取 6,732 条安全 review，分布与真实世界对齐。benchmark 显示现有自动生成方法在安全反馈上仍有较大改进空间。
 
 **Abstract:** Software security vulnerabilities can lead to severe consequences, making early detection essential. Although code review serves as a critical defense mechanism against security flaws, relevant feedback remains scarce due to limited attention to security issues or a lack of expertise among reviewers. Existing datasets and studies primarily focus on general-purpose code review comments, either lacking security-specific annotations or being too limited in scale to support large-scale research. To bridge this gap, we introduce \textbf{SeRe}, a \textbf{security-related code review dataset}, constructed using an active learning-based ensemble classification approach. The proposed approach iteratively refines model predictions through human annotations, achieving high precision while maintaining reasonable recall. Using the fine-tuned ensemble classifier, we extracted 6,732 security-related reviews from 373,824 raw review instances, ensuring representativeness across multiple programming languages. Statistical analysis indicates that SeRe generally \textbf{aligns with real-world security-related review distribution}. To assess both the utility of SeRe and the effectiveness of existing code review comment generation approaches, we benchmark state-of-the-art approaches on security-related feedback generation. By releasing SeRe along with our benchmark results, we aim to advance research in automated security-focused code review and contribute to the development of more effective secure software engineering practices.
@@ -131,6 +155,8 @@ Total in this category: 13 papers
 **Authors:** Yibiao Yang (Nanjing University), Qingyang Li (Nanjing University), Maolin Sun (Nanjing University), Jiangchang Wu (Nanjing University), Yuming Zhou (Nanjing University)
 
 **Categories:** Evolution
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3744916.3773254
 
 **中文总结:** 重访编译器故障隔离，发现开发者常用的 BIC 二分定位策略 BASIC 在 Top-1/Top-5 上多数优于谱-based SBFL，建议作为新方法基线。
 

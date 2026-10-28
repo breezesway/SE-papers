@@ -24,3 +24,5 @@ Total: 321 papers
 Awarded papers (Distinguished Paper Award / Artifact Award Winner): 24
 
 Papers with author affiliations parsed: 321/321
+
+Papers with ACM PDF links (via Crossref → ACM DL): 321/321
