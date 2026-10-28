@@ -54,7 +54,7 @@ AI 会议则为单份 digest：`{VENUE}{YEAR}_SE_Coding_Papers.md`。
 | ICML'26 | 51 | [ICML2026_SE_Coding_Papers.md](2026/icml2026_se_coding/ICML2026_SE_Coding_Papers.md) |
 | ICLR'26 | 28 | [ICLR2026_SE_Coding_Papers.md](2026/iclr2026_se_coding/ICLR2026_SE_Coding_Papers.md) |
 | ACL'26 | 30 | [ACL2026_SE_Coding_Papers.md](2026/acl2026_se_coding/ACL2026_SE_Coding_Papers.md) |
-| NeurIPS'26 | — | 待整理 |
+| NeurIPS'26 | 60 | [NeurIPS2026_SE_Coding_Papers.md](2026/neurips2026_se_coding/NeurIPS2026_SE_Coding_Papers.md) |
 
 ---
 
@@ -79,11 +79,5 @@ AI 会议则为单份 digest：`{VENUE}{YEAR}_SE_Coding_Papers.md`。
 | ACL'25 | 25 | [ACL2025_SE_Coding_Papers.md](2025/acl2025_se_coding/ACL2025_SE_Coding_Papers.md) |
 
 ---
-
-## 待更新（截止 2026.10.28）
-
-以下信息尚未补全，后续会陆续更新：
-
-- **NeurIPS'26**：软工 / Coding 相关论文 digest 尚未整理
 
 > 暂无 PDF 链接的论文，绝大多数可在 [Google Scholar](https://scholar.google.com/) 上通过标题检索到。
