@@ -6,20 +6,26 @@ Count: 29
 
 ## 1. AgentChaos: Chaos Engineering for Agent Systems via Programmatic Fault Injection
 
-**Authors:** Gou Tan (School of Systems Science and Engineering, Sun Yat-sen University, Guangzhou, China China), Zhensu Sun (Singapore Management University Singapore), Jieke Shi (Singapore Management University Singapore), Ting Zhang (Monash University Australia), Zilong He (Sun Yat-sen University China), Qingfu Wu (Sun Yat-sen University China), Shuai Liang (Sun Yat-sen University; China Unicom Software Research Institute: Beijing, CN China), Weifeng Sun (Singapore Management University, Singapore Singapore), Junda He (Singapore Management University Singapore), Pengfei Chen (Sun Yat-sen University), Chuanfu  Zhang (Sun Yat-Sen University China), Lwin (Khin Shar Singapore Management University Singapore), David Lo (Singapore Management University Singapore)
+**Authors:** Gou Tan (Sun Yat-sen University, Guangzhou, China), Zhensu Sun (Singapore Management University, Singapore), Jieke Shi (Singapore Management University, Singapore), Ting Zhang (Monash University, Australia), Zilong He (Sun Yat-sen University, Guangzhou, China), Qingfu Wu (Sun Yat-sen University, Guangzhou, China), Shuai Liang (Sun Yat-sen University, Guangzhou, China / China Unicom Software Research Institute, Beijing, China), Weifeng Sun (Singapore Management University, Singapore), Junda He (Singapore Management University, Singapore), Pengfei Chen (Sun Yat-sen University, Guangzhou, China), Chuanfu Zhang (Sun Yat-sen University, Guangzhou, China), Lwin Khin Shar (Singapore Management University, Singapore), David Lo (Singapore Management University, Singapore)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**Artifact badges:** Artifacts Available
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837437
+
+**中文总结:** 在共享 HTTP LLM API 层做运行时、非侵入式 chaos 注入（crash/omission/value 及 content、tool call 字段篡改），并过滤未触发 fault 的任务；65 种配置下各 agent 系统 pass@1 最多降 50 个百分点，且排序跨 backbone 一致，说明鲁棒性更多取决于系统实现。
+
+**Abstract:** Agent systems rely on LLM APIs for every response, but these APIs can return server errors, truncated responses, or corrupted content that propagates through downstream agents and causes task failure. Evaluating robustness under these faults is crucial for reliable deployment. Existing fault injection methods are offline, require source code modification, or cannot modify specific response fields. A comprehensive evaluation also requires a systematic fault taxonomy because different fault types affect downstream agents differently. We propose AgentChaos, a chaos engineering framework for controlled, runtime, non-intrusive LLM API fault injection. Since all agent systems access LLMs through the same HTTP interface, we inject faults at this shared layer without modifying source code. We define crash, omission, and value faults on content and tool call fields, intercept and modify LLM API responses at runtime, and verify whether each fault is triggered to filter untriggered tasks and avoid underestimating fault impact. Evaluations across agent systems, benchmarks, and backbone LLMs under 65 fault configurations show that all systems degrade under fault injection, with pass@1 dropping by up to 50 percentage points. The ranking is consistent across models, suggesting that robustness depends on system implementation rather than model capability. Existing fault diagnosis methods achieve below 53% accuracy on fault type and below 56% on fault step, leaving room for improvement. We further reveal practical findings for agent system developers.
 
 
 ## 2. Are Reasoning Traces Faithful in LLM-Based Code Vulnerability Detection?
 
-**Authors:** Wang Jialai (National University of Singapore Singapore), Juncheng Lu (Southeast University China), Songtao Yang (Zhongguancun Laboratory), Bingyi He (Huazhong University of Science and Technology China), Zeyu Gao (Tsinghua University China), Chao Zhang (Tsinghua University China), Shuai Wang (Hong Kong University of Science and Technology China)
+**Authors:** Jialai Wang (National University of Singapore, Singapore), Juncheng Lu (Tsinghua University, China), Songtao Yang (Zhongguancun Laboratory, China), Bingyi He (Huazhong University of Science and Technology, China), Zeyu Gao (Tsinghua University, China), Chao Zhang (Tsinghua University, China / Zhongguancun Laboratory, China), Shuai Wang (Hong Kong University of Science and Technology, Hong Kong)
 
 **Categories:** Software Engineering for AI
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834364
 
 **中文总结:** 提出 VulFaith 框架，以修复式评估检验 LLM 漏洞检测中推理 trace 的完整性与逐因子忠实性。实验显示多种开源与商用 LLM 存在广泛不忠实（完整性最高 66.14%，逐因子最高 94.00%）。
 
@@ -28,174 +34,232 @@ Count: 29
 
 ## 3. Automated Assertion Generation and Regression Testing for Machine Learning Notebooks
 
-**Authors:** Yingao (Elaine) (Yao Cornell University United States), Vedant Nimje (Veermata Jijabai Technological Institute India), Varun Viswanath (Dwarkadas J Sanghvi College of Engineering India), Saikat Dutta (Cornell University United States)
+**Authors:** Yingao (Elaine) Yao (Cornell University, USA), Vedant Nimje (Veermata Jijabai Technological Institute, India), Varun Viswanath (Dwarkadas J Sanghvi College of Engineering, India), Saikat Dutta (Cornell University, USA)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**Awards:** ACM SIGSOFT Distinguished Paper Award
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**Artifact badges:** Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834390
+
+**中文总结:** 提出 NBTestGen 为 ML notebook 自动生成回归断言，及 Jupyter 插件 NBTest（cell 级、非阻塞、pytest/CI 集成）；在 585 个 Kaggle notebook 上平均 36.82 条断言/本，杀死 72.21% ML 变异，检出 69.68% 历史回归，SHAP 已接入 CI。
+
+**Abstract:** Jupyter Notebooks have become the de-facto choice for data scientists and machine learning (ML) engineers for prototyping and experimenting with ML pipelines. Notebooks provide a rich interactive interface with support for code, data, and visualization in one place. However, notebooks provide limited support for testing. As a result, during continuous development, many silent (non-crashing) regressions often go unnoticed and make notebooks unreliable and results hard to reproduce.  
+To enable more systematic testing of ML notebooks, we introduce NBTestGen – the first automated assertion generation approach for ML notebooks. NBTestGen generates regression-based assertions that check properties related to data processing, model building, and model evaluation steps in a typical ML notebook. To support systematic integration of such assertions in notebooks, we introduce the first regression testing framework (called NBTest) that can be used as a Jupyter plugin and allows developers to write cell-scoped assertions in notebooks. Three key features of such assertions are that they are 1) cell-scoped: they are linked to specific notebook cells and execute only after those cells are executed, 2) non-intrusive: they do not block notebook execution (in a Jupyter session), so that development can continue when they fail, and 3) they integrate with pytest and CI pipelines, allowing developers to easily do regression testing of their notebooks.  
+We evaluate NBTestGen on a corpus of 585 notebooks from the popular Kaggle platform. NBTestGen generates a total of 21542 assertions (36.82 on average per notebook). The generated assertions kill 72.21% of ML-specific mutations, while maintaining a high passrate of 100.00%. We also show that NBTestGen can detect 69.68% of historical regressions in 531 older versions of Kaggle notebooks. A popular ML library, SHAP, integrated NBTest into their CI. Further, we perform a user study with 17 ML developers that shows that such users find NBTest highly intuitive and useful.
 
 
 ## 4. Bridging the Gap between Intent and Impact: An Empirical Study of GPU Optimizations in Deep Learning Frameworks
 
-**Authors:** Siqi Wang (Zhejiang University China), Fanjing Luo (Zhejiang University China), Xing Hu (Zhejiang University China), Xinyu Wang (Zhejiang University), Xin Xia (Zhejiang University China)
+**Authors:** Siqi Wang (Zhejiang University, China), Fanjing Luo (Zhejiang University, China), Xing Hu (Zhejiang University, China), Xinyu Wang (Zhejiang University, China), Xin Xia (Zhejiang University, China / Hangzhou High-Tech Zone (Binjiang) Institute of Blockchain and Data Security, China)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834344
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 分析主流深度学习框架 202 个 GPU 优化 PR 并归纳 22 类策略，再用真实 workload 与微架构 profiling 验证；许多优化收益有限甚至回退，常见根因包括融合致寄存器压力、小 kernel 同步开销迁移与高负载内存仲裁。
+
+**Abstract:** Performance optimization is a critical concern in the evolution of deep learning frameworks, as GPU execution dominates training and inference costs. While hundreds of optimizations are proposed to accelerate training and inference, it is unclear how often these changes deliver meaningful gains in practice, and why they sometimes fail. To bridge this gap, we conduct an empirical study of GPU performance optimizations in deep learning frameworks. We analyze 202 performance-related pull requests from the major deep learning frameworks, and categorize them into 22 distinct optimization strategies (e.g., kernel fusion, auto-tuning, and vectorization). This taxonomy reveals a rich set of developer-intended performance improvements spanning logic, execution, and infrastructure levels. Our evaluation reveals that optimization benefits are far from guaranteed. While some strategies achieve substantial speedups, a significant portion exhibit limited gains or even performance  
+regressions when deployed in realistic workloads. To understand these discrepancies, we conduct multi-level benchmarking and microarchitectural profiling, uncovering three recurring root causes of performance degradation: (1) increased register pressure from aggressive fusion, (2) synchronization overhead migration in small kernels, and (3) memory arbitration under high-load kernels. These  
+findings highlight a fundamental challenge in performance engineering: optimizations interact with hardware resources in complex and often counterintuitive ways, making their outcomes difficult  
+to predict. Our study provides the first systematic characterization of these effects, offering insights to guide more reliable and performance-aware optimization in deep learning frameworks.
 
 
 ## 5. CIPIHunter: Detecting Configuration-Induced Prediction Instability in Deep Learning Frameworks
 
-**Authors:** Yanzhou Mu (UNIST (Ulsan National Institute of Science and Technology), Korea), Shuo Meng (Nantong University China), Mijung Kim (UNIST South Korea), Xiang Chen (Nantong University China), Chunrong Fang (Nanjing University China), Zhenyu Chen (Nanjing University China), Juan Zhai (University of Massachusetts at Amherst United States)
+**Authors:** Yanzhou Mu (UNIST, Republic of Korea / Nanjing University, China), Shuo Meng (Nantong University, China), Mijung Kim (UNIST, Republic of Korea), Xiang Chen (Nantong University, China), Chunrong Fang (Nanjing University, China), Zhenyu Chen (Nanjing University, China), Juan Zhai (University of Massachusetts at Amherst, USA)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834345
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 针对配置切换导致预测漂移的 CIPI，CIPIHunter 用配置对测试、敏感度导向变异、反馈搜索与中间层追踪定位可疑算子；13 个 PyTorch 模型上报告最多 CIPI 与 22 个去重 Type I 表现，已向 PyTorch 提交 29 个问题（多份获确认或高优先级）。
+
+**Abstract:** Deep learning (DL) frameworks support diverse execution configurations, including precision modes and model optimizations. Even with a fixed model, input, and framework version, changing these configurations can change model predictions, causing Configuration-Induced Prediction Instability (CIPI). It arises when configuration-dependent numerical perturbations propagate and cause potentially harmful model-level behavior. Existing API-level and model-level testing approaches are not well suited to detecting CIPI, as these approaches lack configuration-conditioned exploration and propagation-aware diagnosis. Therefore, we present CIPIHunter, which combines controlled configuration-pair testing, sensitivity-oriented mutation, feedback-guided search, and intermediate tracing to localize suspicious operators or operator groups. On 13 PyTorch models under a 100-round budget, CIPIHunter reports the highest raw CIPI count and 22 deduplicated Type I manifestations, 83.3% more than the strongest baseline, while remaining competitive in overall deduplicated manifestation coverage. In total, we submit 29 PyTorch issue reports. Developers have acknowledged eight, rejected five, and marked four as duplicates; nine remain pending, and three have been closed without an explicit determination. Separately, three reports are labeled “high-priority”. These results demonstrate the practical utility of CIPI testing for framework quality assurance.
 
 
 ## 6. EMERGE: Checking Implementation Equivalence for LLMs via Rule Synthesis
 
-**Authors:** Qi Zhan (Zhejiang University China), Xing Hu (Zhejiang University China), Xin Xia (Zhejiang University China), Shanping Li (Zhejiang University China)
+**Authors:** Qi Zhan (Zhejiang University, China), Xing Hu (Zhejiang University, China), Xin Xia (Zhejiang University, China / Hangzhou High-Tech Zone (Binjiang) Institute of Blockchain and Data Security, China), Shanping Li (Zhejiang University, China)
 
 **Categories:** Software Engineering for AI
 
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834405
+
 **中文总结:** 提出 EMERGE，通过规则合成检查不同框架下 LLM 实现是否等价。从 HuggingFace Transformers 与 vLLM 的计算图中推断并重写规则，结合 SMT 与随机测试验证；能建立正确实现对等价性并发现多处实现缺陷。
 
-**Abstract:** Verifying whether two implementations of the same large language model are equivalent across frameworks is difficult in practice. Even when they implement the same computation, the graphs may differ in operator decomposition, tensor layout, and the use of fused or opaque kernels, making manual rewrite rules hard to build and maintain. We present Emerge, a framework for checking Implementation Equivalence over computation graphs extracted from model implementations. Instead of writing rules manually, Emerge infers candidate relations from execution values, and synthesizes rewrite rules on demand when existing rules are insufficient. Each synthesized rule is then validated using SMT solving when possible and constraint-aware randomized testing for opaque kernels. As these local equivalences accumulate, Emerge eventually establishes whether the two implementations are equivalent. Our implementation targets inference computation graphs captured from HuggingFace Transformers and vLLM. Our evaluation shows that Emerge establishes equivalence for correct implementation pairs at practical cost. It also detects 10 of 13 known implementation bugs, uncovers 8 previously unknown implementation issues that were later confirmed by developers, and localizes the first mismatch when equivalence cannot be established.
+**Abstract:** Verifying whether two implementations of the same large language model are equivalent across frameworks is difficult in practice. Even when they implement the same computation, the graphs may differ in operator decomposition, tensor layout, and the use of fused or opaque kernels, making manual rewrite rules hard to build and maintain. We present Emerge, a framework for checking Implementation Equivalence over computation graphs extracted from model implementations. Instead of writing rules manually, Emerge infers candidate relations from execution values, and synthesizes rewrite rules on demand when existing rules are insufficient. Each synthesized rule is then validated using SMT solving when possible and constraint-aware randomized testing for opaque kernels. As these local equivalences accumulate, Emerge eventually establishes whether the two implementations are equivalent. Our implementation targets inference computation graphs captured from HuggingFace Transformers and vLLM. Our evaluation shows that 
+Emerge establishes equivalence for correct implementation pairs at practical cost. It also detects 10 of 13 known implementation 
+bugs, uncovers 8 previously unknown implementation issues that were later confirmed by developers, and localizes the first mismatch 
+when equivalence cannot be established.
 
 
 ## 7. Evolution-Aware Regression Test Prioritization of ML-Enabled Systems using Gradient-Based Behavior Vectors
 
-**Authors:** Eunho Cho (Korea Advanced Institute of Science and Technology (KAIST) South Korea), Donghwan Shin (University of Sheffield United Kingdom), In-Young Ko (Korea Advanced Institute of Science and Technology South Korea)
+**Authors:** Eunho Cho (KAIST, Republic of Korea), Donghwan Shin (University of Sheffield, UK), In-Young Ko (KAIST, Republic of Korea)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**Artifact badges:** Artifacts Available, Artifacts Reusable
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834368
+
+**中文总结:** 提出 GBV-PD，用原模型 loss 梯度投影为行为向量，并在模型参数更新方向上估计各测试 loss 升降，无需在进化模型上重跑即可 prioritization；分类/回归任务上优于非方向基线且可缓存复用。
+
+**Abstract:** The machine learning(ML) component of an ML-enabled system evolves through retraining, fine-tuning, and optimization, so previously valid test results may no longer hold. A single evolution step can worsen performance on some test cases while improving others, making regression test prioritization inherently directional. We present Gradient-based Behavior Vector-Parameter Delta(GBV-PD), the first approach to operationalize the behavior vector space for evolution-aware regression test prioritization. GBV-PD represents each test case as a gradient-based vector(GBV), a low-dimensional projection of its loss gradient under the original model. It then projects the observed parameter update of the evolved model onto the same PCA basis and uses the resulting alignment to estimate whether each test case's loss is likely to increase or decrease, without running the evolved model on test cases during prioritization. In an empirical study across classification and regression tasks, GBV-PD consistently outperformed non-directional baselines and remained competitive with a full-gradient reference, while offering better time and storage profiles for repeated updates via reusable GBV caching. These results show that behavior-space ideas can be operationalized into a practical and efficient mechanism for repeated-update regression-test prioritization of evolving ML components within ML-enabled systems.
 
 
 ## 8. Execution-as-Configuration: Security Smells in Model Configuration Artifacts
 
-**Authors:** Mohammed Latif (Siddiq Meta Platforms United States), Prince Noah (Johnson University of Notre Dame United States), Joanna (C. S. Santos University of Notre Dame United States)
+**Authors:** Mohammed Latif Siddiq (University of Notre Dame, USA), Prince Noah Johnson (University of Notre Dame, USA), Joanna C. S. Santos (University of Notre Dame, USA)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837470
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 将 config.json 等视为执行控制面，定义 12 类配置安全 smell 并实现仓库感知检测器 MONTICELLO；分析 Hugging Face/OpenCSG/ModelScope 共 44812 仓库，配置 smell 广泛存在（约六成以上受影响）。
 
-
-## 9. Gradient-Free Repair of Code LLMs: A Closed-Form Fisher-Guided Bayesian Approach
-
-**Authors:** Zhiyu Duan (Beihang University China), Chong Bian (China Mobile China), iainzhang, Shunkun Yang (Beihang University China)
-
-**Categories:** Software Engineering for AI
-
-**中文总结:** （目前没有摘要，因此没有总结）
-
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**Abstract:** Model sharing hubs rely on configuration artifacts to control model loading and execution. Although treated as metadata, files such as config.json determine class resolution and dependency selection, effectively making configurations an execution control surface. Yet their security implications remain largely unexplored. In this paper, we present a large-scale study of model configuration-related security smells. We introduce a taxonomy of 12 security smell types capturing execution-enabling constructs, trust boundary confusion, supply-chain risks, information leakage, and operational risks in model configuration files. To operationalize this taxonomy, we design MONTICELLO, a repository-aware security smell detection approach that combines pattern-based rules with contextual reasoning. We analyze 44,812 repositories across Hugging Face, OpenCSG, and ModelScope. Configuration smells are pervasive: 65.5
 
 
-## 10. Harnessing Uncertainty in Code Language Models: Lessons from Vulnerability Detection
+## 9. Harnessing Uncertainty in Code Language Models: Lessons from Vulnerability Detection
 
-**Authors:** Haodong Li (Huazhong University of Science and Technology China), Xiao Cheng (Macquarie University Australia), Xudong Wang (Zhongguancun Institute of Artificial Intelligence China), Zhihao Guo (UTS Australia), Haoyu Wang (Huazhong University of Science and Technology China)
+**Authors:** Haodong Li (Huazhong University of Science and Technology, China), Xiao Cheng (Macquarie University, Australia), Xudong Wang (Zhongguancun Institute of Artificial Intelligence, China), Zhihao Guo (University of Technology Sydney, Australia), Haoyu Wang (Huazhong University of Science and Technology, China)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837465
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 在 1050 个真实项目上系统评估 CLM 漏洞检测中的四种校准方法与两种不确定性增强框架；发现校准效果随模型规模变化、需标签条件建模的 uncertainty 修正（OOD 上 Macro-F1 最高约 +12%），并给出部署不确定性感知检测的实践指南。
 
-
-## 11. How Do LLMs Read Bug Reports? An Empirical Study of Attention in LLMs for Automated Program Repair
-
-**Authors:** Ramtin Ehsani (Drexel University United States), Irene Manotas (IBM (USA) United States), Saurabh Pujar (IBM Research AI United States), Luca Buratti (IBM Research United States), Preetha Chatterjee (Drexel University, USA United States)
-
-**Categories:** Software Engineering for AI
-
-**中文总结:** （目前没有摘要，因此没有总结）
-
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**Abstract:** Code Language Models (CLMs) are increasingly adopted for vulnerability detection, yet knowing when to trust their predictions remains an open challenge.  
+Uncertainty estimation has improved reliability in traditional discriminative models, but whether these benefits transfer to the generative paradigm of CLMs is unclear.  
+This experience paper presents a systematic empirical study of uncertainty estimation in CLM-based vulnerability detection, evaluating four calibration methods and two uncertainty-driven enhancement frameworks across eight models (2B--16B parameters) under both in-distribution and out-of-distribution settings on 1,050 real-world projects.  
+Our study reveals that: (1) calibration effectiveness is model-scale dependent: temperature scaling and ensembles deliver consistent gains, while Monte Carlo Dropout and Bayesian Low-Rank Adaptation by Backpropagation only benefit medium-scale models (approximately 6B--7B parameters); (2) uncertainty-based correction requires label-conditional modeling to be effective (up to 12% Macro-F1 improvement on out-of-distribution data), as global strategies show negligible effects; (3) curriculum learning fails to improve upon standard fine-tuning, as uncertainty-based difficulty ordering does not align with the learned decision boundary, causing training instability or negligible gains.  
+These findings challenge assumptions about the universal transferability of uncertainty methods and provide practical guidelines for deploying uncertainty-aware vulnerability detection.
 
 
-## 12. How Reasoning Shapes Social Bias in LLM-Generated Code?
+## 10. How Do LLMs Read Bug Reports? An Empirical Study of Attention in LLMs for Automated Program Repair
 
-**Authors:** Weifeng Sun (Singapore Management University, Singapore Singapore), Jieke Shi (Singapore Management University Singapore), Zhou Yang (University of Alberta; CIFAR AI Chair; Alberta Machine Intelligence Institute Canada), Yuchen Chen (Nanjing University China), Hongyan Li (Chongqing University China), Meng Yan (Chongqing University China), David Lo (Singapore Management University Singapore)
+**Authors:** Ramtin Ehsani (Drexel University, USA), Irene Manotas (IBM Research, USA), Saurabh Pujar (IBM Research, USA), Luca Buratti (IBM Research, USA), Preetha Chatterjee (Drexel University, USA)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**Artifact badges:** Artifacts Available
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837434
+
+**中文总结:** 首次实证分析 LLM 自动修 bug 时对 bug report 各部分的注意力；成功修复往往分散关注描述、栈迹与测试，失败则过度聚焦版本等元数据，注意力与开发者认为关键信息的对齐度与修复成功率相关。
+
+**Abstract:** Large Language Model (LLM)-based Automated Program Repair systems are advancing rapidly, yet their performance remains inconsistent. Even when provided with the same contextual information, an LLM may generate a correct patch for one bug but fail on another closely related bug. Why this happens remains poorly understood, and it is unclear how LLMs prioritize the diverse information in bug reports and whether model attention affects repair success.  
+In this paper, we present the first empirical study of attention patterns in LLM-based program repair, providing interpretable insights into how models process bug reports and where their attention is concentrated during repair. We analyze 319 real-world Python and Java bugs from SWE-bench Verified and Multi-SWE-bench to study (RQ1) how model attention is distributed across bug report sections, (RQ2) how attention patterns within each section differ between successful and unsuccessful repairs, and (RQ3) how these patterns compare to information developers consider important for bug fixing. We find that successful repairs are characterized by diffused attention across multiple diagnostic components such as bug descriptions, stacktraces, and test cases, while failures often exhibit over-localized attention toward metadata such as version information. We further observe that stronger alignment between model attention and developer-identified key sections and phrases is associated with higher repair success. Our results provide the first empirical evidence that attention misallocation is a key factor in LLM-based APR failures, and offer actionable insights for designing more interpretable and reliable future APR systems.
 
 
-## 13. Localizing Data Annotation Faults in Semantic Segmentation Systems
+## 11. How Reasoning Shapes Social Bias in LLM-Generated Code?
 
-**Authors:** Pengyi Yang (China University of Geosciences China), Teng Long (School of Artificial Intelligence, China University of Geosciences (Beijing) China), Zhiwu Xu (Shenzhen University China), Linhai Jing (China University of Geosciences China)
+**Authors:** Weifeng Sun (Singapore Management University, Singapore), Jieke Shi (Singapore Management University, Singapore), Zhou Yang (University of Alberta, Canada / Alberta Machine Intelligence Institute, Canada), Yuchen Chen (Nanjing University, China), Hongyan Li (Chongqing University, China), Meng Yan (Chongqing University, China), David Lo (Singapore Management University, Singapore)
+
+**Categories:** Software Engineering for AI
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834387
+
+**中文总结:** 首次系统研究 reasoning-based 代码生成中的社会偏见；推理平均将偏见率从 0.64 降至 0.40 但质量亦下降，提出 ProbeDebias 检测并重写偏见推理轨迹，实验显示有效 debias（报告 87.76% 相关指标）。
+
+**Abstract:** Large language models (LLMs) are increasingly used for code generation, but recent studies have shown that generated programs can exhibit code bias , i.e., unfair or differential treatment encoded in code logic with respect to sensitive demographic attributes. Although prior work has investigated this problem in a direct generation setting, it remains unclear how bias behaves in reasoning-based code generation , where models produce intermediate reasoning traces before generating the final code. To bridge this gap, we conduct the first systematic empirical study of social bias in reasoning-based code generation. We evaluate 9 models spanning both standard LLMs and large reasoning models (LRMs) on realistic bias-sensitive coding tasks covering three human-centered decision scenarios. Our results reveal four main findings. First, reasoning generally reduces code bias, lowering the average bias rate from 0.64 to 0.40, but the improvement is highly model-dependent. Second, reasoning-based generation does not consistently preserve code quality, with the average quality dropping from 0.72 to 0.59. We further find that biased reasoning strongly predicts biased code, and that simply adjusting generation configurations is insufficient for robust bias mitigation. Motivated by these findings, we propose ProbeDebias, a reasoning-aware debiasing framework that detects biased reasoning traces and rewrites them before final code generation. Extensive experiments demonstrate that ProbeDebias achieves 87.76
+
+
+## 12. Localizing Data Annotation Faults in Semantic Segmentation Systems
+
+**Authors:** Pengyi Yang (China University of Geosciences (Beijing), China), Teng Long (China University of Geosciences (Beijing), China), Zhiwu Xu (Shenzhen University, China), Linhai Jing (China University of Geosciences (Beijing), China)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837428
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** SegFaultLoc 将 SBFL 适配到语义分割标注连通分量，用冻结编码器构造语义/几何双谱并学习聚合 suspiciousness；三基准上 APFD、Precision@10%、nDCG@10% 较最佳基线最高 +9.2%/+21.9%/+22.4%，COCO-Stuff 自然噪声上修标注可提升模型。
+
+**Abstract:** Data annotation fault localization is a critical software quality assurance task in deep learning pipelines, as annotation faults can severely compromise model reliability and system dependability in safety-critical applications. Semantic segmentation requires assigning a class label to every pixel in the image, making it one of the most fault-prone annotation tasks, with faults ranging from incorrect class labels to imprecise boundaries. However, existing annotation fault localization methods target simpler annotation types such as classification and object detection, and rely on models trained on potentially noisy data, making them inadequate for dense annotations such as semantic segmentation. We adapt spectrum-based fault localization from program elements to annotation components in semantic segmentation, and propose SegFaultLoc , an annotation fault localization framework that identifies and ranks faulty annotation components by suspiciousness without segmentation model training. SegFaultLoc decomposes annotation masks into connected components and extracts noise-independent features from frozen pretrained encoders to construct dual fault spectra: a semantic spectrum for classification and missing faults, and a geometric spectrum for localization and fragmentation faults. Learning-based suspiciousness aggregation integrates these signals into unified suspiciousness scores for prioritized inspection. Systematic experiments on three benchmarks against seven data-quality baselines demonstrate that SegFaultLoc achieves up to 9.2% improvement in APFD, 21.9% in Precision@10%, and 22.4% in nDCG@10% over the best baseline. Validation on naturally occurring annotation faults in the real-world COCO-Stuff dataset further confirms that correcting detected faults consistently improves segmentation performance.
 
 
-## 14. MultiKernelBench: A Multi-platform Benchmark for Kernel Generation
+## 13. MultiKernelBench: A Multi-platform Benchmark for Kernel Generation
 
-**Authors:** Zhongzhen Wen (Nanjing University China), zhangyinghui (Nanjing University China), Zhong Li (Nanjing University China), Zhongxin Liu (Zhejiang University China), Linna Xie (Nanjing University China), Tian Zhang (Nanjing University China)
+**Authors:** Zhongzhen Wen (Nanjing University, China), Yinghui Zhang (Nanjing University, China), Zhong Li (Nanjing University, China), Zhongxin Liu (Zhejiang University, China), Linna Xie (Nanjing University, China), Tian Zhang (Nanjing University, China)
 
 **Categories:** Software Engineering for AI
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837460
 
 **中文总结:** 发布 MultiKernelBench，首个覆盖 Nvidia GPU、Huawei NPU 与 Google TPU 的 LLM 深度学习 kernel 生成基准，含 285 项任务与 14 类 kernel。系统评估 7 个 SOTA LLM，揭示跨平台泛化差异并验证 category-aware one-shot prompting 的有效性。
 
-**Abstract:** The automatic generation of deep learning (DL) kernels using large language models (LLMs) has emerged as a promising approach to reduce the manual effort and hardware-specific expertise required for writing high-performance operator implementations. However, existing benchmarks for evaluating LLMs in this domain suffer from limited hardware support, coarse-grained kernel categorization, and imbalanced task coverage. To address these limitations, we introduce MultiKernelBench, the first comprehensive, multi-platform benchmark for LLM-based DL kernel generation. MultiKernelBench spans 285 tasks across 14 well-defined kernel categories and supports three major hardware platforms: Nvidia GPUs, Huawei NPUs, and Google TPUs. To enable future extensibility, we design a modular backend abstraction layer that decouples platform-specific logic from the core benchmarking infrastructure, allowing easy integration of new hardware platforms. We further propose a simple yet effective category-aware one-shot prompting method that improves generation quality by providing in-category exemplars. Through systematic evaluations of seven state-of-the-art LLMs, we reveal significant variation in task difficulty, poor generalization to platforms with less training exposure, and the effectiveness of targeted prompting strategies. MultiKernelBench is publicly available at https://github.com/wzzll123/MultiKernelBench.
+**Abstract:** The automatic generation of deep learning (DL) kernels using large language models (LLMs) has emerged as a promising approach to reduce the manual effort and hardware-specific expertise required for writing high-performance operator implementations. However, existing benchmarks for evaluating LLMs in this domain suffer from limited hardware support, coarse-grained kernel categorization, and imbalanced task coverage. To address these limitations, we introduce MultiKernelBench, the first comprehensive, multi-platform benchmark for LLM-based DL kernel generation. MultiKernelBench spans 300 tasks across 15 well-defined kernel categories and supports three major hardware platforms: NVIDIA GPUs, Huawei NPUs, and Google TPUs. To enable future extensibility, we design a modular backend abstraction layer that decouples platform-specific logic from the core benchmarking infrastructure, allowing easy integration of new hardware platforms. We further propose a simple yet effective category-aware one-shot prompting method that improves generation quality by providing in-category exemplars. Through systematic evaluations of seven state-of-the-art LLMs, we reveal significant variation in task difficulty, poor generalization to platforms with less training exposure, and the effectiveness of targeted prompting strategies.
 
 
-## 15. Not as Sweet by Another Name: An Empirical Study of Format Robustness in LLM Document Workflows
+## 14. Not as Sweet by Another Name: An Empirical Study of Format Robustness in LLM Document Workflows
 
-**Authors:** Xiaoyu Zhang (Nanyang Technological University, Singapore Singapore), Xianyun Cheng (Central South University China), Tianlin Li (Beihang University, China), Yuwei Zheng (Beihang University China), Yue Yang (Xi'an University of Architecture and Technology China), Yang Liu (Nanyang Technological University Singapore)
+**Authors:** Xiaoyu Zhang (Nanyang Technological University, Singapore), Xianyun Cheng (National University of Singapore, Singapore), Tianlin Li (Beihang University, China), Yuwei Zheng (Beihang University, China), Yue Yang (Xi'an University of Architecture and Technology, China), Yang Liu (Nanyang Technological University, Singapore)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837456
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 提出面向 LLM 文档工作流的格式感知蜕变测试及三条 MR，在 4 工作流×4 任务×4 格式共 4.8 万次执行上评估；仅换文档格式可使准确率最多降 53.63%、41% 以上实例决策漂移，用户侧轻量缓解可恢复部分漂移而无需重训。
+
+**Abstract:** LLM-driven software systems are rapidly evolving from plain-text conversations to document-centric end-to-end workflows, where the same semantic content can be delivered in diverse document formats (e.g., CSV) through file upload interfaces. Yet existing testing work focuses on the robustness and reliability of models and systems whose input is a single prompt string, leaving a critical question unanswered: Can these document workflows maintain robust behaviors when the same content arrives in a different document format? To fill the gap, in this paper, we propose a format-aware metamorphic testing framework with three metamorphic relations to comprehensively evaluate the format robustness of end-to-end LLM document workflows. Based on this framework, we conduct a large-scale empirical study spanning four representative LLM workflows, four real-world tasks, and four document formats, comprising a total of 48,000 workflow executions. Our findings reveal that format variation poses a systematic and serious threat. Merely switching formats can cause accuracy to drop by up to 53.63% and trigger decision drifts in over 41% of instances. We further design lightweight mitigation strategies from the users’ perspective that recover up to 44.21% of format-induced decision drift without model retraining. Our study demonstrates that document format is not a neutral wrapper but a critical factor affecting the reliability of LLM software systems, calling for corresponding testing and safeguards in the deployment in real-world high-stakes scenarios.
+
+
+## 15. Optimization-Free Repair of Code LLMs: A Closed-Form Fisher-Guided Bayesian Approach
+
+**Authors:** Zhiyu Duan (Beihang University, China), Chong Bian (China Mobile, China), Yizhuo Zhang (Beihang University, China), Shunkun Yang (Beihang University, China)
+
+**Categories:** Software Engineering for AI
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834442
+
+**中文总结:** 提出 FISR，以 Fisher 信息刻画参数语义重要性，在贝叶斯后验更新中加权约束修复子空间，实现免迭代训练的闭式语义修复；在三模型六基准上 EM 最高 95.8%，较强基线提升 EM/Pass@1，且修复时间与更新成本显著低于编辑类方法。
+
+**Abstract:** Large language models (LLMs) are increasingly used in software engineering, yet their code generations remain vulnerable to subtle functional errors, making reliable post-hoc repair essential. Existing repair methods typically apply localized parameter updates without explicitly accounting for the heterogeneous importance of pre-trained knowledge, which can entangle targeted correction with unintended changes to general coding ability. We propose Fisher-Informed Semantic Repair (FISR), a principled framework that treats code LLM repair as a Bayesian posterior update constrained by pre-trained prior knowledge. It estimates parameter-wise semantic importance through the Fisher Information Matrix, using local curvature information to identify high-confidence directions that should be preserved during repair. It then introduces Fisher-weighted structural constraints to guide corrective updates away from knowledge-critical parameters and toward more adaptable regions of the parameter space. To make this process scalable, we combine structured curvature approximation with low-rank precision decomposition, enabling efficient closed-form updates within a safe repair subspace rather than relying on iterative retraining. Extensive experiments on three backbone code models and six software engineering benchmarks show that FISR achieves the best overall trade-off among repair accuracy, stability, and efficiency. It reaches up to 95.8% Exact Match, improving Exact Match by up to 3.1% and Pass@1 by up to 3.4% over strong prior repair methods. It also demonstrates stronger held-out stability while substantially reducing repair cost, requiring only 40%-67% of the end-to-end repair time and 14%-20% of the update-time cost of competitive editing-based baselines. These results demonstrate that the proposed method enables accurate, safe, and efficient semantic repair for code LLMs.
 
 
 ## 16. Pattern over Pixels: Measuring Pattern Completion Bias in Multimodal Code Generation
 
-**Authors:** Khai Nguyen (William & Mary United States), Oscar Chaparro (William & Mary United States), Antonio Mastropaolo (William and Mary, USA)
+**Authors:** Khai-Nguyen Nguyen (William & Mary, USA), Oscar Chaparro (William & Mary, USA), Antonio Mastropaolo (William & Mary, USA)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**Artifact badges:** Artifacts Available
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834443
+
+**中文总结:** 构建首个视觉 pattern-completion bias 基准（Design2Code 衍生 1,440 截图），在重复 UI 模式中 perturb 单元素要求 MLLM 填 width/font-size；五款前沿 MLLM 强烈偏向重复基线（card width bias 约 69.8%、text 约 80.2%），准确率远低于无 perturb 情形。
+
+**Abstract:** Multimodal large language models (MLLMs) are increasingly used to translate webpage screenshots into front-end code, but repeated UI patterns may sway them toward visually incorrect yet pattern-consistent outputs. In this work, we test how repeated webpage patterns hurt MLLM accuracy on an objective screenshot-to-code fill-in-the-blank task. We introduce the first benchmark for visual pattern-completion bias , where one localized element in a repeated UI pattern is perturbed and the model must recover the masked width or font-size value from the screenshot and HTML context. Starting from 30 webpages curated from the Design2Code dataset, we build 1,440 evaluated screenshots spanning structural card and text-style patterns under standard and noise-overlaid conditions. We evaluate five frontier MLLMs and find that all are strongly biased toward the repeated baseline. Mean bias rate reaches 69.78% on card-width perturbations and 80.22% on text font-size perturbations, while mean accuracy is only 21.17% and 7.89%, respectively.  performs best but still drops from 68.61% accuracy on cards to 13.89% on text, while  reaches 96.11% bias on text. Noise, subtler perturbations, and boundary positions further increase bias rate. Reasoning analysis further shows that greater reasoning effort correlates with lower bias, yet qualitative evidence reveals that models can identify the anomalous element and still override it with the pattern-consistent answer. Our results identify a concrete failure mode in multimodal code generation and show that its severity is strongly associated with visual saliency.
 
 
 ## 17. ProbGuard: Proactive Runtime Monitoring for LLM Agent Safety via Probabilistic Prediction
 
-**Authors:** Haoyu Wang (School of Computing and Information Systems, Singapore Management University Singapore), Chris Poskitt (Singapore Management University Singapore), Jiali Wei (Xi'an Jiaotong University China), Jun Sun (Singapore Management University Singapore)
+**Authors:** Haoyu Wang (Singapore Management University, Singapore), Christopher M. Poskitt (Singapore Management University, Singapore), Jiali Wei (Xi'an Jiaotong University, China), Jun Sun (Singapore Management University, Singapore)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837413
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 提出 ProbGuard，将 agent 执行抽象为符号状态并学习 DTMC，在剩余安全概率低于阈值时 proactive 干预；自动驾驶与家庭 embodied 场景可提前 15–38 秒预警，re-prompt 模式不安全行为降 65.37% 且保留 80.4% 任务完成率。
+
+**Abstract:** Large Language Model (LLM) agents increasingly operate across domains such as robotics, virtual assistants, and web automation. However, their stochastic decision-making introduces safety risks that are difficult to anticipate during execution. Existing runtime monitoring frameworks, such as AgentSpec, primarily rely on reactive safety rules that detect violations only when unsafe behavior is imminent or has already occurred, limiting their ability to handle long-horizon dependencies. We present ProbGuard, a proactive runtime monitoring framework for LLM agents that anticipates safety violations through probabilistic risk prediction. ProbGuard abstracts agent executions into symbolic states and learns a Discrete-Time Markov Chain (DTMC) from execution traces to model behavioral dynamics. At runtime, the monitor estimates the probability that execution will remain safe from the current state, and triggers an intervention when this probability falls below a user-defined threshold. To improve robustness, ProbGuard incorporates semantic validity constraints in the abstraction and admits a PAC-style analysis that characterizes the sample complexity required to certify the learned model under standard assumptions. We evaluate ProbGuard in two safety-critical domains: autonomous driving and embodied household agents. Across evaluated scenarios, ProbGuard consistently predicts traffic law violations and collisions in advance, with warnings up to 15.84 seconds at a threshold yielding no false alarms, and up to 38.66 seconds at stricter thresholds. In embodied agent tasks, ProbGuard's re-prompting intervention mode reduces unsafe behavior by 65.37% relative to the unmonitored baseline while retaining 80.4% of the baseline task completion; a stricter halting configuration reduces unsafe behavior by 93.60% at a larger cost in completion.  
+ProbGuard is implemented as an extensible open-source runtime monitor integrated with the LangChain agent framework and introduces minimal runtime overhead.
 
 
 ## 18. RealAIGC: Towards More Realistic Evaluation of AI-Generated Code Detection in Real-World Code Repository
 
-**Authors:** Wentao Chen (East China University of Science and Technology China), Yufei Chen (East China University of Science and Technology China), Huiqun Yu (East China University of Science and Technology; Shanghai Engineering Research Center of Smart Energy China), Guisheng Fan (East China University of Science and Technology China), Kaiwen Zhi (East China University of Science and Technology China), Peite Guo (East China University of Science and Technology China), Jianyuan Yu (East China University of Science and Technology China)
+**Authors:** Wentao Chen (East China University of Science and Technology, China), Yufei Chen (East China University of Science and Technology, China), Huiqun Yu (East China University of Science and Technology, China), Guisheng Fan (East China University of Science and Technology, China / Shanghai Engineering Research Center of Smart Energy, China), Kaiwen Zhi (East China University of Science and Technology, China), Peite Guo (East China University of Science and Technology, China), Jianyuan Yu (East China University of Science and Technology, China)
 
 **Categories:** Software Engineering for AI
+
+**Awards:** ACM SIGSOFT Distinguished Paper Award
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834411
 
 **中文总结:** 基于 GitHub 真实开发历史构建 RealAIGC 基准（含 400 余万函数），系统评估 28 种 AI 生成代码检测方法；现有方法在主流动态语言及 commit/PR 粒度上普遍失效。
 
@@ -204,75 +268,110 @@ Count: 29
 
 ## 19. RealisticTritonBench: A Benchmark for Triton-Kernel Generation in Real-World AI Frameworks
 
-**Authors:** Jinjun Huang (Zhejiang University China), Zhongzhen Wen (Nanjing University China), Tongtong Xu (Huawei China), Meng Yan (Chongqing University China), Xin Xia (Zhejiang University China), Zhongxin Liu (Zhejiang University China)
+**Authors:** Jinjun Huang (Zhejiang University, China), Zhongzhen Wen (Nanjing University, China), Tongtong Xu (Huawei, China), Meng Yan (Chongqing University, China), Xin Xia (Zhejiang University, China), Zhongxin Liu (Zhejiang University, China)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837457
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 从热门 AI 框架真实 Triton 相关 PR 抽取任务，要求在自然语言需求下生成内核并嵌入原框架做端到端评测，克服孤立 PyTorch→Triton 翻译与单核性能脚本的局限；提供可复现环境以忠实衡量 LLM 在生产式 Triton 开发中的可用性（原文评估细节在截断摘要中略）。
+
+**Abstract:** In modern AI frameworks, the GPU kernel is a key determinant of overall system performance. By combining usability, portability, and near-handwritten CUDA performance, Triton has been widely adopted for implementing GPU kernels.  
+Recent advances have shown the potential of using large language models (LLMs) to automatically generate Triton kernels, helping reduce the manual effort required by expert kernel developers.  
+To evaluate the quality of LLM-generated Triton kernels, several benchmarks have been proposed. However, existing benchmarks primarily target isolated kernel generation tasks and suffer from three key limitations: (1) they restrict the task to only PyTorch-to-Triton translation, thus failing to reflect the diversity and complexity of real-world Triton tasks; (2) they evaluate only the performance of individual kernels, limiting the evaluation of real-world performance of generated kernels in AI frameworks, where end-to-end performance is the core criterion for real deployment; (3) they rely on manually written evaluation scripts for single kernel, which may introduce vulnerabilities and allow models to exploit evaluation flaws to bypass correctness checks and obtain inflated scores.  
+To address these limitations, we introduce RealisticTritonBench, the first benchmark that derives Triton kernel generation tasks from real-world pull requests in popular AI frameworks, enabling evaluation under realistic, production-like settings.  
+RealisticTritonBench systematically extracts real-world PRs with Triton kernel modified from popular open-source AI frameworks and transforms them into kernel generation tasks with concrete engineering contexts. Each task takes a natural language requirement as input and requires to generate a corresponding Triton kernel implementation. RealisticTritonBench also provides a complete and reproducible evaluation environment for each task.  
+In contrast to prior benchmarks that focus on isolated kernel performance, RealisticTritonBench integrates generated kernels into their original frameworks and evaluates them under end-to-end test, enabling a more faithful assessment.  
+We conduct a systematic evaluation of the state-of-the-art LLMs on RealisticTritonBench, revealing that they still struggle to handle the challenges in real-world Triton generation tasks.
 
 
 ## 20. RefineAct: Automatic Runtime Verification of LLM Agent Actions
 
-**Authors:** Fraol Batole (Tulane University United States), Foutse Khomh (Polytechnique Montréal Canada), Hridesh Rajan (Tulane University United States)
+**Authors:** Fraol Batole (Tulane University, USA), Foutse Khomh (Polytechnique Montréal, Canada), Hridesh Rajan (Tulane University, USA)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**Awards:** ACM SIGSOFT Distinguished Paper Award
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834409
+
+**中文总结:** 提出 RefineAct 运行时验证框架：将用户自然语言意图形式化为 Prolog 规约，经 refinement 规划动作链，并在执行前拦截校验每条工具调用；在 ToolEmu 144 任务上失败率由 77% 降至 39%，任务质量 0–3 分由 1.0 升至 1.9。
+
+**Abstract:** LLM-based agents that invoke external tools can cause irreversible harm when their actions diverge from user intent, from deleting critical files to exposing private data or executing untrusted code. Unlike traditional software, where test suites and contracts define expected behavior, LLM agents operate without a specification: there is no artifact against which to check their actions before execution. Existing safeguards rely on prompt engineering or post-hoc evaluation, neither of which closes this gap. We present RefineAct, a runtime verification framework that automatically derives a task-specific specification from the user’s natural-language instruction and enforces it during agent execution. RefineAct operates in three stages: (1) intent formalization translates instructions into first-order Prolog predicates capturing the user’s goal and safety requirements; (2) refinement-based planning decomposes the specification into a concrete action plan with pre-/postcondition chains and risky-action patterns; and (3) runtime verification intercepts each agent-proposed action, queries the Prolog knowledge base to verify precondition satisfaction and constraint compliance, and returns a disposition state that determines whether the action proceeds, requires user confirmation, or is blocked with corrective feedback. We evaluate RefineAct on 144 agent tasks across five domains from the ToolEmu benchmark. RefineAct reduces failure incidence from 77% to 39% while improving task completion quality from 1.0 to 1.9 on a 0–3 scale, demonstrating that deriving and enforcing specifications at runtime can improve both safety and helpfulness of LLM agent behavior.
 
 
 ## 21. SimServing: Native-Execution Simulation for Evolution-Resilient LLM Serving Configuration Tuning
 
-**Authors:** Yujie Huang (The Chinese University of Hong Kong), Jiazhen Gu (Chinese University of Hong Kong China), Zhihan Jiang (The Chinese University of Hong Kong), Michael Lyu (CUHK, Hong Kong)
+**Authors:** Yujie Huang (Chinese University of Hong Kong, Hong Kong), Jiazhen Gu (Chinese University of Hong Kong, Hong Kong), Zhihan Jiang (Chinese University of Hong Kong, Hong Kong), Michael R. Lyu (Chinese University of Hong Kong, Hong Kong)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834362
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 提出 SimServing：原生执行未改动的 serving 管理软件，仅用可插拔延迟估计器替代 GPU 计算，避免重实现 vLLM 控制逻辑导致的语义漂移；吞吐预测误差由 13.8% 降至 4.9%，仿真加速最高 21.18×，调参吞吐最高 +10.2%。
+
+**Abstract:** Large Language Model (LLM) services expose a large configuration space that critically affects performance, yet tuning these configurations on hardware (e.g., NVIDIA GPUs) is prohibitively expensive. Simulation offers a scalable alternative, but state-of-the-art simulators suffer from a fundamental software engineering pitfall: they re-implement the serving framework's complex control logic (e.g., request scheduling and memory management), creating a semantic copy that inevitably diverges from the rapidly evolving upstream software. Our empirical study across eight consecutive vLLM versions confirms this fidelity drift, with prediction errors widening as the framework evolves.  
+We observe that the serving management software dominates performance fidelity yet accounts for less than 10% of total execution time, with GPU computation consuming over 90%. This asymmetry motivates SimServing, a hybrid simulation framework that executes the native, unmodified serving software while replacing GPU computation with a pluggable latency estimator. This design preserves the serving management software's control flow by executing it rather than modeling it, thereby automatically inheriting upstream updates and substantially reducing the maintenance burden associated with re-implementation. Integrating SimServing with Particle Swarm Optimization for configuration tuning, our evaluation shows that it reduces throughput prediction error from 13.8% to 4.9%, achieves up to 21.18× simulation speedup, and discovers configurations that improve throughput by up to 10.2% over existing baselines.
 
 
 ## 22. Tangent: An Empirical Study of Testing Practices for LLM-Based Agent Applications
 
-**Authors:** Rangeet Pan (IBM Research United States), Tyler Stennett (Georgia Institute of Technology), Divya Sankar (IBM Research United States), Bridget McGinn (IBM Resesarch United States), Alessandro Orso (University of Georgia, USA United States), Raju Pavuluri (IBM T.J. Watson Research Center United States), Saurabh Sinha (IBM Research United States), Maja Vukovic (IBM Research United States)
+**Authors:** Rangeet Pan (IBM Research, USA), Tyler Stennett (Georgia Institute of Technology, USA), Divya Sankar (IBM Research, USA), Bridget McGinn (IBM Research, USA), Alessandro Orso (University of Georgia, USA), Raju Pavuluri (IBM Research, USA), Saurabh Sinha (IBM Research, USA), Maja Vukovic (IBM Research, USA)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837414
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 挖掘开源 agent 项目并标注 2572 个测试方法，归纳 23 种测试模式，辅以 10 位工业访谈；发现测试以窄单元为主、mock 重、交互与非功能覆盖不足，并发布测试工件数据集指引系统化 agent 测试研究。
+
+**Abstract:** Agents built on large language models (LLMs) are increasingly used to develop applications that perform complex, multi-step tasks involving reasoning, tool use, and interaction with external environments. Despite rapid advances in benchmarking LLM-based agents, little is known about how they are tested in practice. In particular, key aspects of testing---such as testing levels, objectives, data patterns, test complexity, and validation strategies---for agent applications remain underexplored.  
+In this paper, we present an empirical study of testing practices for LLM-based agent applications using a corpus of mined open-source projects.  
+We construct an extensive dataset of agent applications, tools, and tests, and manually label 2,572 test methods from 240 modules. From this analysis, we develop a taxonomy of 23 testing patterns across test fixtures, data, objectives, and assertions, and characterize tests by level (unit, module, integration). We complement this with structured interviews of 10 senior industry practitioners building agentic systems.  
+Our results show that testing of LLM-based agent applications is dominated by narrowly scoped unit tests, with limited coverage of complex interactions, realistic scenarios, and non-functional requirements. Tests often rely on simplistic inputs, heavy mocking, and shallow validation, and exhibit low structural complexity. Although industry practice places greater emphasis on non-functional testing than open-source projects, both reveal common gaps, including the lack of formal testing foundations, unclear test objectives, and challenges in generating high-quality test data.  
+Based on these findings, we identify research directions toward more systematic and rigorous testing of agent applications, including foundations for agent testability, formalized test objectives, and fault-based testing techniques tailored to agentic systems. We also release a curated dataset of testing artifacts to support future research.
 
 
 ## 23. Tensor-Based Batch Fuzzing with Adaptive Perturbation Scaling for Deep Neural Networks
 
-**Authors:** Guanqin Zhang (University of New South Wales, Sydney Australia), Yulei Sui (University of New South Wales Australia)
+**Authors:** Guanqin Zhang (University of New South Wales, Australia), Yulei Sui (University of New South Wales, Australia)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**Artifact badges:** Artifacts Available, Artifacts Reusable
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834435
+
+**中文总结:** 提出规格感知的张量批处理 DNN 模糊测试框架，按规格可行域自适应缩放扰动步长，并将约束与性质检查嵌入网络以单次前向处理 B 条规格；在 TrafficSigns、Cifar100、TinyImageNet 等基准上相对顺序基线可达约 40× 吞吐与 4× 违规发现量。
+
+**Abstract:** Deep neural networks (DNNs) are increasingly deployed in safety-critical domains such as autonomous driving and medical diagnosis, yet their opaque, high-dimensional parameter spaces make it difficult to systematically assess model reliability on unseen inputs. Existing coverage-guided sequential fuzzing frameworks for DNN inherit a one-input-per-iteration design from traditional software fuzzing and apply uniform perturbation budgets across all input dimensions, limiting both testing throughput (i.e., inputs processed per unit time) and the precision of input-space exploration. We present a new specification-aware batch fuzzing framework with adaptive perturbation scaling that addresses both limitations. Rather than relying on a fixed global perturbation radius є, our approach derives mutation step sizes from specification-defined feasible ranges (i.e., the gap between lower and upper bounds) using a shared scale factor. This scaling can be applied either as a global scalar ( isotropic ) or as per-dimension step sizes ( anisotropic ), enabling perturbations to remain consistent with the underlying constraint structure. As a result, the fuzzer can explore input spaces with heterogeneous feature scales more effectively across all specifications in the batch. We embed input constraints and output property checks directly into the network as non-trainable layers, yielding a wrapped model that processes B specification instances in a single batched iteration, which substantially improves fuzzing efficiency and exploration of counterexamples. We evaluate our framework extensively on three benchmarks, covering six networks and over 400 specifications across TrafficSigns, Cifar100, and TinyImageNet. Our tensor-based fuzzing achieves up to 40× higher throughput and 4× more violations than the sequential baseline under the same time budget, demonstrating significantly improved effectiveness in specification-guided fuzzing.
 
 
 ## 24. Towards Verifiable Fairness Testing: Auditable Coverage over Data-Supported Input Domains
 
-**Authors:** Yingqian Guo (Beijing Institute of Technology China), Wentian Zhao (Beijing Institute of Technology China), Tian Song (Beijing Institute of Technology)
+**Authors:** Yingqian Guo (Beijing Institute of Technology, China), Wentian Zhao (Beijing Institute of Technology, China), Tian Song (Beijing Institute of Technology, China)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**Awards:** ACM SIGSOFT Distinguished Paper Award
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**Artifact badges:** Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834430
+
+**中文总结:** 将黑盒公平性测试重构为在数据支撑合理域上的可审计过程：划分局部覆盖单元、用调度器记录已测/未测区域，并辅以 SDF 与 DIR 的结构感知单元内搜索；在多个表格数据集上实现更均衡覆盖与更高歧视性样本发现，且发现实例可用于重训练缓解个体公平违规。
+
+**Abstract:** Black-box models are increasingly deployed in high-stakes domains such as education, personnel hiring, and credit assessment, making systematic and auditable fairness testing particularly important. In such settings, black-box fairness testing is typically modeled as a search problem aiming to discover biases in the target model as much as possible. However, existing methods offer limited support for verifiable evaluation on a clearly stated, data-supported test domain: which reasonable regions have been tested, which have not, and whether exploration is balanced across the test domain remain unclear. This paper redefines black-box fairness testing as an auditable process on a data-supported, reasonable input domain. We first construct a reasonable region from the reference data and divide it into a finite set of local coverage units. Then, we introduce a coverage scheduler that distributes testing work among the units and explicitly records tested and untested regions, thus achieving reproducible and verifiable sufficient testing. To improve discriminative discovery capabilities without compromising the coverage foundation, we further design a structure-aware intra-unit search mechanism that combines a structure-aware discriminative field (SDF) and directional influence refinement (DIR). Experiments on multiple real-world tabular datasets show that our method enables auditable unit-level coverage accounting and achieves more balanced coverage, higher sample naturalness, and higher discrimination discovery effectiveness than representative black-box fairness testing baselines. Moreover, the discovered instances are effective for mitigating individual fairness violations through retraining.
 
 
 ## 25. Understanding Bugs in Modern Agentic Frameworks: A Study of Symptoms, Root Causes, and Triggering Conditions
 
-**Authors:** Xiaowen Zhang, Hannuo Zhang (Concordia University Canada), Shin Hwei (Tan Concordia University Canada)
+**Authors:** Xiaowen Zhang (Concordia University, Canada), Hannuo Zhang (Concordia University, Canada), Shin Hwei Tan (Concordia University, Canada)
 
 **Categories:** Software Engineering for AI
+
+**Artifact badges:** Artifacts Available, Artifacts Reusable
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834378
 
 **中文总结:** 对五个智能体框架中 409 个已修复缺陷进行实证分析，提出五层架构分类与触发条件 taxonomy；模型集成层缺陷最多但修复时测试覆盖率仅 47%。
 
@@ -281,43 +380,65 @@ Count: 29
 
 ## 26. Understanding the Code and Architectural Smells Generated by LLMs and Autonomous Agents
 
-**Authors:** Yuecai Zhu (Bell Mobility Canada), Nikolaos Tsantalis (Concordia University Canada), Peter Rigby (Concordia University; Meta Canada)
+**Authors:** Yuecai Zhu (Concordia University, Canada), Nikolaos Tsantalis (Concordia University, Canada), Peter C. Rigby (Concordia University, Canada)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834413
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 对 LLM 与 agent 生成代码做多尺度技术债审计，发现能力越强代码越臃肿耦合的「推理—复杂度权衡」及近乎完美的体量—质量反比律；功能正确性与详细 prompt 均不能缓解架构腐化，主张未来需显式架构前瞻而非仅追求生成正确性。
+
+**Abstract:** The promise of Large Language Models (LLMs) in automated software engineering is often measured by functional correctness, overlooking the critical issue of long-term maintainability. This paper presents a systematic audit of technical debt in AI-generated software, revealing that AI does not eliminate flaws but rather introduces a distinct "machine signature" of defects. Our multi-scale analysis—spanning single-file algorithmic tasks and complex, agent-generated systems—identifies a fundamental Reasoning-Complexity Trade-off: as models become more capable, they generate increasingly bloated and coupled code. This architectural decay is so pronounced that we establish a Volume-Quality Inverse Law, where code volume is a near-perfect predictor of structural degradation. Crucially, we demonstrate that neither functional correctness nor detailed prompting mitigates this decay. These findings challenge the current paradigm of prompt-driven generation, reframing the central problem of AI-based software engineering from one of code generation to one of architectural complexity management. We conclude that future progress depends on equipping agents with explicit architectural foresight to ensure the software they build is not just functional, but also maintainable.
 
 
 ## 27. What Breaks When LLMs Code? Characterizing Operational Safety Failures of Agentic Code Assistants
 
-**Authors:** Alif Al (Hasan Case Western Reserve University Bangladesh), Sumon Biswas (Case Western Reserve University United States)
+**Authors:** Alif Al Hasan (Case Western Reserve University, USA), Sumon Biswas (Case Western Reserve University, USA)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**Artifact badges:** Artifacts Available, Artifacts Functional
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834393
+
+**中文总结:** 结合 22 个顶会 185 篇安全相关文献与 16,586 条 GitHub issue（确认 547 起真实失败）构建含 33 类操作风险的七维分类法；326 起为高/严重，主要风险为约束违反、破坏性操作、授权绕过与欺骗，超 65% 发生在修 bug 与环境配置等日常任务而非对抗 prompt。
+
+**Abstract:** Autonomous coding agents built on large language models (LLMs) are rapidly being integrated into development workflows, yet their operational safety properties remain poorly understood beyond evaluations of explicitly malicious inputs. In practice, high-impact failures arise during benign, goal-directed use through environment breakage, fabricated success reports, etc. that current benchmarks do not capture. What categories of operational safety failures actually occur when coding agents are used for everyday development tasks and what is their impact? We present an incident-driven empirical study grounded in two complementary evidence streams. We screen 68,816 papers from 22 premier venues, curating 185 safety-relevant studies, and mine 16,586 GitHub issues from widely deployed LLM-powered coding tools, manually confirming 547 genuine safety failures. Applying systematic open coding over both corpora, we derive a multi-dimensional safety taxonomy of 33 operational risk types organized across seven dimensions, and annotate each incident with contributing factors, task context, severity, and downstream impact. Our findings show that coding-agent failures are often severe, with 326 of 547 incidents rated high or critical. The dominant risks are constraint violations, destructive operations, authorization bypasses, and deception, and over 65% of incidents arise in bug fixing and setup or configuration, patterns largely missing from prior literature. These results have direct implications for SE tool designers and benchmark developers: guardrails must go beyond adversarial-prompt defenses to enforce environmental constraints, failure transparency, and safe-halt behaviors.
 
 
 ## 28. When Ambiguity Meets Atypicality: Dual-Perspective Test Input Prioritization for DNNs
 
-**Authors:** Haoran Li, Shihai Wang (Beihang University China), Bin Liu (Beihang University China), Jialuo Chen (Zhejiang University China), Wenjing Zhu (Beihang University China), Yu Liu (Clarkson University United States), Tengfei Shi (Beihang University China), Shudi Guo (Beihang University China)
+**Authors:** Haoran Li (Beihang University, China), Shihai Wang (Beihang University, China), Bin Liu (Beihang University, China), Jialuo Chen (Zhejiang University, China), Wenjing Zhu (Beihang University, China), Yu Liu (Beihang University, China), Tengfei Shi (Beihang University, China), Shudi Guo (Beihang University, China)
 
 **Categories:** Software Engineering for AI
 
+**Artifact badges:** Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834351
+
 **中文总结:** 提出 DuFP 双视角特征空间测试输入优先级方法，联合决策歧义与分布非典型性；在干净、损坏与对抗场景下优于现有 DNN 测试优先级方法。
 
-**Abstract:** While Deep Neural Networks (DNNs) have achieved remarkable progress in cutting-edge domains, their inherent brittleness has become a growing concern. To ensure the reliability and safety of DNN-enabled software, DNN testing has emerged as an indispensable practice. Within this context, test input prioritization is essential for early fault detection and reducing labeling costs. However, it remains challenging to accurately identify failure-inducing inputs. Although decision ambiguity and distributional atypicality are two widely adopted perspectives for characterizing inter-class competition and intra-class typicality respectively, relying on either perspective in isolation inevitably introduces blind spots. In this paper, we propose \textsc{DuFP} (\textbf{Du}al perspective \textbf{F}eature space \textbf{P}rioritization), a KNN density-based test input prioritization approach for DNNs that jointly incorporates both inter-class and intra-class perspectives. The prioritization framework of \textsc{DuFP} is built upon class-conditional density estimation. Based on the estimation results, prediction correctness is characterized by an ambiguity score and an atypicality score, with the former reflecting decision ambiguity and the latter quantifying distributional atypicality. A hybrid uncertainty score is then constructed by integrating both scores to guide the final prioritization. We evaluate \textsc{DuFP} on prioritization and selection tasks across image and text datasets under clean, corrupted, and adversarial scenarios. Experimental results demonstrate that \textsc{DuFP} effectively and efficiently prioritizes fault-inducing inputs and outperforms state-of-the-art approaches.
+**Abstract:** While Deep Neural Networks (DNNs) have achieved remarkable progress in cutting-edge domains, their inherent brittleness has become a growing concern. To ensure the reliability and safety of DNN-enabled software, DNN testing has emerged as an indispensable practice. Within this context, test input prioritization is essential for early fault detection and reducing labeling costs. However, it remains challenging to accurately identify failure-inducing inputs. Although decision ambiguity and distributional atypicality are two widely adopted perspectives for characterizing inter-class competition and intra-class typicality respectively, relying on either perspective in isolation inevitably introduces blind spots. In this paper, we propose DuFP ( Du al perspective F eature space P rioritization), a KNN density-based test input prioritization approach for DNNs that jointly incorporates both inter-class and intra-class perspectives. The prioritization framework of DuFP is built upon class-conditional density estimation. Based on the estimation results, prediction correctness is characterized by an ambiguity score and an atypicality score, with the former reflecting decision ambiguity and the latter quantifying distributional atypicality. A hybrid uncertainty score is then constructed by integrating both scores to guide the final prioritization. We evaluate DuFP on prioritization and selection tasks across image and text datasets under clean, corrupted, and adversarial scenarios. Experimental results demonstrate that DuFP effectively and efficiently prioritizes fault-inducing inputs and outperforms state-of-the-art approaches.
 
 
 ## 29. When Comments Mislead: An Empirical Study of Outdated Comments in LLM-Based Code Completion
 
-**Authors:** Zhikun Xia (Sun Yat-sen University China), Yuan Huang (Sun Yat-sen University China), Xiangping Chen (Sun Yat-sen University, China China), Zibin Zheng (Sun Yat-sen University China)
+**Authors:** Zhikun Xia (Sun Yat-sen University, China), Yuan Huang (Sun Yat-sen University, China), Xiangping Chen (Sun Yat-sen University, China), Zibin Zheng (Sun Yat-sen University, China)
 
 **Categories:** Software Engineering for AI
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**Artifact badges:** Artifacts Available
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834359
+
+**中文总结:** 实证表明过时注释会系统性误导 LLM 补全，使生成代码偏向历史实现而非仅降低质量；影响随函数签名长度与任务复杂度变化，挑战「更多上下文总是更好」的假设。
+
+**Abstract:** Large language models (LLMs) are widely used for code completion, where natural-language comments serve as key contextual signals.  
+While prior work shows that comments and natural-language descriptions can improve generation quality by providing high-level semantic guidance, their reliability in evolving codebases remains unclear.  
+In practice, comments may be outdated or inconsistent with the current implementation, raising the question of whether such context may mislead generation rather than simply degrade it. In this paper, we present an empirical study of outdated comments in LLM-based code completion.  
+We find that outdated comments tend to introduce a systematic misleading effect: instead of merely degrading performance, they can bias generated code toward historical implementations, producing outputs that remain globally plausible while failing in regions where the implementation has changed, as outdated comments often retain partially correct yet inconsistent information. 
+Importantly, this effect is not uniform.  
+Our study shows that the impact of outdated comments varies with factors such as the function signature length and task complexity, reflecting the interaction between structural signals and natural-language guidance.  
+Overall, our findings challenge the common assumption that richer context is uniformly beneficial for code generation.  
+They highlight that natural-language comments can act as strong but unreliable signals, and underscore the need for more robust handling of inconsistent contextual information in LLM-based code generation.
+

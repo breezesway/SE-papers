@@ -2,432 +2,1062 @@
 
 Source: https://conf.researchr.org/track/ase-2026/ase-2026-research-track#event-overview
 
-Count: 39
+Count: 72
 
-## 1. A11YRepair: Bridging Web Accessibility Barriers via Knowledge-Enhanced Divide-and-Conquer Repair
+## 1. A Few Pages of Markdown: Committed AI Configuration and Lower Quality Cost after Coding-Agent Adoption
 
-**Authors:** Kevin Huang, Ling Zhu (TU Munich Germany), Jian Zhang (Beihang University China), Xiaofei Xie (Singapore Management University Singapore), Chunyang Chen (TU Munich Germany)
+**Authors:** Yegor Denisov-Blanch (Stanford University, USA), Shyam Agarwal (Carnegie Mellon University, USA), Pavel Azaletskiy (Grid Dynamics, USA), Hao He (Carnegie Mellon University, USA), Rylan Schaeffer (Stanford University, USA), Brando Miranda (Stanford University, USA), Bogdan Vasilescu (Carnegie Mellon University, USA), Sanmi Koyejo (Stanford University, USA)
 
 **Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837546
+
+**中文总结:** 提出基于版本库可观测 AI 配置产物的 RAMP 四级成熟度模型，并在 441 个仓库与既有 agent 采用面板中分层复估；coding agent 普遍加速提交，但在「先上 agent、无 committed AI 配置」的仓库中，认知复杂度与静态分析告警增幅约为有配置者 2 倍与 1.7 倍。
+
+**Abstract:** Coding agents increase development velocity but also technical debt. Prior work reports only average effects across adopters, hiding wide differences between teams. We introduce RAMP (Repository AI Maturity Profile), a four-level cumulative maturity model grounded in version-controlled artifacts that teams commit to configure AI tools. RAMP runs from behavioral rules and coding standards through named agent definitions to multi-agent orchestration, with observed practice concentrated in the first three levels. Across 441 repositories the levels behave as a cumulative scale, and independent human annotation reproduces RAMP's repository-level labels on 97% of a held-out sample. Adoption is cumulative, forward-only, and set-and-forget: 73.8% of artifacts are committed once and never modified. Re-estimating an existing agent-adoption panel within each stratum, agents accelerate development regardless of maturity (28-38% more commits), but quality diverges: among agent-first repositories, where the contrast is identified, those without committed AI configuration show roughly twice the increase in cognitive complexity (+53% versus +27%) and 1.7× the increase in static-analysis warnings. Because maturity is observational, correlated engineering discipline or model capability may explain part of the gap; we present these findings as hypothesis-generating and release RAMP as a reusable instrument.
+
+
+## 2. A11YRepair: Bridging Web Accessibility Barriers via Knowledge-Enhanced Divide-and-Conquer Repair
+
+**Authors:** Kai Huang (TU Munich, Germany), Ling Zhu (TU Munich, Germany), Jian Zhang (Nanyang Technological University, Singapore), Xiaofei Xie (Singapore Management University, Singapore), Chunyang Chen (TU Munich, Germany)
+
+**Categories:** AI for Software Engineering
+
+**Awards:** ACM SIGSOFT Distinguished Paper Award
+
+**Artifact badges:** Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834334
 
 **中文总结:** 提出 LLM 框架 A11YRepair，以分而治之聚类 WCAG 相关违规并合成协调补丁，修复多文件 Web 无障碍问题。在 A11YBench（60 个 GitHub 项目）上优于现有 APR 基线，部分补丁已合入 Google、Microsoft 等开源项目。
 
-**Abstract:** Web accessibility (A11Y), which ensures web content is perceivable and usable for users with disabilities, is a critical requirement for modern web applications. Yet existing tooling overwhelmingly focuses on detecting A11Y violations rather than repairing them. Automated program repair (APR) techniques appear promising for this setting, but our study shows that state-of-the-art APR systems perform poorly when applied to real-world A11Y violations. Unlike conventional sparse-bug scenarios, web A11Y issues often manifest as multiple structurally related violations per page, requiring coordinated edits across multiple files. Existing repair systems fail to manage this multi-fault scale, as they handle each bug individually without considering their relationships or incorporating domain rules such as the Web Content Accessibility Guidelines (WCAG). We propose A11YRepair, an LLM-based framework for web A11Y repair. A11YRepair introduces a divide-and-conquer workflow that first clusters violations requiring coordinated edits to reduce redundant localization, and then decomposes each cluster by root cause so the LLM can generate focused and consistent patches. The framework further incorporates WCAG-driven knowledge to strengthen domain awareness during both fault localization and patch synthesis. To support systematic evaluation, we construct A11YBench, a benchmark of 60 real-world web projects collected from GitHub. Experimental results show that A11YRepair achieves higher repair effectiveness and lower cost than state-of-the-art baselines, and ablation studies confirm the importance of its divide-and-conquer design and selective domain knowledge integration. Specifically, patches generated by A11YRepair have been merged into open-source projects from Google, Microsoft, Facebook, IBM, K8s, Docker, and Alibaba, demonstrating its practical value.
+**Abstract:** Web accessibility (A11Y), which ensures web content is perceivable and usable for users with disabilities, is a critical requirement for modern web applications. Yet existing tooling overwhelmingly focuses on detecting A11Y violations rather than repairing them. Automated program repair (APR) techniques appear promising for this setting, but our study shows that state-of-the-art APR systems perform poorly when applied to real-world A11Y violations. Unlike conventional sparse-bug scenarios, web A11Y issues often manifest as multiple structurally related violations per page, requiring coordinated edits across multiple files. Existing repair systems fail to manage this multi-fault scale, as they handle each bug individually without considering their relationships or incorporating domain rules such as the Web Content Accessibility Guidelines (WCAG). We propose A11YRepair, an LLM-based framework designed specifically for web A11Y repair. A11YRepair introduces a divide-and-conquer workflow that first clusters violations requiring coordinated edits to reduce redundant localization, and then decomposes each cluster by root cause so the LLM can generate focused and consistent patches. The framework further incorporates WCAG-driven knowledge to strengthen domain awareness during both fault localization and patch synthesis. To support systematic evaluation, we construct A11YBench, a benchmark of 60 real-world web projects collected from GitHub. Experimental results show that A11YRepair achieves higher repair effectiveness and lower cost than state-of-the-art baselines, and ablation studies confirm the importance of its divide-and-conquer design and selective domain knowledge integration. Specifically, patches generated by A11YRepair have been merged into open-source projects from Google, Microsoft, Facebook, IBM, K8s, Docker, and Alibaba, demonstrating its practical value in real-world dev scenarios. This work demonstrates the promise of LLM-driven accessibility repair and highlights the importance of combining structured repair strategies with domain expertise to advance inclusive software engineering.
 
 
-## 2. AEG-Edit: Bridging API Evolution and Code Semantics for Accurate API Usage in Code Generation
+## 3. AEG-Edit: Bridging API Evolution and Code Semantics for Accurate API Usage in Code Generation
 
-**Authors:** Yitong Lin (Zhejiang University China), Haoye Tian (Aalto University Finland), Dehai Zhao (Zhejiang University China), Chao Ni (Zhejiang University China), Xiaohu Yang (Zhejiang University China), Xiaoxue Ren (Zhejiang University China)
+**Authors:** Yitong Lin (Zhejiang University, China / Hangzhou High-Tech Zone (Binjiang) Institute of Blockchain and Data Security, China), Haoye Tian (Aalto University, Finland), Dehai Zhao (Zhejiang University, China), Chao Ni (Zhejiang University, China / Hangzhou High-Tech Zone (Binjiang) Institute of Blockchain and Data Security, China), Xiaohu Yang (Zhejiang University, China / Hangzhou High-Tech Zone (Binjiang) Institute of Blockchain and Data Security, China), Xiaoxue Ren (Zhejiang University, China / Hangzhou High-Tech Zone (Binjiang) Institute of Blockchain and Data Security, China)
 
 **Categories:** AI for Software Engineering
+
+**Artifact badges:** Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834415
 
 **中文总结:** 提出 AEG-Edit，通过异构 API 演化图与 API 加权窗口编辑，使 LLM 在 API 变更后生成语义正确的代码。在 RustEvo²+ 与 PyEvo 上 Pass@1 显著优于基线（Qwen2.5-7B 最高提升 6.49%）。
 
 **Abstract:** As APIs across standard libraries and software ecosystems evolve, the API knowledge frozen in pre-trained LLMs becomes outdated. Prompt-based methods supply updated documentation at inference time yet suffer from context neglect, often reverting to memorized deprecated usages. Existing parametric approaches, whether fine-tuning or model editing, face two common challenges: they treat API changes as textual fact updates, overlooking the changes in code semantics needed for executable correctness (C1), and lack a mechanism to concentrate updates on positions involved in the API evolution, causing parameter interference beyond the evolution boundary (C2). We propose AEG-Edit, which constructs a heterogeneous API evolution graph, encodes and aligns the graph signal with the LLM hidden space, and concentrates gradient effort on positions involved in the API evolution through API-weighted windowing and optimization. On RustEvo²+ (708 Rust tasks) and PyEvo (622 Python tasks) across two representative open-source LLMs at the 7–8B parameter scale, AEG-Edit achieves statistically significant Pass@1 gains on RustEvo²+, improving over the strongest baseline by up to 6.49% on Qwen2.5-7B-Instruct. Ablation and transferability analyses confirm that the heterogeneous API evolution graph drives the gains and transfers to alternative editing backbones.
 
 
-## 3. AgentExecutor: Partial Code Execution via Agentic Context Generation
+## 4. AgentExecutor: Partial Code Execution via Agentic Context Generation
 
-**Authors:** Junkai Chen (Singapore Management University, Singapore China), Chengran Yang (Singapore Management University, Singapore Singapore), Xing Hu (Zhejiang University China), Zhenhao Li (York University Canada), Xin Xia (Zhejiang University China), David Lo (Singapore Management University Singapore)
-
-**Categories:** AI for Software Engineering
-
-**中文总结:** （目前没有摘要，因此没有总结）
-
-**Abstract:** (摘要暂未在 researchr 页面提供)
-
-
-## 4. AlphaCu: A Transformation-Driven Synthesis Framework for LLM-Based GPU Kernel Generation
-
-**Authors:** Yangjie Zhou (National University of Singapore Singapore), Xing Ma (Shanghai Jiao Tong University China), Zihan Liu (Shanghai Jiao Tong University), Wang Qing (Tsinghua University China), Weihao Cui (Shanghai Jiao Tong University China), Sun Wu (Shanghai Jiao Tong University China), Hanjing Wang (Harvard University United States), Binhang Qi (National University of Singapore Singapore), Jingwen Leng (Shanghai Jiao Tong University China), Yun Lin (Shanghai Jiao Tong University China), Jin Song (Dong National University of Singapore Singapore), Minyi Guo (Shanghai Jiao Tong University China)
+**Authors:** Junkai Chen (Singapore Management University, Singapore), Chengran Yang (Singapore Management University, Singapore), Xing Hu (Zhejiang University, China), Zhenhao Li (York University, Canada), Xin Xia (Zhejiang University, China), David Lo (Singapore Management University, Singapore)
 
 **Categories:** AI for Software Engineering
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**Awards:** ACM SIGSOFT Distinguished Paper Award
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834355
 
+**中文总结:** 提出三阶段多 agent 框架 AgentExecutor：环境准备、迭代探索执行、经程序合成的 prefix 演化，并配合 coverage 引导上下文剪枝；在 Stack Overflow 与开源片段数据集上覆盖率最高约 94%/90%，较 Treefix 提升 19.9%/13.8%，时间与成本最高降 80.3%/56.6%。
 
-## 5. Automated Table Reproduction via Code Generation
-
-**Authors:** Doehyun Baek (CISPA Helmholtz Center for Information Security Germany), Michael Pradel (CISPA Helmholtz Center for Information Security Germany)
-
-**Categories:** AI for Software Engineering
-
-**中文总结:** （目前没有摘要，因此没有总结）
-
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**Abstract:** Executing code snippets is essential for dynamic program analysis, but it remains challenging to execute an arbitrary code snippet due to issues like missing context and incomplete dependencies.  
+Existing approaches to partial code execution, such as LExecutor and Treefix, leverage the power of language models to infer missing information and enable execution. However, they suffer from (i) limited action spaces and feedback, and (ii) rigid optimization strategies, which restrict their effectiveness and efficiency. In this paper, we propose AgentExecutor, a novel multi-agent framework for partial code execution. Our approach introduces a three-phase design: execution environment preparation, dynamic exploration with iterative refinement, and prefix evolution via program synthesis. Supported by the power of LLM agents who can think, act, and get feedback iteratively, AgentExecutor is able to autonomously explore a richer action space, enabling diverse operations such as creating resource files and resolving environment configuration. Furthermore, it adopts adaptive optimization strategies, including coverage-guided context pruning and prefix evolution via program synthesis, to systematically improve the execution quality of partial code. We evaluate AgentExecutor on two widely used datasets comprising Stack Overflow snippets and open-source project code. The results show that AgentExecutor achieves up to 94% and 90% code coverage, outperforming the state-of-the-art approach Treefix by 19.9% and 13.8%, respectively. In addition, AgentExecutor significantly reduces execution time (by up to 80.3%) and cost (by up to 56.6%). These findings demonstrate that AgentExecutor provides an effective and efficient solution for partial code execution.
 
 
-## 6. ChangeWiki: Repository-Level Change Summarization Augmented with Architecture Semantics
+## 5. Aligning User Requirement with Large Language Model in Code Generation
 
-**Authors:** Zijun Wang (the School of Software Engineering, Xi’an Jiaotong University, Xi’an, China), Wuxia Jin (Xi'an Jiaotong University China), Jiale Li (the School of Software Engineering, Xi’an Jiaotong University, Xi’an, China China), Zhanhong Mou (Xi'an Jiaotong University China), Ting Liu (Xi'an Jiaotong University)
+**Authors:** Jia Li (Wuhan University, China), Ruiqi Bai (Wuhan University, China), Yangkang Luo (Wuhan University, China), Yiran Zhang (Nanyang Technological University, Singapore), Wentao Yang (Wuhan University, China), Zeyu Sun (Institute of Software at Chinese Academy of Sciences, China), Tiankuo Zhao (Wuhan University, China), Dongming Jin (Peking University, China), Lei Li (University of Hong Kong, Hong Kong), Zhi Jin (Wuhan University, China)
 
 **Categories:** AI for Software Engineering
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837487
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 提出 REA-Coder：先对齐 LLM 难以理解的需求表述，再生成代码并校验需求—实现一致性并迭代；在四种 LLM、五个编程 benchmark 上优于先进基线，平均 Pass 率提升约 7.93%–30.25%。
 
-
-## 7. Clarity Is Not Assumed: Understanding LLM-Based Code Generation under Ambiguous Requirements
-
-**Authors:** diyang, Xinou Xie (East China Normal University China), Xiuwen Yang (East China Normal University China), Ming Hu (East China Normal University, China China), Yihao Huang (National University of Singapore, Singapore), Yueling Zhang (East China Normal University), Weikai Miao (East China Normal University China), Ting Su (East China Normal University China), Chengcheng Wan (East China Normal University China), Geguang Pu (East China Normal University, China China)
-
-**Categories:** AI for Software Engineering
-
-**中文总结:** （目前没有摘要，因此没有总结）
-
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**Abstract:** Code generation refers to automatically producing executable programs from user requirements. Recently, researchers have explored approaches to enhance the correctness of generated code with advanced large language models. Although achieving improvements, existing approaches focus on designing reasoning strategies or post-refinement methods to enhance code generation performance. Despite their differences, all these methods share a common assumption: the LLM can correctly understand the given requirement. However, this assumption does not always hold. To fill this gap, we propose REA-Coder, a requirement alignment approach to enhance the code generation performance of LLMs. REA-Coder involves first identifying the requirement content that does not align with LLMs and aligning the requirements. Then, based on the aligned requirements, LLMs generate code and further verify whether the generated code aligns with the requirements, iterating this process of requirement alignment and code generation until generating correct code or achieving the maximum number of iterations. Experimental results show that REA-Coder outperforms all advanced baselines on four LLMs across five programming benchmarks. Concretely, REA-Coder achieves average improvements of 7.93%, 30.25%, 26.75%, 8.59%, and 8.15% on the five benchmarks, demonstrating the effectiveness of requirement alignment for improving the code generation performance of LLMs.
 
 
-## 8. Compressing Code Context for LLM-Based Issue Resolution
+## 6. AlphaCu: A Transformation-Driven Synthesis Framework for LLM-Based GPU Kernel Generation
 
-**Authors:** Haoxiang Jia (Peking University China), Earl T. (Barr University College London United Kingdom), Sergey Mechatev (Peking University)
+**Authors:** Yangjie Zhou (National University of Singapore, Singapore), Xing Ma (Shanghai Jiao Tong University, China / Shanghai Qi Zhi Institute, China), Zihan Liu (Shanghai Jiao Tong University, China / Shanghai Qi Zhi Institute, China), Qing Wang (Nanjing University, China), Weihao Cui (Shanghai Jiao Tong University, China), Wu Sun (Shanghai Jiao Tong University, China), Hanjing Wang (Harvard University, USA), Binhang Qi (National University of Singapore, Singapore), Jingwen Leng (Shanghai Jiao Tong University, China / Shanghai Qi Zhi Institute, China), Yun Lin (Shanghai Jiao Tong University, China), Minyi Guo (Shanghai Jiao Tong University, China), Jin Song Dong (National University of Singapore, Singapore)
 
 **Categories:** AI for Software Engineering
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837433
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 将 LLM GPU kernel 生成建模为显式优化变换 pass 的结构化合成（AlphaCu），绑定预验证 microkernel 并以实测反馈调参；在 104 个跨 H100/A100/V100/MI210 算例上功能全过，平均较既有 agent 工作流加速 5.64×，可与厂商库/张量编译器竞争。
 
-
-## 9. DAGGER: Dynamic Agentic Graph-Guided Efficient Reasoner for Container Image Dependency Optimization
-
-**Authors:** Shikhar Vashistha (IIT Roorkee India), Neetesh Kumar (IIT Roorkee India)
-
-**Categories:** AI for Software Engineering
-
-**中文总结:** （目前没有摘要，因此没有总结）
-
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**Abstract:** Large language models show promise for code generation, yet their effectiveness in producing high-performance GPU kernels remains insufficiently understood. Recent agentic workflows improve over direct prompting through specialized generation roles and execution feedback, but our characterization of a representative workflow reveals failures in optimization-strategy selection, hardware-specific instruction realization, and shape-dependent parameter selection. We present AlphaCu, a transformation-driven synthesis framework for LLM-based GPU kernel generation. AlphaCu treats kernel generation as structured synthesis over explicit optimization decisions rather than end-to-end code emission. Specifically, AlphaCu represents these decisions as scoped transformation passes maintained across agent-coordinated synthesis stages, enabling compatibility checking and failure attribution. AlphaCu binds selected hardware-sensitive operations to pre-validated microkernels and uses target-device measurements to revise transformation choices and tune runtime configurations. We evaluate AlphaCu on 104 test cases covering single and fused operators across four GPU architectures: NVIDIA H100, A100, V100, and AMD MI210. Under comparable generation budgets, AlphaCu achieves 100% functional correctness on our benchmark suite and delivers an average speedup of 5.64× over prior LLM workflows, while remaining competitive with vendor libraries and tensor compilers.
 
 
-## 10. DesignFix: Context-Augmented Repair of Design Rule Violations
+## 7. ArkEval: Benchmarking and Evaluating Automated Code Repair for ArkTS
 
-**Authors:** Mainul Hossain (George Mason University United States), Thomas LaToza (George Mason University United States)
+**Authors:** Bang Xie (Shanghai Jiao Tong University, China), Senjian Zhang (Shanghai Jiao Tong University, China), Zhiyuan Peng (Shanghai Jiao Tong University, China), Wei Chen (Shanghai Jiao Tong University, China), Xin Yin (Zhejiang University, China), Chenhao Ying (Shanghai Jiao Tong University, China), Yuan Luo (Shanghai Jiao Tong University, China)
 
 **Categories:** AI for Software Engineering
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837514
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 发布可执行的 ArkTS/OpenHarmony 仓库级修复 benchmark ArkEval（502 实例，六轮测试精炼）；八模型统一协议下最高编译通过率 54.38%、行为 Pass@1 19.32%，用于区分「能编译」与「行为修复」。
 
-
-## 11. Documentation vs. Code Patterns: What Drives LLM-Based Exception Oracle Generation?
-
-**Authors:** Soneya (Binta Hossain University of Texas at Dallas United States), Tasfia Tasnim (University of Texas at Dallas, US United States), Matthew B (Dwyer University of Virginia United States)
-
-**Categories:** AI for Software Engineering
-
-**中文总结:** （目前没有摘要，因此没有总结）
-
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**Abstract:** Automated program repair benchmarks largely cover mature languages such as Python and Java, leaving limited support for ArkTS and OpenHarmony. We present ArkEval, an executable repository-level benchmark for evaluating repair on real ArkTS/OpenHarmony issue-resolution tasks. To the best of our knowledge, it is the first benchmark with this scope. We mined more than 6,000 pull-request and merge-request records available through July 3, 2025, from nine public repositories. Automated profiling and unanimous screening by three ArkTS/OpenHarmony developers produced 502 instances. Their reproduction tests were constructed through a six-round benchmark-wide refinement process, followed by targeted closure for the remaining six instances. We evaluated eight current models with the same localization-guided, RAG-off repair protocol. The best model compiled 54.38% of its patches, whereas the highest behavioral Pass@1 was 19.32%. ArkEval therefore separates build validity from behavioral repair and supplies traceable tests for studying both.
 
 
-## 12. Effective and Efficient Context Retrieval via Partial Dependency Graph for Repository-Level Code Generation
+## 8. Automated Table Reproduction via Code Generation
 
-**Authors:** Zhongxin Liu (Zhejiang University China), Zhonghao Jiang (Zhejiang University China), Zhifan Ye (Zhejiang University China), Haoye Wang (Hangzhou City University China), Jiakun Liu (Harbin Institute of Technology China), Xiaoxue Ren (Zhejiang University China)
+**Authors:** Doehyun Baek (CISPA Helmholtz Center for Information Security, Germany), Michael Pradel (CISPA Helmholtz Center for Information Security, Germany)
 
 **Categories:** AI for Software Engineering
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**Artifact badges:** Artifacts Available, Artifacts Functional
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834440
+
+**中文总结:** 提出 Artisan：将论文表格数值复现表述为可审计的代码生成任务，并用不泄露真值的自动评判引导 agent；Artisan-Bench（60 任务/23 篇 SE 论文）上高效复现，并发现论文或 artifact 中 20 处新错误。
+
+**Abstract:** Reproducibility is an important goal in computer science research, e.g., for artifact evaluation and to build upon experimental results of prior work. Recently, LLM agents are being used to automatically reproduce research results, but they fail to provide executable evidence of reproduction and do not consider the method of reproduction, which limits their usefulness. We present Artisan, an LLM agent that reproduces tables of numeric results, given a paper and its artifact. The approach is enabled by two key contributions: First, we frame the reproduction problem as a code generation task, enabling users to audit and re-run the resulting reproduction script independently of the agent. Second, we design automated judging mechanisms that steer the agent toward correct results without exposing them, while preventing shortcuts like copying precomputed results. To evaluate Artisan, we introduce Artisan-Bench, the first benchmark assessing the ability to generate code that reproduces research results. Artisan-Bench comprises 60 tasks derived from 23 software engineering papers. Our experiments show that Artisan is effective and efficient, with the added benefit of aiding the discovery of 20 new errors in either the paper or artifact.
 
 
-## 13. ExeCRE: Execution-Consistency Guided Reliability Estimation for Self-Correcting Code Generation
+## 9. Can Large Language Models Decompose User Stories into Tasks? Exploring the Role of Prompting Strategies and Models
 
-**Authors:** Yiru Dong (Beihang University China), Richong Zhang (Beihang University China), Fanshuang Kong (Beihang University China), Si Chen (Beihang University China)
+**Authors:** Delina Ly (VX Company, Netherlands / Utrecht University, Netherlands), Fatma Başak Aydemir (Utrecht University, Netherlands), Fabiano Dalpiaz (Utrecht University, Netherlands)
+
+**Categories:** AI for Software Engineering
+
+**Artifact badges:** Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837558
+
+**中文总结:** 提出 DELTA：LLM 从 user story 生成任务并用基于 LLM judge 的多准则模块评估分解质量；文本相似度无法稳定选优，但 DELTA 排序与专家判断更一致，专家常偏好 judge 排名前三分解并愿采纳该工具。
+
+**Abstract:** Refining user stories (USs) into tasks is an important step in agile software development, as it translates software requirements into project management artifacts that are assigned to team members. This story-to-task decomposition can be tedious. In this paper, we propose and evaluate DELTA, a Large Language Model (LLM)-based approach that automatically generates tasks from USs and assesses the quality of the resulting decompositions. We conduct a two-phase empirical study to evaluate DELTA. In the first phase, we identify the best-performing DELTA configuration by comparing different prompting strategies, LLM families, and sizes using text similarity metrics on human-created and LLM-generated decompositions. The comparison based on these metrics did not identify a single consistently best-performing configuration. Therefore, in the second phase, we conducted an expert evaluation to determine whether the observed differences in text similarity are reflected in expert judgments and whether DELTA’s criteria-based evaluation module, which uses LLM judges, aligns with expert judgments. Our results show that DELTA’s evaluation module produces rankings that align more closely with expert judgments than text similarity metrics. Moreover, experts generally prefer the top three LLM-generated decompositions, as ranked by LLM judges, over those created by humans, and they express a willingness to adopt DELTA.
+
+
+## 10. ChangeWiki: Repository-Level Change Summarization Augmented with Architecture Semantics
+
+**Authors:** Zijun Wang (Xi'an Jiaotong University, China), Wuxia Jin (Xi'an Jiaotong University, China), Jiale Li (Xi'an Jiaotong University, China), Zhanhong Mou (Xi'an Jiaotong University, China), Ting Liu (Xi'an Jiaotong University, China)
 
 **Categories:** AI for Software Engineering
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834436
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** ChangeWiki 构建多粒度变更实体树、跨版本模块结构恢复与双向上下文聚合，在架构语义约束下生成可追踪的仓库级演化摘要；基准与工业试点显示语义完整性、跨粒度可追溯性显著提升，可减轻上游变更致的问题定位成本。
+
+**Abstract:** Understanding software evolution at the repository level is essential for tasks such as release management, code review, and regression testing. However, existing change summarization techniques are largely confined to single commits or functions, failing to capture cross-commit evolutionary context, while recent repository-level understanding tools focus on static documentation of single-version codebases, overlooking evolution over time. To bridge this gap, we propose ChangeWiki, an architecture semantic-augmented approach for repository-level change summarization. ChangeWiki first constructs hierarchical, multi-granularity change entity trees enriched with multi-source contexts to infer change intent and impact. It then recovers modular structures across versions and employs a bidirectional context-guided aggregation mechanism, synthesizing code-level changes from the bottom up while injecting architectural semantics as top-down constraints. ChangeWiki finally generates coherent, traceable summaries that capture both local modifications and system-level evolution. We construct comprehensive benchmarks and evaluate ChangeWiki on real-world projects. Experimental results demonstrate significant improvements in semantic accuracy, completeness, and cross-granularity traceability. A prototype of ChangeWiki has been deployed in an industrial setting for upstream-downstream code evolution, where developers reported that the hierarchical summaries significantly reduced manual effort in issue localization caused by upstream changes and show potential for automating version release notes.
 
 
-## 14. ExplainBench: Evaluating Code Explanations from Agents
+## 11. CiL-Agent: Compiler-in-the-Loop LLM Agent for Memory-Safe C Program Repair
 
-**Authors:** Zhiyuan Pan (Zhejiang University China), Sungmin Kang (NUS South Korea), Imam (Nur Bani Yusuf Singapore Management University, Singapore Indonesia), Abhik Roychoudhury (National University of Singapore Singapore)
+**Authors:** Yang Shen (National University of Defense Technology, China), Yating Zhang (National University of Defense Technology, China), Jiaqiang Yao (National University of Defense Technology, China), Minghao Liu (National University of Defense Technology, China), Wei Dong (National University of Defense Technology, China)
 
 **Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837493
+
+**中文总结:** CiL-Agent 将 GCC、Clang Static Analyzer、Valgrind 诊断结构化为编译可达性/静态可证性/动态内存安全三维反馈，采用 Best-of-N 采样加迭代 refinement；1000 个真实 C 漏洞上 Pass@1 88.2%、87.3% 补丁内存安全，显著优于五 APR 基线与五款 coding agent。
+
+**Abstract:** Automated Program Repair (APR) has advanced rapidly on managed languages such as Java and Python, yet C—the bedrock of systems software—remains far harder to repair safely. The difficulty is specific to C: as an unmanaged language with manual memory management, a patch can compile and pass every functional test while silently introducing a memory-safety defect (a leak, use-after-free, or double free) that managed-language tests would never expose, making such “fixes” potentially worse than no fix. Existing LLM-based repair offers little defense, as it learns from impoverished feedback—no execution at all (APPATCH), binary pass/fail signals (ChatRepair), or loosely-structured, unscored sanitizer text (VRpilot). We present CiL-Agent (Compiler-in-the-Loop Agent), which tightly integrates GCC, the Clang Static Analyzer, and Valgrind into the LLM generation loop, parsing their diagnostics into structured, three-dimensional feedback: compilation reachability, static provability, and dynamic memory safety. A two-phase strategy first samples and composite-scores candidate patches (Best-of-N), then refines the best under precise tool feedback. On 1,000 real-world C vulnerabilities spanning 11 CWE categories, CiL-Agent attains 88.2% Pass@1 with 87.3% memory-safe patches, outperforming five repair baselines (by 8.3–58.4pp, all p <0.001, McNemar’s test) and five modern coding agents by a wide margin. A full 1,000-task ablation shows toolchain integration and iterative refinement are independently essential (−44.3 and −35.2 percentage points), with toolchain integration the single most critical component, and a post-cutoff benchmark confirms the gains are not due to training-data memorization.
+
+
+## 12. Clarity Is Not Assumed: Understanding LLM-Based Code Generation under Ambiguous Requirements
+
+**Authors:** Di Yang (East China Normal University, China / Shanghai Innovation Institute, China), Xinou Xie (East China Normal University, China), Xiuwen Yang (East China Normal University, China), Ming Hu (East China Normal University, China), Yihao Huang (East China Normal University, China), Yueling Zhang (East China Normal University, China), Weikai Miao (East China Normal University, China), Ting Su (East China Normal University, China), Chengcheng Wan (East China Normal University, China / Shanghai Innovation Institute, China), Geguang Pu (East China Normal University, China)
+
+**Categories:** AI for Software Engineering
+
+**Awards:** ACM SIGSOFT Distinguished Paper Award
+
+**Artifact badges:** Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834403
+
+**中文总结:** 发布含 1304 个函数级、四类歧义（词法/句法/语义/模糊）需求的 Orchid benchmark，首次系统评估歧义对代码生成的影响；歧义一致降低各 LLM 表现，模型常产出 divergent 实现且难以自主识别或消解歧义。
+
+**Abstract:** Software requirement ambiguity is ubiquitous in real-world development, stemming from the inherent imprecision of natural language and the varying interpretations of stakeholders. While Large Language Models (LLMs) have demonstrated impressive capabilities in generating code from precise specifications, such ambiguity poses a significant obstacle to reliable automated code generation. Existing benchmarks typically assume clear and unambiguous requirements, leaving an empirical gap in understanding how LLMs behave when faced with the inherent uncertainty of real-world software requirements. In this paper, we introduce Orchid, a code generation benchmark specifically designed with ambiguous requirements. It comprises 1,304 function-level tasks covering four distinct types of ambiguity: lexical, syntactic, semantic, and vagueness. Leveraging this dataset, we conduct the first systematic empirical study to evaluate the impact of requirement ambiguity on LLM-based code generation. Our results demonstrate that ambiguity consistently degrades the performance of all evaluated LLMs, with the most pronounced negative effects observed in highly advanced models. Furthermore, we observe that LLMs frequently produce functionally divergent implementations for the same ambiguous requirement and lack the capability to identify or resolve such ambiguity autonomously. These findings reveal a significant performance gap between clear and ambiguous requirements, underscoring the urgent need for ambiguity-aware techniques in the next generation of automated software engineering tools. The Orchid benchmark is publicly available at https://huggingface.co/datasets/SII-YDD/Orchid.
+
+
+## 13. Code Transformation Rule Synthesis using LLMs: Potential and Limits
+
+**Authors:** Axel Allain (INSA, France / University of Rennes, France / Inria, France / CNRS, France / IRISA, France), Aymeric Blot (University of Rennes, France / Inria, France / CNRS, France / IRISA, France), Djamel Eddine Khelladi (CNRS, France / University of Rennes, France / Inria, France / IRISA, France), Mathieu Acher (INSA, France / University of Rennes, France / Inria, France / CNRS, France / IRISA, France)
+
+**Categories:** AI for Software Engineering
+
+**Artifact badges:** Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837504
+
+**中文总结:** 在 Comby、GritQL、Ast-Grep 上评估 GPT-5.4 等 LLM 合成四类演进任务变换规则；前沿模型规则可用率与贴近 ground truth 明显更好，小模型适合局部改动但复杂迁移仍弱，相对 anti-unification  correctness 更强但 applicability 更低。
+
+**Abstract:** Due to their black-box nature, LLMs suffer from limited explain-  
+ability and a lack of determinism. Their usage cost can also rise,  
+particularly with repetitive tasks on large codebases. Code transfor-  
+mation rules mitigate those challenges. This paper fills this gap, with  
+a novel empirical study targeting three domain-specific languages  
+for transformation rules, namely Comby, GritQL, and Ast-Grep We  
+evaluate three LLMs (GPT-5.4, GPT-oss-120B, and Llama3.1-8B) on  
+six diverse datasets covering four software-evolution tasks: API  
+misuse correction, program repair, API migration, and language ver-  
+sion migration. Our results provide evidence that transformation  
+rule synthesis moves beyond proof-of-concept with strong frontier  
+models. GPT-5.4 achieves consistently high rule applicability rates  
+and produces transformations closest to the ground truth across  
+most benchmarks. Smaller and open-weight GPT-oss-120B and  
+Llama3.1-8B models remain effective for simpler, localized changes  
+but struggle with complex migration scenarios. We also observe  
+non-negligible generalizability through the usage of meta-variables  
+and through a high reuse score in the first quartile of many datasets.  
+Finally, when compared to the anti-unification algorithm, LLMs  
+outperform it in correctness, but underperform in rule applicabil-  
+ity. Overall, our results show great potential for LLMs to generate  
+sound, correct, generalizable, and reusable rules.
+
+
+## 14. Compressing Code Context for LLM-Based Issue Resolution
+
+**Authors:** Haoxiang Jia (Peking University, China), Earl T. Barr (University College London, UK), Sergey Mechtaev (Peking University, China)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834397
+
+**中文总结:** 针对 GitHub issue 修复中上下文过大且噪声干扰的问题，提出 Oracle-guided Context Distillation（OCD）与轻量压缩模型，在 SWE-bench Verified 上约 6× 压缩、token 降 52%–71%，修复率提升 5%–9.2%。
+
+**Abstract:** Large Language Models (LLMs) are now capable of resolving real-world GitHub issues. However, current approaches overapproximate the code context and suffer from two compounding problems: the prohibitive cost of processing massive inputs, and low effectiveness as noise floods the context window and distracts the model from the bug-fixing signal. Existing compression techniques fail to resolve this tension: generic compressors compromise the semantic integrity of code, while code-specific tools lack awareness of code structure and task context to preserve essential patch ingredients. To address this, we propose a novel framework consisting of two components. First, Oracle-guided Context Distillation (OCD), a context distillation algorithm that combines genetic search and delta debugging to systematically reduce code contexts to their minimal sufficient subsequence — retaining only the ingredients required for a successful fix. We use this distilled data to fine-tune , a lightweight model that learns to compress code context at inference time, filtering noise and combating distraction while preserving fix ingredients. Evaluated on SWE-bench Verified across three frontier LLMs, maintains a stable compression rate of about 6× across models, reduces the total token budget by 51.8%–71.3% relative to the uncompressed setting, improves issue resolution rates by 5.0%–9.2%, and delivers the best overall balance among effectiveness, compression ratio, and latency compared with state-of-the-art context compression baselines.
+
+
+## 15. DAGGER: Dynamic Agentic Graph-Guided Efficient Reasoner for Container Image Dependency Optimization
+
+**Authors:** Shikhar Vashistha (IIT Roorkee, India), Neetesh Kumar (IIT Roorkee, India)
+
+**Categories:** AI for Software Engineering
+
+**Artifact badges:** Artifacts Available, Artifacts Reusable
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837446
+
+**中文总结:** 提出 DAGGER，基于容器镜像依赖图与 agent 知识检索动态选择优化策略，在避免误删关键依赖前提下瘦身镜像；生产镜像上平均体积减 35.7%， breakage 率约 0.2%。
+
+**Abstract:** Container image (CI) bloat degrades cloud deployment efficiency, as structural redundancy and obsolete package buildup over time result in complex dependency graphs that remain largely unaddressed by current CI optimization methods. Traditional visualization techniques rely on user expertise for manual optimization, whereas runtime methods require long execution traces to identify and retain only accessed dependencies. Conversely, static-analysis-based methods lack semantic visibility in dynamic loading or reflection contexts, leading to over- or under-approximations. To address these limitations, we propose D ynamic A gentic G raph- G uided E fficient R easoner (DAGGER) that dynamically selects from an ensemble of optimization strategies based on CI structures and dependency patterns. DAGGER’s agentic AI module utilizes knowledge retrieval on the graph representation of CI dependencies to analyze and prevent the removal of critical dependencies, ensuring zero-loss operational functionality. DAGGER’s knowledge base is built using curated examples that its agentic AI module uses to generate optimized CI. Based on preliminary experiments on production CIs, DAGGER achieves an average size reduction of 35.7% with a 0.2% breakage rate, compared with state-of-the-art baselines.
+
+
+## 16. DesignFix: Context-Augmented Repair of Design Rule Violations
+
+**Authors:** Mainul Hossain (George Mason University, USA), Thomas D. LaToza (George Mason University, USA)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837422
+
+**中文总结:** 提出 IDE 集成 DesignFix，为设计规则违规注入规则说明、同项目正例与结构上下文，两阶段 LLM 生成可审阅补丁；系统实验最高约 90% 修复成功，用户研究修复正确率 43%→93%、耗时降 36%。
+
+**Abstract:** Design rules make project-specific design decisions explicit and checkable, helping teams preserve architectural intent as systems evolve. Although automated checkers can detect violations, developers must still interpret the rule, locate the code that must change, and construct a repair consistent with project conventions. We present DesignFix, an IDE-integrated approach that turns checker-reported violations into project-grounded, reviewable repairs. DesignFix augments each violation with the rule description, a rule-satisfying example from the same project, and focused structural context, while a two-step LLM pipeline separates repair reasoning from structured edit extraction. We report three complementary evaluations. A systematic study of seven prompt configurations across 9,450 repair trials found that the full workflow achieved up to 90% repair success, 89% explanation correctness, and 90% preservation of unrelated code: 26 percentage points above a baseline prompt. We conducted a controlled experiment with 14 developers. Compared to a control condition with browser-based LLMs, developers completed repairs 36% faster with DesignFix, increased correct repairs from 43% to 93%, and reported significantly lower workload on five of six NASA-TLX dimensions. Finally, we ran the autonomous in-IDE agent Cline on six repair task types drawn from our user study. Cline produced a correct repair for only half of them, while averaging 12.1× DesignFix’s token use and substantially higher API cost per run. Together, these results suggest that effective design-rule repair depends on grounding the LLM in checker-derived, project-specific design intent and on keeping repairs under developer review, needs that repository autonomy alone does not meet.
+
+
+## 17. Doc2Feat-Bench: Evaluating Documentation-Driven Feature Addition
+
+**Authors:** Zhonghao Jiang (Zhejiang University, China), Le Deng (Zhejiang University, China), Jialun Cao (Hong Kong University of Science and Technology, Hong Kong), Michael Pradel (CISPA Helmholtz Center for Information Security, Germany), Zhongxin Liu (Zhejiang University, China)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837489
+
+**中文总结:** 发布 Doc2Feat-bench（634 任务/10 项目）及人工校验子集 Verified（114 条），评估 agent 能否据文档变更实现功能；最佳成功率仅 37.72%，暴露跨文件编辑与文档语义理解瓶颈。
+
+**Abstract:** Documentation changes in mature software projects often describe newly introduced or modified behavior. This makes them a natural basis for documentation-driven feature addition, where software engineering agents implement features from public-facing documentation updates. However, existing benchmarks for agentic software development primarily rely on issue reports written for maintainer coordination and often contain implementation-level details. Motivated by this observation, this work introduces Doc2Feat-bench, a benchmark for documentation-driven feature addition. Doc2Feat-bench consists of 634 tasks across 10 mature open-source software projects, involving about 114k code changes in total. Each task pairs a documentation change with the corresponding implementation and developer-written tests, enabling evaluation of whether a software engineering agent can implement the feature described by the documentation diff. The benchmark is constructed through a five-phase pipeline, starting from release notes, and offers broad coverage across libraries, developer tools, and frameworks while preserving real-world development settings. To facilitate lightweight and reliable evaluation under limited resources, we further curate a human-validated subset named Doc2Feat-bench Verified. It contains 114 high-quality instances whose task clarity and evaluation validity are manually verified. We use Doc2Feat-bench to assess a range of state-of-the-art software engineering agents with two widely used scaffolds. Experimental results show that despite significant token consumption, the best task success rate remains as low as 37.72% (OpenHands with Qwen3-Coder-480B). Our analysis reveals that software engineering agents face key challenges in performing cross-file edits, understanding existing code modules, and correctly interpreting documentation semantics.
+
+
+## 18. Documentation vs. Code Patterns: What Drives LLM-Based Exception Oracle Generation?
+
+**Authors:** Soneya Binta Hossain (University of Texas at Dallas, USA), Matthew B. Dwyer (University of Virginia, USA), Tasfia Tasnim (University of Texas at Dallas, USA)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837464
+
+**中文总结:** 通过大规模干预实验表明 LLM 异常 oracle 预测几乎不依赖 Javadoc @throws，而多依赖测试/代码中的 shortcut 信号；呼吁 TOG 评估应检验预测是否 grounded 于真实触发证据。
+
+**Abstract:** LLM-based test oracle generation (TOG) methods report high accuracy on exception-oracle generation, but it remains unclear what evidence drives these predictions. In particular, do models use explicit exceptional-behavior documentation such as Javadoc @throws clauses, or do they rely on recurring patterns in tests, code, and documentation? We investigate this question through a large-scale intervention-based study of three TOG systems spanning classifier-based and generative architectures and model sizes from roughly 110M to 7B parameters, evaluated on three real-world benchmarks comprising two generated-test datasets and a new benchmark of developer-written tests. We first remove Javadoc @throws clauses and find that accuracy changes only marginally, with the largest drop below one percentage point. This indicates that structured exception documentation is not the primary driver of exception-oracle prediction. We then apply attribution-guided substitution ablations to identify the signals that predictions depend on. The results show that high accuracy can be driven by shortcut signals: some models are highly sensitive to a small number of structural tokens, while others distribute reliance across many lexical cues. These findings challenge the assumption that strong exception-oracle accuracy reflects robust use of exception semantics. Future TOG systems should therefore be evaluated not only by whether they predict the correct oracle type, but also by whether their predictions are grounded in meaningful exception-triggering evidence.
+
+
+## 19. Effective and Efficient Context Retrieval via Partial Dependency Graph for Repository-Level Code Generation
+
+**Authors:** Zhongxin Liu (Zhejiang University, China), Zhonghao Jiang (Zhejiang University, China), Zhifan Ye (Zhejiang University, China), Haoye Wang (Hangzhou City University, China), Jiakun Liu (Harbin Institute of Technology, China), Xiaoxue Ren (Zhejiang University, China)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834350
+
+**中文总结:** 提出 DyRetriever，用 LLM 沿按需构建的部分依赖图多跳检索上下文，集成后 DyCoder 在 CoderEval/DevEval 上 Pass@1 相对提升 25.63%/59.73%，且比静态全局图方法快 7.4×。
+
+**Abstract:** LLM-based repository-level code generation aims to generate code according to the available context within a software repository, requiring LLMs to understand and reason over complex code dependencies. Due to limited context windows and insufficient understanding of repository-specific code, LLMs typically rely on retrieval-augmented generation (RAG) to incorporate relevant contextual code. Early RAG approaches primarily employ similarity-based retrieval, which often fails to retrieve code snippets that the target function actually depends on. Recent work introduces graph-based retrieval to model such dependencies, but typically relies on manually designed rules and static global graphs, leading to limited flexibility and high construction and maintenance costs. In contrast, human developers typically collect helpful context by implicitly constructing a partial dependency graph and iteratively inspecting along it. Inspired by human behavior, we propose DyRetriever, an effective and efficient context retrieval method via partial dependency graphs. DyRetriever leverages an LLM to simulate how human developers collect helpful context by first selecting a set of entry-point functions and then performing multi-hop reasoning along the code dependency graph. During multi-hop reasoning, DyRetriever leverages the LLM’s semantic understanding to explicitly validate whether a function can help to generate the target function, thereby eliminating reliance on manually designed rules and enabling flexibility across application scenarios. Instead of statically constructing a global dependency graph, DyRetriever builds a partial graph on demand and discards it after use, reducing construction overhead and avoiding maintenance costs. We integrate DyRetriever with a similarity-based code retriever to build a new code generation approach, DyCoder, and evaluate it on two widely used repository-level code generation benchmarks, CoderEval and DevEval. Experimental results show that DyCoder achieves relative Pass@1 improvements of 25.63% and 59.73% on CoderEval and DevEval, respectively, compared with existing RAG-based methods, while being 7.4× faster than baselines based on static dependency graph construction.
+
+
+## 20. Evaluating Inference-Time Defenses against Package Hallucination in LLM-Generated Code
+
+**Authors:** Alberick Euraste Djire (University of Luxembourg, Luxembourg / AI4D (CITADEL), Ouagadougou, Burkina Faso), Iyiola E. Olatunji (University of Luxembourg, Luxembourg), Melissa Tessa (University of Luxembourg, Luxembourg), Earl T. Barr (University College London, UK), Jacques Klein (University of Luxembourg, Luxembourg), Tegawendé F. Bissyandé (University of Luxembourg, Luxembourg)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837555
+
+**中文总结:** 修正包幻觉评测中对标准库的误分类，系统评估 7 种推理期防御与 Package Utility；RAG 在多数配置降 PHR，对抗 prompt 下 PHR 可飙升 45 个百分点，防御需匹配威胁模型。
+
+**Abstract:** LLMs are increasingly used for code generation, yet they frequently hallucinate non-existent software packages, creating exploitable entry points into the software supply chain. We make four contributions to this problem. First, we show that prior evaluation methodologies systematically inflate hallucination rates by misclassifying standard-library modules as hallucinations in some languages. For Python, the overestimation reaches 9.4 percentage points. Second, we evaluate seven inference-time defenses for mitigating package hallucinations, including five guided decoding strategies (Greedy, Contrastive, DoLa, Nudging, and Active Layer-Contrastive Decoding), an iterative self-refinement approach (Self-Refine), and a Retrieval-Augmented Generation (RAG)-based defense. Across eight models spanning five families and four programming languages (Python, JavaScript, Ruby, Rust), RAG reduces the package hallucination rate (PHR) in 18 of 32 model–language configurations. Third, we introduce Package Utility ( PU ) to assess whether defenses preserve valid and task-relevant recommendations. Among strategies evaluated, Greedy decoding provides the strongest average mitigation–utility trade-off. Fourth, we stress-test all strategies under adversarial prompts seeded with fabricated package names and find that PHR surges by up to 45 percentage points relative to standard prompts, with Ruby consistently the most vulnerable language (80.9–95.2%). Under adversarial conditions, RAG and Self-Refine outperform all decoding-only strategies, indicating that robust defense requires either external grounding or iterative self-verification when prompts are actively hostile. Our results recast package hallucination as both a measurement problem and a decoding-time control problem, and they demonstrate that the choice of defense must be matched to the threat model and recommendation utility.
+
+
+## 21. Exact-IaC: Execution-Driven Exact Knowledge Injection for Reliable IaC Synthesis
+
+**Authors:** Hua Ge (Nanjing University, China), Minxue Pan (Nanjing University, China)
+
+**Categories:** AI for Software Engineering
+
+**Artifact badges:** Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837539
+
+**中文总结:** 提出 Exact-IaC，以分治与编译器反馈做确定性 schema 注入，增强本地 SLM 合成 IaC；IaC-Eval 上 Pass@1 从约 31% 提至 49.34%，30B 本地模型可超过 GPT-5.2-Codex 强基线，并揭示 L6 微参数幻觉悖论。
+
+**Abstract:** The deployment and maintenance of software systems rely heavily on Infrastructure-as-Code (IaC) to translate high-level infrastructure intent into deployable configurations. While Large Language Models (LLMs) show potential in automating IaC synthesis, relying on closed-source cloud APIs poses severe data privacy risks. Conversely, deploying Small Language Models (SLMs) locally often encounters performance bottlenecks due to schema hallucinations and attention dilution in long-context scenarios. Furthermore, existing retrieval-augmented generation (RAG), multi-turn repair, and semantic topology parsing approaches struggle to resolve complex declarative resource dependencies. In this paper, we propose Exact-IaC , an execution-driven framework designed to enhance SLMs for reliable IaC synthesis. It employs a divide-and-conquer strategy: it transitions from initial semantic intent approximation to an iterative repair loop that utilizes compiler feedback for deterministic schema injection . This approach effectively offloads the SLM’s parametric memorization burden. Extensive experiments on the IaC-Eval benchmark demonstrate the effectiveness and generalizability of Exact-IaC across diverse open-weight SLMs, yielding 55.0% to 69.8% relative gains. Specifically, for our primary 30B backbone (Qwen3-Coder), the framework elevates the Pass@1 rate from 31.00% (the performance ceiling of evaluated baselines) to 49.34%, achieving a 59.2% relative improvement. Notably, this locally deployed SLM, augmented by Exact-IaC , outperforms a top-tier proprietary model (GPT-5.2-Codex) operating under its strongest baseline setting (48.47%). Furthermore, our trajectory-level error analysis reveals the L6 Paradox : even at extreme infrastructure complexity, SLMs fail predominantly due to micro-parameter hallucinations rather than macroscopic topological reasoning deficits. Ultimately, Exact-IaC establishes a zero-data-leakage orchestration pipeline, proving empirically that deterministic context precision can effectively substitute raw parameter scale for secure enterprise cloud provisioning.
+
+
+## 22. ExeCRE: Execution-Consistency Guided Reliability Estimation for Self-Correcting Code Generation
+
+**Authors:** Yiru Dong (Beihang University, China), Richong Zhang (Beihang University, China), Fanshuang Kong (Beihang University, China), Si Chen (Beihang University, China)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837445
+
+**中文总结:** 提出 ExeCRE，用大量随机输入上的执行输出一致性及 Dawid–Skene 估计代码可靠性，替代不可靠测试/LLM 反馈驱动自校正；LiveCodeBench 上 GPT-5.2 误改正确代码次数由 113.2 降至 14.0。
+
+**Abstract:** Large language models (LLMs) have made notable progress in code generation, but they still struggle on challenging tasks that require sophisticated algorithms or complex implementations. Recent methods increasingly use code execution as feedback, especially in self-correction pipelines that construct verification signals from generated code. However, these pipelines often depend on supervision signals whose reliability is unknown, which can introduce misleading feedback, unnecessary revisions, and incorrect final answers. To address this issue, we propose ExeCRE, an Exe cution- C onsistency guided code R eliability E stimation framework. Instead of judging candidate code by tests or LLM feedback, ExeCRE estimates code reliability by statistically analyzing consistency patterns in execution outputs over a large number of randomly generated inputs. It collects execution outputs over generated inputs, projects them into consistency signals, and applies Dawid–Skene model to infer latent code reliability. We integrate ExeCRE into self-correction for code generation. Experiments show that ExeCRE consistently improves both effectiveness and stability, while substantially reducing misleading correction signals. Under GPT-5.2 on LiveCodeBench, the average number of misleading feedback cases on already correct code drops from 113.2 with a representative self-correction baseline to 14.0 with ExeCRE. As an additional study, we apply the same reliability estimation strategy to code-based mathematical reasoning and observe similar benefits. These results suggest that ExeCRE enables more reliable use of generated code in execution-based pipelines.
+
+
+## 23. ExplainBench: Evaluating Code Explanations from Agents
+
+**Authors:** Zhiyuan Pan (Zhejiang University, China), Sungmin Kang (National University of Singapore, Singapore), Imam Nur Bani Yusuf (National University of Singapore, Singapore), Abhik Roychoudhury (National University of Singapore, Singapore)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834395
 
 **中文总结:** 提出 ExplainBench 基准，自动评估 coding agent 生成代码解释的可信度。实验表明解释质量与 SWE-bench 排名不一致且常存在虚假正确声明；配套的 explanation audit agent 可进一步验证并改进解释。
 
-**Abstract:** Large Language Model (LLM) agents have seen rapid adoption in software engineering. As agents take a greater role in the actual generation of code, they are making larger changes, spanning tens to hundreds of lines. This makes manual review of agent results increasingly infeasible, leading developers to turn to explanations to understand enacted changes. Despite this, there are no benchmarks that evaluate the trustworthiness of agent-generated explanations. To bridge this gap, we propose ExplainBench, a benchmark to automatically evaluate explanations from coding agents. ExplainBench is based on the intuition that informative explanations should enable an LLM to correctly answer questions, allowing quantitative comparison of explanation quality between agents. With this observation, we construct a suite of questions that evaluates whether explanations accurately describe (1) the intended behavior of buggy code and (2) the effect of applying the agent patch itself. Experiments first reveal that explanation quality is a distinct axis of agent evaluation: ExplainBench ranks agents differently from the widely-used SWE-bench Verified benchmark. A deeper breakdown of explanation quality in agents shows frequent problems in explanations, such that explanations often claim that a patch is correct when it is not. Based on this insight, we implement and evaluate an explanation audit agent which runs additional tests to validate and refine explanations. This agent improved the explanations of all evaluated agents, demonstrating agent explanations can be automatically made more trustworthy.
+**Abstract:** Large Language Model (LLM) agents have seen rapid adoption in software engineering.  
+As agents take a greater role in the actual generation of code, they are making larger changes, spanning tens to hundreds of lines. This makes manual review of agent results increasingly infeasible, leading developers to turn to explanations to understand enacted changes.  
+Despite this, there are no benchmarks that evaluate the trustworthiness of agent-generated explanations. To bridge this gap, we propose ExplainBench, a benchmark to automatically evaluate explanations from coding agents. ExplainBench is based on the intuition that informative explanations should enable an LLM to correctly answer questions, allowing quantitative comparison of explanation quality between agents.  
+With this observation, we construct a suite of questions that evaluates whether  
+explanations accurately describe (1) the intended behavior of buggy code and (2) the effect of applying the agent patch itself.  
+Experiments first reveal that explanation quality is a distinct axis of agent evaluation: ExplainBench ranks agents differently from the widely-used SWE-bench Verified benchmark. A deeper breakdown of explanation quality in agents shows frequent problems in explanations, such that explanations often claim that a patch is correct when it is not. Based on this insight, we implement and evaluate an explanation audit agent which runs additional tests to validate and refine explanations. This agent improved the explanations of all evaluated agents, demonstrating agent explanations can be automatically made more trustworthy.
 
 
-## 15. Free Is More: Empowering Software Agents via Issue-Free Trajectory Learning and Entropy-Aware RLVR Training
+## 24. Formula Completion Suggestions for Alloy Models with Selection Guidance
 
-**Authors:** Xin-Cheng Wen (Harbin Institute of Technology China), Binbin Chen (Ant Group China), Haoxuan Lan (Zhejiang University China), Hang Yu (Ant Group), Peng Di (Kunlunxin & UNSW Sydney China), Cuiyun Gao (Harbin Institute of Technology, Shenzhen China)
-
-**Categories:** AI for Software Engineering
-
-**中文总结:** （目前没有摘要，因此没有总结）
-
-**Abstract:** (摘要暂未在 researchr 页面提供)
-
-
-## 16. From Guessing to Seeing: Enhancing LLM-Based Program Repair via Trace-Guided Multi-strategy Debate
-
-**Authors:** Jiaqing Wu, Tong Wu (Northwestern Polytechnical University China), Manqing Zhang (Northwestern Polytechnical University China), Yunwei Dong (Northwestern Polytechnical University, School of Computer Science and Engineering China), Bo Shen (Northwestern Polytechnical University China)
+**Authors:** Mohammad Nurullah Patwary (University of Texas at Arlington, USA), Allison Sullivan (University of Texas at Arlington, USA)
 
 **Categories:** AI for Software Engineering
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837517
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 为 Alloy 公式编写提供上下文补全建议，并用 Alloy 自身分析帮助用户选择最合意图的补全；评估显示开销小、排序有效且能在信息量与上下文间取得平衡。
 
-
-## 17. From Plan to Action: How Well Do Agents Follow the Plan?
-
-**Authors:** Shuyang Liu, Saman Dehghan (University of Illinois Urbana Champaign United States), Jatin Ganhotra (IBM Research United States), Martin Hirzel (IBM Research United States), Reyhaneh Jabbarvand (University of Illinois at Urbana-Champaign United States)
-
-**Categories:** AI for Software Engineering
-
-**中文总结:** （目前没有摘要，因此没有总结）
-
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**Abstract:** Alloy is a declarative modeling language that is well-suited for verifying system designs. Unfortunately, writing correct Alloy models is a difficult task due to Alloy’s expressive operators, which allow for succinct formulations of complex properties, but can be hard to reason over manually. Case in point, a recent empirical study found that 75% of the time, novice Alloy users will write formulas that are incorrect or fail to compile. To aid developers in writing valid formulas, we outline a framework in which the user is presented with relevant completion suggestions as they are constructing their formulas. Moreover, using Alloy itself, we provide novel automated guidance that helps users select the completion that best matches their intention. Our evaluation highlights that there is nominal overhead to create these suggestions, our ranking strategy is effective, and our automated guidance can balance providing context with reducing the amount of information we present.
 
 
-## 18. From Runnable Code to Shippable Applications: Test-Driven Development for Full-Stack Web Application Generation
+## 25. Free Is More: Empowering Software Agents via Issue-Free Trajectory Learning and Entropy-Aware RLVR Training
 
-**Authors:** Yuxuan Wan (The Chinese University of Hong Kong), Tingshuo Liang (Chinese University of Hong Kong), Jiakai Xu (Columbia University in the City of New York United States), Jingyu Xiao (The Chinese University of Hong Kong Hong Kong SAR China), Yintong Huo (Singapore Management University, Singapore Singapore), Michael Lyu (CUHK, Hong Kong)
+**Authors:** Xin-Cheng Wen (Ant Group, China), Binbin Chen (Ant Group, China), Haoxuan Lan (Zhejiang University, China), Hang Yu (Ant Group, China), Peng Di (Ant Group, China / University of New South Wales, Australia), Cuiyun Gao (Chinese University of Hong Kong, China)
 
 **Categories:** AI for Software Engineering
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834438
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 提出 SWE-Fuse，融合 issue 引导与无 issue 高质量轨迹 SFT，并针对 bash 高熵状态设计熵感知 RLVR，减轻错误 issue 描述与 clipping 限制探索的问题，提升 SWE agent 训练效果。
+
+**Abstract:** Large language models (LLMs) have transformed the software engineering landscape. Recently, numerous LLM-based agents have been developed to address real-world software issue fixing tasks. These agents are typically equipped with various coding tools, enabling them to autonomously generate action trajectories for end-to-end problem-solving. Despite their state-of-the-art performance, these agents still face two primary challenges: (1) Lack of sufficiently high-quality issue descriptions:  
+Inconsistencies between issue descriptions and their corresponding solutions introduce noise and ambiguity that can mislead automated agents, restricting their ability to derive effective solutions. Furthermore, high-quality issue-PR pairs are difficult to acquire at scale, and the available datasets remain relatively limited in size.  
+(2) Uncertainty introduced by bash tools prevents stable training and sufficient exploration:  
+Bash tools serve as the primary interface for code execution and file manipulation in SWE agents, making them integral to virtually all agent operations. However, bash tools introduce substantial uncertainty into the agent's decision-making process. In reinforcement learning with verifiable rewards (RLVR), the fixed probability ratio clipping mechanism exhibits limited adaptability to such varying uncertainty states. Specifically, when bash tool invocations trigger high-entropy states, excessively restrictive clipping constraints impede both exploration and stable learning, hindering the training efficiency. To address these challenges, we propose SWE-Fuse, an issue-description-aware training framework that fuses issue-description-guided and issue-free samples for training SWE agents.  
+It consists of two key modules:  
+(1) An issue-free-driven trajectory learning module, which comprises: a multi-step trajectory construction component for generating high-quality multi-turn reasoning-action trajectories, a trajectory data filtering process for ensuring data quality, and issue-free-driven supervised fine-tuning to mitigate potentially misleading issue descriptions while enabling the model to learn step-by-step debugging processes; and  
+(2) An entropy-aware RLVR training module, which adaptively adjusts training dynamics through entropy-driven clipping. It applies relaxed clipping under high entropy to encourage exploration, and stricter clipping under low entropy to ensure training stability.  
+We evaluate SWE-Fuse on the widely studied SWE-bench Verified  
+benchmark shows to demonstrate its effectiveness in solving real-world software problems. Specifically, SWE-Fuse outperforms the best 8B and 32B baselines by 41.9% and 59.3% in solve rate, respectively. Furthermore, integrating SWE-Fuse with test-time scaling (TTS) enables further performance improvements, achieving solve rates of 49.8% and 65.2% under TTS@8 for the 8B and 32B models, respectively.
 
 
-## 19. It Takes Two to Tango: Accelerating Code Generation via Cache-Inspired Hierarchical Speculative Decoding
+## 26. From Function to Repository: Towards Understanding and an Agentic Approach for Repo-Level Directed Input Generation
 
-**Authors:** Yinggang Qiu (National University of Defense Technology China), Shangwen Wang (National University of Defense Technology China), Yihao Qin (Information Support Force Engineering University China), Mingyang Geng (National University of Defense Technology China), Dezun Dong (NUDT)
+**Authors:** Haoyu Wang (Huazhong University of Science and Technology, China), Ming Wen (Huazhong University of Science and Technology, China), Haoran Yan (Huazhong University of Science and Technology, China), Jiayi Huang (Huazhong University of Science and Technology, China), Xuanhua Shi (Huazhong University of Science and Technology, China), Hai Jin (Huazhong University of Science and Technology, China)
+
+**Categories:** AI for Software Engineering
+
+**Artifact badges:** Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837537
+
+**中文总结:** 构建 RepoEval 基准并实证仓库级定向输入生成远难于函数级；提出 AgenticDIG 工作流（目标分析、意图提取、故障注入与迭代反馈），相对最佳基线目标覆盖提升 43.56%。
+
+**Abstract:** Directed Input Generation (DIG) aims to automatically construct an input that reaches a specified target program location. Although  
+recent studies have shown promising results for Large Language Models (LLMs) in function-level DIG, it remains unclear whether  
+such effectiveness generalizes to realistic repository-level testing scenarios. Unlike function-level settings, repository-level DIG requires reasoning over long call chains, project-specific input semantics, and complex execution conditions distributed across real  
+software repositories. To address this gap, we present a comprehensive empirical study of repository-level directed input generation  
+with LLMs. Specifically, we construct a benchmark, RepoEval, containing hard-to-cover target lines across mainstream programming  
+languages, and evaluate multiple state-of-the-art LLMs under different context and output settings.  
+Our results show that repository-level DIG remains substantially more challenging than prior simplified settings. While advanced  
+models can cover a portion of targets (from 16.02% to 37.35%), their effectiveness is strongly compromised by repository specific semantic constraints, context settings, output formats, and external execution conditions. Based on these findings, we design AgenticDIG, an agentic workflow that integrates target-oriented analysis, intention extraction, fault injection, and iterative feedback to improve repository-level DIG. Evaluation shows that AgenticDIG improves target coverage by 43.56% relative to the best baseline.
+
+
+## 27. From Guessing to Seeing: Enhancing LLM-Based Program Repair via Trace-Guided Multi-strategy Debate
+
+**Authors:** Jiaqing Wu (Northwestern Polytechnical University, China), Tong Wu (Northwestern Polytechnical University, China), Manqing Zhang (Northwestern Polytechnical University, China), Yunwei Dong (Northwestern Polytechnical University, China), Bo Shen (Northwestern Polytechnical University, China)
 
 **Categories:** AI for Software Engineering
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837458
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 提出 TraceRepair，探针 agent 采集运行时快照，多 agent 以 trace 为硬约束交叉验证补丁；Defects4J 修复 392 个缺陷，优于现有 LLM-APR，并在新 bug 数据集上显示泛化来自动态推理。
+
+**Abstract:** Automated Program Repair (APR) aims to resolve software bugs without human intervention. However, handling complex logic errors, especially silent failures that produce incorrect outputs without any explicit crash signals, remains a significant challenge. Current LLM-based APR approaches attempt to address this issue through conversational feedback, retrieval-augmented generation, or static analysis tools. However, these methods are fundamentally static, relying only on source code and basic test outputs, and thus struggle to capture complex runtime behaviors and dynamic data dependencies accurately. Inspired by human debugging practice, incorporating runtime evidence into APR provides direct access to program behavior through execution traces, which expose concrete state transitions and data dependencies. However, even with such runtime evidence, a single LLM interpreting it in isolation tends to commit to a specific repair hypothesis, leading to test overfitting and producing patches that satisfy the observed traces and test suite by coincidence rather than correct logic. This observation suggests that runtime evidence should not be treated merely as additional input, but as objective constraints that candidate patches must satisfy. Building on this insight, we propose TraceRepair, a multi-agent framework that leverages runtime facts as shared constraints for patch validation. A probe agent captures execution snapshots of critical variables, forming an objective basis for repair, while a committee of specialized agents cross-verifies candidate patches to expose inconsistencies and iteratively refine them. Evaluated on the Defects4J benchmark, TraceRepair substantially improves repair effectiveness, correctly fixing 392 defects and outperforming existing LLM-based approaches. Extensive experiments further demonstrate improved efficiency and strong generalization on a newly constructed dataset of recent bugs, suggesting that the performance gains arise from dynamic reasoning rather than memorization.
 
 
-## 20. LaMAR: Latent Multi-agent Collaboration via KV-Cache Communication for Automated Program Repair
+## 28. From Plan to Action: How Well Do Agents Follow the Plan?
 
-**Authors:** Rui Jiao (Xidian University China), Yue Zhang (Auburn University United States), Zhexuan Feng (Xidian University China), Jinku Li (Xidian University China)
+**Authors:** Shuyang Liu (University of Illinois at Urbana-Champaign, USA), Saman Dehghan (University of Illinois at Urbana-Champaign, USA), Jatin Ganhotra (IBM, USA), Martin Hirzel (IBM, USA), Reyhaneh Jabbarvand (University of Illinois at Urbana-Champaign, USA)
+
+**Categories:** AI for Software Engineering
+
+**Artifact badges:** Artifacts Available, Artifacts Reusable
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834400
+
+**中文总结:** 对 SWE-agent 在 SWE-bench Verified/Pro 上 21120 条轨迹系统分析计划遵从度：无计划时依赖内化不完整工作流，标准计划与周期提醒可减违规并提成功率，劣质或错位阶段计划反而更伤性能。
+
+**Abstract:** Agents are commonly instructed to follow a task-specific plan for guidance.However, it is unknown to what extent agents actually follow instructed plans. Without such an analysis---determining the extent agents comply with a given plan---it is impossible to assess whether a solution was reached through correct strategic reasoning or through other means, e.g., data contamination or overfitting to a benchmark.  
+This paper presents the first extensive, systematic analysis of plan compliance in programming agents, examining 21,120 trajectories from SWE-agent across four LLMs on SWE-bench Verified and SWE-bench Pro under eight plan variations. Without an explicit plan, agents fall back on internalized workflows during training, which are often incomplete, overfit, or inconsistently applied. Providing the standard plan improves issue resolution, and we observe that periodic plan reminders can mitigate plan violations and improve task success. A subpar plan hurts performance even more than no plan at all. Surprisingly, inserting additional task-relevant phases in the early stage can degrade performance, particularly when these phases do not align with the model’s internal problem-solving strategy. These findings call for fine-tuning paradigms that teach models to follow instructed plans, rather than encoding task-specific plans in them, so that they reason and act adaptively, rather than memorizing workflows.
+
+
+## 29. From Runnable Code to Shippable Applications: Test-Driven Development for Full-Stack Web Application Generation
+
+**Authors:** Yuxuan Wan (Chinese University of Hong Kong, Hong Kong), Tingshuo Liang (Chinese University of Hong Kong, Hong Kong), Jiakai Xu (Columbia University in the City of New York, USA), Jingyu Xiao (Chinese University of Hong Kong, Hong Kong), Yintong Huo (Singapore Management University, Singapore), Michael R. Lyu (Chinese University of Hong Kong, Hong Kong)
 
 **Categories:** AI for Software Engineering
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834388
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 提出 TDDev 仪器，自动从需求派生浏览器可执行验收测试并闭环 TDD 修复全栈 Web app；20 个应用上强 backbone 准确率提升 15.5–23.7 个百分点，并给出按模型能力与反馈可靠性选择 TDD 模式的决策树。
+
+**Abstract:** Coding agents can generate runnable web applications, but their outputs frequently fail to satisfy functional requirements. Although test-driven development (TDD) offers a principled repair loop, applying it to web applications requires deriving executable acceptance tests, validating behavior through dynamic browser interactions, and translating observed failures into actionable feedback. We present TDDev, an experimental instrument that automates these tasks and enables closed-loop TDD with minimal human mediation. Using TDDev, we conduct the first controlled study of TDD for full-stack web application generation across 20 diverse web applications, multiple backbone models, two coding agents, and three TDD implementations. With sufficiently capable backbones, TDD improves accuracy by 15.5-23.7 percentage points and remains effective across both minimal and full-featured coding agents; replacing unreliable feedback with a stronger tester restores positive gains for a lower-capability backbone. Incremental TDD provides bounded control, Whole-Project TDD enables coordinated repair and achieves the highest cost efficiency in most configurations, and Agentic TDD performs best with highly capable models. Based on these findings, we provide a practical decision tree that selects an implementation according to model capability, feedback reliability, and deployment objectives. By automating acceptance testing and failure-guided repair, TDDev also reduces the human testing and intervention required during development.
 
 
-## 21. LLM Agents Can See Code Repositories
+## 30. From Vibe to Spec: An Empirical Study to Demystify Specifications in Code Generation
 
-**Authors:** Dongjian Ma (Shanghai Jiao Tong University China), Silin Chen (Shanghai Jiao Tong University China), yufeiyang (Xi'an Jiaotong University China), Yuling Shi (Shanghai Jiao Tong University China), Yanfu Yan (Zhejiang University), Xiaodong Gu (Shanghai Jiao Tong University China)
+**Authors:** Ruirui He (Nanjing University, China), Hanqing Lu (Nanjing University, China), Lezhi Ma (Nanjing University, China), Kai Ye (Nanjing University, China), Qiong Wu (Nanjing University, China), Shangqing Liu (Nanjing University, China), Lei Bu (Nanjing University, China), Xuandong Li (Nanjing University, China)
 
 **Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837515
+
+**中文总结:** 首次系统实证比较 LLM 代码生成中规格的形式（自然语言/粗粒度与细粒度伪代码）与粒度（行/函数/模块/项目级），在五种多语言中型项目上评估 GPT-5、DeepSeek-V3.1、Qwen-3.7；细粒度结构化伪代码显著提升生成稳定性与质量。
+
+**Abstract:** Recent advances in large language models (LLMs) for code generation have given rise to vibe coding, a programming practice in which developers interact with LLMs through unstructured natural language and primarily validate implementations by inspecting overall execution outputs. However, the inherent ambiguity and inconsistency of natural language present substantial challenges for generating complex and large-scale software systems. To mitigate these limitations, an emerging AI programming paradigm—specification-driven development—advocates providing LLMs with precise and consistent specifications to guide code generation. Despite its promise, fundamental questions regarding the appropriate forms of specifications and the granularity at which they should be supplied to LLMs remain largely unexplored. To address this gap, we present the first empirical study that systematically investigates the impact of two orthogonal dimensions of specifications—form and granularity—on the effectiveness of LLM-based code generation. We construct a dataset comprising five medium-sized software projects, ranging from several hundred to over one thousand lines of code, implemented in multiple programming languages and spanning diverse application domains (e.g., system utilities and games). For each project, we design specifications in three forms—natural language, coarse-grained pseudocode, and fine-grained pseudocode—to capture the form dimension. To examine granularity, we further decompose the fine-grained pseudocode into four levels of input granularity: line-level, function-level, module-level, and project-level.  
+Using this dataset, we evaluate code generated by three representative models, GPT-5, DeepSeek-V3.1, and Qwen-3.7.  
+Evaluation is conducted using a comprehensive set of metrics, including text-similarity-based metrics (e.g., BLEU-4 and CodeBLEU), test-based metrics (e.g., accuracy), and human-centered metrics (e.g., usability and logical consistency). Our results demonstrate that using fine-grained, structured pseudocode specifications significantly enhances generation stability and quality. Regarding granularity, while coarser-grained specifications (project and module level) generally achieve higher code quality, organizing specifications at the module level provides the best overall balance between quality, stability, and token efficiency. Moreover, additional analyses indicate that this module-level granularity yields the most user-friendly outcome for human developers.
+
+
+## 31. Generation of Web Apps with Agentic IDEs: An Empirical Assessment
+
+**Authors:** Manuel Marceca (University of Milano-Bicocca, Italy), Maria Teresa Rossi (Gran Sasso Science Institute, Italy), Leonardo Mariani (University of Milano-Bicocca, Italy)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837506
+
+**中文总结:** 对比 Copilot、Cursor、Windsurf 从零生成五个全栈 Web 应用的端到端能力；CRUD 与认证等成熟模式表现较好，任务队列等分布式架构错误显著更多，结论为 Agentic IDE 不能替代开发者但将角色转向通过自然语言编排与迭代 refine LLM 智能体。
+
+**Abstract:** Agentic IDEs are among the most significant innovations in software engineering, aiming to accelerate application development through LLM-based agents that can assist developers during development. However, their evaluation in end-to-end development tasks involving the generation of complete applications remains limited. To fill this gap, we propose a rigorous comparative analysis of three popular agentic IDEs (Copilot, Cursor, and Windsurf) in the generation of five full-stack Web applications from scratch. Results show high maturity in the generation of established patterns, such as CRUD operations and authentication features. In contrast, the generation of less common distributed architectures, such as a task queue architecture, produces significantly more errors. Overall, results show that Agentic IDEs cannot replace developers but shift their role toward building software by orchestrating LLM-based agents through natural-language instructions and iterative refinement. Yet, each agentic IDE shows its peculiarities, although differences are narrow.
+
+
+## 32. How Well Do LLMs Generate Taxonomies in the SE Domain? A Multi-perspective Evaluation Framework
+
+**Authors:** Sota Nakashima (Kyushu University, Japan), Yuta Ishimoto (University of Osaka, Japan), Masanari Kondo (Kyushu University, Japan), Tao Xiao (Kyushu University, Japan), Yasutaka Kamei (Kyushu University, Japan)
+
+**Categories:** AI for Software Engineering
+
+**Artifact badges:** Artifacts Available, Artifacts Reusable
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837551
+
+**中文总结:** 在七篇带人工分类法的 SE 论文上比较 TnT-LLM 与 CLIMB 及五种 LLM；TnT-LLM 质量接近专家但成本高、结构偏复杂，CLIMB 快 15–40×、省 8–49× 成本但在需深层技术推理时质量较低，给出选用建议。
+
+**Abstract:** Taxonomies provide a shared conceptual framework for organizing heterogeneous observations in software engineering (SE) research. Manually constructing such taxonomies is labor-intensive and requires annotators with expertise in the SE domain. While advances in Large Language Models (LLMs) have led to the emergence of automated taxonomy generation methods outside the SE domain, their applicability to technically complex SE artifacts remains unclear. In this experience paper, we present the first comprehensive empirical evaluation of how state-of-the-art automated methods perform on SE artifacts through a multi-perspective evaluation framework, including taxonomy quality, alignment with taxonomies defined by human experts, reliability under independent annotation, and efficiency. To support this evaluation, we systematically collect seven SE papers with publicly available artifacts and human-defined taxonomies, and conduct experiments using two automated methods (TnT-LLM and CLIMB) with five state-of-the-art LLMs. Our evaluation reveals a clear trade-off: TnT-LLM constructs high-quality taxonomies comparable to human-defined ones but incurs substantially higher cost and runtime and tends to generate overly complex taxonomies, whereas CLIMB is 15–40× faster and 8–49× cheaper but tends to score lower on quality when technical inference beyond surface-level similarity is required. These findings suggest that TnT-LLM and CLIMB can be used in practical situations in the SE domain, while researchers should first assess the complexity of the generated taxonomies and their cost using a subset of the target data to decide whether to use automated methods or human experts. Our work represents a first step toward a systematic understanding of automated taxonomy generation in SE, offering actionable insights for future research and practice.
+
+
+## 33. HyBinMAS: LLM-Powered Hybrid Analysis for Function Name Recovery of Stripped Binaries
+
+**Authors:** Chenxi Wang (Nanjing University, Nanjing, China), Lei Xu (Nanjing University, Nanjing, China), Xincheng He (Jiangnan University, China / Nanjing University, China), Gaozhan Yu (Nanjing University, Nanjing, China), Ye Wang (Southeast University, China)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837532
+
+**中文总结:** 将 strip 二进制函数名恢复建模为证据驱动的语义状态 ⟨name, summary⟩ 迭代更新，结合 ACG、静态/动态证据与多智能体 SemanticRestorer/TestGenerator/ExecutionValidator；五架构平均 F1 0.343、较最强基线 +39.43%，并发布 8000+ 函数的 ARM-64 基准。
+
+**Abstract:** Binary function name recovery is vital for understanding stripped binaries, yet existing learning-based methods face significant hurdles. Current approaches often struggle to capture inter-procedural context and complex control flows, leading to semantic ambiguity. Furthermore, their reliance on static analysis and fixed training distributions severely limits their generalization across heterogeneous architectures and unseen binaries. In this paper, we propose a novel approach HyBinMAS that reformulates binary function name recovery as an evidence-driven semantic-state update process with LLM-Powered hybrid analysis. For each target function, HyBinMAS maintains a semantic state ⟨ name, summary ⟩ and iteratively refines it using static evidence, inter-procedural semantic propagation, and dynamic evidence. Specifically, it introduces an Attributed Call Graph ( ACG ) as a stateful semantic memory and incorporates runtime feedback to validate and correct semantic hypotheses. It further employs a collaborative multi-agent workflow, consisting of SemanticRestorer, TestGenerator, and ExecutionValidator to realize the state updates through semantic hypothesis generation, executable validation, and behavioral feedback interpretation. To address the lack of ARM-64 datasets, we construct an ARM-64 Benchmark comprising over 8,000 binary functions. Extensive experiments across five architectures demonstrate that HyBinMAS consistently outperforms existing approaches, achieving an average F1 score of 0.343 and improving the F1 score by 39.43% over the strongest baseline. Moreover, on a controlled subset, incorporating execution-grounded evidence yields an 18.14% F1 improvement over static-only analysis, demonstrating the complementary value of dynamic feedback for semantic-state update.
+
+
+## 34. It Takes Two to Tango: Accelerating Code Generation via Cache-Inspired Hierarchical Speculative Decoding
+
+**Authors:** Yinggang Qiu (National University of Defense Technology, China), Shangwen Wang (National University of Defense Technology, China), Yihao Qin (Information Support Force Engineering University, China), Mingyang Geng (National University of Defense Technology, China), Dezun Dong (National University of Defense Technology, China)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837454
+
+**中文总结:** 提出 CacheCoder：检索作 L1、小 draft 模型作 L2 的分层 speculative decoding，并用 Preliminary Prediction 与 Draft Expansion 组合；相对自回归解码最高 2.64× 加速，优于 SOTA speculative 方案。
+
+**Abstract:** While Large Language Models (LLMs) have demonstrated exceptional performance in code generation, their autoregressive decoding paradigm typically results in low inference efficiency. Speculative decoding has emerged as a solution to speed up inference through its draft–verification mechanism, where multiple draft tokens are generated efficiently and then verified in parallel by LLMs. Current speculative decoding approaches for code generation are broadly categorized into two types: model-based approaches that generate drafts using a lightweight draft model, and retrieval-based approaches that reuse code snippets from external corpora. In this work, we first conduct empirical experiments to analyze the strengths and weaknesses of retrieval-based and model-based drafting. We find that retrieval-based approach is efficient but usually low-quality, while model-based one is high-quality but the drafting time increases with inference steps of the draft model. Inspired by the cache mechanism in computer architecture, we propose a novel framework CacheCoder . In our design, retrieval acts as a high-speed Level-1 (L1) cache for rapid draft acquisition, while the draft model functions as a more capable Level-2 (L2) cache to compensate for L1 misses, enabling us to capitalize on the speed of reuse when possible and rely on the precision of generation when necessary. To combine these two hierarchical processes, we propose two customized strategies, i.e., Preliminary Prediction and Draft Expansion , which utilize the draft model to pre-filter retrieved contents and expand them with tokens generated by the draft model to form drafts with higher length. Experimental results show that CacheCoder achieves up to a 2.64× speedup compared to autoregressive decoding, significantly outperforming state-of-the-art approaches.
+
+
+## 35. LaMAR: Latent Multi-agent Collaboration via KV-Cache Communication for Automated Program Repair
+
+**Authors:** Rui Jiao (Xidian University, China), Yue Zhang (Shandong University, China), Zhexuan Feng (Xidian University, China), Jinku Li (Xidian University, China)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837423
+
+**中文总结:** 提出 Latent Agent Communication（LAC）在智能体间直接传递 KV-cache，token 复杂度 O(N²)→O(N)，实例化双链 LaMAR；Qwen3-8B 在 Defects4J 成功率 24.5%，DebugBench/QuixBugs 上 62.1%–87.5%，多数设置优于基线。
+
+**Abstract:** Multi-agent systems for automated program repair communicate through text tokens, requiring each agent to decode its internal state into discrete symbols and the next agent to re-encode them. This conversion loses information and incurs token overhead that grows quadratically with the agent count. We develop Latent Agent Communication (LAC), a theoretically grounded framework that formalizes how agents can share KV-cache representations directly in continuous space, and prove it provides a communication channel with strictly higher information capacity while reducing token complexity from O(N^2) to O(N). We instantiate LAC as LaMAR, a dual-chain repair system: Bug Analysis Chain diagnoses the bug through four collaborating latent agents; Repair Chain refines the patch through multi-agent latent collaboration with cross-chain context transfer, and supports optional multi-round iteration for complex defects. Evaluated across three benchmarks spanning Java, Python, and C++ with three model families, LaMAR with Qwen3-8B achieves 24.5% repair success rate on Defects4J and 62.1%--87.5% on DebugBench and QuixBugs, outperforming all baselines in the large majority of settings. Ablation experiments identify the bug analysis chain and latent communication as the most critical components.
+
+
+## 36. LLM Agents Can See Code Repositories
+
+**Authors:** Dongjian Ma (Shanghai Jiao Tong University, China), Silin Chen (Shanghai Jiao Tong University, China), Yufei Yang (Xi'an Jiaotong University, China), Yuling Shi (Shanghai Jiao Tong University, China), Yanfu Yan (Zhejiang University, China), Xiaodong Gu (Shanghai Jiao Tong University, China)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834363
 
 **中文总结:** 系统评估 MLLM 编码 agent 在仓库级 issue 修复中利用可视化仓库结构表示的效果。纯视觉输入会降低准确率并增加 token 成本，而文本与结构图混合模态最多可节省 26% 输入 token，同时保持或提升修复准确率。
 
-**Abstract:** Coding agents powered by large language models have demonstrated strong performance on software engineering tasks. Yet most agents consume repositories almost entirely as text, which differs from how human developers use visual structure such as folder hierarchies and dependency relationships to orient themselves in large codebases. With multimodal large language models (MLLMs), it is an open question whether agents can effectively benefit from visual representations of repositories. This paper presents the first systematic empirical study of visual repository representations for LLM-based agents on repository-level issue resolution. We evaluate four recent multimodal models. Our results show that a strictly vision-only setup degrades accuracy and increases token cost, because agents lack sufficient symbolic detail and compensate with repeated visual queries. In contrast, integrating visual graphs of repository structure as a supplementary modality alongside standard text interfaces helps agents understand structure more efficiently: input token consumption decreases by up to 26% while issue-resolution accuracy is maintained or improved. Visualization is most useful during fault localization and when the agent autonomously controls exploration depth. These findings point to a practical hybrid text-and-vision design for next-generation coding agents.
+**Abstract:** Coding agents powered by large language models (LLMs) have demonstrated remarkable proficiency in software engineering tasks. Yet modern coding agents rely almost entirely on text, leaving a major gap between how human developers and agents comprehend software repositories. Human developers leverage visual repository cues such as folder hierarchies and dependencies, raising the question of whether multimodal models can similarly improve repository understanding.  
+In this paper, we conduct the first systematic empirical study on multimodal foundation models for repository-level tasks. Our experiments across four modern multimodal models reveal that while a vision-only context representation degrades performance and inflates token costs, integrating visualized context graphs as a supplementary modality can help agents grasp the repository more efficiently. Specifically, providing agents with visual structural context alongside standard text interfaces reduces input token consumption by up to 26% while maintaining or improving issue-resolution accuracy. Furthermore, we demonstrate that visual tools are most effective when utilized during the fault localization stage and when agents autonomously dictate their exploration depth. Our findings highlight a promising hybrid-modality pathway for the design of next-generation coding agents.
 
 
-## 22. LLM-Based Agents for Identifying Bug-Introducing Commits
+## 37. LLM-Based Agents for Identifying Bug-Introducing Commits
 
-**Authors:** Niklas Risse (Max-Planck-Institute for Security and Privacy Germany), Marcel Böhme (MPI for Security and Privacy Germany)
-
-**Categories:** AI for Software Engineering
-
-**中文总结:** （目前没有摘要，因此没有总结）
-
-**Abstract:** (摘要暂未在 researchr 页面提供)
-
-
-## 23. Lost in Translation, Found in Summary: Summary-Driven Supervision for Cross-Language Code Retrieval
-
-**Authors:** Zhijie Liu (ShanghaiTech University, China China), Yisi Liu (Donghua University China), Linxi Jiang (Independent Researcher China), Yutian Tang (University of Glasgow, United Kingdom United Kingdom), Lili Xiao (Donghua University China), Zhipeng Xue (Zhejiang University)
+**Authors:** Niklas Risse (MPI-SP, Germany / CISPA Helmholtz Center for Information Security, Germany), Marcel Böhme (MPI-SP, Germany / CISPA Helmholtz Center for Information Security, Germany)
 
 **Categories:** AI for Software Engineering
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**Awards:** ACM SIGSOFT Distinguished Paper Award
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**Artifact badges:** Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834337
+
+**中文总结:** 简单 agent 从 fix commit 搜索候选并提取可 grep 模式定位引入 bug 的 commit；Linux kernel 主流数据集 F1 从 0.64 升至 0.81，增幅超过 2005 SZZ 至 2025 SOTA 的十年进步。
+
+**Abstract:** Śliwerski, Zimmermann, and Zeller (SZZ) just won the 2026 ACM SIGSOFT Impact Award for asking: When do changes induce fixes? Their paper from 2005 served as the foundation for a wide array of approaches aimed at identifying bug-introducing changes (or commits) from fix commits in software repositories. But even after two decades of progress, the best-performing approach from 2025 yields a modest increase of 10 percentage points in F1-score on the most popular Linux kernel dataset. In this paper, we uncover how and why LLM-based agents can substantially advance the state-of-the-art in identifying bug-introducing commits from fix commits. We propose a simple agentic workflow based on searching a set of candidate commits and find that it raises the F1-score from 0.64 to 0.81 on the most popular Linux kernel dataset, a bigger jump than between the original 2005 method (0.54) and the previous SOTA (0.64). We also uncover why agents are so successful: They derive short greppable patterns from the fix commit diff and message and use them to effectively search and find bug-introducing commits in large candidate sets. Finally, we also discuss how these insights might enable further progress in root cause understanding and repair.
 
 
-## 24. MicroAgent: Context-Augmented Multi-agent Framework for Automatic Microservice Decomposition
+## 38. Looks Good, but Does It Run? A Large-Scale Empirical Study of the Executability of Example Code in Model Cards
 
-**Authors:** Zishan Su (Chinese University of Hong Kong), Junjie Huang (The Chinese University of Hong Kong Hong Kong SAR China), Shiwen Shan (Sun Yat-sen University China), chenxingyan (Sun Yat-sen University China), Hui Zeng (Sun Yat-sen University China), Yuxin Su (Sun Yat-sen University China), Yanlin Wang (Sun Yat-sen University China), Michael Lyu (CUHK, Hong Kong)
+**Authors:** Simeng Yao (National University of Defense Technology, China), Jialin Zhao (National University of Defense Technology, China), Yang Zhang (National University of Defense Technology, China), Tun Li (National University of Defense Technology, China), Tao Wang (National University of Defense Technology, China), Changrong Xie (National University of Defense Technology, China), Zezhou Tang (National University of Defense Technology, China), Yiwen Wu (National University of Defense Technology, China)
 
 **Categories:** AI for Software Engineering
+
+**Artifact badges:** Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837507
+
+**中文总结:** 实证 Hugging Face 291 张 model card 示例代码，68.38% snippet 无法运行；归纳 15 类错误与 24 子类、50 条修复策略，CardCodeFixer 将可执行率从约 30% 提升到 51%–56%（GPT-4o/DeepSeek-v3）。
+
+**Abstract:** Model cards document how machine learning models should be understood, evaluated, and reused in practice. Many also provide example code to help users access and use models, yet the executability of such code remains understudied. We take Hugging Face as an open model repository and conduct an empirical study of model-card example code. Among 291 model cards, 68.38% of the example-code snippets fail to run, suggesting that execution failures are common and may hinder model reuse. To characterize these failures, we construct a taxonomy comprising fifteen error categories and twenty-four subcategories and distill fifty reusable repair strategies. Based on these findings, we develop CardCodeFixer, a tool for automated repair. Experimental results show that CardCodeFixer increases executability from 29.63% to 56.08% with GPT-4o and from 31.75% to 51.85% with DeepSeek-v3. These results characterize execution problems in model-card example code and show that automated repair can improve executability.
+
+
+## 39. Lost in Translation, Found in Summary: Summary-Driven Supervision for Cross-Language Code Retrieval
+
+**Authors:** Zhijie Liu (Independent Researcher, China), Yisi Liu (Donghua University, China), Linxi Jiang (Independent Researcher, China), Yutian Tang (University of Glasgow, UK), Lili Xiao (Donghua University, China), Zhipeng Xue (Zhejiang University, China)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837444
+
+**中文总结:** SemSIR 以 Summary IR 桥接跨语言语义，从仓库自动构造 700 万语义组并 CLIP 式对比学习+分布对齐；CLCR 基准 MRR/MAP 平均较 SOTA 最高 +24.7%/+50.1%，跨语言恶意代码追踪案例 MRR 92.20。
+
+**Abstract:** Cross-language code retrieval (CLCR) is critical to modern software development, and recent studies have shown that contrastive learning is an effective way to learn cross-language code semantics. However, these methods are still limited by two fundamental challenges. First, they rely on online judge platforms or multilingual NL-to-code datasets, which either lack diversity or fail to ensure semantic alignment between code snippets, thereby limiting the effectiveness of cross-language semantic learning. Second, during training, code snippets from different languages are often encoded into heterogeneous representation distributions. This distribution inconsistency introduces similarity bias and weakens the model's ability to capture accurate cross-language semantics. To address these challenges, we propose SemSIR, an end-to-end framework for CLCR. The key insight is to use Summary IR, a natural-language intermediate representation, to bridge semantic gaps across languages. Built on this insight, SemSIR automatically constructs scalable cross-language supervision from real-world repositories, and further combines distribution alignment with CLIP-style contrastive training to learn more discriminative language-independent code semantics. In our evaluation, we collect 24 million real-world code snippets across 9 languages and automatically construct 7 million semantic groups. Manual inspection of 1,000 sampled groups shows that 92.7% are fully semantically coherent, with an average Group Purity of 96.8%. On CLCR, SemSIR consistently outperforms all baselines on two benchmarks, surpassing the state-of-the-art method by up to 24.7% in MRR and 50.1% in MAP on average. In addition, experimental results on a security case study of tracing rewritten malware across languages show that SemSIR achieves 92.20 MRR and 88.40 MAP, highlighting its potential for security-oriented CLCR.
+
+
+## 40. MicroAgent: Context-Augmented Multi-agent Framework for Automatic Microservice Decomposition
+
+**Authors:** Zishan Su (Chinese University of Hong Kong, China), Junjie Huang (Chinese University of Hong Kong, China), Shiwen Shan (Sun Yat-sen University, China), Xingyan Chen (Sun Yat-sen University, China), Hui Zeng (Sun Yat-sen University, China), Yuxin Su (Sun Yat-sen University, China), Yanlin Wang (Sun Yat-sen University, China), Michael R. Lyu (Chinese University of Hong Kong, China)
+
+**Categories:** AI for Software Engineering
+
+**Awards:** ACM SIGSOFT Distinguished Paper Award
+
+**Artifact badges:** Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834441
 
 **中文总结:** 提出 MicroAgent 多 agent 框架，结合多粒度上下文与分析工具自动完成 monolith 到 microservice 的分解。在 10 个 Java Web 应用上平均分解准确率达 89.2%，较 SOTA 提升 24.6%。
 
-**Abstract:** The adoption of Microservice Architecture (MSA) has revolutionized software engineering by enhancing scalability, agility, and maintainability over traditional monolithic applications. As more developers transition their legacy systems to microservice-based architectures, effective microservice decomposition-partitioning monolithic applications into highly cohesive services-becomes vital. However, this decomposition task presents significant challenges. Manual approaches are time-consuming and labor-intensive. Existing automated methods often fail to capture the necessary semantic insights from complex applications, while naive applications of Large Language Models tend to overlook crucial contextual information and design principles, leading to suboptimal results. To address these challenges, we propose MicroAgent, a Context-Augmented Multi-Agent Framework for Microservice Decomposition. Our framework divides the decomposition process into five distinct subtasks and assigns each to a specialized agent. To enhance the effectiveness of each agent, we provide tailored, multi-granularity context that keeps its analysis focused and mitigates information overload. Furthermore, to ensure the decomposition adheres to established design principles, we integrate analytical tools that guide the agents' decision-making. Experimental evaluations on 10 Java Web applications demonstrate that MicroAgent achieves an average decomposition accuracy of 89.2%, outperforming the state-of-the-art method by 24.6%. We also conduct a case study to highlight the practical benefits of our design.
+**Abstract:** The adoption of Microservice Architecture (MSA) has revolutionized software engineering by enhancing scalability, agility, and maintainability over traditional monolithic applications. As more developers transition their legacy systems to microservice-based architectures, effective microservice decomposition—partitioning monolithic applications into highly cohesive services—becomes vital. However, this decomposition task presents significant challenges. Manual approaches are time-consuming and labor-intensive. Existing automated methods often fail to capture the necessary semantic insights from complex applications, while naive applications of Large Language Models tend to overlook crucial contextual information and design principles, leading to suboptimal results. To address these challenges, we propose MicroAgent , a Context-Augmented Multi-Agent Framework for Microservice Decomposition. Our framework divides the decomposition process into five distinct subtasks and assigns each to a specialized agent. To enhance the effectiveness of each agent, we provide tailored, multi-granularity context that keeps its analysis focused and mitigates information overload. Furthermore, to ensure the decomposition adheres to established design principles, we integrate analytical tools that guide the agents’ decision-making. Experimental evaluations on 10 Java Web applications demonstrate that MicroAgent achieves an average decomposition accuracy of 89.2%, outperforming the state-of-the-art method by 24.6%. We also conduct a case study to highlight the practical benefits of our design.
 
 
-## 25. Multi-level Code Optimization via Mixture of Prompts
+## 41. Mobile Bug Reproduction via Global State Reprioritization and LLM-Guided Trajectory Exploration
 
-**Authors:** Yun Peng (The Chinese University of Hong Kong Hong Kong SAR China), Jun Wan (Zhejiang University China), Jiakun Liu (Harbin Institute of Technology China), Shuzheng Gao (Chinese University of Hong Kong China), David Lo (Singapore Management University Singapore), Xiaoxue Ren (Zhejiang University China)
+**Authors:** Dingbang Wang (University of Connecticut, USA), Sidong Feng (Chinese University of Hong Kong, China), William G. J. Halfond (University of Southern California, USA), Tingting Yu (University of Connecticut, USA)
 
 **Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837495
+
+**中文总结:** 提出 ReproPilot，将 LLM 的长程语义指导与全局规划/heuristic 结合，在状态层面选择探索位置与轨迹而非逐步盲跟单步动作；在 74 个 Android crash 上一致性达 80.14%、有效率 86.49%，token 消耗较 SOTA LLM 基线降 65%–84%。
+
+**Abstract:** Mobile bug reproduction is essential to effective debugging in software engineering. Recent methods leveraging Large Language Models (LLMs) have shown significant performance gains over traditional techniques in automating this task. However, existing LLM-based methods remain constrained by two major limitations. First, they lack robustness to unreliable or inconsistent LLM outputs due to overreliance on a single LLM-suggested action without principled planning. Second, substantial token overhead arises from frequent LLM queries and the limited utilization of each query’s output capacity.  
+To address these limitations, we propose ReproPilot, a lightweight framework that combines global planning with LLM-based semantic reasoning to reproduce mobile bugs. Specifically, the LLM provides diverse, reusable long-horizon guidance beyond step-wise action suggestions. This guidance is integrated with heuristic signals by a global planning mechanism to reason about reproduction progress and globally determine where to explore (i.e., which reproduction states) and what trajectories to explore, rather than merely executing actions on the current UI page at each iteration.  
+As a result, ReproPilot improves the consistency and cost-efficiency of bug reproduction while maintaining competitive effectiveness. Evaluation on 74 real-world Android crash reports shows that our approach delivers the best reliability–cost trade-off among the evaluated methods, attaining the highest consistency (80.14%) with competitive effectiveness (86.49%), reducing reproduction time by 2.32%–14.07%, and lowering LLM token consumption by 65.39%–83.96% compared with state-of-the-art LLM-based baselines.
+
+
+## 42. Multi-level Code Optimization via Mixture of Prompts
+
+**Authors:** Yun Peng (Fudan University, China), Jun Wan (Zhejiang University, China), Jiakun Liu (Harbin Institute of Technology, China), Shuzheng Gao (Chinese University of Hong Kong, Hong Kong), David Lo (Singapore Management University, Singapore), Xiaoxue Ren (Zhejiang University, China / Hangzhou High-Tech Zone (Binjiang) Institute of Blockchain and Data Security, China)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834369
 
 **中文总结:** 提出 Optimo，基于 Mixture-of-Prompts 架构进行多层级 LLM 代码优化，从算法到 API 用法分层路由优化策略。在 COFFE 与 Effibench 上 opt% 最高达 57.48%，人类代码加速最高 3.97x，显著优于现有基线。
 
 **Abstract:** Runtime efficiency is a critical factor that impacts both software quality and user satisfaction. There are many approaches proposed for code optimization to improve runtime efficiency. Traditional code optimization methods operate on intermediate representations (IRs) during compilation for static languages. They are effective but struggle to handle dynamic languages that do not require compilation. Recently, large language models (LLMs) have been leveraged to directly optimize source code in dynamic languages. However, these methods fail to identify suitable optimization targets and usually conduct incomprehensive single-level optimization. To address these challenges, we propose Optimo, a multi-level LLM-based code optimization approach built on a novel Mixture-of-Prompts (MoP) architecture. In the MoP architecture, Optimo identifies time-critical code structures as performance bottlenecks via differential profiling. These structures are then routed to some optimization strategies, akin to expert models in MoE, each tailored to optimize specific code patterns. Unlike traditional approaches that focus only on statement-level optimizations, Optimo operates at four levels of abstraction, ranging from coarse-grained algorithmic improvements to fine-grained optimizations in API usage. We evaluate Optimo on two code efficiency benchmarks, COFFE and Effibench. Our results demonstrate that Optimo achieves an up to 57.48% opt%, i.e., the percentage of optimized programs that are correct and at least 10% faster than the original programs, and an up to 3.97x speedup when optimizing human-written code, and it consistently outperforms the best baseline by up to 96.51% in terms of opt%. Furthermore, Optimo achieves an up to 42.42% opt% and an up to 13.51x speedup when optimizing LLM-generated code.
 
 
-## 26. PCodeTrans: Translate Decompiled Pseudocode to Trace-Level Equivalent Source Code
+## 43. MultiFixer: A Coordinator-Proposer Based Multi-agent Framework for Fixing Multi-hunk Bugs
 
-**Authors:** Yuxin Cui (Institute for Network Sciences and Cyberspace, Tsinghua University China), Zeyu Gao (Tsinghua University China), Siliang Qin (Institute of Information Engineering, Chinese Academy of Sciences. School of Cyber Security, University of Chinese Academy of Sciences, China China), Yuanda Wang (Peking University China), JiaMing Wang (Tsinghua University), xizeLuo (Hunan University China), Peng Zhou (Tsinghua University China), Chao Zhang (Tsinghua University China)
-
-**Categories:** AI for Software Engineering
-
-**中文总结:** （目前没有摘要，因此没有总结）
-
-**Abstract:** (摘要暂未在 researchr 页面提供)
-
-
-## 27. Prism: A Multi-solution Reasoning and Synthesis Framework for Repository-Level Issue Resolution
-
-**Authors:** Yibo Wang (Northeastern University), Guotian Wang (Northeastern University China), Zhihao Peng (Northeastern University China), Ying Wang (Northeastern University China), Chang Xu (Nanjing University China), Zhiliang Zhu (Northeastern University, China China)
+**Authors:** Haichuan Hu (Nanjing University of Science and Technology, China), Chunrong Fang (Nanjing University, China), Ye Shang (Nanjing University, China), Jiawei Liu (Nanjing University, China), Weifeng Sun (Singapore Management University, Singapore), Guoqing Xie (Nanjing University, China), Chenxing Zhong (Nanjing University of Science and Technology, China), Quanjun Zhang (Nanjing University of Science and Technology, China)
 
 **Categories:** AI for Software Engineering
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837527
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 提出 Coordinator–Proposer 多智能体 MultiFixer，面向跨位置 multi-hunk 缺陷做工具增强分析、细粒度上下文与两阶段补丁精炼；在 Defects4J 修复 326 个 bug（含 62 个跨方法、27 个跨文件），配 Claude-3.5-Sonnet 达 420，并在 VUL4J 等漏洞集上优于对比基线。
+
+**Abstract:** Automated Program Repair (APR) has benefited greatly from Large Language Models (LLMs), but existing LLM-based APR methods still struggle with multi-hunk bugs that require coordinated changes across multiple locations. These bugs demand repository-level context understanding, repair-order scheduling, and effective hunk-level patch generation and selection. To address these challenges, we propose MultiFixer, a novel Coordinator-Proposer based multi-agent framework for multi-hunk repair.  
+MultiFixer performs tool-augmented bug analysis, constructs fine-grained repair context, iteratively generates patches through a Coordinator-Proposer architecture, and applies two-stage patch refinement for syntactic and semantic correctness. We evaluate MultiFixer on 835 bugs from Defects4J and three vulnerability benchmarks. On Defects4J, MultiFixer fixes 326 bugs, including 62 multi-method and 27 multi-file bugs, and outperforms prior APR baselines in the reported comparisons with the same base model. Moreover, MultiFixer also fixes 46 multi-hunk bugs among 95 unique fixes. When combined with Claude-3.5-Sonnet, MultiFixer repairs 420 bugs, establishing a new state of the art on Defects4J. On VUL4J, MultiFixer repairs 24 real-world vulnerabilities, including 5 multi-hunk cases. On the multi-hunk subsets of SEC-bench and PatchEval, MultiFixer fixes 11 and 19 vulnerabilities, respectively, outperforming all compared baselines under GPT-3.5. These results demonstrate the effectiveness of MultiFixer for multi-hunk repair.
 
 
-## 28. PSearch: Search-Based Patch Generation in the Era of LLM-Based Automated Program Repair
+## 44. PAIChecker: Uncovering and Checking PR-Issue Misalignment in SWE-Bench-Like Benchmarks
 
-**Authors:** hai (chuan hu), ye shang (Nanjing University China), Weifeng Sun (Singapore Management University, Singapore Singapore), Quanjun Zhang (Nanjing University of Science and Technology China)
+**Authors:** Manyi Wang (Chinese University of Hong Kong, Shenzhen, China), Junjielong Xu (Chinese University of Hong Kong, Shenzhen, China), Pinjia He (Chinese University of Hong Kong, Shenzhen, China)
 
 **Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837557
+
+**中文总结:** 系统分析 SWE-bench Verified 发现 13.6% 实例存在五类十一细粒度 PR–Issue 不对齐；提出三阶段多智能体 PAIChecker 做模式识别、跨 agent 标签合成与代码级验证，在 SWE-Gym 与 Multilingual 上二元准确率最高约 92%/91.7%。
+
+**Abstract:** SWE-bench-like benchmarks are widely used for evaluating LLM's issue resolution capability. They typically follow a common construction pipeline: each PR (Pull Request) is paired with its linked issue by extracting issue references from the PR description; the issue description is used as the problem statement, and the PR patch serves as the test oracle. However, due to the inherent complexity of developing and maintaining large repositories, such PR-Issue pairings are often misaligned in practice. In this work, we systematically study SWE-bench Verified instances, finding that 13.6% exhibit misalignment across five patterns in eleven fine-grained scenarios. To enable reliable and scalable construction of those benchmarks in the future, we propose PAIChecker, a multi-agent system for checking PR-Issue misalignment in SWE-bench-like benchmarks. Specifically, PAIChecker adopts a three-phase design that combines specific pattern identification, cross-agent label synthesis, and code-level validation, thereby enabling more accurate, generalizable, and progressively verified detection. Experiments on SWE-Gym and SWE-bench Multilingual show that PAIchecker achieves the best performance across all four LLM backbones, reaching up to 92.12% and 91.67% binary accuracy, respectively.
+
+
+## 45. PCodeTrans: Translate Decompiled Pseudocode to Trace-Level Equivalent Source Code
+
+**Authors:** Yuxin Cui (Tsinghua University, China), Zeyu Gao (Tsinghua University, China), Siliang Qin (Institute of Information Engineering at Chinese Academy of Sciences, China), Yuanda Wang (Peking University, China), Jiaming Wang (Tsinghua University, China), Xize Luo (Hunan University, China), Peng Zhou (Tsinghua University, China), Chao Zhang (Tsinghua University, China)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837432
+
+**中文总结:** 提出 PCodeTrans：原位可替换引擎把编译函数注入原二进制，以断点匹配差分追踪为诊断目标迭代对齐 Hex-Rays 伪代码与可编译源码；在 Coreutils 等套件上函数级编译成功率 100%、非 strip 测试一致 99.5%，strip 仍超 97%。
+
+**Abstract:** Decompilation remains foundational for binary analysis, yet conventional tools prioritize human readability over compilation success and test-validated runtime consistency. While recent large language model approaches attempt refining decompiled pseudocode, they often introduce semantic hallucinations. Operating statically without dynamic feedback or attempting whole binary repairs lacking scalability, these existing methods struggle to resolve genuine runtime divergences. We present PCodeTrans, a dynamic feedback driven framework that implements a loop of recompilation, validation, and alignment for the recovery of functional source code. Extracting a minimal yet globally consistent context, PCodeTrans employs an in situ substitutable engine. This mechanism injects isolated compiled functions directly into the original binary, natively preserving authentic execution environments. Utilizing trace-level alignment as a diagnostic objective, PCodeTrans leverages breakpoint matched differential tracing, generating precise runtime causal diagnostics that guide the model through iterative refinement resolving behavioral discrepancies. Evaluated across a comprehensive Linux and Windows Benchmark suite including Coreutils , Binutils , PuTTY , and SQLite3 , PCodeTrans achieves substantial translation performance refining raw Hex-Rays outputs. Empirical results confirm PCodeTrans achieves 100% function-level compilation success and 99.5% test-validated consistency on unstripped binaries, resolving up to 85.6% of logic errors. Even for stripped executables, the framework maintains over 97% test-validated consistency, narrowing the gap between raw decompilation and functional source code. Surpassing existing baselines, PCodeTrans paves a practical path toward recovered source that can be recompiled, validated to pass test harnesses, and consumed by source-level security analysis and fuzzing tools.
+
+
+## 46. Perception, Reasoning, and Action: A ReAct-Based Vulnerability Detection Framework with Repository-Level Reasoning
+
+**Authors:** Xin-Cheng Wen (Harbin Institute of Technology, Shenzhen, China), Hanyue Luo (Harbin Institute of Technology, Shenzhen, China), Cuiyun Gao (Harbin Institute of Technology, Shenzhen, China), Hao Zhu (Peking University, China), Yang Xiao (Institute of Information Engineering at Chinese Academy of Sciences, China / University of Chinese Academy of Sciences, China), Ge Li (Peking University, China)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837547
+
+**中文总结:** 提出 ReAct-Vul，以仓库级知识切片（过程间/内切片+ReAct 感知）与推理–行动交替的检测–反思循环建模 C/C++ 漏洞检测；在 PrimeVul 与 SVEN 上验证相对现有 LLM 方法在仓库上下文与幻觉控制上的改进（摘要截断处仍强调 SOTA 级检测效果）。
+
+**Abstract:** The exponential growth in software vulnerabilities has created an urgent demand for automated vulnerability detection solutions. Recent research has emphasized the importance of repository-level context for vulnerability detection and has leveraged large language models (LLMs) to address this challenge. Although these methods show state-of-the-art performance, they face the following challenges:  
+(1) Insufficient perception of repository-level contextual information. Current approaches primarily rely on the given input itself or predefined knowledge bases.  
+They cannot adequately account for inter-file dependencies, such as import relationships and class hierarchies, that may be critical to understanding specific vulnerabilities.  
+(2) Relying on manually designed actions in the LLM reasoning process.  
+Specifically, existing methods do not effectively integrate reasoning (i.e., predicting vulnerability existence by LLMs) with action (i.e., dynamically retrieving additional or reduced context by tool).  
+This limitation can lead to factual hallucinations throughout the detection process, leading to limited performance. To address these challenges, we propose to model the repository-level vulnerability detection task from a Reasoning and Action (i.e., ReAct) paradigm and incorporate human workflows into multi agent-based LLMs, termed ReAct-Vul,  
+which consists of two key modules:  
+(1) a repository-scale knowledge slicing, which comprises an intra-procedural slicing process, an inter-procedural slicing process, and a ReAct-based perception component for extracting the vulnerability-related context and knowledge at the repository level.  
+(2) a synergistic reasoning-action-driven detection module, which interleaves a dual-perspective vulnerability analysis (Action phase) and detection-reflection loop (Reasoning phase).  
+This synergistic approach enables the framework to explicitly consider both vulnerability presence and absence,  
+generate reasoning explanations and refine subsequent targeted actions for vulnerability detection.  
+We evaluate ReAct-Vul on the real-world C/C++ dataset PrimeVul and SVEN to demonstrate its effectiveness in vulnerability detection. Specifically, ReAct-Vul outperforms the best baseline by 18.4% on SVEN and 8.7% on PrimeVul in terms of accuracy.  
+Furthermore, we demonstrate that the proposed ReAct paradigm enhances the reasoning capabilities of different models, achieving a 15.9% improvement in the accuracy of SVEN.
+
+
+## 47. Post-hoc Attention Steering of Large Language Models for Robust Code Understanding under Obfuscation
+
+**Authors:** Xiaokai Rong (University of Texas at Dallas, USA), Aashish Yadavally (University of Central Florida, USA), Tien N. Nguyen (University of Texas at Dallas, USA)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837556
+
+**中文总结:** 提出 CodeSteer，结合轻量程序分析在推理时重分配注意力至 backward slice 与控制流等语义要素；多模型多数据集上显著恢复混淆代码理解能力，接近未混淆水平，并在缓冲区溢出检测案例展示恶意/漏洞分析潜力。
+
+**Abstract:** Code obfuscation is widely used in software systems and malware to conceal program logic and hinder analysis, posing significant challenges for both human developers and automated tools. While large language models (LLMs) have shown strong capabilities in code understanding, our preliminary study shows that LLM performance significantly degrades on obfuscated code, suggesting a reliance on superficial lexical cues rather than deep semantic reasoning. To address this limitation, we propose CodeSteer, a novel attention steering approach that reallocates model attention toward semantically relevant program elements, including backward slices for output prediction and control-flow paths for execution reasoning. Our method integrates lightweight program analysis with inference-time attention steering to guide LLMs toward the core input-to-output dependencies of a program. Experiments across multiple models and datasets demonstrate that CodeSteer significantly improves performance on obfuscated code, often recovering comparable accuracy to the level of unobfuscated programs. We also show CodeSteer’s practical utility through a case study on buffer overflow detection, highlighting its potential for malware/vulnerability analysis and reverse engineering of obfuscated code.
+
+
+## 48. Prism: A Multi-solution Reasoning and Synthesis Framework for Repository-Level Issue Resolution
+
+**Authors:** Yibo Wang (Northeastern University, China), Guotian Wang (Northeastern University, China), Zhihao Peng (Northeastern University, China), Ying Wang (Northeastern University, China), Chang Xu (Nanjing University, China), Zhiliang Zhu (Northeastern University, China)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837451
+
+**中文总结:** 提出粗到细多解框架 Prism：对比语义约束的全局探索、A* 式局部分支与 reviewer/judge 多 agent 合成互补补丁；在 SWE-bench Verified 上 Claude-4.6-Sonnet/DeepSeek-V3.2-Reasoner 分别达 82%/80% Pass@1，合成阶段独有解决 15 题。
+
+**Abstract:** Large language model (LLM)-based agents have achieved notable success in repository-level issue resolution, yet existing frameworks still face two key bottlenecks: insufficient diversity among candidate repair solutions and limited ability to combine complementary strengths across candidate solutions. To address these challenges, we introduce Prism, a multi-solution reasoning and synthesis framework that adopts a coarse-to-fine paradigm to systematically generate, refine, and integrate diverse repair solutions. Prism comprises three stages: (1) a global exploration mechanism with contrastive semantic constraints that broadens the search space by encouraging divergence across historical solutions; (2) an A* algorithm -inspired local exploration mechanism that identifies suitable branching points to generate divergent sub-solutions; and (3) a multi-agent collaborative solution synthesis process where reviewer and judge agents jointly evaluate, complement, and integrate partially correct candidate solutions. We evaluate Prism on SWE-bench Verified and SWE-bench-Live Lite . With Claude-4.6-Sonnet and DeepSeek-V3.2-Reasoner , Prism achieves Pass@1 rates of 82.0% and 80.0% on SWE-bench Verified , respectively, outperforming the compared baselines. On SWE-bench-Live Lite , designed to reduce data leakage concerns, Prism outperforms the reported baselines. Further analyses show that Prism expands the solution space and that its solution synthesis stage uniquely resolves 15 issues unaddressed by isolated candidates.
+
+
+## 49. Probe to Generate: Program Variant-Guided Test Augmentation for Repository-Level Repair Benchmarks
+
+**Authors:** Chenglin Li (Concordia University, Canada), Yisen Xu (Concordia University, Canada), Zehao Wang (Concordia University, Canada), Shin Hwei Tan (Concordia University, Canada), Tse-Hsun (Peter) Chen (Concordia University, Canada)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837534
+
+**中文总结:** 提出 PROBE，用语义变体程序探测 SWE-bench 类基准测试不足并生成仅杀变体、过参考补丁的回归测；Verified 上 77% 实例存在存活变体，增 1,014 测后覆盖升约 10 点，重评 top-10 agent  resolved 率降 4.2%–9.0%。
+
+**Abstract:** Test-based benchmarks such as SWE-bench have become a standard basis for evaluating automated issue resolution agents, deeming a patch correct if it passes a provided regression test suite. In practice, weak test suites can admit plausible but semantically incorrect patches, inflating reported agent performance. We present PROBE, a test augmentation framework that uses semantically modified program variants as behavioral probes to identify and close gaps in benchmark test suites. Variants of the reference patch that survive the original tests reveal under-constrained behaviors, which then guide targeted regression test generation. Each generated test is retained only if it passes on the reference patch, fails on at least one surviving variant, and remains robust under behavior-preserving transformations. On SWE-bench Verified, 77% of instances admit at least one surviving variant. PROBE generates 1,014 validated tests across 211 instances, increasing patch-region line and branch coverage by 10.8 and 9.5 percentage points. Re-evaluating the top-10 repair agents with the augmented suites reduces resolved rates by 4.2%-9.0%, showing that many previously accepted patches exploit benchmark test gaps rather than fully satisfying the intended repair semantics. These findings demonstrate that benchmark evaluation is not solely a patch-generation problem but also a test-strength problem.
+
+
+## 50. PSearch: Search-Based Patch Generation in the Era of LLM-Based Automated Program Repair
+
+**Authors:** Haichuan Hu (Nanjing University of Science and Technology, China), Ye Shang (Nanjing University, China), Weifeng Sun (Singapore Management University, Singapore), Quanjun Zhang (Nanjing University of Science and Technology, China)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834422
 
 **中文总结:** 提出 PSearch，面向 LLM-based APR 的 search-based patch generation 框架，维护结构化搜索状态并优先精炼高潜力补丁路径（当前以 MCTS 实现）。在 Defects4J 修复 201/835 个 bug，成本约为强基线 50%。
 
 **Abstract:** Large Language Models (LLMs) have substantially advanced Automated Program Repair (APR), yet most existing LLM-based APR methods still rely on trial-and-error to generate patches. Such a strategy explores candidate patches in a weakly structured manner, making it difficult to assess the future potential of search directions and allocate search budget effectively. To address this limitation, we propose Psearch, a search-based patch generation framework for LLM-based APR centered on iterative patch evaluation and refinement. Instead of treating patch generation as repeated independent sampling, Psearch maintains a structured search state over intermediate patches, continuously evaluates the promise of explored search paths, and prioritizes the most promising ones for further refinement. This design enables Psearch to abandon weak directions early and progressively approach correct fixes through long-horizon search. Importantly, Psearch can be integrated with different search algorithms, while our current implementation adopts Monte Carlo Tree Search as one effective instantiation. We evaluate Psearch on five widely used bug and vulnerability benchmarks. Experimental results show that Psearch correctly repairs 201 out of 835 bugs in Defects4J, outperforming all 12 state-of-the-art baselines. Psearch also fixes 27 of 79 vulnerabilities in VUL4J and resolves 164 of 300 issues in SWE-Bench-Lite. Moreover, with a patch size of 16, Psearch reduces monetary cost to roughly 50% of strong baselines while maintaining superior repair effectiveness. These results highlight the effectiveness of Psearch for improving LLM-based APR.
 
 
-## 29. RACE-Bench: A Reasoning-Augmented Benchmark for Repository-Level Code Agents on Feature Addition
+## 51. RACE-Bench: A Reasoning-Augmented Benchmark for Repository-Level Code Agents on Feature Addition
 
-**Authors:** Shuhan Liu (Zhejiang University China), Zhiyi Zhao (Zhejiang University China), Xing Hu (Zhejiang University China), Kui Liu (Huawei China), Xiaohu Yang (Zhejiang University China), Xin Xia (Zhejiang University China)
-
-**Categories:** AI for Software Engineering
-
-**中文总结:** （目前没有摘要，因此没有总结）
-
-**Abstract:** (摘要暂未在 researchr 页面提供)
-
-
-## 30. Regression Accumulation in Multi-turn LLM Programming Conversations
-
-**Authors:** Yonghui (Andie) (Huang Massey University New Zealand), Lin Ma (Alibaba Research Center for Complexity Sciences; Hangzhou Normal University China), Amjed Tahir (Massey University New Zealand), Qian Zhang (University of California at Riverside United States), Liwen Xiao (University of Otago New Zealand), Lysa Xiao (University of Otago New Zealand)
+**Authors:** Shuhan Liu (Zhejiang University, China), Zhiyi Zhao (Zhejiang University, China), Xing Hu (Zhejiang University, China), Kui Liu (Independent Researcher, China), Xiaohu Yang (Zhejiang University, China), Xin Xia (Zhejiang University, China / Hangzhou High-Tech Zone (Binjiang) Institute of Blockchain and Data Security, China)
 
 **Categories:** AI for Software Engineering
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837426
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 发布含 528 个真实 feature addition 实例的 RACE-Bench，配可执行补丁验证与 issue/定位/任务/步骤等中间推理参考，双轨评估补丁与推理对齐；三 agent Resolved 29%–70%，意图理解强但落地步骤弱，失败补丁推理召回低 35.7%、过度预测高 94.1%。
 
-
-## 31. RepoProbe: Benchmarking Architecture-Aware Repository Comprehension with Checklists
-
-**Authors:** Yuexi Yang (Zhejiang University China), Alyssa Wu (Tencent China), Ji Luo (Tencent China), Richeng Xuan (Tencent China), Zhichao Hu (Tencent China), Yuhong Liu (Tencent China), Zhen Qin (Zhejiang University China)
-
-**Categories:** AI for Software Engineering
-
-**中文总结:** （目前没有摘要，因此没有总结）
-
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**Abstract:** Repository-level code agents have shown strong promise in real-world feature addition tasks, making reliable evaluation of their capabilities increasingly important. However, existing benchmarks primarily evaluate these agents as black boxes based on final test correctness, providing limited insight into how they reason and where failures arise. To address this limitation, we introduce RACE-Bench, a reasoning-augmented benchmark for evaluating code agents on repository-level feature addition tasks. RACE-Bench contains 528 real-world feature addition instances from 12 open-source repositories. Each instance is paired with executable patch verification and structured intermediate reference reasoning covering issue understanding, file localization, implementation tasks, and step decomposition. Based on this design, we introduce a dual-track evaluation framework that jointly measures patch correctness and intermediate reasoning alignment with developer-accepted reference trajectories. We evaluate three representative repository-level code agents on RACE-Bench. On the full benchmark, Resolved Rate ranges from 29% to 70% across different agents. Our reasoning-level analysis further shows that while current agents perform well at understanding high-level intent, their performance degrades substantially when translating intent into concrete implementation steps. We also find patches that can be applied but still fail the tests cover fewer reference-reasoning elements (35.7% lower recall) and contain more unsupported reasoning elements (94.1% higher over-prediction) than successful patches. These findings highlight the importance of evaluating repository-level code agents beyond final patch correctness by examining the quality of their reasoning processes.
 
 
-## 32. ReqEvolve: User-Oriented Software Self-Evolution through Automatic Requirement Interpretation
+## 52. RAVEN: Measuring Detection Instability in Anti-virus Engines under Semantics-Preserving Perturbations
 
-**Authors:** Md Asif Iqbal (Fahim University College Dublin (UCD) Ireland), Alessio Ferrari (University College Dublin (UCD) and Consiglio Nazionale delle Ricerche (CNR) Italy)
+**Authors:** Younghoon Ban (Soongsil University, Republic of Korea), Beomjin Jin (Ajou University, Republic of Korea), Doowon Kim (University of Tennessee, Knoxville, USA), Hyoungshick Kim (Sungkyunkwan University, Republic of Korea), Haehyun Cho (Soongsil University, Republic of Korea)
 
 **Categories:** AI for Software Engineering
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837492
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 面向签名式 AV 在语义保持扰动下的检测不稳定性评估框架 RAVEN，并以 ClamAV 开源库为白盒参照；分析显示原始字节级签名占 ClamAV 签名库绝大多数（摘要报告 94.54%），揭示学术对抗 ML-AV 与产业签名引擎之间的评估空白（原文摘要截断）。
+
+**Abstract:** Real-world anti-virus (AV) engines continue to rely heavily on signature-based detection, whereas academic adversarial research has largely focused on ML-based models, leaving an evaluation gap. To better understand signature-based detection behavior, we analyze ClamAV’s open-source signature database as a white-box reference point. Our analysis shows that raw byte-level signatures account for 94.54
 
 
-## 33. Spec2V: Planning-Guided Specification-to-Verilog Generation Framework with Verification-Driven Debugging
+## 53. ReCodeAgent: A Multi-agent Workflow for Language-Agnostic Translation and Validation of Large-Scale Repositories
 
-**Authors:** Xuming Liu (Technology and Engineering Center for Space Utilization at Chinese Academy of Sciences; University of Chinese Academy of Sciences China), Chi Zhang (Institute of Software at Chinese Academy of Sciences; University of Chinese Academy of Sciences China), Jinglong Xu (Technology and Engineering Center for Space Utilization at Chinese Academy of Sciences; University of Chinese Academy of Sciences China), Shan Zhou (Technology and Engineering Center for Space Utilization at Chinese Academy of Sciences China), Jinbo Wang (Technology and Engineering Center for Space Utilization at Chinese Academy of Sciences China)
+**Authors:** Ali Reza Ibrahimzada (University of Illinois at Urbana-Champaign, USA), Brandon Paulsen (Amazon, USA), Daniel Kroening (Amazon, USA), Reyhaneh Jabbarvand (University of Illinois at Urbana-Champaign, USA)
 
 **Categories:** AI for Software Engineering
+
+**Artifact badges:** Artifacts Available, Artifacts Functional
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837486
+
+**中文总结:** 提出 ReCodeAgent，多智能体自主完成仓库级、语言无关的代码翻译与验证，用户仅需指定源/目标语言；在 118 个真实项目、6 种语言与 4 组语言对上，相对既有神经符号与智能体方法将 ground-truth 测试通过率提升 60.8%，平均成本约 $15.3，且多智能体架构相对单智能体平均再提升 40.4% 通过率。
+
+**Abstract:** Most repository-level code translation and validation techniques have been evaluated on a single source-target programming language (PL) pair, owing to the complex engineering effort required to adapt new PL pairs. Programming agents can enable PL-agnosticism in repository-level code translation and validation: they can synthesize code across many PLs and autonomously use existing tools specific to each PL’s analysis. However, state-of-the-art has yet to offer a fully autonomous agentic approach for repository-level code translation and validation of large-scale programs. This paper proposes ReCodeAgent, an autonomous multi-agent approach for language-agnostic repository-level code translation and validation. Users only need to provide the project in the source PL and specify the target PL for ReCodeAgent to automatically translate and validate the entire repository. ReCodeAgent is the first technique to achieve high translation success rates across many PLs. We compare the effectiveness of ReCodeAgent with four alternative neuro-symbolic and agentic approaches to translate 118 real-world projects, with 1,975 LoC and 43 translation units for each project, on average. The projects cover 6 PLs and 4 PL pairs. Our results demonstrate that ReCodeAgent consistently outperforms prior techniques on translation correctness, improving test pass rate by 60.8% on ground-truth tests, with an average cost of $15.3. We also perform process-centric analysis of ReCodeAgent trajectories to confirm its procedural efficiency. Finally, we investigate how the design choices (a multi-agent vs. single-agent architecture) influence ReCodeAgent performance: on average, the test pass rate drops by 40.4%, and trajectories become 28% longer and persistently inefficient.
+
+
+## 54. RegoMender: A Multi-agent Framework for Automated Rego Policy Repair
+
+**Authors:** Ruijie Zhang (Institute of Information Engineering at Chinese Academy of Sciences, China / University of Chinese Academy of Sciences, China), Huaxiao Yin (Institute of Information Engineering at Chinese Academy of Sciences, China / University of Chinese Academy of Sciences, China), Li Hu (University of Science and Technology of China, China), Fanqi Kong (Peking University, China), Haozhe Liang (University of Chinese Academy of Sciences, China), Shaoyin Cheng (University of Science and Technology of China, China / Anhui Province Key Laboratory of Digital Security, China), Kun Zhang (Institute of Information Engineering at Chinese Academy of Sciences, China / University of Chinese Academy of Sciences, China), Bibo Tu (Institute of Information Engineering at Chinese Academy of Sciences, China / University of Chinese Academy of Sciences, China)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837490
+
+**中文总结:** 发布 RegoBench（1159 个真实 Rego 缺陷）与多智能体 RegoMender，通过黑板与原子工具包反馈式执行补丁/重写/回滚；语法与测试语义修复成功率分别达 82.9% 与 77.9%，并在 HCL/SQL 及 132 个 CVE 场景展现泛化（真实漏洞修复率 86.4%）。
+
+**Abstract:** Policy-as-Code (PaC) has emerged as a foundational paradigm in cloud-native systems. However, repairing Rego policies remains challenging due to their strict syntax, declarative semantics, and specific verification requirements. Existing automated program repair (APR) methods are mainly designed for mainstream languages and struggle to accommodate the unique policy logic and repair workflows of Rego. Thus, Rego policy repair remains a manual process driven by trial and error. To address this, we introduce RegoBench, the first automated Rego policy benchmark comprising 1,159 real-world defects, and propose RegoMender, a feedback-guided multi-agent framework. Collaborating via a shared blackboard and an atomic toolkit, RegoMender dynamically executes patching, rewriting, or rolling back, to resolve complex repair scenarios. Evaluated on RegoBench, RegoMender achieves syntactic and test-based semantic success rates of 82.9% and 77.9%, respectively, outperforming the strongest baseline by 13.4%. Unlike other approaches whose performance drops in complex scenarios, RegoMender maintains effectiveness across single-step and chained repair tasks. Furthermore, it generalizes strongly across HCL and SQL and achieves an 86.4% repair rate on 132 real-world CVE vulnerabilities, proving its robustness and practical utility for security.
+
+
+## 55. Regression Accumulation in Multi-turn LLM Programming Conversations
+
+**Authors:** Yonghui (Andie) Huang (Massey University, New Zealand), Lin Ma (Alibaba Research Center for Complexity Sciences, China / Hangzhou Normal University, China), Amjed Tahir (Massey University, New Zealand), Qian Zhang (University of Otago, New Zealand), Liwen Xiao (University of Otago, New Zealand), Lysa Xiao (University of Otago, New Zealand)
+
+**Categories:** AI for Software Engineering
+
+**Artifact badges:** Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834357
+
+**中文总结:** 构造 542 条 8 轮需求演化链（HumanEval+/MBPP+），评估六款 LLM 的多轮编程回归累积：43%–73% 任务在对话中丢失先前正确行为，Cross-Turn Conflict 为主因；Verification Gate（新代码对历史测试校验并回滚重试）是唯一一致提升各模型最终质量的策略。
+
+**Abstract:** In LLM-assisted software development, coding is often iterative. In this paper, single-turn refers to settings where the LLM responds in one request with one code suggestion, whereas multi-turn refers to settings where the LLM responds across multiple sequential requests within the same conversation. Regression accumulation refers to a later code suggestion breaking requirements introduced in earlier turns. Reliability depends not only on satisfying the current turn, but also on preserving requirements in earlier turns. Yet, there are limited evaluations of the accumulation of regression in multi-turn coding conversations. To address this gap, we conduct an empirical study of multi-turn regression in LLM programming. We construct 542 tasks from the HumanEval+ and MBPP+ benchmarks, and instantiate each task as an 8-turn requirement-evolution chain. We evaluate six LLM models on 26,016 turn instances (542×6×8). At each turn, we check if the current code suggestion still passes earlier benchmark tests, and we analyze 384 failure cases drawn from the failure population in our 26,016 turn instances to derive and validate a taxonomy of multi-turn regression bugs through independent four-annotator labeling. Our results show that regression accumulation appears across all six models, with 43% to 73% of tasks losing previously correct behavior over the full conversation. Final-turn quality is lower than initial-turn quality across models, and especially in turns adding input validation or broader input types. Manual analysis shows that Cross-Turn Conflict, where later code conflicts with earlier requirements, is the main failure class. We further find that Verification Gate, which checks new code against prior tests and triggers rollback and retry, is the only strategy that consistently improves all models, raising final-turn quality from 75.8% to 87.9% on DeepSeek-V3 and from 31.6% to 47.3% on Llama-3.1-8B. These findings suggest that strong performance on single-turn tasks can overestimate reliability in multi-turn coding conversations. Future evaluation and tool design should test whether later code suggestions preserve requirements from earlier turns and should include Verification Gate mechanisms.
+
+
+## 56. RepoProbe: Benchmarking Architecture-Aware Repository Comprehension with Checklists
+
+**Authors:** Yuexi Yang (Zhejiang University, China), Alyssa Wu (Tencent, China), Ji Luo (Tencent, China), Richeng Xuan (Tencent, China), Zhichao Hu (Tencent, China), Yuhong Liu (Tencent, China), Zhen Qin (Zhejiang University, China / Zhejiang University, China)
+
+**Categories:** AI for Software Engineering
+
+**Artifact badges:** Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837452
+
+**中文总结:** 提出 RepoProbe，基于 GitHub Discussions 的开放式架构问答基准，并用 Checklist-Based Verification 将答案分解为可验证原子事实以替代标量 LLM-as-Judge；实验显示 SOTA 模型存在“编辑偏置”（急于改代码而非理解架构），且清单验证显著提升评测可靠性。
+
+**Abstract:** The integration of Large Language Models (LLMs) into software engineering has shifted the focus from function-level generation to repository-scale assistance. However, existing benchmarks largely rely on bug reports from GitHub Issues, which often allow models to bypass genuine understanding via pattern matching on error logs. This misalignment under-measures Edit Bias , which refers to premature generation , where models prematurely propose code modifications instead of understanding the existing repository architecture. Furthermore, current LLM-as-a-Judge scalar scoring suffers from high variance and low interpretability. This work introduces RepoProbe, a novel benchmark for evaluating repository-level code understanding through open-ended Q&A using GitHub Discussions, which focuses on open-ended architectural inquiries rather than defect reporting. To ensure rigorous evaluation, we propose a Checklist-Based Verification Protocol that decomposes answers into atomic, verifiable facts, thereby replacing subjective ratings with objective verification. Our evaluation of state-of-the-art (SOTA) LLMs reveals a persistent gap between high clarity and evidence-grounded technical correctness. It also quantitatively confirms the prevalence of edit bias, in which models prioritize code generation instead of architectural analysis. Finally, we demonstrate that our verification protocol significantly improves evaluation reliability compared to traditional evaluations with scalar scoring.
+
+
+## 57. Repository-Aware Metamorphic Relation Generation for Augmented Reality Applications using Large Language Models
+
+**Authors:** Dibyendu Brinto Bose (Virginia Tech, USA), Jiawei Qin (Virginia Tech, USA), Chris Brown (Virginia Tech, USA)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837502
+
+**中文总结:** 面向 AR 应用提出仓库上下文感知的蜕变关系（MR）生成与智能体 deliberation 精炼流水线，在 142 个移动 AR 仓库上生成并 reconciling 冲突候选；人工 oracle 研究表明精炼 MR 可逻辑有效且可转断言，初步案例显示可检出真实变异。
+
+**Abstract:** Metamorphic Testing (MT) provides a promising approach for testing software without defined test oracles by specifying expected relations between inputs and outputs, instead of relying on exact outputs. For example, testing Augmented Reality (AR) applications is challenging due to dynamic interactions between virtual content, physical environments, and code, which make traditional test oracles difficult to define. However, formulating metamorphic relations (MRs) is time-consuming and burdensome. We introduce a context-aware pipeline that generates and refines MRs using repository-level context and reasoning orchestration, evaluated on a dataset of 142 mobile AR system repositories. Across three context configurations generating 14,916 candidate MRs, hierarchical context yielded the broadest coverage (7,004 MRs across 142 repositories and 5,167 class–method pairs) and lower redundancy. An agentic deliberation process then reconciled conflicting candidates—observed in 79.0% of cases—reducing duplication and selecting context-aware relations in 88.2% of outcomes. A manual oracle study shows refined relations ( n = 141) are both logically valid and sufficiently concrete to be directly translated into test assertions, and a preliminary case study reveals converting generated MRs ( n = 5) into executable tests can detect non-equivalent mutations in real-world code. Overall, our results show that combining repository-aware MR generation with reasoning-based refinement enables scalable construction of reliable, domain-relevant test oracles.
+
+
+## 58. ReqEvolve: User-Oriented Software Self-Evolution through Automatic Requirement Interpretation
+
+**Authors:** Md Asif Iqbal Fahim (University College Dublin, Ireland), Alessio Ferrari (University College Dublin, Ireland / National Research Council, Italy)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834416
+
+**中文总结:** 提出 ReqEvolve 运行时系统，将用户高层需求经自动 RE 与 TDD（澄清、分解、测例生成、集成）转为可执行能力；在 18 项目 72 个演化案例上 Pass@1 达 89.2%，显著优于 SpecFix 与消融基线。
+
+**Abstract:** The paradigm of software self-evolution enables systems to autonomously extend and reconfigure their own capabilities during execution in response to technical specifications. Yet requests for new functionality often originate from end users and are rarely expressed in technical terms. As a result, developers must translate user needs into technical specifications before the system can evolve, delaying early validation of the requested functionality by preventing users from immediately observing the resulting behaviour. To address this gap, we present ReqEvolve, a runtime code generation system that enables user-driven self-evolution by accepting high-level user requests. The system integrates automatic requirements engineering (RE) and test-driven development (TDD) to transform these requests into executable functionality through clarification, specification decomposition, test generation, and runtime integration. We evaluate ReqEvolve on 72 software evolution cases across 18 projects against two baselines: SpecFix, an RE-focused code generation approach, and an ablation variant of our system. ReqEvolve achieves 89.2% Pass@1, outperforming SpecFix by 18.8% ( p < 0.01, r = 0.79, large effect) and the ablation baseline by 32.6% ( p < 0.001, r = 0.88, large effect). These results provide initial evidence that user-driven self-evolution is a viable paradigm for autonomously extending software capabilities from user requests, thereby accelerating requirements validation prior to developer verification.
+
+
+## 59. Revisiting LLMs on New Feature Implementation in Real-World Software Development Practices
+
+**Authors:** Jia Li (Wuhan University, China), Tingxuan Huang (Wuhan University, China), Tiankuo Zhao (Wuhan University, China), Yiming Wang (Wuhan University, China), Yiran Zhang (Nanyang Technological University, Singapore), Anshun Hu (Wuhan University, China), Kechi Zhang (Peking University, China), Lecheng Wang (Peking University, China), Zinan Sheng (Peking University, China), Kui Liu (Huawei Technologies, China), Ge Li (Peking University, China), Zhi Jin (Wuhan University, China / Peking University, China)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837511
+
+**中文总结:** 基于合并 PR 构建 NFEI 基准，仅给 LLM 功能描述与仓库、禁止签名/路径等不真实提示，并标注需求澄清与实现规划等中间步骤；七模型整体测试通过率仅 29.84%，中间步骤质量与最终代码强相关，注入真值中间产物平均约 +18% 仍有限。
+
+**Abstract:** Implementing new features in existing repositories is a key activity in software development. With the rapid advances in large language models (LLMs), benchmarking their capability in this task has attracted growing attention. However, existing benchmarks deviate from real-world practices in two aspects. First, they provide LLMs with unrealistic information such as target code signatures and file paths, which developers do not have access to in practice. Second, they only evaluate the final generated code using functional tests, without examining intermediate steps like requirement understanding and implementation planning. These limitations make it difficult to faithfully assess LLMs’ actual capabilities and diagnose their weaknesses. To address the above limitations, we conduct a systematic evaluation to revisit the capability of large language models (LLMs) in new feature implementation, with a task setup strictly aligned with real-world software development practices. Our evaluation is built on NFEI, a curated benchmark sourced from merged feature pull requests of active GitHub repositories, where each target feature involves cross-snippet multiple code modifications, and LLMs are only provided with the feature description and the target repository throughout the evaluation. Beyond the realistic input settings, we further annotate fine-grained labels for the intermediate steps of the development workflow, including requirement clarification and implementation planning. This enables our evaluation to support a comprehensive stage-wise assessment across three granularities with seven dedicated metrics. We evaluate seven popular LLMs under two development paradigms and three generation strategies. Results show that new feature implementation remains highly challenging, with an overall average Test Pass Rate of only 29.84%. Our stage-wise analysis reveals that intermediate step quality is closely linked to final code performance, and injecting ground-truth intermediate artifacts yields an average absolute gain of about 18%, yet performance remains limited. Qualitative error analysis further identifies three recurrent failure patterns, suggesting that new feature implementation of LLMs adhering to real-world world software development practices remains challenges.
+
+
+## 60. S2CAgent: A Self-Learning Agent Knowledge Graph Framework for Software Supply Chain Analysis
+
+**Authors:** Youfei Huang (Nanjing University, China), Zhong Li (Nanjing University, China), Minxue Pan (Nanjing University, China), Xuandong Li (Nanjing University, China)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837513
+
+**中文总结:** 构建多源 SSCKG 并提出神经符号智能体 S2CAgent，从图谱归纳规则对齐多跳问答并自学习改进轨迹；在新跨生态基准（漏洞影响、依赖、许可证）上优于基线，已在头部 ICT 企业部署处理复杂真实案例。
+
+**Abstract:** The extensive reuse of open-source software (OSS) accelerates development. However, it also creates increasingly complex software supply chains (SSCs) and intensifies the attacker-defender asymmetry, making attacks "low-cost, high-impact, and hard-to-detect." Software Bill of Materials (SBOMs) and Software Composition Analysis (SCA) are widely used for SSC analysis, but both have clear limitations. SBOMs frequently lack vulnerability information, while SCA tools are typically limited to specific ecosystems. To address these limitations, we first construct a multi-source software supply chain knowledge graph (SSCKG) that unifies heterogeneous information and supports continuous evolution through automated updates. Building on this foundation, we propose S2CAgent, a neural-symbolic large language model (LLM) agent framework for SSC analysis. S2CAgent supports natural language questions by inducing symbolic reasoning rules from the SSCKG. These rules align complex questions with underlying graph semantics and multi-hop reasoning patterns. Furthermore, the agent leverages structured evidence from the SSCKG and unstructured web knowledge, thereby mitigating LLM hallucinations and alleviating knowledge incompleteness. In addition, it incorporates a self-learning mechanism that synthesizes and refines tool-augmented trajectories to improve future reasoning. We evaluate S2CAgent on a newly constructed cross-ecosystem benchmark that includes three core tasks: vulnerability impact assessment, software dependency analysis, and license compliance checking. Experimental results show that S2CAgent outperforms baselines across multiple metrics and remains stable under complex multi-hop reasoning. In particular, S2CAgent has been deployed at a leading ICT corporation, where it effectively handles complex real-world analysis cases, further demonstrating its practical utility.
+
+
+## 61. SafeDep: Detecting State Mutation Unsoundness in Rust via Dependency Slicing and LLM Reasoning
+
+**Authors:** Zihao Rao (Fudan University, China), Yilin Chen (Fudan University, China), Chengjun Chen (Ant Group, China), Hui Xu (Fudan University, China)
+
+**Categories:** AI for Software Engineering
+
+**Artifact badges:** Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837481
+
+**中文总结:** 提出 SafeDep：基于 MIR 构建字段敏感读写依赖图并切片，再由 LLM 重建跨方法状态转移并生成 PoC，经编译器/Miri 反馈 refine；扫描 crates.io Top4000 发现 24 个未报告 soundness 问题（18 已确认或 RustSec）。
+
+**Abstract:** Rust's type system protects safe code, but many low-level abstractions depend on internal unsafe operations whose correctness rests on memory and logical invariants. In struct-based abstractions, a sibling method may legally modify internal fields while invalidating a precondition required by another method's unsafe operation. We call this defect an unsound state mutation. Traditional pattern-based static analyzers support inter-procedural tracking but may lack the capability to model cross-method state interference. Furthermore, they cannot interpret natural-language safety contracts, making these deep defects difficult to detect. LLMs can reason about these contracts, but whole-crate prompting is expensive and often prone to hallucinated paths. To bridge this gap, we present SafeDep, a vulnerability discovery framework that combines compiler-driven static analysis with LLM-based semantic reasoning. SafeDep analyzes Rust MIR to build a field-sensitive read/write dependency graph and slices the graph to retain methods that may affect safety-critical state. An LLM then reconstructs cross-method state transitions from this compact context and generates PoC candidates. A bounded compiler/Miri feedback loop refines the candidates and their exploitability judgments before manual audit. On our evaluation dataset, SafeDep outperforms static and LLM baselines while reducing prompt context. A scan of the top 4,000 crates.io projects found 24 previously unreported soundness vulnerabilities, 18 of which had been confirmed by maintainers or accepted as RustSec advisories at the time of writing.
+
+
+## 62. Safeguarding LLM Agents from Misalignment through Provenance Analysis
+
+**Authors:** Yining She (Carnegie Mellon University, USA), Yiliang Liang (Carnegie Mellon University, USA), Eunsuk Kang (Carnegie Mellon University, USA)
+
+**Categories:** AI for Software Engineering
+
+**Artifact badges:** Artifacts Available, Artifacts Reusable
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837535
+
+**中文总结:** 以溯源分析形式化 misalignment：工具调用须有上下文可追溯证据；实现 ProvenanceGuard 多阶段流水线，在 AgentSafetyBench 与 WorkBench 上相对 LLM-as-judge 基线显著降低误对齐轨迹上的错误率（由 44.3% 量级改善）。
+
+**Abstract:** As LLM agents gain increasing access to powerful tools, ensuring that their actions align with the user’s intent becomes critical. When an agent’s proposed action deviates from that intent—a phenomenon called misalignment — it may cause harm that is difficult to undo. Existing runtime guardrails rely on an LLM-as-a-judge paradigm that lacks a systematic framework for reasoning about alignment, often producing inconsistent or difficult-to-audit judgments. Motivated by provenance analysis, we propose a conceptual framework that formalizes misalignment detection as determining whether a proposed tool call is supported by traceable evidence in the agent’s context. Based on this framework, we build ProvenanceGuard, a multi-stage pipeline that analyzes the agent’s action for three types of misalignment before its execution and only allows aligned actions. We evaluated ProvenanceGuard on AgentSafetyBench and WorkBench, across 11 backbone LLMs. Compared to the LLM-as-a-judge baseline, ProvenanceGuard reduces error rate on misaligned traces from 44.3
+
+
+## 63. SecChain: Operationalizing Security Guidelines for Multi-agent Smart Contract Generation
+
+**Authors:** Dianxiang Sun (Nanyang Technological University, Singapore), Liming Nie (Shenzhen Technology University, China), Yang Liu (Nanyang Technological University, Singapore)
+
+**Categories:** AI for Software Engineering
+
+**Artifact badges:** Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837480
+
+**中文总结:** 提出 SecChain，以持久 SecuritySpec 贯穿规划、编码、测试、审计与修复，五智能体与确定性 Coordinator 协作；在 FSM-SCG 1000 合约上最终编译率 89.0%、零风险合约比例 60.3%，远优于 vanilla GPT-4o 与 FSM-SCG。
+
+**Abstract:** Smart contracts generated by large language models (LLMs) can compile yet still violate basic security obligations, and existing generation frameworks largely treat security as post-hoc verification rather than as a constraint that persists throughout generation and repair. We present SecChain, a multi-agent smart-contract generation framework built around a persistent SecuritySpec artifact that makes requirement-level security obligations explicit and preserves them across planning, coding, testing, auditing, and fixing. Five LLM-powered agents collaborate with a fully deterministic Coordinator through stage-specific procedures, deterministic pre-test verification, and nested repair loops, while an Auditor provides complementary semantic review grounded in a three-layer security knowledge base. We evaluate SecChain on 1,000 contracts from the finite-state-machine-guided smart-contract generation (FSM-SCG) dataset against vanilla GPT-4o, GPT-5.4, Claude Sonnet 4.6, and the FSM-SCG framework. SecChain achieves an 89.0% final compilation rate and a Zero Risk Contract Proportion (ZRCP) of 60.3%, compared with 12.7% for vanilla GPT-4o and 23.3% for FSM-SCG. With a GPT-4o backbone, SecChain still outperforms the tested vanilla current-generation models (GPT-5.4, Claude Sonnet 4.6) on the primary security metrics.
+
+
+## 64. Spec2V: Planning-Guided Specification-to-Verilog Generation Framework with Verification-Driven Debugging
+
+**Authors:** Xuming Liu (Technology and Engineering Center for Space Utilization at Chinese Academy of Sciences, China / University of Chinese Academy of Sciences, China), Chi Zhang (Technology and Engineering Center for Space Utilization at Chinese Academy of Sciences, China), Jinglong Xu (Technology and Engineering Center for Space Utilization at Chinese Academy of Sciences, China / University of Chinese Academy of Sciences, China), Shan Zhou (Technology and Engineering Center for Space Utilization at Chinese Academy of Sciences, China), Jinbo Wang (Technology and Engineering Center for Space Utilization at Chinese Academy of Sciences, China)
+
+**Categories:** AI for Software Engineering
+
+**Artifact badges:** Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834342
 
 **中文总结:** 提出 Spec2V 智能体框架，以双层 Tree of Thought 规划分解规格并用 LLM-as-a-Judge 驱动验证调试；在 VerilogEval Machine/Human 上 Pass@1 分别达 99.8% 与 99.4%。
 
 **Abstract:** Field Programmable Gate Array (FPGA) is essential in mission-critical fields like aerospace. It offers high flexibility and deterministic real-time response. With the increase in development demands and system complexity, the traditional design paradigm that relies on manual expertise has become inefficient. Although large language models (LLMs) provide a potential pathway for automated code generation, a significant semantic gap remains between the linear reasoning patterns of LLMs and the inherent parallelism of FPGA hardware logic. Current methods encounter difficulties in decomposing complex tasks, low-resource code generation, and resolving simulation errors. To address these issues, we present Spec2V, an agent framework for the generation of Verilog code. Spec2V incorporates two key complementary components: (i) we propose a task planning method based on a dual-layer Tree of Thought. It decouples complex specifications into macro-topology and micro-logic structures to mitigate logical drift from linear reasoning and to improve the accuracy of initial solutions. (ii) During validation and debugging, Spec2V reformulates failure analysis as a structured attribution task with an LLM-as-a-Judge paradigm. It utilizes the reasoning capabilities of LLMs and multi-source evidence to localize the sources of simulation errors. Furthermore, the framework introduces a multi-temperature hedged sampling strategy and a waveform mismatch rate filtering mechanism to identify correct implementations efficiently from extensive candidate spaces. On the public VerilogEval Machine and Human benchmarks, Spec2V achieves Pass@1 accuracies of up to 99.8% and 99.4%, respectively. Case studies on representative RTL design tasks further demonstrate that Spec2V significantly reduces the manual effort required for implementation and mitigates the overhead of iterative engineering through closed-loop planning, validation, and debugging.
 
 
-## 34. SwiftGram: Dynamic Lexical Forking for Precise and Efficient Grammar-Constrained Decoding
+## 65. SwiftGram: Dynamic Lexical Forking for Precise and Efficient Grammar-Constrained Decoding
 
-**Authors:** Shuyi Ling (Institute of Software at Chinese Academy of Sciences China), Liangyi Kang (Institute of Software, Chinese Academy of Sciences China), Jie Liu (Institute of Software, Chinese Academy of Sciences China), Shuai Wang (Institute of Software, Chinese Academy of Sciences), Zhirou Ma (Institute of Software, Chinese Academy of Sciences China), Dan Ye (Institute of Software at Chinese Academy of Sciences China)
-
-**Categories:** AI for Software Engineering
-
-**中文总结:** （目前没有摘要，因此没有总结）
-
-**Abstract:** (摘要暂未在 researchr 页面提供)
-
-
-## 35. Synthesizing File-Level Data for Unit Test Generation with Chain-of-Thoughts via Self-Debugging
-
-**Authors:** Ziyue Hua (Peking University China), Tianyu Chen (Microsoft Research Asia), Yeyun Gong (Microsoft Research China), Shuai Lu (Microsoft Research China), Peng Cheng (Microsoft Research Asia), Qinglin Zhu (King's College London United Kingdom), Yibo He (Peking University China), Yingjie Fu (Peking University China), Wenpin Jiao (Peking University China), Wei Yang (UT Dallas United States), Tao Xie (Peking University China)
+**Authors:** Shuyi Ling (Institute of Software at Chinese Academy of Sciences, China), Liangyi Kang (Institute of Software at Chinese Academy of Sciences, China), Jie Liu (Institute of Software at Chinese Academy of Sciences, China), Shuai Wang (Institute of Software at Chinese Academy of Sciences, China), Zhirou Ma (Institute of Software at Chinese Academy of Sciences, China), Dan Ye (Institute of Software at Chinese Academy of Sciences, China)
 
 **Categories:** AI for Software Engineering
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834419
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 提出 SwiftGram，在终端歧义边界做 dynamic lexical forking，结合 GLR/GSS 与邻接剪枝实现精确 GCD 掩码；近零语法违规、mask 构建步均加速 5.9×，拒绝采样下吞吐最高 +14.7%。
+
+**Abstract:** Large Language Models (LLMs) must strictly adhere to grammatical constraints for reliable structured generation in agentic workflows, code synthesis, and domain-specific language (DSL) generation. Grammar-Constrained Decoding (GCD) enforces this by masking out tokens incompatible with the target grammar at each decoding step, and has been adopted as a core module in mainstream inference engines such as vLLM. However, existing GCD methods exhibit precision defects under grammars with overlapping terminal definitions. The misalignment between LLM tokens and grammar terminals induces terminal ambiguity, where a token admits multiple plausible terminal interpretations. Existing methods handle this imprecisely, causing both false acceptance and false rejection, while incurring high computational overhead. We propose SwiftGram, a GCD framework that incorporates dynamic lexical forking for precise token masking. By forking only at detected ambiguity boundaries, SwiftGram preserves all admissible terminal interpretations while suppressing spurious ones. It builds on Generalized LR (GLR) parsing with the Graph-Structured Stack (GSS) for compact multi-branch parsing, together with adjacency pruning and terminal tries to reduce online overhead. Experiments show that SwiftGram achieves near-zero grammar violations and no observed false rejection, whereas strong baselines remain prone to masking errors. SwiftGram improves effective throughput by up to 14.7% over the strongest baseline under rejection sampling, and achieves a 5.9× average speedup in per-step mask construction under mask-before-selection.
 
 
-## 36. TheBotCompany: Self-Organizing Multi-agent Systems for Continuous Software Development
+## 66. Synthesizing File-Level Data for Unit Test Generation with Chain-of-Thoughts via Self-Debugging
 
-**Authors:** Wenhan Lyu (William & Mary United States), Yue Xiao (William & Mary United States), Yixuan Zhang (William & Mary), Yifan Sun (William&Mary)
+**Authors:** Ziyue Hua (Peking University, China), Tianyu Chen (Microsoft Research, China), Yeyun Gong (Microsoft Research, China), Shuai Lu (Microsoft Research, China), Peng Cheng (Microsoft Research, China), Qinglin Zhu (King's College London, UK), Yibo He (Peking University, China), Yingjie Fu (Peking University, China), Wenpin Jiao (Peking University, China), Wei Yang (Fudan University, China), Tao Xie (Peking University, China)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837477
+
+**中文总结:** 用 self-debugging（guided test repair + CoT 压缩）蒸馏 74,518 条〈焦点方法, 测试, CoT〉训练数据并 SFT；微调模型断言通过率 36.17%、分支覆盖 43.90%、变异分 88.66%，显著优于 o4-mini 等商业模型。
+
+**Abstract:** Automatic unit test (UT) generation is essential for software quality assurance, but existing approaches—including symbolic execution, search-based testing, and recent LLM-based generators—struggle to produce human-quality tests with correct, meaningful assertions and reliable chain-of-thought (CoT) explanations.  
+We identify a gap in UT training data: repository-mined tests lack developer CoTs, while LLM-distilled CoTs are often incorrect or incomplete.  
+To address this issue, we propose a novel data-distillation approach that uses self-debugging to produce high-quality UT training examples paired with faithful CoTs.  
+Our approach combines (1) guided test repair, a heuristic loop (error-, failure-, coverage-, and mutation-focused steps) that prompts the same model to diagnose and iteratively fix generated tests, and (2) CoT compression, which compacts original and debugging CoTs into concise explanations that directly justify correct tests.  
+We apply this pipeline to a large corpus of open-source projects to construct a dataset of 74,518 high-quality <focal method, test, CoT> examples, and then use it for supervised fine-tuning of a base model.  
+An empirical evaluation shows that the fine-tuned model achieves high UT generation effectiveness: it attains a pass rate of 36.17% on test assertions, a branch coverage of 43.90%, and a mutation score of 88.66%, substantially higher than those of state-of-the-art commercial models such as o4-mini.
+
+
+## 67. The CodeInverter Suite: Structure- and Data-Aware Binary Decompilation with Efficient LLMs
+
+**Authors:** Peipei Liu (Zhongguancun Laboratory, China), Jian Sun (Zhongguancun Laboratory, China), Rongkang Sun (Zhongguancun Laboratory, China), Li Chen (Zhongguancun Laboratory, China), Zhaoteng Yan (Zhongguancun Laboratory, China), Xiaoling Zhang (Zhongguancun Laboratory, China), Dawei Wang (Zhongguancun Laboratory, China), Dapeng Sun (Zhongguancun Laboratory, China), Peizheng Zhang (Zhongguancun Laboratory, China), Dan Li (Tsinghua University, China)
 
 **Categories:** AI for Software Engineering
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837554
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**中文总结:** 提出 CodeInverter 套件：CIW 提示流程结合 CFG 与显式数据映射，配套 869 万样本 CID 数据集及 1.3B/6.7B 的 CIM 轻量模型；CIW 平均提升可重执行率 13.07%、可重编译率 23.94%，CIM-6.7B 在可读性与可执行性上优于参数量大两个数量级的 LLM。
+
+**Abstract:** Binary decompilation plays a vital role in various cybersecurity and software engineering tasks. Recently, end-to-end decompilation methods powered by large language models (LLMs) have attracted increasing attention for their ability to generate highly readable source code with minimal human intervention. However, existing LLM-based methods still struggle with reconstructing program structure and logic, achieving accurate data recovery, ensuring data security and privacy, and maintaining computational efficiency. To address these challenges, we propose the CodeInverter Suite, with three main pieces: (1) the CodeInverter Workflow (CIW) is a novel prompt engineering method that incorporates control flow graphs (CFG) and explicit data mappings to enhance structure reconstruction and data recovery during decompilation; (2) building upon CIW, we construct the CodeInverter Dataset (CID), a large-scale domain-specific dataset containing 8.69 million samples enriched with CFGs and data mapping information; (3) we develop CodeInverter Models (CIMs), two lightweight LLMs with 1.3B and 6.7B parameters, enabling efficient inference in privacy-sensitive and resource-constrained environments. Extensive experiments on two benchmark datasets demonstrate that CIW significantly enhances the decompilation performance of various LLMs, with average improvements of 13.07% in re-executability and 23.94% in re-compilability. For our proposed decompilation model, CIM-6.7B achieves state-of-the-art performance in terms of re-executability and readability, outperforming existing LLMs—even with over 100× more parameters—by an average of 11.03% and 6.27%, respectively.
 
 
-## 37. Think Before You Code: Dual Reasoning for the NLSafety–Utility Trade-Off in LLM Code Generation
+## 68. TheBotCompany: Self-Organizing Multi-agent Systems for Continuous Software Development
 
-**Authors:** Honghao Tan (Concordia University Canada), Haibo Wang (Concordia University), Shin Hwei (Tan Concordia University Canada)
+**Authors:** Wenhan Lyu (William & Mary, USA), Yue Xiao (William & Mary, USA), Yixuan Zhang (William & Mary, USA), Yifan Sun (William & Mary, USA)
 
 **Categories:** AI for Software Engineering
+
+**Artifact badges:** Artifacts Available
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834358
+
+**中文总结:** 开源编排框架 TheBotCompany 以策略—执行—验证三阶段状态机驱动里程碑开发，经理 agent 动态组建与解散工人团队并支持异步人工监督；多日真实项目实验表明自组织团队能持续交付且验证阶段可拦截长期潜伏缺陷。
+
+**Abstract:** Large language model (LLM)-based multi-agent systems have shown promise in automating software development tasks. However, most vibe-coding systems focus on completing small tasks and incremental code changes, leaving persistent, continuous software development largely unexplored. We present TheBotCompany, an open-source orchestration framework for continuous multi-agent software development. TheBotCompany introduces three key innovations: (1) a three-phase state machine (Strategy to Execution to Verification) for milestone-driven development, (2) self-organizing agent teams where manager agents dynamically hire, assign, and retire worker agents based on project needs, and (3) asynchronous human oversight. We evaluate TheBotCompany on real-world software projects over multiple days of continuous development, measuring team adaptation patterns, milestone completion rates, cost efficiency, and code quality. Our results demonstrate that the self-organizing approach enables effective long-term software development with measurable progress, while the verification phase catches defects that would otherwise persist.
+
+
+## 69. Think Before You Code: Dual Reasoning for the NLSafety–Utility Trade-Off in LLM Code Generation
+
+**Authors:** Honghao Tan (Concordia University, Canada), Haibo Wang (Concordia University, Canada), Shin Hwei Tan (Concordia University, Canada)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834385
 
 **中文总结:** 提出 SUDS 指标与 Dual Reasoning 推理时技术，在五个 LLM 上统一评估代码功能与安全权衡；DR 使平均 SUDS 较基线提升 1.32–3.42 倍。
 
 **Abstract:** Large language models (LLMs) for code generation are typically evaluated on functional correctness alone, overlooking whether generated code propagates harmful content embedded in the prompt. Prior work has shown that most Code LLMs reproduce offensive identifiers from injected renaming instructions without warning, yet existing approaches focus on detecting harmful content, neglecting functional correctness. Grounded in the Theory of Dual Channel Constraints (which states that code is a dual-channel medium combining an algorithmic (AL) channel for machine execution and a natural language (NL) channel for human communication, creating a unique safety-utility trade-off where a model must balance functional execution with responsible communication), we propose NLSafety-Utility Duality Score (SUDS), a metric that unifies code utility, safety adherence, and warning awareness into a single score across 12 ranked response scenarios, and Dual Reasoning (DR), a structured inference-time technique that requires an explicit safety audit and task-grounded code review before code generation. Evaluated on five LLMs across two benchmarks augmented with harmful keyword injections (820 and 2,135 samples), DR consistently achieves the highest SUDS across all models, improving mean SUDS by 1.32× to 3.42× over the baseline, while chain-of-thought prompting yields negligible safety gains and a safety-aware prompt provides only partial improvement. Further analysis reveals that DR's effectiveness scales with model capacity, that the one-shot exemplar primarily stabilizes output format for smaller models, and that structured reasoning cannot compensate for models with limited safety vocabularies.
 
 
-## 38. Towards Fully Automated Medical Imaging Code Generation via Validation-Based Context Engineering
+## 70. To Think or Not to Think: Evaluating LLM Reasoning and Agents in Vulnerability Detection
 
-**Authors:** Zixiao Zhao (University of Auckland), Jing Sun (School of Computer Science, University of Auckland New Zealand), Zhe Hou (Griffith University), Cheng-Hao Cai (Monash University China), Qian Liu (University of Auckland New Zealand), Mengze Li (University of Auckland New Zealand), Zijian Zhang (Beijing Institute of Technology China), Jin Song (Dong National University of Singapore Singapore)
+**Authors:** Hua Beng Tan (Singapore Management University, Singapore), Ratnadira Widyasari (Singapore Management University, Singapore), Merve Astekin (SINTEF, Norway), Arda Goknil (SINTEF, Norway), Hasan Sözer (Ozyegin University, Türkiye), Yan Naing Tun (Singapore Management University, Singapore), Erik Johannes Husom (SINTEF, Norway), Lwin Khin Shar (Singapore Management University, Singapore), Lingxiao Jiang (Singapore Management University, Singapore)
 
 **Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837521
+
+**中文总结:** 在 PrimeVul Pair 上分阶段分离因素，比较 instruct/thinking 模型与单/双/多 agent 设计及解释质量；thinking 在非 agent 设置中 8 种情形 7 种提升 F1（主要靠召回）但能耗增 2.7–4.4×，双 agent 召回最高却将 88.2% 函数标为漏洞，解释增益因模型而异且难区分对错预测。
+
+**Abstract:** Large language models (LLMs) are increasingly studied for software vulnerability detection, but the benefits of recent reasoning-enabled (“thinking”) modes remain unclear. At the same time, agentic LLM designs aim to enhance analysis through structured collaboration, while practical software security workflows require explanations that facilitate inspection, validation, and remediation. Because prior studies often examine these dimensions separately or under heterogeneous settings, their individual effects on vulnerability detection remain difficult to disentangle. This paper addresses the gap through a phased, factor-separated empirical study on the PrimeVul Pair benchmark. In the first phase, we compare instruct and thinking variants of four open models under zero- and few-shot prompting without agents. In the second phase, we evaluate single-, dual-, and multi-agent (SA, DA, and MA) designs alongside call-matched single-agent baselines, alert-burden metrics, and cost analysis. In the third, we assess explanations through blinded human and calibrated LLM evaluation across correct and incorrect predictions, controlling for response length and model family. Thinking improves non-agent (NA) F1 in 7 of 8 settings, mainly through recall, while DA achieves the highest F1/recall but flags 88.2% of functions as vulnerable. MA performs better on pairwise discrimination, although call-matched self-revision achieves the best Pair-wise Correct Prediction (P-C) overall. Thinking also uses 2.7–4.4× more energy, and its F1 benefit declines with greater orchestration. Explanation gains are model-specific, partly length-mediated, and do not distinguish correct from incorrect predictions.
+
+
+## 71. Towards Fully Automated Medical Imaging Code Generation via Validation-Based Context Engineering
+
+**Authors:** Zixiao Zhao (University of Auckland, New Zealand), Jing Sun (University of Auckland, New Zealand), Zhe Hou (Griffith University, Australia), Cheng-Hao Cai (Monash University, Suzhou, China), Qian Liu (University of Auckland, New Zealand), Mengze Li (University of Auckland, New Zealand), Zijian Zhang (Beijing Institute of Technology, China), Jin Song Dong (National University of Singapore, Singapore)
+
+**Categories:** AI for Software Engineering
+
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3834399
 
 **中文总结:** 提出 AutoMedImg 多智能体框架，结合规划/编码阶段的多层验证与跨项目自适应流水线合成，在六个医学影像数据集上实现零人工干预，分割 Dice 最高 0.90、分类准确率 99%。
 
 **Abstract:** Large language models (LLMs) have demonstrated considerable promise in program generation for small-scale and conventional application development; however, they remain limited when applied to complex, domain-specific tasks such as medical image processing. General-purpose models lack explicit domain knowledge and robust validation mechanisms to ensure correctness, often requiring substantial human intervention to produce reliable processing pipelines. To address these limitations, we propose AutoMedImg, a multi-agent framework for fully automated medical image processing code generation. AutoMedImg orchestrates specialised agents across two phases: a Planning Phase that performs dataset analysis and architecture design with semantic and formal verification, and a Coding Phase that generates modules in parallel with static checking, execution testing, and assembly validation. This multi-stage validation mitigates error propagation throughout generation, while comprehensive auto-context engineering combining domain-specific knowledge bases, shared memory, and validation feedback automates context construction without manual prompting. A cross-project adaptive pipeline synthesis mechanism further accumulates validated pipelines and retrieves proven components for new tasks based on project similarity, enhancing generation efficiency through cross-project learning. Extensive evaluation across six diverse and well-established medical imaging datasets with five backbone LLMs demonstrates that AutoMedImg achieves zero human intervention, with Dice scores of up to 0.90 for segmentation tasks and 99% accuracy for classification.
 
 
-## 39. Translation Tag Team: Formal Rules and LLMs Translate More Macros Together Than Apart
+## 72. Translation Tag Team: Formal Rules and LLMs Translate More Macros Together Than Apart
 
-**Authors:** Brent Pappas (University of Central Florida United States), Joseph Zaluksy (University of Central Florida United States), Zachary Burkett (University of Central Florida United States), Paul Gazzillo (University of Central Florida United States)
+**Authors:** Brent Pappas (University of Central Florida, USA), Joseph Zalusky (University of Central Florida, USA), Zachary Burkett (University of Central Florida, USA), Paul Gazzillo (University of Central Florida, USA)
 
 **Categories:** AI for Software Engineering
 
-**中文总结:** （目前没有摘要，因此没有总结）
+**Artifact badges:** Artifacts Available, Artifacts Reusable
 
-**Abstract:** (摘要暂未在 researchr 页面提供)
+**PDF:** https://dl.acm.org/doi/pdf/10.1145/3832783.3837412
+
+**中文总结:** 形式化宏翻译器 MerC 与基准 MacroBench 支持约 50% 真实宏用例且保证正确，LLM 单独翻译覆盖率更高但含 8%–28% 错误；MerC 先处理、LLM 补余的 tag team 平均失败率比纯 LLM 低 32%、比 MerC 多译 51% 用例。
+
+**Abstract:** Modern critical software infrastructure is largely written in C. Since C lacks memory safety, researchers are investigating automatic translation of C to safer languages like Rust. But real-world C software consists of more than just C code, often using named code fragments called macros which are not part of the C language proper. State-of-the-art techniques avoid translating macros by preprocessing C code first before translating it. But this approach produces translations that are dissimilar to the original C code, because preprocessing inlines all macro definitions. To preserve macro usage in translated code, we study the language features that macros and C share and distill them into the first formally- specified translator, MerC. To evaluate MerC, we introduce the first macro translation benchmark, MacroBench, with test cases based on macros randomly sampled from real-world C programs. We find that MerC supports 50% of MacroBench’s macro test cases. We also use MacroBench to evaluate how effective large language models (LLMs) are at performing the previously-unstudied task of macro translation. LLMs translate 22% to 77% more of MacroBench than MerC, but with 8% and 28% of these translations being incorrect translations requiring additional validation by developers. In contrast, MerC only produces correct translations. Our key insight is that running MerC first then using LLMs on the remainder reaps greater benefits than using either technique alone. This tag team approach has an average failure rate 32% lower than that of LLMs, while also translating an average of 51% more test cases than MerC.
+

@@ -44,7 +44,7 @@ AI 会议则为单份 digest：`{VENUE}{YEAR}_SE_Coding_Papers.md`。
 |------|------:|--------|
 | ICSE'26 | 321 | [ICSE_2026_Research_Track.md](2026/icse2026_research_track/ICSE_2026_Research_Track.md) |
 | FSE'26 | 211 | [FSE_2026_Research_Track.md](2026/fse2026_research_track/FSE_2026_Research_Track.md) |
-| ASE'26 | 181 | [ASE_2026_Research_Track.md](2026/ase2026_research_track/ASE_2026_Research_Track.md) |
+| ASE'26 | 263 | [ASE_2026_Research_Track.md](2026/ase2026_research_track/ASE_2026_Research_Track.md) |
 | ISSTA'26 | 210 | [ISSTA_2026_Research_Track.md](2026/issta2026_research_track/ISSTA_2026_Research_Track.md) |
 
 ### AI 会议中的软工 / Coding 相关论文
@@ -84,7 +84,6 @@ AI 会议则为单份 digest：`{VENUE}{YEAR}_SE_Coding_Papers.md`。
 
 以下信息尚未补全，后续会陆续更新：
 
-- **ASE'26**：全部论文的 PDF 链接；awarded papers 信息；部分论文尚缺 abstract，对应中文总结亦待补全（目前约 146/181 篇无摘要）
 - **NeurIPS'26**：软工 / Coding 相关论文 digest 尚未整理
 
 > 暂无 PDF 链接的论文，绝大多数可在 [Google Scholar](https://scholar.google.com/) 上通过标题检索到。
